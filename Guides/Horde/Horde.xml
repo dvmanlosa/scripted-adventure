@@ -1,5 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="Route.lua"/>
+	<Script file="QuestInfo.lua"/>
 	<Script file="01_Durotar_1_12.lua"/>
 	<Script file="02_The_Barrens_12_15.lua"/>
 	<Script file="03_Stonetalon_Mountains_15_16.lua"/>

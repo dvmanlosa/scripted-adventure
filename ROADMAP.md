@@ -16,18 +16,23 @@ A step-by-step leveling guide for WoW Forever: picks the route for your faction 
 | Tool | Does |
 | --- | --- |
 | `tools/match_quest_ids.py` | Fills missing quest IDs from QuestieDB -> `tools/quest_id_fixes.json` |
-| `tools/route_edits.json` | Hand fixes on top of the JSON: reorder steps, notes, optional, wrong quest IDs |
+| `tools/quest_meta.py` | Quest prerequisites and dungeon quests from QuestieDB -> `tools/quest_meta.json` |
+| `tools/route_edits.json` | Hand fixes on top of the JSON: reorder/insert steps, notes, optional, wrong quest IDs and zones, xp gates, dungeon tags and alternatives |
 | `tools/audit_routes.py` | Flags wrong-faction quests, quests taken under their required level, grey quests |
 | `tools/convert_routes.py` | JSON + fixes + edits -> `Guides/` |
 | `tools/check_guides.py`, `tools/smoke_test.py` | Parser/route checks, and the whole addon against a fake WoW API |
 
-## Ideas (from studying FlowUp Forever; their routes are All Rights Reserved and not used)
+## Done from the FlowUp ideas (their routes are All Rights Reserved and not used)
 
-- Skipping a quest also skips its follow-ups (QuestieDB has the chain links).
-- Level gates by XP percent ("grind to 70% of level 8").
-- Dungeon steps that can be switched off; optional side chains.
-- Optional automation, off by default: auto accept/turn-in, take the step's flight.
-- Starting zones for Tauren, Undead, Dwarf/Gnome, Night Elf, Skyborne (Zephras Isle).
+- Skipping a quest also skips its follow-ups (`Guides/<Route>/QuestInfo.lua`, from QuestieDB).
+- Grind steps by XP percent (`xp:70`).
+- Dungeon steps that can be switched off, with `alt:` alternatives (Deadmines has one).
+
+## Ideas
+
+- Optional side chains switched like dungeons.
+- Starting zones for Tauren, Undead, Dwarf/Gnome, Night Elf.
+- Not planned: auto accept/turn-in, Skyborne starting zone.
 
 ## Open items
 

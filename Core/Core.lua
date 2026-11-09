@@ -30,7 +30,18 @@ local function passes(filter, token)
 end
 
 function SA:StepApplies(step)
-    return passes(step.classes, self.class) and passes(step.races, self.race)
+    if not (passes(step.classes, self.class) and passes(step.races, self.race)) then return false end
+    local off = self.char and self.char.dungeonsOff or {}
+    if step.dungeon and off[step.dungeon] then return false end -- dungeon turned off
+    if step.alt and not off[step.alt] then return false end     -- alternative, only while it's off
+    return true
+end
+
+-- Rebuild every guide's visible steps (after a dungeon is switched on or off).
+function SA:Refilter()
+    for _, guide in ipairs(self.chain) do guide.visible = nil end
+    self:PrepareGuide(self.guide)
+    self:Changed()
 end
 
 -- Build the step list this character sees for a guide, with stable keys for saving progress.
@@ -62,15 +73,116 @@ end
 function SA:IsDone(step)
     local v = self:DoneSet(self.guide)[step.key]
     if v ~= nil then return v == true end
-    return step.qid ~= nil and self.char.skipped[step.qid] == true
+    return step.qid ~= nil and self:QuestRemoved(step.qid)
 end
 
--- Skip a quest: every remaining step of it, in this guide and later ones, drops out of the list.
+---------------------------------------------------------------------------
+-- Removed quests: skipped by hand, part of a dungeon that's turned off, or a follow-up whose
+-- prerequisites were removed (Guides/<Route>/QuestInfo.lua). Their steps count as done.
+---------------------------------------------------------------------------
+
+-- quest ID -> dungeon name, from the dungeon-tagged steps of the route
+function SA:QuestDungeon(qid)
+    if not self.questDungeon then
+        self.questDungeon = {}
+        for _, guide in ipairs(self.chain) do
+            for _, st in ipairs(guide.steps) do
+                if st.qid and st.dungeon then self.questDungeon[st.qid] = st.dungeon end
+            end
+        end
+    end
+    return self.questDungeon[qid]
+end
+
+function SA:QuestRemoved(qid)
+    local cache = self.removedCache
+    if not cache then cache = {}; self.removedCache = cache end
+    if cache[qid] ~= nil then return cache[qid] end
+    cache[qid] = false -- guards against prerequisite loops
+    if self.Tracker and self.Tracker:QuestDone(qid) then return false end -- you did it anyway
+    local removed = self.char.skipped[qid] == true
+    if not removed then
+        local d = self:QuestDungeon(qid)
+        removed = d ~= nil and self.char.dungeonsOff[d] == true
+    end
+    if not removed then
+        local reqs = SA.requires and SA.requires[self.routeName] and SA.requires[self.routeName][qid]
+        for _, group in ipairs(reqs or {}) do
+            if group.kind == "all" then
+                for _, pre in ipairs(group) do
+                    if self:QuestRemoved(pre) then removed = true; break end
+                end
+            else
+                local allGone = #group > 0
+                for _, pre in ipairs(group) do
+                    if not self:QuestRemoved(pre) then allGone = false; break end
+                end
+                removed = allGone
+            end
+            if removed then break end
+        end
+    end
+    cache[qid] = removed
+    return removed
+end
+
+-- Quest IDs in the whole route (to count follow-ups when skipping).
+function SA:RouteQuests()
+    if not self.routeQuests then
+        local seen, list = {}, {}
+        for _, guide in ipairs(self.chain) do
+            for _, st in ipairs(guide.steps) do
+                if st.qid and not seen[st.qid] then seen[st.qid] = true; list[#list + 1] = st.qid end
+            end
+        end
+        self.routeQuests = list
+    end
+    return self.routeQuests
+end
+
+local function countRemoved()
+    local n = 0
+    for _, q in ipairs(SA:RouteQuests()) do
+        if SA:QuestRemoved(q) then n = n + 1 end
+    end
+    return n
+end
+
+-- Skip a quest: its remaining steps, and those of its follow-ups, drop out of the list.
 function SA:SkipQuest(qid, title)
     if not qid then return end
+    self.removedCache = nil
+    local before = countRemoved()
     self.char.skipped[qid] = true
-    msg("Skipping |cffffffff" .. tostring(title or ("quest " .. qid)) .. "|r. /sa unskip brings skipped quests back.")
+    self.removedCache = nil
+    local extra = countRemoved() - before - 1
+    msg("Skipping |cffffffff" .. tostring(title or ("quest " .. qid)) .. "|r"
+        .. (extra > 0 and (" and " .. extra .. " follow-up quest(s)") or "")
+        .. ". /sa unskip brings skipped quests back.")
     self:Changed()
+end
+
+---------------------------------------------------------------------------
+-- Dungeons
+---------------------------------------------------------------------------
+
+-- Dungeons that have steps in this route, in route order.
+function SA:RouteDungeons()
+    local seen, list = {}, {}
+    for _, guide in ipairs(self.chain) do
+        for _, st in ipairs(guide.steps) do
+            local d = st.dungeon or st.alt
+            if d and not seen[d] then seen[d] = true; list[#list + 1] = d end
+        end
+    end
+    return list
+end
+
+function SA:SetDungeon(name, on)
+    self.char.dungeonsOff[name] = (not on) or nil
+    msg(name .. (on and " is on: its steps are back in the route."
+        or " is off: its steps are hidden (and alternatives shown, where the route has them)."))
+    self:Refilter()
 end
 
 function SA:UnskipAll()
@@ -186,6 +298,7 @@ end
 
 -- Called after any progress change. Moves to the next guide once this one is finished.
 function SA:Changed(guideSwitched)
+    self.removedCache = nil -- skips, dungeon switches and turn-ins all change what's removed
     if not guideSwitched and not self:CurrentIndex() then
         local nextGuide = self.chain[self:GuideIndex() + 1]
         if nextGuide then
@@ -213,6 +326,7 @@ function SA:Init()
     self.db, self.char = ScriptedAdventureDB, ScriptedAdventureCharDB
     self.char.done = self.char.done or {}
     self.char.skipped = self.char.skipped or {}
+    self.char.dungeonsOff = self.char.dungeonsOff or {}
 
     self:LoadPlayer()
     self.routeName = self.faction -- routes are per faction; starting-zone guides pick the race
@@ -261,6 +375,7 @@ local HELP = {
     "/sa nav on | off - map pin / waypoint (and TomTom) on the current step",
     "/sa map - show the current step on the world map",
     "/sa unskip - bring back quests you skipped",
+    "/sa dungeons - list the route's dungeons; /sa dungeon <name> | all on | off",
     "Right-click a step for more (skip quest, show on map, waypoint).",
     "/sa errors - list guide file errors",
     "/sa debug - show what auto-tick sees (quest log, current step)",
@@ -314,6 +429,27 @@ SlashCmdList.SCRIPTEDADVENTURE = function(input)
         if SA.Nav and step then SA.Nav:ShowOnMap(step) end
     elseif cmd == "unskip" then
         SA:UnskipAll()
+    elseif cmd == "dungeons" then
+        local list = SA:RouteDungeons()
+        if #list == 0 then return msg("This route has no dungeon steps.") end
+        for _, d in ipairs(list) do
+            msg(d .. ": " .. (SA.char.dungeonsOff[d] and "|cffff6060off|r" or "|cff40ff40on|r"))
+        end
+    elseif cmd == "dungeon" then
+        local which, state = arg:match("^(.-)%s+(%a+)$")
+        if not (which and (state == "on" or state == "off")) then
+            return msg("Usage: /sa dungeon <name> | all on | off  (see /sa dungeons)")
+        end
+        local hits = {}
+        for _, d in ipairs(SA:RouteDungeons()) do
+            if which == "all" or d:lower():find(which, 1, true) then hits[#hits + 1] = d end
+        end
+        if #hits == 0 then return msg("No dungeon matching '" .. which .. "' in this route (see /sa dungeons).") end
+        for _, d in ipairs(hits) do SA.char.dungeonsOff[d] = (state == "off") or nil end
+        if #hits == 1 then SA:SetDungeon(hits[1], state == "on") else
+            msg(#hits .. " dungeons turned " .. state .. ".")
+            SA:Refilter()
+        end
     elseif cmd == "shown" and tonumber(arg) then
         SA.db.shown = math.max(1, math.min(8, math.floor(tonumber(arg))))
         if SA.UI then SA.UI:Update() end

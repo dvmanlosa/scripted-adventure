@@ -270,10 +270,10 @@ turnin     Detonation at a Distance (Part 2)         #92751  @61.9,30.6  forever
            Back to Sprite Jumpsprocket
 accept     Explosive Consultation (Part 2)           #92752  forever
            Turns in to Alba in Westfall later
-accept     Collecting Memories                       #168  @70.3,40.8
+accept     Collecting Memories                       #168  @70.3,40.8  dungeon:The_Deadmines
            Wilder Thistlenettle, Dwarven District
-accept     Oh Brother. . .                           #167
-accept     Underground Assault                       #2040  @62.6,34.1
+accept     Oh Brother. . .                           #167  dungeon:The_Deadmines
+accept     Underground Assault                       #2040  @62.6,34.1  dungeon:The_Deadmines
            Shoni the Shilent
 accept     Philmor's Favor                           #97220  @43.2,46.9  forever
            Manifest Clerk Philmor
@@ -284,7 +284,7 @@ complete   Gatehouse Goods                           #97222  forever  unverified
            Follow the quest text; Wowhead has no objective data yet
 turnin     Gatehouse Goods                           #97222  @66.4,73.5  forever
            Elaine Trias
-note       Deadmines prep                            forever
+note       Deadmines prep                            dungeon:The_Deadmines  forever
            Defias Brotherhood, Collecting Memories, Oh Brother and Underground Assault are for
            the Deadmines run after Redridge
 boat       Auberdine                                 forever

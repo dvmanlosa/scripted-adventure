@@ -36,10 +36,28 @@ def apply_fixes(route, data):
 EDITS = ROOT / "tools" / "route_edits.json"     # hand reordering / notes on top of the JSON
 
 
+META = ROOT / "tools" / "quest_meta.json"       # from tools/quest_meta.py: prerequisites, dungeon quests
+
+
+def load_meta():
+    return json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
+
+
 def apply_edits(route, data):
-    """Apply tools/route_edits.json (see its _about) to the route's guides, in file order."""
+    """Apply tools/route_edits.json (see its _about) to the route's guides, in file order,
+    then tag dungeon quests (tools/quest_meta.json plus the route's _dungeon_quests list)."""
     edits = json.loads(EDITS.read_text(encoding="utf-8")).get(route, {}) if EDITS.exists() else {}
     for g in data["guides"]:
+        def find(ref):
+            hits = [s for s in g["steps"] if s["action"] == ref["action"]
+                    and (s.get("qid") == ref["qid"] if "qid" in ref else s["title"] == ref["title"])]
+            nth = ref.get("nth")
+            if nth:
+                assert len(hits) >= nth, f"route_edits: {g['name']}: {ref} has only {len(hits)} matches"
+                return hits[nth - 1]
+            assert len(hits) == 1, f"route_edits: {g['name']}: {ref} matches {len(hits)} steps"
+            return hits[0]
+
         for e in edits.get(g["name"], []):
             if "replace_qid" in e:              # wrong quest ID on every step of a quest in this guide
                 old, new = e["replace_qid"]["from"], e["replace_qid"]["to"]
@@ -48,21 +66,39 @@ def apply_edits(route, data):
                 for s in hits:
                     s["qid"] = new
                 continue
-
-            def find(ref):
-                hits = [s for s in g["steps"] if s["action"] == ref["action"] and s.get("qid") == ref["qid"]]
-                assert len(hits) == 1, f"route_edits: {g['name']}: {ref} matches {len(hits)} steps"
-                return hits[0]
+            if "set_zone" in e:                 # coordinates labelled with the wrong zone
+                old, new = e["set_zone"]["from"], e["set_zone"]["to"]
+                if g["zone"] == old:
+                    g["zone"] = new
+                for s in g["steps"]:
+                    if s.get("coord", {}).get("zone") == old:
+                        s["coord"]["zone"] = new
+                continue
+            if "insert" in e:                   # a new step (e.g. an alternative for a dungeon)
+                anchor = find(e["after"])
+                new = dict(e["insert"], origin=e["insert"].get("origin", "authored"), _gap=False)
+                g["steps"].insert(g["steps"].index(anchor) + 1, new)
+                continue
             step = find(e["step"])
             if e.get("optional"):
                 step["optional"] = True
-            if "note" in e:
-                step["note"] = e["note"]
+            for key in ("note", "xp", "dungeon"):
+                if key in e:
+                    step[key] = e[key]
             if "after" in e:
                 anchor = find(e["after"])
                 g["steps"].remove(step)
                 g["steps"].insert(g["steps"].index(anchor) + 1, step)
                 step["_gap"] = False                 # a moved step joins its new group
+
+    dungeon_of = dict(load_meta().get(route, {}).get("dungeon", {}))
+    for name, qids in edits.get("_dungeon_quests", {}).items():
+        for q in qids:
+            dungeon_of[str(q)] = name
+    for g in data["guides"]:
+        for s in g["steps"]:
+            if str(s.get("qid")) in dungeon_of and not s.get("alt"):
+                s["dungeon"] = dungeon_of[str(s["qid"])]
     return data
 
 
@@ -144,6 +180,12 @@ def tags_for(step, faction):
         t.append(f"loot:{item}x{count}" if count else f"loot:{item}")
     if "level" in step:
         t.append(f"level:{step['level']}")
+    if "xp" in step:
+        t.append(f"xp:{step['xp']}")
+    if step.get("dungeon"):
+        t.append("dungeon:" + step["dungeon"].replace(" ", "_"))
+    if step.get("alt"):
+        t.append("alt:" + step["alt"].replace(" ", "_"))
     if step.get("optional") or step.get("advisory"):
         t.append("optional")
     if step.get("origin") == "forever":
@@ -233,7 +275,7 @@ def convert(route, starters, json_name, tgv_dir):
         out += ["]==]", ""]
         text = "\n".join(out)
         assert "]==]" not in text[text.index("[==[") + 4:text.rindex("]==]")], "note contains ]==]"
-        fname = f"{gi:02d}_{slug(g['zone'])}_{levels.replace('-', '_')}.lua"
+        fname = f"{gi:02d}_{slug(m.group(1) if m else g['name'])}_{levels.replace('-', '_')}.lua"
         (dest / fname).write_text(text, encoding="utf-8", newline="\n")
         files.append(fname)
 
@@ -247,7 +289,26 @@ def convert(route, starters, json_name, tgv_dir):
         f"start:    {start}",
         "]==]", "",
     ]), encoding="utf-8", newline="\n")
-    xml = ['<Ui xmlns="http://www.blizzard.com/wow/ui/">', '\t<Script file="Route.lua"/>']
+    # quest prerequisites, so skipping a quest in game also drops its follow-ups
+    requires = load_meta().get(route, {}).get("requires", {})
+    lines = []
+    for q in sorted(requires, key=int):
+        r = requires[q]
+        if r.get("all"):
+            lines.append(f"{q} needs {' and '.join(map(str, r['all']))}")
+        if r.get("any"):
+            lines.append(f"{q} needs {' or '.join(map(str, r['any']))}")
+    (dest / "QuestInfo.lua").write_text("\n".join([
+        f"-- Quest prerequisites for the {route} route, from QuestieDB (tools/quest_meta.py).",
+        "-- '<quest> needs A and B' = both first; '<quest> needs A or B' = either first.",
+        "-- Used to drop a skipped quest's follow-ups.",
+        "local _, SA = ...",
+        f'SA:RegisterQuestInfo("{route}", [==[',
+        *lines,
+        "]==])", "",
+    ]), encoding="utf-8", newline="\n")
+    xml = ['<Ui xmlns="http://www.blizzard.com/wow/ui/">', '\t<Script file="Route.lua"/>',
+           '\t<Script file="QuestInfo.lua"/>']
     xml += [f'\t<Script file="{f}"/>' for f in files] + ["</Ui>", ""]
     (dest / f"{route}.xml").write_text("\n".join(xml), encoding="utf-8", newline="\n")
     steps = sum(len(g["steps"]) for g in data["guides"])

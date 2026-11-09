@@ -71,9 +71,16 @@ Separate the title from its tags with **two or more spaces**. (If you use one sp
 | `use:16114` | Item to use for this step |
 | `loot:3357x8` | Item to collect, and how many (`loot:3357` without a count) |
 | `level:8` | Level this step is about (grind targets) |
+| `xp:70` | With `level:8` on a grind step: done at 70% of the way through level 8 |
+| `dungeon:The_Deadmines` | Part of a dungeon (underscores stand for spaces). Hidden while that dungeon is turned off |
+| `alt:The_Deadmines` | Alternative step, shown only while that dungeon is turned off |
 | `optional` | Can be skipped |
 | `forever` | Content added by WoW Forever (not in vanilla) |
 | `unverified` | Forever quest whose location or objective isn't confirmed yet |
+
+## Dungeons
+
+Players turn a dungeon off by right-clicking one of its steps, or with `/sa dungeon deadmines off` (`/sa dungeons` lists them). Its `dungeon:` steps disappear, quests that need a dungeon quest go with them, and `alt:` steps for it appear: for example a grind step that makes up the missed levels. Only the dungeon parts of a chapter are tagged, so its solo quests stay.
 
 ## Routes
 
@@ -90,6 +97,8 @@ start:    The Barrens (12-15)
 A character starts at the starting-zone guide whose `races:` include their race, and that guide's `next:` leads into the shared chain. Races with no starting-zone guide yet start at `start:`. To add a starting zone (say Mulgore), write a guide with `races: Tauren` and `next: The Barrens (12-15)`, and add it to `<Route>.xml`.
 
 `Guides/<Route>/<Route>.xml` lists the files in load order.
+
+`Guides/<Route>/QuestInfo.lua` lists quest prerequisites, one per line: `804 needs 790` (790 first), `X needs A and B` (both), `X needs A or B` (either). When a player skips a quest, every quest that can no longer be taken because of it is skipped too. Generated from QuestieDB by `tools/quest_meta.py`.
 
 ## Regenerating and checking
 

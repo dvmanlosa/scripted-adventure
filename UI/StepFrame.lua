@@ -45,7 +45,9 @@ local function stepTitle(step)
     local style = VERB_STYLE[step.verb] or VERB_STYLE.note
     local text = step.title
     if style[1] then text = "|cff" .. style[2] .. style[1] .. "|r " .. text end
+    if step.xp then text = text .. ", " .. step.xp .. "% in" end
     if step.optional then text = text .. " |cff888888(optional)|r" end
+    if step.dungeon then text = text .. " |cff9999ff(" .. step.dungeon .. ")|r" end
     return text
 end
 
@@ -68,6 +70,12 @@ local function stepDetail(step, guide)
     if step.lootItem then
         parts[#parts + 1] = "|cffffffffCollect:|r " .. itemName(step.lootItem)
             .. (step.lootCount and (" x" .. step.lootCount) or "")
+    end
+    if step.action == "G" and step.level and UnitLevel then
+        local lvl = UnitLevel("player") or 0
+        local cur, max = UnitXP and UnitXP("player"), UnitXPMax and UnitXPMax("player")
+        local pct = (type(cur) == "number" and type(max) == "number" and max > 0) and math.floor(cur / max * 100) or nil
+        parts[#parts + 1] = "|cff8899aa(you: level " .. lvl .. (pct and (", " .. pct .. "%") or "") .. ")|r"
     end
     if step.x then
         local where = fmt(step.x) .. ", " .. fmt(step.y)
@@ -300,6 +308,11 @@ function UI:MenuItems(step)
     end
     if step.qid then
         add("Skip this quest", function() SA:SkipQuest(step.qid, step.title) end)
+    end
+    if step.dungeon then
+        add("Turn off " .. step.dungeon, function() SA:SetDungeon(step.dungeon, false) end)
+    elseif step.alt then
+        add("Turn " .. step.alt .. " back on", function() SA:SetDungeon(step.alt, true) end)
     end
     if step.x and SA.Nav then
         add("Show on map", function() SA.Nav:ShowOnMap(step) end)

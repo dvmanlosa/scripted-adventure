@@ -86,6 +86,7 @@ for route, starters, json_name, _ in ROUTES:
                 "forever": True if j.get("origin") == "forever" else None,
                 "optional": True if (j.get("optional") or j.get("advisory")) else None,
                 "unverified": True if j.get("unverified") else None,
+                "xp": j.get("xp"), "dungeon": j.get("dungeon"), "alt": j.get("alt"),
             }
             for k, v in exp.items():
                 if s[k] != v:

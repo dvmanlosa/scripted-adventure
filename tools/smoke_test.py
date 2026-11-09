@@ -44,6 +44,9 @@ function UnitRace() return PLAYER.race, PLAYER.race end
 function UnitClass() return PLAYER.class, PLAYER.class end
 function UnitFactionGroup() return PLAYER.faction end
 function UnitLevel() return PLAYER.level end
+XP, XPMAX = 0, 100
+function UnitXP() return XP end
+function UnitXPMax() return XPMAX end
 function GetItemInfo(id) if id == 16114 then return "Foreman's Blackjack" end end
 function GetItemIcon() return 134400 end
 -- quest log, completed quests, location, bags
@@ -438,6 +441,79 @@ check(not any(SA.IsDone(SA, x) for x in sarkoth), "/sa unskip brings them back")
 row1._scripts.OnClick(row1, "RightButton")
 next(b for b in menu.buttons.values() if b.label == "Mark done")._scripts.OnClick()
 check(SA.CurrentStep(SA)[0].title != "Cutting Teeth" or SA.CurrentStep(SA)[0].action != "C", "'Mark done' ticks the step")
+
+print("Skipping a quest drops its follow-ups")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
+G = lua.globals()
+steps_of = lambda q: [x for x in SA.guide.visible.values() if x.qid == q]
+n = len(chat(g))
+SA.SkipQuest(SA, 790, "Sarkoth")
+check(all(SA.IsDone(SA, x) for x in steps_of(790) + steps_of(804)),
+      "skipping Sarkoth (Part 1) also drops Sarkoth (Part 2), which needs it")
+check(any("1 follow-up" in m for m in chat(g)[n:]), "the chat line says how many follow-ups went with it")
+check(not any(SA.IsDone(SA, x) for x in steps_of(788)), "unrelated quests stay")
+g.SlashCmdList.SCRIPTEDADVENTURE("unskip")
+check(not any(SA.IsDone(SA, x) for x in steps_of(804)), "/sa unskip brings the follow-up back too")
+SA.RegisterQuestInfo(SA, "Horde", "9001 needs 790 or 788\n")
+SA.SkipQuest(SA, 790, "Sarkoth")
+check(SA.QuestRemoved(SA, 9001) is False, "'needs A or B': still available while one option is left")
+SA.SkipQuest(SA, 788, "Cutting Teeth")
+check(SA.QuestRemoved(SA, 9001) is True, "'needs A or B': removed once both are skipped")
+g.SlashCmdList.SCRIPTEDADVENTURE("unskip")
+G.COMPLETED[790] = True
+SA.SkipQuest(SA, 790, "Sarkoth")
+check(not any(SA.IsDone(SA, x) for x in steps_of(804) if SA.DoneSet(SA, SA.guide)[x.key] is None),
+      "a skipped quest you turned in anyway doesn't drop its follow-ups")
+g.SlashCmdList.SCRIPTEDADVENTURE("unskip")
+
+print("XP-percent grind steps")
+grind = next(x for x in SA.guide.visible.values() if x.action == "G" and x.level == 8)
+grind.xp = 70
+st = make_current("Durotar (1-12)", "G")
+G.PLAYER.level, G.XP = 8, 50
+g.FIRE("PLAYER_XP_UPDATE")
+row1 = SA.UI.rows[1]
+check(SA.DoneSet(SA, SA.guide)[st.key] is None and "70% in" in row1.text._text and "level 8, 50%" in row1.detail._text,
+      "grind to level 8 +70% shows your progress and waits at 50%")
+G.XP = 75
+g.FIRE("PLAYER_XP_UPDATE")
+check(SA.DoneSet(SA, SA.guide)[st.key] is True, "ticks at 75% of level 8")
+G.PLAYER.level, G.XP = 1, 0
+
+print("Dungeons on/off with alternatives")
+lua, g, SA = login("Human", "WARRIOR", "Alliance", 20)
+G = lua.globals()
+n = len(chat(g))
+g.SlashCmdList.SCRIPTEDADVENTURE("dungeons")
+check(any("The Deadmines" in m and "on" in m for m in chat(g)[n:]), "/sa dungeons lists The Deadmines (on)")
+SA.SetGuide(SA, "The Deadmines (20-22)")
+titles = lambda: [x.title for x in SA.guide.visible.values()]
+check("Run the Deadmines" in titles() and "Level 20" not in titles(), "dungeon on: the run shows, the alternative doesn't")
+dm_row = None
+for x in SA.guide.visible.values():
+    if x.title == "Run the Deadmines":
+        dm = x
+labels = [it.label for it in SA.UI.MenuItems(SA.UI, dm).values()]
+check("Turn off The Deadmines" in labels, "a dungeon step's menu offers to turn the dungeon off")
+g.SlashCmdList.SCRIPTEDADVENTURE("dungeon deadmines off")
+t = titles()
+check("Run the Deadmines" not in t and "Level 20" in t and "Underground Assault" not in t,
+      "dungeon off: run and dungeon quests hidden, the alternative appears")
+check("The Defias Brotherhood (Part 6)" in t and "Explosive Consultation (Part 2)" in t,
+      "the chapter's solo quests stay")
+alt = next(x for x in SA.guide.visible.values() if x.title == "Level 20")
+labels = [it.label for it in SA.UI.MenuItems(SA.UI, alt).values()]
+check("Turn The Deadmines back on" in labels, "the alternative's menu offers to turn it back on")
+SA.SetGuide(SA, "Westfall (11-17)")
+check("Underground Assault" not in [x.title for x in SA.guide.visible.values()],
+      "earlier guides drop the dungeon quest accepts too")
+g.SlashCmdList.SCRIPTEDADVENTURE("dungeon all on")
+check("Underground Assault" in [x.title for x in SA.guide.visible.values()], "/sa dungeon all on brings them back")
+saved = g.ScriptedAdventureCharDB
+g.SlashCmdList.SCRIPTEDADVENTURE("dungeon deadmines off")
+lua2, g2, SA2 = login("Human", "WARRIOR", "Alliance", 20, g.ScriptedAdventureCharDB)
+SA2.SetGuide(SA2, "The Deadmines (20-22)")
+check("Level 20" in [x.title for x in SA2.guide.visible.values()], "the dungeon switch is saved per character")
 
 print("Commands")
 for c in ["", "", "guides", "guide next", "guide prev", "guide 3", "shown 2", "reset", "errors", "help", "nonsense"]:

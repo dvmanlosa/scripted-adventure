@@ -25,7 +25,8 @@ local RACE_TOKENS = {
     skyborne = "Skyborne", -- WoW Forever race, playable on both factions
 }
 local FLAGS = { optional = true, forever = true, unverified = true }
-local NUM_TAGS = { use = "useItem", loot = "lootItem", level = "level" }
+local NUM_TAGS = { use = "useItem", loot = "lootItem", level = "level", xp = "xp" }
+local NAME_TAGS = { dungeon = "dungeon", alt = "alt" } -- dungeon:The_Deadmines (underscores = spaces)
 local GUIDE_HEADERS = { guide = true, route = true, faction = true, levels = true, zone = true, next = true, races = true }
 
 local function trim(s) return (s:gsub("^%s+", ""):gsub("%s+$", "")) end
@@ -70,6 +71,7 @@ local function parseTags(step, tags, err)
             local x, y = tok:match("^@(%d+%.?%d*),(%d+%.?%d*)$")
             local key, val = tok:match("^(%a+):(%d+)$")
             local lootId, lootCount = tok:match("^loot:(%d+)x(%d+)$")
+            local nameKey, name = tok:match("^(%a+):(%S+)$")
             if lootId then
                 step.lootItem, step.lootCount = tonumber(lootId), tonumber(lootCount)
             elseif qid then
@@ -78,6 +80,8 @@ local function parseTags(step, tags, err)
                 step.x, step.y = tonumber(x), tonumber(y)
             elseif key and NUM_TAGS[key] then
                 step[NUM_TAGS[key]] = tonumber(val)
+            elseif nameKey and NAME_TAGS[nameKey] then
+                step[NAME_TAGS[nameKey]] = (name:gsub("_", " "))
             elseif FLAGS[tok] then
                 step[tok] = true
             else
@@ -188,6 +192,35 @@ function SA:RegisterGuide(text)
     end
     byName[guide.name] = guide
     return guide
+end
+
+-- Quest prerequisites for a route (Guides/<Route>/QuestInfo.lua):
+--   "804 needs 790"               804 needs 790 first
+--   "6383 needs 235 or 742 or 6382"   any one of them
+--   "X needs A and B"             both
+-- Stored as SA.requires[route][qid] = { {all = {...}} / {any = {...}}, ... } (every group must hold).
+SA.requires = SA.requires or {}
+function SA:RegisterQuestInfo(routeName, text)
+    local byQuest = SA.requires[routeName] or {}
+    SA.requires[routeName] = byQuest
+    local errs, lineNo = {}, 0
+    for line in (text .. "\n"):gmatch("([^\n]*)\n") do
+        lineNo = lineNo + 1
+        if not (line:match("^%s*$") or line:match("^%s*%-%-")) then
+            local q, rest = line:match("^%s*(%d+)%s+needs%s+(.-)%s*$")
+            if not q then
+                fail(errs, "QuestInfo " .. routeName, lineNo, "expected '<quest> needs <quest> ...'", line)
+            else
+                local kind = rest:find("%sor%s") and "any" or "all"
+                local group = { kind = kind }
+                for id in rest:gmatch("%d+") do group[#group + 1] = tonumber(id) end
+                local list = byQuest[tonumber(q)] or {}
+                list[#list + 1] = group
+                byQuest[tonumber(q)] = list
+            end
+        end
+    end
+    collect(errs)
 end
 
 function SA:RegisterRoute(text)

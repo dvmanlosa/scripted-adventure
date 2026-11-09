@@ -1,5 +1,5 @@
 {
- "_about": "Hand changes applied on top of out/*.json by tools/convert_routes.py, per guide, in order. 'replace_qid' {from, to} fixes a wrong quest ID on every step of that quest in the guide. Other entries find one step by 'step' {action, qid}: 'after' {action, qid} moves it right after that step, 'note' replaces its note, 'optional': true marks it skippable. 'why' is for people reading this file.",
+ "_about": "Hand changes applied on top of out/*.json by tools/convert_routes.py, per guide, in order. 'replace_qid' {from, to} fixes a wrong quest ID on every step of that quest in the guide. 'set_zone' {from, to} relabels the guide's coordinates. 'insert' {step fields} adds a step right after 'after'. Other entries find one step by 'step' {action, qid} or {action, title, nth}: 'after' moves it right after that step; 'note', 'xp' (percent into the step's level:N) and 'dungeon' set those fields; 'optional': true marks it skippable. Per route, '_dungeon_quests' {dungeon: [quest IDs]} tags every step of those quests. 'alt': <dungeon> on a step shows it only while that dungeon is turned off. 'why' is for people reading this file.",
  "Horde": {
   "Durotar (1-12)": [
    {"step": {"action": "A", "qid": 97279}, "after": {"action": "T", "qid": 4641},
@@ -17,12 +17,28 @@
   ]
  },
  "Alliance": {
+  "_dungeon_quests": {
+   "The Deadmines": [166, 167, 168, 214, 2040, 92819]
+  },
+  "The Deadmines (20-22)": [
+   {"set_zone": {"from": "The Deadmines", "to": "Westfall"},
+    "why": "this chapter's coordinates are Sentinel Hill / Moonbrook, i.e. Westfall"},
+   {"step": {"action": "N", "title": "Group chapter"},
+    "note": "The Defias Brotherhood chain ends in the Deadmines. No group? Right-click a Deadmines step and turn the dungeon off (or /sa dungeon deadmines off): the solo parts of this chapter stay"},
+   {"step": {"action": "N", "title": "Run the Deadmines"}, "dungeon": "The Deadmines"},
+   {"step": {"action": "F", "title": "Sentinel Hill", "nth": 3}, "dungeon": "The Deadmines",
+    "why": "the flight back after the run"},
+   {"insert": {"action": "G", "title": "Level 20", "level": "20", "alt": "The Deadmines",
+               "note": "Deadmines is off: if you're under level 20, finish Westfall and Redridge quests or grind Defias around Moonbrook, then sail to Darkshore"},
+    "after": {"action": "T", "qid": 92752}}
+  ],
   "Elwynn Forest (1-12)": [
    {"replace_qid": {"from": 1717, "to": 1685},
     "why": "#1717 is the level 20 Gakin's Summons; the level 10 one from Remen Marcot is #1685"}
   ],
   "Westfall (11-17)": [
    {"replace_qid": {"from": 1717, "to": 1685}, "why": "same quest as the Elwynn accept"},
+   {"step": {"action": "N", "title": "Deadmines prep"}, "dungeon": "The Deadmines"},
    {"replace_qid": {"from": 1795, "to": 1689},
     "why": "Voidwalker Binding (Bloodstone Choker, Gakin, level 10) is #1689; #1795 is the level 30 Felhunter one"}
   ],

@@ -11,6 +11,6 @@
     "GetZoneText", "GetSubZoneText", "GetMinimapZoneText", "GetBindLocation", "UnitOnTaxi",
     "ERR_NEWTAXIPATH", "GetBuildInfo", "issecretvalue",
     "WorldMapFrame", "ShowUIPanel", "UISpecialFrames", "UiMapPoint", "C_SuperTrack", "TomTom",
-    "GetQuestLogIndexByID", "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard"
+    "GetQuestLogIndexByID", "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard", "UnitXP", "UnitXPMax"
   ]
 }

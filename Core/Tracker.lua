@@ -197,7 +197,13 @@ function T:AnyStepDone(step)
         if a == "A" then return entry ~= nil end
         return entry ~= nil and entry.complete
     end
-    if a == "G" and step.level then return (UnitLevel("player") or 0) >= step.level end
+    if a == "G" and step.level then
+        -- level:N alone = reach level N; with xp:P = P% of the way through level N
+        local lvl = UnitLevel("player") or 0
+        if lvl ~= step.level or not step.xp then return lvl >= step.level end
+        local cur, max = UnitXP and UnitXP("player"), UnitXPMax and UnitXPMax("player")
+        return num(cur) and num(max) and max > 0 and cur / max * 100 >= step.xp or false
+    end
     if step.lootItem and GetItemCount then
         return GetItemCount(step.lootItem) >= (step.lootCount or 1)
     end
@@ -228,6 +234,7 @@ end
 function T:Evaluate(event)
     if not SA.guide or not SA.db or SA.db.auto == false then return end
     self:LoadCompleted()
+    SA.removedCache = nil -- a turn-in can bring back follow-ups of quests you did after all
     self:ScanLog()
     local set, changed = SA:DoneSet(SA.guide), false
     for _, step in ipairs(SA.guide.visible) do
@@ -284,7 +291,7 @@ local EVENTS = {
     "PLAYER_LEVEL_UP", "BAG_UPDATE_DELAYED", "ZONE_CHANGED", "ZONE_CHANGED_INDOORS",
     "ZONE_CHANGED_NEW_AREA", "PLAYER_ENTERING_WORLD", "TAXIMAP_OPENED", "UI_INFO_MESSAGE",
     "CHAT_MSG_SYSTEM", "UNIT_SPELLCAST_SUCCEEDED", "PLAYER_CONTROL_GAINED", "PLAYER_DEAD",
-    "HEARTHSTONE_BOUND",
+    "HEARTHSTONE_BOUND", "PLAYER_XP_UPDATE",
 }
 -- An event this client doesn't know would raise an error and stop this file loading, so
 -- register each one safely and remember which failed (shown by /sa debug).
