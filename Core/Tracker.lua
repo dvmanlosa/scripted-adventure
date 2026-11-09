@@ -39,6 +39,7 @@ end
 ---------------------------------------------------------------------------
 
 T.turnedIn = {} -- quest IDs turned in this session (the completed flag can lag the event)
+T.removed = {}   -- quest IDs that left the log since the last evaluation (turned in or abandoned)
 
 -- One quest log line -> title, isHeader, isComplete, questID. Supports the classic
 -- GetQuestLogTitle API and the newer C_QuestLog.GetInfo API, whichever this client has.
@@ -237,6 +238,20 @@ function T:Evaluate(event)
     SA.removedCache = nil -- a turn-in can bring back follow-ups of quests you did after all
     self:ScanLog()
     local set, changed = SA:DoneSet(SA.guide), false
+    -- abandoned (left the log without being turned in): untick its accept/complete steps so the
+    -- guide sends you back for it; nil (not false) so taking it again ticks them again
+    for qid in pairs(self.removed) do
+        self.removed[qid] = nil
+        if not self:QuestDone(qid) and not self.byId[qid] then
+            for _, step in ipairs(SA.guide.visible) do
+                if step.qid == qid and (step.action == "A" or step.action == "C") and set[step.key] == true then
+                    set[step.key] = nil
+                    SA:ForgetHistory(SA.guide.name, step.key)
+                    changed = true
+                end
+            end
+        end
+    end
     for _, step in ipairs(SA.guide.visible) do
         if set[step.key] == nil and self:AnyStepDone(step) then -- nil: not done, not unticked by hand
             set[step.key] = true
@@ -318,6 +333,10 @@ f:SetScript("OnEvent", function(_, event, ...)
         if T.wasOnTaxi then T.wasOnTaxi = false; T:Schedule("LANDED") end
     elseif event == "TAXIMAP_OPENED" or event == "PLAYER_DEAD" then
         T:Schedule(event)
+    elseif event == "QUEST_REMOVED" then
+        local qid = ...
+        if num(qid) then T.removed[qid] = true end
+        T:Schedule("UPDATE")
     elseif event == "UNIT_QUEST_LOG_CHANGED" then
         if ... == "player" then T:Schedule("UPDATE") end
     else

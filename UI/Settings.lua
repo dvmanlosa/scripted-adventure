@@ -39,6 +39,14 @@ local function BuildPage(parent)
     add(W.Check(parent, "Lock window position",
         function() return SA.db.locked end,
         function(v) SA.db.locked = v end, "Stops the window being dragged by accident."))
+    add(W.Check(parent, "Minimap button",
+        function() return SA.db.minimap ~= false end,
+        function(v) SA.db.minimap = v; if SA.Minimap then SA.Minimap:Refresh() end end,
+        "Left-click: guide. Shift-click: history. Right-click: settings. Drag to move it."))
+    add(W.Check(parent, "Item button for steps that use an item",
+        function() return SA.db.itemButton ~= false end,
+        function(v) SA.db.itemButton = v; if SA.ItemButton then SA.ItemButton:Update() end end,
+        "A button beside the guide that uses the step's item. Can be keybound under Key Bindings > Scripted Adventure."))
     add(W.Check(parent, "Animations",
         function() return SA.db.anim ~= false end,
         function(v) SA.db.anim = v end, "Ticked steps slide out, the rest glide up, and the next step pulses."))

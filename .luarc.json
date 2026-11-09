@@ -11,6 +11,12 @@
     "GetZoneText", "GetSubZoneText", "GetMinimapZoneText", "GetBindLocation", "UnitOnTaxi",
     "ERR_NEWTAXIPATH", "GetBuildInfo", "issecretvalue",
     "WorldMapFrame", "ShowUIPanel", "UISpecialFrames", "UiMapPoint", "C_SuperTrack", "TomTom",
-    "GetQuestLogIndexByID", "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard", "UnitXP", "UnitXPMax", "date", "time", "GetTime", "Settings", "InterfaceOptions_AddCategory"
+    "GetQuestLogIndexByID", "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard", "UnitXP", "UnitXPMax", "date", "time", "GetTime", "Settings", "InterfaceOptions_AddCategory",
+    "Minimap", "GetMinimapShape", "GetCursorPosition", "IsShiftKeyDown", "InCombatLockdown",
+    "C_Container", "GetItemCooldown", "ScriptedAdventure_OnCompartmentClick",
+    "ScriptedAdventure_OnCompartmentEnter", "ScriptedAdventure_OnCompartmentLeave",
+    "BINDING_HEADER_SCRIPTEDADVENTURE", "BINDING_NAME_SCRIPTEDADVENTURE_TICK",
+    "BINDING_NAME_SCRIPTEDADVENTURE_BACK", "BINDING_NAME_SCRIPTEDADVENTURE_TOGGLE",
+    "BINDING_NAME_SCRIPTEDADVENTURE_HISTORY"
   ]
 }

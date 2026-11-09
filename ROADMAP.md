@@ -7,8 +7,8 @@ A step-by-step leveling guide for WoW Forever: picks the route for your faction 
 | 1 | Readable guide format, converter from `out/` JSON, Lua parser, checker | Done |
 | 2 | Addon skeleton: `.toc`, faction routes with per-race starting zones, step window (current + next steps), manual tick/skip/back, saved progress per character, slash commands | Done, needs in-game test |
 | 3 | Auto-completion: quest accepted / objectives done / turned in, flight path, hearth, level, zone, item counts; already-done quests tick on login; modern quest API first, secret-value safe | Done, needs in-game test |
-| 4 | Navigation: game map pin + on-screen waypoint on the current step, TomTom if installed, "show on map"; live objective counts; right-click step menu; skip a whole quest | **Done, needs in-game test** |
-| 5 | Polish: settings page (gear button / game AddOns settings) with guide picker, dungeons, skipped quests; history panel (click an entry to go back to it); window lock and size; step animations (tick, removal, glide, pulse on the next step; can be turned off). Still to do: minimap button, compact view | **Mostly done, needs in-game test** |
+| 4 | Navigation: game map pin + on-screen waypoint on the current step, TomTom if installed, "show on map"; live objective counts; right-click step menu; skip a whole quest | Done, needs in-game test |
+| 5 | Polish: settings page (gear button / game AddOns settings) with guide picker, dungeons, skipped quests; history panel (click an entry to go back to it); window lock and size; step animations; minimap button + addon-list entry; item button for the step's item (secure, combat-safe); keybindings; step hover tooltip. Still to do: compact view | **Mostly done, needs in-game test** |
 | Content | Improve the shared 12-60 routes first; starting zones for other races later | Ongoing |
 
 ## Route data tools
@@ -30,12 +30,13 @@ A step-by-step leveling guide for WoW Forever: picks the route for your faction 
 
 ## Ideas
 
+- Compact view (current step only, smaller font).
 - Optional side chains switched like dungeons.
+- Fill in `xp:` gates on grind steps; review the grey-quest audit.
 - Starting zones for Tauren, Undead, Dwarf/Gnome, Night Elf.
 - Not planned: auto accept/turn-in, Skyborne starting zone.
 
 ## Open items
 
-- Abandoning a quest doesn't untick its accept step yet.
 - Trolls use Durotar, but Troll-only class quests aren't in the data yet.
 - Grey-quest audit (13 Horde, 7 Alliance) lists low-XP breadcrumbs; review case by case.

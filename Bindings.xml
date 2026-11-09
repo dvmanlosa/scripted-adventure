@@ -1,0 +1,15 @@
+<Bindings>
+	<Binding name="SCRIPTEDADVENTURE_TICK" header="SCRIPTEDADVENTURE" category="ADDONS">
+		if ScriptedAdventure and ScriptedAdventure.guide then ScriptedAdventure:Skip() end
+	</Binding>
+	<Binding name="SCRIPTEDADVENTURE_BACK" category="ADDONS">
+		if ScriptedAdventure and ScriptedAdventure.guide then ScriptedAdventure:Back() end
+	</Binding>
+	<Binding name="SCRIPTEDADVENTURE_TOGGLE" category="ADDONS">
+		if ScriptedAdventure and ScriptedAdventure.UI then ScriptedAdventure.UI:Toggle() end
+	</Binding>
+	<Binding name="SCRIPTEDADVENTURE_HISTORY" category="ADDONS">
+		if ScriptedAdventure and ScriptedAdventure.History then ScriptedAdventure.History:Toggle() end
+	</Binding>
+	<Binding name="CLICK ScriptedAdventureItemButton:LeftButton" category="ADDONS"/>
+</Bindings>

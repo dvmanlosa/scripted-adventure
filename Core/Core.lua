@@ -4,7 +4,8 @@
 local ADDON, SA = ...
 ScriptedAdventure = SA -- global handle for macros and /dump
 
-local DEFAULTS = { shown = 4, point = nil, hidden = false, auto = true, nav = true, locked = false, scale = 1, anim = true } -- account-wide
+local DEFAULTS = { shown = 4, point = nil, hidden = false, auto = true, nav = true, locked = false, scale = 1, anim = true,
+                   minimap = true, minimapAngle = 210, itemButton = true } -- account-wide
 
 local function msg(text) DEFAULT_CHAT_FRAME:AddMessage("|cff33ccffScripted Adventure:|r " .. text) end
 SA.Print = msg
@@ -365,6 +366,7 @@ function SA:Changed(guideSwitched)
     if self.UI then self.UI:Update() end
     if self.Nav then self.Nav:Update() end
     if self.Settings then self.Settings:Refresh() end
+    if self.ItemButton then self.ItemButton:Update() end
 end
 
 ---------------------------------------------------------------------------
@@ -402,6 +404,8 @@ function SA:Init()
     end
     if self.UI then self.UI:Init() end
     if self.History then self.History:Update() end
+    if self.Minimap then self.Minimap:Refresh() end
+    if self.ItemButton then self.ItemButton:Update() end
 end
 
 local events = CreateFrame("Frame")
@@ -438,6 +442,14 @@ local HELP = {
     "/sa errors - list guide file errors",
     "/sa debug - show what auto-tick sees (quest log, current step)",
 }
+
+-- Key Bindings (Bindings.xml)
+BINDING_HEADER_SCRIPTEDADVENTURE = "Scripted Adventure"
+BINDING_NAME_SCRIPTEDADVENTURE_TICK = "Tick the current step"
+BINDING_NAME_SCRIPTEDADVENTURE_BACK = "Undo the last tick"
+BINDING_NAME_SCRIPTEDADVENTURE_TOGGLE = "Show / hide the guide"
+BINDING_NAME_SCRIPTEDADVENTURE_HISTORY = "History"
+_G["BINDING_NAME_CLICK ScriptedAdventureItemButton:LeftButton"] = "Use the step's item"
 
 SLASH_SCRIPTEDADVENTURE1, SLASH_SCRIPTEDADVENTURE2 = "/sa", "/scriptedadventure"
 SlashCmdList.SCRIPTEDADVENTURE = function(input)

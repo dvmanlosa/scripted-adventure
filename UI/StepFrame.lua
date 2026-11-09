@@ -131,7 +131,10 @@ function UI:Build()
     f:EnableMouse(true)
     f:RegisterForDrag("LeftButton")
     f:SetScript("OnDragStart", function(self) if not SA.db.locked then self:StartMoving() end end)
-    f:SetScript("OnDragStop", function(self) self:StopMovingOrSizing(); savePosition(self) end)
+    f:SetScript("OnDragStop", function(self)
+        self:StopMovingOrSizing(); savePosition(self)
+        if SA.ItemButton then SA.ItemButton:Update() end -- it sits beside the window
+    end)
     if f.SetBackdrop then
         f:SetBackdrop({
             bgFile = "Interface\\Buttons\\WHITE8X8", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -221,7 +224,12 @@ function UI:Acquire()
     row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
     row:RegisterForDrag("LeftButton")
     row:SetScript("OnDragStart", function() if not SA.db.locked then f:StartMoving() end end)
-    row:SetScript("OnDragStop", function() f:StopMovingOrSizing(); savePosition(f) end)
+    row:SetScript("OnDragStop", function()
+        f:StopMovingOrSizing(); savePosition(f)
+        if SA.ItemButton then SA.ItemButton:Update() end
+    end)
+    row:SetScript("OnEnter", function(self) UI:StepTooltip(self) end)
+    row:SetScript("OnLeave", function() GameTooltip:Hide() end)
     row:SetScript("OnClick", function(self, button)
         if not self.step or self.st.leaving then return end
         if button == "RightButton" then UI:OpenMenu(self) else SA:ToggleStep(self.step) end
@@ -474,6 +482,29 @@ function UI:Update()
     self.lastGuide = guide.name
 end
 
+-- Hover tooltip: everything about the step, and what the mouse buttons do.
+function UI:StepTooltip(row)
+    local step = row.step
+    if not step or row.st.leaving then return end
+    GameTooltip:SetOwner(row, "ANCHOR_LEFT")
+    GameTooltip:SetText(stepTitle(step), 1, 1, 1, 1, true)
+    if step.note then GameTooltip:AddLine(step.note, 0.85, 0.85, 0.85, true) end
+    local objs = step.qid and SA.Tracker and SA.Tracker:Objectives(step.qid)
+    for _, o in ipairs(objs or {}) do
+        GameTooltip:AddLine("- " .. o.text, o.done and 0.25 or 1, 1, o.done and 0.25 or 1)
+    end
+    if step.qid then GameTooltip:AddLine("Quest #" .. step.qid, 0.55, 0.6, 0.7) end
+    if step.x then
+        GameTooltip:AddLine(string.format("%s %s, %s", step.zone or "", fmt(step.x), fmt(step.y)), 0.55, 0.6, 0.7)
+    end
+    if step.useItem then GameTooltip:AddLine("Use: " .. itemName(step.useItem), 0.55, 0.6, 0.7) end
+    if step.forever then GameTooltip:AddLine("New in WoW Forever", 0.4, 0.8, 1) end
+    GameTooltip:AddLine(" ")
+    GameTooltip:AddLine("Left-click: tick / untick", 0.6, 0.6, 0.6)
+    GameTooltip:AddLine("Right-click: skip quest, map, waypoint" .. (step.dungeon and ", dungeon" or ""), 0.6, 0.6, 0.6)
+    GameTooltip:Show()
+end
+
 ---------------------------------------------------------------------------
 -- Right-click menu (a small frame of our own: no dependency on the client's menu API)
 ---------------------------------------------------------------------------
@@ -561,6 +592,7 @@ function UI:Toggle()
     if SA.db.hidden and self.menu then self.menu:Hide() end
     if SA.db.hidden and SA.History and SA.History.frame then SA.History.frame:Hide() end
     if SA.Settings then SA.Settings:Refresh() end
+    if SA.ItemButton then SA.ItemButton:Update() end
 end
 
 function UI:Init()

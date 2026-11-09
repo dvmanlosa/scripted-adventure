@@ -28,6 +28,8 @@ local function mock(kind)
     if k == "GetText" then return function(self) return self._text end end
     if k == "GetStringHeight" then return function(self) return 12 end end
     if k == "RegisterEvent" then return function(self, e) if UNKNOWN_EVENTS[e] then error("Attempt to register unknown event \"" .. e .. "\"") end end end
+    if k == "SetAttribute" then return function(self, n, v) rawset(self, "_attr_" .. n, v) end end
+    if k == "GetAttribute" then return function(self, n) return rawget(self, "_attr_" .. n) end end
     if k == "GetFrameLevel" then return function(self) return rawget(self, "_level") or 1 end end
     if k == "SetFrameLevel" then return function(self, v) self._level = v end end
     if k == "SetAlpha" then return function(self, v) self._alpha = v end end
@@ -39,6 +41,10 @@ local function mock(kind)
   end })
 end
 FRAMES, UNKNOWN_EVENTS = {}, {}
+IN_COMBAT, SHIFT = false, false
+function InCombatLockdown() return IN_COMBAT end
+function IsShiftKeyDown() return SHIFT end
+TIP = {}
 CLOCK = 1000
 time = function() return 1700000000 end
 date = function(fmt, t) return "12:34" end
@@ -50,6 +56,9 @@ Settings = {
 }
 function CreateFrame(kind, name) local f = mock(kind); FRAMES[#FRAMES + 1] = f; if name then _G[name] = f end; return f end
 UIParent, GameTooltip = mock("UIParent"), mock("GameTooltip")
+Minimap = mock("Minimap")
+GameTooltip.SetText = function(self, t) TIP[#TIP + 1] = t end
+GameTooltip.AddLine = function(self, t) TIP[#TIP + 1] = t end
 BackdropTemplateMixin = {}
 CHAT = {}
 DEFAULT_CHAT_FRAME = { AddMessage = function(_, m) CHAT[#CHAT + 1] = m end }
@@ -672,6 +681,87 @@ check(not any(r.st.leaving is not None for r in UI.live.keys()) and all(r.step.k
 G.ScriptedAdventureDB.anim = True
 SA.SetGuide(SA, "The Barrens (12-15)")
 check(not any(r.st.leaving is not None for r in UI.live.keys()), "switching guides redraws without animating")
+
+print("Minimap button and addon list")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
+G = lua.globals()
+mb = G.ScriptedAdventureMinimapButton
+check(mb is not None and mb._shown, "minimap button is created and shown")
+main = G.ScriptedAdventureFrame
+mb._scripts.OnClick(mb, "LeftButton")
+check(not main._shown, "left-click hides the guide ...")
+mb._scripts.OnClick(mb, "LeftButton")
+check(main._shown, "... and shows it again")
+G.SHIFT = True
+mb._scripts.OnClick(mb, "LeftButton")
+G.SHIFT = False
+check(G.ScriptedAdventureHistory._shown, "shift-click opens the history")
+mb._scripts.OnClick(mb, "RightButton")
+check(G.ScriptedAdventureSettings._shown, "right-click opens settings")
+lua.execute("TIP = {}")
+mb._scripts.OnEnter(mb)
+tip = [G.TIP[i] for i in range(1, len(G.TIP) + 1)]
+check(any("Durotar (1-12)" in t for t in tip) and any("Your Place In The World" in t for t in tip),
+      "its tooltip shows the guide, progress and current step")
+G.ScriptedAdventure_OnCompartmentClick("ScriptedAdventure", "LeftButton")
+check(not main._shown, "the addon-list (compartment) entry toggles the guide too")
+G.ScriptedAdventure_OnCompartmentClick("ScriptedAdventure", "LeftButton")
+mm = next(c for c in SA.Settings.page.controls.values() if c.label and c.label._text == "Minimap button")
+mm._checked = False
+mm._scripts.OnClick(mm)
+check(not mb._shown and G.ScriptedAdventureDB.minimap is False, "Settings > Minimap button off hides it")
+
+print("Item button")
+ib = G.ScriptedAdventureItemButton
+check(ib is not None and not ib._shown, "no item button while the step doesn't use an item")
+st = make_current("Durotar (1-12)", "C", "Lazy Peons")
+check(ib._shown and ib.GetAttribute(ib, "item") == "item:16114" and ib.GetAttribute(ib, "type") == "item",
+      "'Lazy Peons' shows a button that uses item 16114 (Foreman's Blackjack)")
+G.IN_COMBAT = True
+make_current("Durotar (1-12)", "C", "Sting of the Scorpid")
+check(ib._shown and ib.GetAttribute(ib, "item") == "item:16114", "in combat the button isn't touched (the game forbids it)")
+G.IN_COMBAT = False
+g.FIRE("PLAYER_REGEN_ENABLED")
+check(not ib._shown, "after combat it catches up (hidden: this step has no item)")
+make_current("Durotar (1-12)", "C", "Lazy Peons")
+g.SlashCmdList.SCRIPTEDADVENTURE("")
+check(not ib._shown, "hiding the guide hides the item button")
+g.SlashCmdList.SCRIPTEDADVENTURE("")
+
+print("Abandoned quests")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
+G = lua.globals()
+lua.execute("QUESTLOG = { {title=[[Cutting Teeth]], id=788, complete=false}, {title=[[Your Place In The World]], id=4641, complete=false} }")
+g.FIRE("QUEST_ACCEPTED", 1, 788)
+step = lambda t, a: next(x for x in SA.guide.visible.values() if x.title == t and x.action == a)
+state = lambda t, a: SA.DoneSet(SA, SA.guide)[step(t, a).key]
+check(state("Cutting Teeth", "A") is True, "accepting ticks the accept step")
+lua.execute("table.remove(QUESTLOG, 1)")
+g.FIRE("QUEST_REMOVED", 788)
+check(state("Cutting Teeth", "A") is None, "abandoning the quest unticks it, so the guide sends you back")
+check(not any(e.title == "Cutting Teeth" for e in G.ScriptedAdventureCharDB.history.values()), "and it leaves the history")
+lua.execute("QUESTLOG = { {title=[[Cutting Teeth]], id=788, complete=false} }")
+g.FIRE("QUEST_ACCEPTED", 1, 788)
+check(state("Cutting Teeth", "A") is True, "taking it again ticks it again")
+lua.execute("QUESTLOG = {}")
+g.FIRE("QUEST_TURNED_IN", 4641, 0, 0)
+g.FIRE("QUEST_REMOVED", 4641)
+check(state("Your Place In The World", "T") is True and state("Your Place In The World", "A") is True,
+      "a quest that left the log because it was turned in stays ticked")
+
+print("Step tooltip and keybindings")
+lua.execute("QUESTLOG = { {title=[[Cutting Teeth]], id=788, complete=false} }")
+make_current("Durotar (1-12)", "C", "Cutting Teeth")
+lua.execute("TIP = {}")
+r = SA.UI.rows[1]
+r._scripts.OnEnter(r)
+tip = [G.TIP[i] for i in range(1, len(G.TIP) + 1)]
+check(any("Quest #788" in t for t in tip) and any("Durotar 40.6, 62.6" in t for t in tip) and any("Left-click" in t for t in tip),
+      "hovering a step shows its quest ID, location and the click actions")
+import xml.etree.ElementTree as ET
+binds = ET.parse(ROOT / "Bindings.xml").getroot()
+names = [b.get("name") for b in binds]
+check(all(G["BINDING_NAME_" + n] for n in names), f"Bindings.xml is valid and every binding has a name ({len(names)})")
 
 print("Commands")
 for c in ["", "", "guides", "guide next", "guide prev", "guide 3", "shown 2", "reset", "errors", "help", "nonsense"]:

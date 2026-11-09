@@ -1,7 +1,11 @@
 ## Interface: 16001
 ## Title: Scripted Adventure
 ## Notes: Step-by-step leveling guide for WoW Forever. /sa
-## Version: 0.5.0
+## Version: 0.6.0
+## IconTexture: Interface\AddOns\ScriptedAdventure\Media\icon
+## AddonCompartmentFunc: ScriptedAdventure_OnCompartmentClick
+## AddonCompartmentFuncOnEnter: ScriptedAdventure_OnCompartmentEnter
+## AddonCompartmentFuncOnLeave: ScriptedAdventure_OnCompartmentLeave
 ## SavedVariables: ScriptedAdventureDB
 ## SavedVariablesPerCharacter: ScriptedAdventureCharDB
 
@@ -13,6 +17,8 @@ UI\Widgets.lua
 UI\StepFrame.lua
 UI\History.lua
 UI\Settings.lua
+UI\Minimap.lua
+UI\ItemButton.lua
 
 Guides\Horde\Horde.xml
 Guides\Alliance\Alliance.xml
