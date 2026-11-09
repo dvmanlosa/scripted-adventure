@@ -51,15 +51,21 @@ accept     Brother Carlin                #5210
 
 complete   Counting Out Time             #4973
            Find lunchboxes in the houses all around Andorhal.
-complete   Skeletal Fragments            #964
-           Kill undead all over Andorhal.
 
 turnin     Counting Out Time             #4973
 
 hearth     Light's Hope Chapel
 turnin     Zaeldarr the Outcast          #6021
 turnin     Brother Carlin                #5210
-
-turnin     Skeletal Fragments            #964
 turnin     All Along the Watchtowers     #5098
+accept     Scholomance                   #838
+           High Executor Derrington
+turnin     Scholomance                   #838
+           Apothecary Dithers, right next to him
+accept     Skeletal Fragments            #964  optional
+           Apothecary Dithers. Optional: the fragments come from skeletons back in the
+           Plaguelands
+complete   Skeletal Fragments            #964  optional
+           Kill undead all over Andorhal.
+turnin     Skeletal Fragments            #964  optional
 ]==]

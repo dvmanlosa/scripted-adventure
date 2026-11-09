@@ -18,16 +18,16 @@ complete   Sprinkle's Secret Ingredient  #2641  @41,60
 
 goto       Revantusk Village             @77,79
 accept     Snapjaws, Mon!                #7815
-accept     Gammerita, Mon!               #7816
 accept     Lard Lost His Lunch           #7840
 
 complete   Snapjaws, Mon!                #7815
-complete   Gammerita, Mon!               #7816
 complete   Whiskey Slim's Lost Grog      #580
 turnin     Cortello's Riddle (Part 3)    #626  @80,46
            At a little chest in the water
 complete   Lard Lost His Lunch           #7840  @84,42
 turnin     Snapjaws, Mon!                #7815
+accept     Gammerita, Mon!               #7816
+complete   Gammerita, Mon!               #7816
 turnin     Gammerita, Mon!               #7816
 turnin     Lard Lost His Lunch           #7840
 

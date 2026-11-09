@@ -26,7 +26,7 @@ local RACE_TOKENS = {
 }
 local FLAGS = { optional = true, forever = true, unverified = true, held = true }
 local NUM_TAGS = { use = "useItem", loot = "lootItem", level = "level", xp = "xp" }
-local NAME_TAGS = { dungeon = "dungeon", alt = "alt" } -- dungeon:The_Deadmines (underscores = spaces)
+local NAME_TAGS = { dungeon = "dungeon", alt = "alt", skill = "skill" } -- dungeon:The_Deadmines (underscores = spaces)
 local GUIDE_HEADERS = { guide = true, route = true, faction = true, levels = true, zone = true, next = true, races = true }
 
 local function trim(s) return (s:gsub("^%s+", ""):gsub("%s+$", "")) end

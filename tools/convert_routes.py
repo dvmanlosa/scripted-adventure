@@ -266,6 +266,8 @@ def tags_for(step, faction):
         t.append("dungeon:" + step["dungeon"].replace(" ", "_"))
     if step.get("alt"):
         t.append("alt:" + step["alt"].replace(" ", "_"))
+    if step.get("skill"):
+        t.append("skill:" + step["skill"].replace(" ", "_"))
     if step.get("held"):
         t.append("held")
     if step.get("optional") or step.get("advisory"):

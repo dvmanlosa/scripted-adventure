@@ -18,7 +18,7 @@ from lupa import lua51
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from convert_routes import ROUTES, CLASSES, load_route, starter_races  # noqa: E402
+from convert_routes import ROUTES, CLASSES, load_route, starter_races, load_meta  # noqa: E402
 
 lua = lua51.LuaRuntime(unpack_returned_tuples=True)
 SA = lua.eval("{}")
@@ -45,6 +45,7 @@ def filt(t):
 
 run_file(ROOT / "Core" / "Parser.lua")
 problems = []
+order = set()
 no_qid = []
 TOKEN = {"Night Elf": "NightElf", "Undead": "Scourge"}
 for route, _starters, json_name, _ in ROUTES:
@@ -75,6 +76,23 @@ for route, _starters, json_name, _ in ROUTES:
         if names != expect:
             problems.append(f"{route}/{race}: chain {names[:2]}... differs from {expect[:2]}...")
         print(f"{route} as {race}: {names[0]} -> {names[-1]} ({len(names)} guides)")
+        # quest order: an accept must come after its prerequisites are turned in (QuestieDB)
+        requires = load_meta().get(route, {}).get("requires", {})
+        in_route = {st.get("qid") for n in expect for st in by_name[n]["steps"]}
+        turned = set()
+        for n in expect:
+            for st in by_name[n]["steps"]:
+                q = st.get("qid")
+                if st["action"] == "A" and str(q) in requires:
+                    r = requires[str(q)]
+                    missing = [p for p in r.get("all", []) if p in in_route and p not in turned]
+                    if r.get("any") and not any(p in turned for p in r["any"]):
+                        missing.append(" or ".join(map(str, r["any"])))
+                    if missing:
+                        order.add(f"{route} / {n}: accept {st['title']} #{q} before its prerequisite "
+                                  f"{', '.join(map(str, missing))} is turned in")
+                elif st["action"] == "T" and q:
+                    turned.add(q)
     parsed = SA.guides[route]
     chain = [parsed[g["name"]] for g in data["guides"]]   # every guide, starting zones included
 
@@ -97,7 +115,7 @@ for route, _starters, json_name, _ in ROUTES:
                 "optional": True if (j.get("optional") or j.get("advisory")) else None,
                 "unverified": True if j.get("unverified") else None,
                 "xp": j.get("xp"), "dungeon": j.get("dungeon"), "alt": j.get("alt"),
-                "held": True if j.get("held") else None,
+                "held": True if j.get("held") else None, "skill": j.get("skill"),
             }
             for k, v in exp.items():
                 if s[k] != v:
@@ -126,6 +144,12 @@ for route, _starters, json_name, _ in ROUTES:
                 no_qid.append(f"{route} / {g['name']} line {s['line']}: {s['verb']} {s['title']}")
     total = sum(len(lua_list(g["steps"])) for g in chain)
     print(f"{route}: {len(chain)} guides, {total} steps, chain {chain[0]['name']} -> {chain[-1]['name']}")
+
+print(f"\nquest order problems (accept before prerequisite turned in): {len(order)}")
+for o in sorted(order)[:40]:
+    print("  " + o)
+if len(order) > 40:
+    print(f"  ... {len(order) - 40} more")
 
 for e in lua_list(SA.parseErrors):
     problems.insert(0, f"parse error {e['source']} line {e['line']}: {e['message']}  | {e['text']}")

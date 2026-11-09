@@ -268,7 +268,6 @@ zone: The Barrens
 turnin     Journey to the Crossroads          #854  @51.5,30.8
            Follow the road east out of town, north to the Crossroads
 accept     Disrupt the Attacks                #871
-accept     Supplies for the Crossroads        #5041
 accept     Harpy Raiders                      #867
 turnin     Meats to Orgrimmar                 #6365
            Skip the follow-up quest

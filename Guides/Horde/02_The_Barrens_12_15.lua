@@ -26,7 +26,6 @@ accept     Meats to Orgrimmar             #6365  [Orc, Troll]
 sethearth  The Crossroads
 accept     Raptor Thieves                 #869
 accept     Disrupt the Attacks            #871
-accept     Supplies for the Crossroads    #5041
 accept     Harpy Raiders                  #867  @51.6,30.9
            Up in the tower
 turnin     Meats to Orgrimmar             #6365  [Orc, Troll]
@@ -61,6 +60,7 @@ turnin     Forged Steel                   #1503  [Warrior]
 
 turnin     Disrupt the Attacks            #871  @51.5,30.8
            Back at the Crossroads
+accept     Supplies for the Crossroads    #5041
 accept     The Disruption Ends            #872
 
 complete   The Disruption Ends            #872  @56,26

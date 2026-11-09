@@ -241,7 +241,7 @@ turnin     Taming the Beast (Part 2)                #6084  [Hunter]
 accept     Taming the Beast (Part 3)                #6085  [Hunter]
 complete   Taming the Beast (Part 3)                #6085  [Hunter]
 turnin     Taming the Beast (Part 3)                #6085  [Hunter]
-accept     Training the Beast                       #6103  [Hunter]
+accept     Training the Beast                       #6086  [Hunter]
 
 accept     Speak with Bink                          #1879  [Mage]
 accept     Road to Salvation                        #2218  [Rogue]
@@ -259,7 +259,7 @@ complete   Data Hoarders                            #95041  forever  unverified
 turnin     Data Hoarders                            #95041  @67.8,43.8  forever
            Jemma Quikswitch
 
-turnin     Training the Beast                       #6103  [Hunter]
+turnin     Training the Beast                       #6086  [Hunter]
 
 turnin     Speak with Bink                          #1879  [Mage]
 accept     Mage-tastic Gizmonitor                   #1880  [Mage]

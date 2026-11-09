@@ -74,6 +74,7 @@ Separate the title from its tags with **two or more spaces**. (If you use one sp
 | `xp:70` | With `level:8` on a grind step: done at 70% of the way through level 8 |
 | `dungeon:The_Deadmines` | Part of a dungeon (underscores stand for spaces). Hidden while that dungeon is turned off |
 | `alt:The_Deadmines` | Alternative step, shown only while that dungeon is turned off |
+| `skill:Enchanting` | Only shown if your character knows that profession |
 | `held` | Only shown if you have the quest (an accept: if you have one of its prerequisites). For quests handed out in hubs only some starting zones pass through |
 | `optional` | Can be skipped |
 | `forever` | Content added by WoW Forever (not in vanilla) |

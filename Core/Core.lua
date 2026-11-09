@@ -36,9 +36,47 @@ end
 function SA:StepApplies(step)
     if not (passes(step.classes, self.class) and passes(step.races, self.race)) then return false end
     local off = self.char and self.char.dungeonsOff or {}
+    if step.skill and not self:HasSkill(step.skill) then return false end -- profession you don't have
     if step.dungeon and off[step.dungeon] then return false end -- dungeon turned off
     if step.alt and not off[step.alt] then return false end     -- alternative, only while it's off
     return true
+end
+
+-- Professions this character knows (lower-case names), read from the skill list. nil = can't tell.
+function SA:ReadSkills()
+    local known, any = {}, false
+    if GetProfessions and GetProfessionInfo then
+        for _, index in ipairs({ GetProfessions() }) do
+            local name = index and GetProfessionInfo(index)
+            if type(name) == "string" then known[name:lower()] = true; any = true end
+        end
+    end
+    if GetNumSkillLines and GetSkillLineInfo then
+        for i = 1, GetNumSkillLines() or 0 do
+            local name, isHeader = GetSkillLineInfo(i)
+            if type(name) == "string" and not isHeader then known[name:lower()] = true; any = true end
+        end
+    end
+    return any and known or nil
+end
+
+-- Steps tagged skill:<Profession> show only if you know it. If the skill list can't be read, they show.
+function SA:HasSkill(name)
+    if self.skills == nil then self.skills = self:ReadSkills() or false end
+    if self.skills == false then return true end
+    return self.skills[name:lower()] == true
+end
+
+-- Re-read professions; refilter if learning or dropping one changed anything.
+function SA:SkillsChanged()
+    local new = self:ReadSkills() or false
+    local old = self.skills
+    self.skills = new
+    if type(old) ~= type(new) then return self.chain and self:Refilter() end
+    if type(new) == "table" then
+        for k in pairs(new) do if not old[k] then return self.chain and self:Refilter() end end
+        for k in pairs(old) do if not new[k] then return self.chain and self:Refilter() end end
+    end
 end
 
 -- Rebuild every guide's visible steps (after a dungeon is switched on or off).
@@ -463,9 +501,12 @@ end
 local events = CreateFrame("Frame")
 events:RegisterEvent("PLAYER_LOGIN")
 events:RegisterEvent("PLAYER_LEVEL_UP")
+pcall(events.RegisterEvent, events, "SKILL_LINES_CHANGED")
 events:SetScript("OnEvent", function(_, event, arg1)
     if event == "PLAYER_LOGIN" then
         SA:Init()
+    elseif event == "SKILL_LINES_CHANGED" then
+        if SA.guide then SA:SkillsChanged() end
     elseif event == "PLAYER_LEVEL_UP" then
         SA.level = arg1
         if SA.UI then SA.UI:Update() end

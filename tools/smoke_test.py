@@ -815,6 +815,21 @@ SA.Skip(SA)
 SA.Back(SA)
 check(SA.guide.name == "The Barrens (12-15)", "back only undoes real ticks, never a passed-over held step")
 
+print("Profession steps (skill:)")
+SKILLS = """
+SKILLS = { {"Professions", true}, {"Herbalism", false} }
+function GetNumSkillLines() return #SKILLS end
+function GetSkillLineInfo(i) return SKILLS[i][1], SKILLS[i][2] end
+"""
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 6, client=SKILLS)
+pain = lambda: [x for x in SA.guide.visible.values() if x.title == "A Pain in the Neck"]
+check(len(pain()) == 0, "A Pain in the Neck is hidden from a non-enchanter")
+lua.execute('table.insert(SKILLS, {"Enchanting", false})')
+g.FIRE("SKILL_LINES_CHANGED")
+check(len(pain()) == 3, "learning Enchanting brings its accept, complete and turn-in back")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 6)
+check(len(pain()) == 3, "if the skill list can't be read, profession steps show")
+
 print("Starting zone picker (Settings)")
 lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
 G = lua.globals()

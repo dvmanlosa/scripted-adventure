@@ -104,7 +104,4 @@ accept     Return to the Bulwark (Part 4)     #5236
 turnin     The Wildlife Suffers Too (Part 2)  #4985
 
 turnin     Return to the Bulwark (Part 4)     #5236
-accept     Scholomance                        #838
-turnin     Scholomance                        #838
-accept     Skeletal Fragments                 #964
 ]==]

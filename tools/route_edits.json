@@ -4,8 +4,9 @@
   "Durotar (1-12)": [
    {"step": {"action": "A", "qid": 97279}, "after": {"action": "T", "qid": 4641},
     "note": "Gornek, right after Your Place In The World"},
-   {"step": {"action": "A", "qid": 98576}, "after": {"action": "A", "qid": 97279},
-    "note": "Gornek"},
+   {"step": {"action": "A", "qid": 98576}, "after": {"action": "T", "qid": 788},
+    "note": "Gornek, once Cutting Teeth is turned in",
+    "why": "Gornek's class letters all need Cutting Teeth turned in first (QuestieDB preQuestSingle 788); the class letter block below follows this one"},
    {"step": {"action": "T", "qid": 98576}, "after": {"action": "A", "qid": 98576},
     "note": "Mai'ah, at the Den entrance. Read the Glyphic Parchment first"},
    {"step": {"action": "C", "qid": 97279}, "after": {"action": "C", "qid": 788},
@@ -14,31 +15,62 @@
    {"remove": {"qid": 3089}, "why": "replaced by the class letter block below (TourGuideVanilla had Orc/Troll versions swapped or missing)"},
    {"remove": {"qid": 3065}, "why": "replaced by the class letter block below (TourGuideVanilla had Orc/Troll versions swapped or missing)"},
    {"remove": {"qid": 3084}, "why": "replaced by the class letter block below (TourGuideVanilla had Orc/Troll versions swapped or missing)"},
-   {"insert": {"title": "Simple Parchment", "qid": 2383, "class": "Warrior", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 98576}, "why": "level 1 class letters from QuestieDB: Gornek gives each race/class its own; turn in at the trainer in the Den"},
+   {"insert": {"title": "Simple Parchment", "qid": 2383, "class": "Warrior", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 98576}, "why": "class letters from QuestieDB (need Cutting Teeth turned in): Gornek gives each race/class its own; turn in at the trainer in the Den"},
    {"insert": {"title": "Simple Parchment", "qid": 2383, "class": "Warrior", "origin": "authored", "race": "Orc", "action": "T", "note": "Frang, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.9, "y": 69.4}}, "after": {"action": "A", "qid": 2383}},
-   {"insert": {"title": "Simple Tablet", "qid": 3065, "class": "Warrior", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 2383}},
+   {"insert": {"title": "Simple Tablet", "qid": 3065, "class": "Warrior", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 2383}},
    {"insert": {"title": "Simple Tablet", "qid": 3065, "class": "Warrior", "origin": "authored", "race": "Troll", "action": "T", "note": "Frang, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.9, "y": 69.4}}, "after": {"action": "A", "qid": 3065}},
-   {"insert": {"title": "Etched Parchment", "qid": 3087, "class": "Hunter", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3065}},
+   {"insert": {"title": "Etched Parchment", "qid": 3087, "class": "Hunter", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3065}},
    {"insert": {"title": "Etched Parchment", "qid": 3087, "class": "Hunter", "origin": "authored", "race": "Orc", "action": "T", "note": "Jen'shan, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.8, "y": 69.3}}, "after": {"action": "A", "qid": 3087}},
-   {"insert": {"title": "Etched Tablet", "qid": 3082, "class": "Hunter", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3087}},
+   {"insert": {"title": "Etched Tablet", "qid": 3082, "class": "Hunter", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3087}},
    {"insert": {"title": "Etched Tablet", "qid": 3082, "class": "Hunter", "origin": "authored", "race": "Troll", "action": "T", "note": "Jen'shan, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.8, "y": 69.3}}, "after": {"action": "A", "qid": 3082}},
-   {"insert": {"title": "Encrypted Parchment", "qid": 3088, "class": "Rogue", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3082}},
+   {"insert": {"title": "Encrypted Parchment", "qid": 3088, "class": "Rogue", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3082}},
    {"insert": {"title": "Encrypted Parchment", "qid": 3088, "class": "Rogue", "origin": "authored", "race": "Orc", "action": "T", "note": "Rwag, class trainer in the Den", "coord": {"zone": "Durotar", "x": 41.3, "y": 68.0}}, "after": {"action": "A", "qid": 3088}},
-   {"insert": {"title": "Encrypted Tablet", "qid": 3083, "class": "Rogue", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3088}},
+   {"insert": {"title": "Encrypted Tablet", "qid": 3083, "class": "Rogue", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3088}},
    {"insert": {"title": "Encrypted Tablet", "qid": 3083, "class": "Rogue", "origin": "authored", "race": "Troll", "action": "T", "note": "Rwag, class trainer in the Den", "coord": {"zone": "Durotar", "x": 41.3, "y": 68.0}}, "after": {"action": "A", "qid": 3083}},
-   {"insert": {"title": "Hallowed Tablet", "qid": 3085, "class": "Priest", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3083}},
+   {"insert": {"title": "Hallowed Tablet", "qid": 3085, "class": "Priest", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3083}},
    {"insert": {"title": "Hallowed Tablet", "qid": 3085, "class": "Priest", "origin": "authored", "race": "Troll", "action": "T", "note": "Ken'jai, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.4, "y": 68.8}}, "after": {"action": "A", "qid": 3085}},
-   {"insert": {"title": "Glyphic Tablet", "qid": 3086, "class": "Mage", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3085}},
+   {"insert": {"title": "Glyphic Tablet", "qid": 3086, "class": "Mage", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3085}},
    {"insert": {"title": "Glyphic Tablet", "qid": 3086, "class": "Mage", "origin": "authored", "race": "Troll", "action": "T", "note": "Mai'ah, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.5, "y": 69.0}}, "after": {"action": "A", "qid": 3086}},
-   {"insert": {"title": "Rune-Inscribed Parchment", "qid": 3089, "class": "Shaman", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3086}},
+   {"insert": {"title": "Rune-Inscribed Parchment", "qid": 3089, "class": "Shaman", "origin": "authored", "race": "Orc", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3086}},
    {"insert": {"title": "Rune-Inscribed Parchment", "qid": 3089, "class": "Shaman", "origin": "authored", "race": "Orc", "action": "T", "note": "Shikrik, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.4, "y": 69.0}}, "after": {"action": "A", "qid": 3089}},
-   {"insert": {"title": "Rune-Inscribed Tablet", "qid": 3084, "class": "Shaman", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3089}},
+   {"insert": {"title": "Rune-Inscribed Tablet", "qid": 3084, "class": "Shaman", "origin": "authored", "race": "Troll", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3089}},
    {"insert": {"title": "Rune-Inscribed Tablet", "qid": 3084, "class": "Shaman", "origin": "authored", "race": "Troll", "action": "T", "note": "Shikrik, class trainer in the Den", "coord": {"zone": "Durotar", "x": 42.4, "y": 69.0}}, "after": {"action": "A", "qid": 3084}},
-   {"insert": {"title": "Tainted Parchment", "qid": 3090, "class": "Warlock", "origin": "authored", "action": "A", "note": "Gornek"}, "after": {"action": "T", "qid": 3084}},
+   {"insert": {"title": "Tainted Parchment", "qid": 3090, "class": "Warlock", "origin": "authored", "action": "A", "note": "Gornek (after Cutting Teeth)"}, "after": {"action": "T", "qid": 3084}},
    {"insert": {"title": "Tainted Parchment", "qid": 3090, "class": "Warlock", "origin": "authored", "action": "T", "note": "Nartok, class trainer in the Den", "coord": {"zone": "Durotar", "x": 40.7, "y": 68.5}}, "after": {"action": "A", "qid": 3090}},
+   {"all_of": {"qid": 96873}, "set": {"skill": "Enchanting"}, "why": "needs disenchanting (Hexed Pendants -> Luminous Residue): Enchanters only"},
+   {"step": {"action": "C", "qid": 96873}, "after": {"action": "C", "qid": 826}, "note": "Enchanters: disenchant Hexed Pendants from the Echo Isles trolls into 3 Luminous Residue", "why": "the pendants drop on the Echo Isles: do it on the Echo Isles trip, not at Sen'jin"},
+   {"step": {"action": "T", "qid": 96873}, "after": {"action": "T", "qid": 808}, "note": "Pa'zula, Sen'jin Village"},
+   {"step": {"action": "C", "qid": 97225}, "after": {"action": "C", "qid": 826}, "note": "8 Forgotten Loa Idols on the Echo Isles", "why": "the idols are on the Echo Isles: collect them on that trip"},
+   {"step": {"action": "T", "qid": 97225}, "after": {"action": "T", "qid": 808}, "note": "Master Gadrin, Sen'jin Village"},
    {"all_of": {"qid": 98576}, "set": {"race": "Orc"}, "why": "Forever's Orc mage letter (race mask Orc); Troll mages get Glyphic Tablet"},
    {"all_of": {"qid": 1485}, "set": {"race": null}, "why": "QuestieDB: open to any Horde warlock, not only Orcs"},
    {"all_of": {"qid": 1499}, "set": {"race": null}, "why": "QuestieDB: open to any Horde warlock, not only Orcs"}
+  ],
+  "The Barrens (12-15)": [
+   {"step": {"action": "A", "qid": 5041}, "after": {"action": "T", "qid": 871}, "why": "Supplies for the Crossroads follows Disrupt the Attacks (QuestieDB preQuestSingle 871)"}
+  ],
+  "Mulgore (1-12)": [
+   {"remove": {"qid": 5041, "action": "A"}, "why": "needs Disrupt the Attacks turned in first; The Barrens guide picks it up then"}
+  ],
+  "The Hinterlands (50-51)": [
+   {"step": {"action": "A", "qid": 7816}, "after": {"action": "T", "qid": 7815}, "why": "Gammerita, Mon! needs Snapjaws, Mon! turned in first (QuestieDB)"},
+   {"step": {"action": "C", "qid": 7816}, "after": {"action": "A", "qid": 7816}},
+   {"step": {"action": "T", "qid": 7816}, "after": {"action": "C", "qid": 7816}}
+  ],
+  "Badlands (40-41)": [
+   {"insert": {"action": "T", "title": "Coolant Heads Prevail", "qid": 713, "optional": true, "origin": "authored", "note": "Turn it in now if you brought what it asks for: Gyro... What? and its follow-ups need it"}, "after": {"action": "A", "qid": 713}, "why": "the route never turned this in, so its follow-ups could not be taken (QuestieDB)"},
+   {"insert": {"action": "T", "title": "Gyro... What?", "qid": 714, "optional": true, "origin": "authored", "note": "Turn it in now if you brought what it asks for: Liquid Stone and This Is Going to Be Hard need it"}, "after": {"action": "A", "qid": 714}}
+  ],
+  "Western Plaguelands (56)": [
+   {"remove": {"qid": 838}, "why": "Scholomance needs All Along the Watchtowers turned in (next guide); moved there"},
+   {"remove": {"qid": 964, "action": "A"}, "why": "Skeletal Fragments follows Scholomance; picked up in the next guide"}
+  ],
+  "Western Plaguelands (57-59)": [
+   {"insert": {"action": "A", "title": "Scholomance", "qid": 838, "origin": "authored", "note": "High Executor Derrington"}, "after": {"action": "T", "qid": 5098}, "why": "available once All Along the Watchtowers is turned in (QuestieDB)"},
+   {"insert": {"action": "T", "title": "Scholomance", "qid": 838, "origin": "authored", "note": "Apothecary Dithers, right next to him"}, "after": {"action": "A", "qid": 838}},
+   {"insert": {"action": "A", "title": "Skeletal Fragments", "qid": 964, "origin": "authored", "optional": true, "note": "Apothecary Dithers. Optional: the fragments come from skeletons back in the Plaguelands"}, "after": {"action": "T", "qid": 838}, "why": "needs Scholomance turned in (QuestieDB)"},
+   {"step": {"action": "C", "qid": 964}, "after": {"action": "A", "qid": 964}, "optional": true},
+   {"step": {"action": "T", "qid": 964}, "after": {"action": "C", "qid": 964}, "optional": true}
   ],
   "Stranglethorn Vale (47)": [
    {"replace_qid": {"from": 614, "to": 8551},
@@ -49,6 +81,9 @@
   "_dungeon_quests": {
    "The Deadmines": [166, 167, 168, 214, 2040, 92819]
   },
+  "Dun Morogh (1-11)": [
+   {"replace_qid": {"from": 6103, "to": 6086}, "why": "#6103 is the Night Elf Training the Beast; the Dwarf one from Grif Wildheart is #6086 (QuestieDB)"}
+  ],
   "The Deadmines (20-22)": [
    {"set_zone": {"from": "The Deadmines", "to": "Westfall"},
     "why": "this chapter's coordinates are Sentinel Hill / Moonbrook, i.e. Westfall"},

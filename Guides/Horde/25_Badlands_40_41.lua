@@ -26,7 +26,13 @@ turnin     Indurium                              #1108
 accept     News for Fizzle                       #1137
 accept     Study of the Elements: Rock (Part 1)  #710
 accept     Coolant Heads Prevail                 #713  loot:3829  optional
+turnin     Coolant Heads Prevail                 #713  optional
+           Turn it in now if you brought what it asks for: Gyro... What? and its follow-ups need
+           it
 accept     Gyro... What?                         #714  loot:4389  optional
+turnin     Gyro... What?                         #714  optional
+           Turn it in now if you brought what it asks for: Liquid Stone and This Is Going to Be
+           Hard need it
 
 goto       Kargath
 flightpath Flight Path                           @4,45

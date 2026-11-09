@@ -14,54 +14,6 @@ accept     Your Place In The World             #4641
 turnin     Your Place In The World             #4641
 accept     Wayward Weapons                     #97279  @42,68.4  forever
            Gornek, right after Your Place In The World
-accept     Glyphic Parchment                   #98576  @42,68.4  [Mage]  [Orc]  forever
-           Gornek
-turnin     Glyphic Parchment                   #98576  @42.4,69  [Mage]  [Orc]  forever
-           Mai'ah, at the Den entrance. Read the Glyphic Parchment first
-accept     Simple Parchment                    #2383  [Warrior]  [Orc]
-           Gornek
-turnin     Simple Parchment                    #2383  @42.9,69.4  [Warrior]  [Orc]
-           Frang, class trainer in the Den
-accept     Simple Tablet                       #3065  [Warrior]  [Troll]
-           Gornek
-turnin     Simple Tablet                       #3065  @42.9,69.4  [Warrior]  [Troll]
-           Frang, class trainer in the Den
-accept     Etched Parchment                    #3087  [Hunter]  [Orc]
-           Gornek
-turnin     Etched Parchment                    #3087  @42.8,69.3  [Hunter]  [Orc]
-           Jen'shan, class trainer in the Den
-accept     Etched Tablet                       #3082  [Hunter]  [Troll]
-           Gornek
-turnin     Etched Tablet                       #3082  @42.8,69.3  [Hunter]  [Troll]
-           Jen'shan, class trainer in the Den
-accept     Encrypted Parchment                 #3088  [Rogue]  [Orc]
-           Gornek
-turnin     Encrypted Parchment                 #3088  @41.3,68  [Rogue]  [Orc]
-           Rwag, class trainer in the Den
-accept     Encrypted Tablet                    #3083  [Rogue]  [Troll]
-           Gornek
-turnin     Encrypted Tablet                    #3083  @41.3,68  [Rogue]  [Troll]
-           Rwag, class trainer in the Den
-accept     Hallowed Tablet                     #3085  [Priest]  [Troll]
-           Gornek
-turnin     Hallowed Tablet                     #3085  @42.4,68.8  [Priest]  [Troll]
-           Ken'jai, class trainer in the Den
-accept     Glyphic Tablet                      #3086  [Mage]  [Troll]
-           Gornek
-turnin     Glyphic Tablet                      #3086  @42.5,69  [Mage]  [Troll]
-           Mai'ah, class trainer in the Den
-accept     Rune-Inscribed Parchment            #3089  [Shaman]  [Orc]
-           Gornek
-turnin     Rune-Inscribed Parchment            #3089  @42.4,69  [Shaman]  [Orc]
-           Shikrik, class trainer in the Den
-accept     Rune-Inscribed Tablet               #3084  [Shaman]  [Troll]
-           Gornek
-turnin     Rune-Inscribed Tablet               #3084  @42.4,69  [Shaman]  [Troll]
-           Shikrik, class trainer in the Den
-accept     Tainted Parchment                   #3090  [Warlock]
-           Gornek
-turnin     Tainted Parchment                   #3090  @40.7,68.5  [Warlock]
-           Nartok, class trainer in the Den
 accept     Cutting Teeth                       #788
 complete   Cutting Teeth                       #788  @40.6,62.6
            Head towards Sarkoth while completing this quest
@@ -78,6 +30,54 @@ turnin     Sarkoth (Part 2)                    #804  @42.1,68.4
            Back at the Den. You can jump down from where you killed Sarkoth.
 turnin     Cutting Teeth                       #788  @42.1,68.4
            Back at the Den
+accept     Glyphic Parchment                   #98576  @42,68.4  [Mage]  [Orc]  forever
+           Gornek, once Cutting Teeth is turned in
+turnin     Glyphic Parchment                   #98576  @42.4,69  [Mage]  [Orc]  forever
+           Mai'ah, at the Den entrance. Read the Glyphic Parchment first
+accept     Simple Parchment                    #2383  [Warrior]  [Orc]
+           Gornek (after Cutting Teeth)
+turnin     Simple Parchment                    #2383  @42.9,69.4  [Warrior]  [Orc]
+           Frang, class trainer in the Den
+accept     Simple Tablet                       #3065  [Warrior]  [Troll]
+           Gornek (after Cutting Teeth)
+turnin     Simple Tablet                       #3065  @42.9,69.4  [Warrior]  [Troll]
+           Frang, class trainer in the Den
+accept     Etched Parchment                    #3087  [Hunter]  [Orc]
+           Gornek (after Cutting Teeth)
+turnin     Etched Parchment                    #3087  @42.8,69.3  [Hunter]  [Orc]
+           Jen'shan, class trainer in the Den
+accept     Etched Tablet                       #3082  [Hunter]  [Troll]
+           Gornek (after Cutting Teeth)
+turnin     Etched Tablet                       #3082  @42.8,69.3  [Hunter]  [Troll]
+           Jen'shan, class trainer in the Den
+accept     Encrypted Parchment                 #3088  [Rogue]  [Orc]
+           Gornek (after Cutting Teeth)
+turnin     Encrypted Parchment                 #3088  @41.3,68  [Rogue]  [Orc]
+           Rwag, class trainer in the Den
+accept     Encrypted Tablet                    #3083  [Rogue]  [Troll]
+           Gornek (after Cutting Teeth)
+turnin     Encrypted Tablet                    #3083  @41.3,68  [Rogue]  [Troll]
+           Rwag, class trainer in the Den
+accept     Hallowed Tablet                     #3085  [Priest]  [Troll]
+           Gornek (after Cutting Teeth)
+turnin     Hallowed Tablet                     #3085  @42.4,68.8  [Priest]  [Troll]
+           Ken'jai, class trainer in the Den
+accept     Glyphic Tablet                      #3086  [Mage]  [Troll]
+           Gornek (after Cutting Teeth)
+turnin     Glyphic Tablet                      #3086  @42.5,69  [Mage]  [Troll]
+           Mai'ah, class trainer in the Den
+accept     Rune-Inscribed Parchment            #3089  [Shaman]  [Orc]
+           Gornek (after Cutting Teeth)
+turnin     Rune-Inscribed Parchment            #3089  @42.4,69  [Shaman]  [Orc]
+           Shikrik, class trainer in the Den
+accept     Rune-Inscribed Tablet               #3084  [Shaman]  [Troll]
+           Gornek (after Cutting Teeth)
+turnin     Rune-Inscribed Tablet               #3084  @42.4,69  [Shaman]  [Troll]
+           Shikrik, class trainer in the Den
+accept     Tainted Parchment                   #3090  [Warlock]
+           Gornek (after Cutting Teeth)
+turnin     Tainted Parchment                   #3090  @40.7,68.5  [Warlock]
+           Nartok, class trainer in the Den
 turnin     Wayward Weapons                     #97279  @40.4,68  forever
            Kzan Thornslash
 accept     Sting of the Scorpid                #789
@@ -132,20 +132,10 @@ turnin     Report to Sen'jin Village           #805  @56,74.7
            Take the path southeast to Sen'jin Village
 accept     Legging It                          #96821  @55.8,74  forever
            Vel'rin Fang
-accept     A Pain in the Neck                  #96873  @56.6,73.6  forever
-           Pa'zula
-complete   A Pain in the Neck                  #96873  forever
-           Pa'zula in Sen'jin Village wants you to collect 3 Luminous Residue. Luminous Residue
-           can be obtained by disenchanting Hexed Pendants dropped by trolls in the Echo Isles
-turnin     A Pain in the Neck                  #96873  @56.6,73.6  forever
+accept     A Pain in the Neck                  #96873  @56.6,73.6  skill:Enchanting  forever
            Pa'zula
 accept     Forgotten Loa Idols                 #97225  @55.8,74.4  forever
            Master Vornal
-complete   Forgotten Loa Idols                 #97225  forever
-           Collect 8 Forgotten Loa Idols from the Echo Isles. Bring them to Master Gadrin in
-           Sen'jin Village
-turnin     Forgotten Loa Idols                 #97225  @56,74.6  forever
-           Master Gadrin
 
 accept     Minshina's Skull                    #808
 accept     Report to Orgnil                    #823
@@ -235,11 +225,20 @@ complete   Minshina's Skull                    #808  @67.5,87.7
            hill near Zalazane, in the ritual circle.
 complete   Zalazane                            #826  @67,87.2
            Zalazane is in the troll camp near Minshina's skull.
+complete   Forgotten Loa Idols                 #97225  forever
+           8 Forgotten Loa Idols on the Echo Isles
+complete   A Pain in the Neck                  #96873  skill:Enchanting  forever
+           Enchanters: disenchant Hexed Pendants from the Echo Isles trolls into 3 Luminous
+           Residue
 die        Die
            Res in Sen'jin Village
 
 turnin     Minshina's Skull                    #808  @56,74.8
            Back at Sen'jin Village
+turnin     Forgotten Loa Idols                 #97225  @56,74.6  forever
+           Master Gadrin, Sen'jin Village
+turnin     A Pain in the Neck                  #96873  @56.6,73.6  skill:Enchanting  forever
+           Pa'zula, Sen'jin Village
 turnin     Lost in the Shadows                 #99123  @55.8,74.4  forever
            Master Vornal
 accept     Bloodtalon Matriarch                #97223  @55.2,75.4  forever
