@@ -1,0 +1,1986 @@
+{
+ "tbc_removed": [],
+ "tbc_kept_travel": [
+  [
+   "Dustwallow Marsh (38)",
+   "F Thunder Bluff |QID|11204|"
+  ]
+ ],
+ "coords_converted": [
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    4.56,
+    38.29
+   ],
+   "to": [
+    2.5,
+    30.7
+   ],
+   "step": "Demon Dogs"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    23.0,
+    68.17
+   ],
+   "to": [
+    19.0,
+    57.6
+   ],
+   "step": "Un-Life's Little Annoyances"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    81.0,
+    58.0
+   ],
+   "to": [
+    71.2,
+    48.4
+   ],
+   "step": "Uncle Carlin"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    79.0,
+    63.0
+   ],
+   "to": [
+    69.4,
+    52.9
+   ],
+   "step": "Zaeldarr the Outcast"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    24.6,
+    80.0
+   ],
+   "to": [
+    20.5,
+    68.3
+   ],
+   "step": "Of Forgotten Memories"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    23.8,
+    78.4
+   ],
+   "to": [
+    19.8,
+    66.8
+   ],
+   "step": "Zaeldarr the Outcast"
+  }
+ ],
+ "inserted": {
+  "Durotar (1-12)": [
+   "A Glyphic Parchment",
+   "A Wayward Weapons",
+   "C Wayward Weapons",
+   "T Wayward Weapons",
+   "T Glyphic Parchment",
+   "A Legging It",
+   "A A Pain in the Neck",
+   "C A Pain in the Neck",
+   "T A Pain in the Neck",
+   "A Forgotten Loa Idols",
+   "C Forgotten Loa Idols",
+   "T Forgotten Loa Idols",
+   "A A Missing Hand",
+   "A For Honor",
+   "C For Honor",
+   "T For Honor",
+   "T A Missing Hand",
+   "A Threat from Below",
+   "C Legging It",
+   "T Legging It",
+   "A Lost in the Shadows",
+   "C Lost in the Shadows",
+   "T Lost in the Shadows",
+   "A Bloodtalon Matriarch",
+   "C Bloodtalon Matriarch",
+   "T Bloodtalon Matriarch",
+   "A This Fruit Could Bite Back",
+   "C This Fruit Could Bite Back",
+   "T This Fruit Could Bite Back",
+   "T Threat from Below",
+   "A Beasts of Thunder Ridge",
+   "C Beasts of Thunder Ridge",
+   "T Beasts of Thunder Ridge",
+   "A This Is Spinal Axe",
+   "C This Is Spinal Axe",
+   "T This Is Spinal Axe"
+  ],
+  "Hillsbrad Foothills (29-30)": [
+   "N Syndicate Sabotage",
+   "N Call of Air"
+  ],
+  "Dustwallow Marsh (38)": [
+   "N Riverglades option"
+  ],
+  "Badlands (40-41)": [
+   "N Learning to Ride"
+  ]
+ },
+ "advisories": {
+  "Stonetalon Mountains (23-25)": [
+   {
+    "qid": 86576,
+    "name": "Bloodfury Trinkets",
+    "level": 26
+   },
+   {
+    "qid": 97538,
+    "name": "Pigments for Paints",
+    "level": 26
+   }
+  ],
+  "Un'Goro Crater (51-53)": [
+   {
+    "qid": 87494,
+    "name": "Microcrystal Contamination",
+    "level": 55
+   }
+  ],
+  "Azshara (50)": [
+   {
+    "qid": 91734,
+    "name": "Remote Contact",
+    "level": 52
+   }
+  ],
+  "Alterac Mountains (37)": [
+   {
+    "qid": 93680,
+    "name": "Key to the City",
+    "level": 33
+   },
+   {
+    "qid": 93689,
+    "name": "Friend of the Kirin Tor",
+    "level": 33
+   },
+   {
+    "qid": 97287,
+    "name": "Shrewd Negotiations",
+    "level": 33
+   },
+   {
+    "qid": 92434,
+    "name": "Blood in the Streets",
+    "level": 34
+   },
+   {
+    "qid": 95534,
+    "name": "Strahnbrad Mystery",
+    "level": 36
+   }
+  ],
+  "Arathi Highlands (36-37)": [
+   {
+    "qid": 92519,
+    "name": "Ward Restocking",
+    "level": 36
+   },
+   {
+    "qid": 97539,
+    "name": "Silky Sutures",
+    "level": 36
+   },
+   {
+    "qid": 95143,
+    "name": "Finding Tan'jani",
+    "level": 38
+   },
+   {
+    "qid": 92867,
+    "name": "Ground to Keep",
+    "level": 39
+   }
+  ],
+  "The Barrens (16-20)": [
+   {
+    "qid": 92706,
+    "name": "WANTED: Bruuz",
+    "level": 20
+   },
+   {
+    "qid": 95774,
+    "name": "Her Name Is Olgra",
+    "level": 20
+   },
+   {
+    "qid": 97003,
+    "name": "Chol'aruk the Ravener",
+    "level": 21
+   },
+   {
+    "qid": 97250,
+    "name": "Wrongly Blamed, Justly Corrected",
+    "level": 23
+   },
+   {
+    "qid": 98093,
+    "name": "Field to Clear",
+    "level": 23
+   },
+   {
+    "qid": 98251,
+    "name": "Never Coming Back",
+    "level": 23
+   }
+  ],
+  "Arathi Highlands (30)": [
+   {
+    "qid": 92707,
+    "name": "The Giant in the Den",
+    "level": 33
+   }
+  ],
+  "Desolace (43)": [
+   {
+    "qid": 92743,
+    "name": "A Conqueror's Crown",
+    "level": 40
+   },
+   {
+    "qid": 93225,
+    "name": "Carved Centaur Totems",
+    "level": 40
+   },
+   {
+    "qid": 93465,
+    "name": "Notes on Draenethyst",
+    "level": 40
+   },
+   {
+    "qid": 93678,
+    "name": "Abridged Notes on Draenethyst",
+    "level": 40
+   },
+   {
+    "qid": 96222,
+    "name": "Khan Hratha",
+    "level": 42
+   },
+   {
+    "qid": 94872,
+    "name": "Buying Friendship: Magram",
+    "level": 45
+   },
+   {
+    "qid": 94873,
+    "name": "Buying Friendship: Gelkis",
+    "level": 45
+   }
+  ],
+  "Desolace (32-34)": [
+   {
+    "qid": 97265,
+    "name": "Hate the Hatefury",
+    "level": 33
+   },
+   {
+    "qid": 92754,
+    "name": "A New Need for Shadow Protection",
+    "level": 35
+   },
+   {
+    "qid": 92814,
+    "name": "I Need a Tailor",
+    "level": 35
+   },
+   {
+    "qid": 92817,
+    "name": "Leather Technique",
+    "level": 35
+   },
+   {
+    "qid": 93044,
+    "name": "A Cleansing Cry",
+    "level": 38
+   },
+   {
+    "qid": 93045,
+    "name": "Test Your Theory",
+    "level": 38
+   },
+   {
+    "qid": 94895,
+    "name": "Lost Shipping Crate",
+    "level": 38
+   }
+  ],
+  "Feralas (45-46)": [
+   {
+    "qid": 92878,
+    "name": "Lost for Words",
+    "level": 43
+   }
+  ],
+  "Swamp of Sorrows (41-42)": [
+   {
+    "qid": 93176,
+    "name": "My Little Friends",
+    "level": 35
+   },
+   {
+    "qid": 93430,
+    "name": "Taking the Bait Back",
+    "level": 35
+   },
+   {
+    "qid": 93663,
+    "name": "Lost in Transit",
+    "level": 35
+   },
+   {
+    "qid": 93464,
+    "name": "The Visiting Mage",
+    "level": 38
+   }
+  ],
+  "Thousand Needles (37-38)": [
+   {
+    "qid": 94930,
+    "name": "Lost Shipping Crate",
+    "level": 38
+   }
+  ],
+  "Stranglethorn Vale (34-36)": [
+   {
+    "qid": 97328,
+    "name": "Anything of Value",
+    "level": 35
+   },
+   {
+    "qid": 95773,
+    "name": "Enemies in the Water",
+    "level": 37
+   },
+   {
+    "qid": 95141,
+    "name": "Report to Rog'mar",
+    "level": 38
+   },
+   {
+    "qid": 97453,
+    "name": "Weed Whacked",
+    "level": 38
+   }
+  ],
+  "Tanaris (44-45)": [
+   {
+    "qid": 95144,
+    "name": "Overseas Delivery",
+    "level": 38
+   },
+   {
+    "qid": 97534,
+    "name": "Gritty Business",
+    "level": 45
+   },
+   {
+    "qid": 97530,
+    "name": "Dunemaul Dues",
+    "level": 47
+   }
+  ],
+  "Stranglethorn Vale (38-40)": [
+   {
+    "qid": 95384,
+    "name": "Partial Mystical Notes",
+    "level": 40
+   },
+   {
+    "qid": 95748,
+    "name": "The Gurubashi Legends of Old",
+    "level": 40
+   },
+   {
+    "qid": 95770,
+    "name": "Locating the Lost City",
+    "level": 40
+   },
+   {
+    "qid": 96078,
+    "name": "A Tale Spun Around the Fire",
+    "level": 40
+   },
+   {
+    "qid": 97332,
+    "name": "Twice Misplaced Trust",
+    "level": 41
+   },
+   {
+    "qid": 95385,
+    "name": "Torn Mystical Scroll",
+    "level": 43
+   }
+  ],
+  "The Barrens (12-15)": [
+   {
+    "qid": 97485,
+    "name": "Traditions of the Bluff",
+    "level": 10
+   },
+   {
+    "qid": 97242,
+    "name": "Yelmak's Medley",
+    "level": 15
+   },
+   {
+    "qid": 97246,
+    "name": "Meal Appeal",
+    "level": 15
+   },
+   {
+    "qid": 97249,
+    "name": "Favorite Food",
+    "level": 15
+   },
+   {
+    "qid": 97253,
+    "name": "Parts and Pieces",
+    "level": 15
+   },
+   {
+    "qid": 97275,
+    "name": "Whuut's the Rush",
+    "level": 15
+   },
+   {
+    "qid": 97326,
+    "name": "Rocks to Rests",
+    "level": 15
+   },
+   {
+    "qid": 95494,
+    "name": "Bruised Pride and Lion Hides",
+    "level": 18
+   },
+   {
+    "qid": 95495,
+    "name": "The Hermit Tanner",
+    "level": 18
+   },
+   {
+    "qid": 95507,
+    "name": "Vrang's Game",
+    "level": 18
+   },
+   {
+    "qid": 95508,
+    "name": "Unwelcome Guests",
+    "level": 18
+   },
+   {
+    "qid": 95621,
+    "name": "Trouble in the Valley",
+    "level": 18
+   }
+  ],
+  "Durotar (1-12)": [
+   {
+    "qid": 96876,
+    "name": "Ukor's Lost Pack",
+    "level": 8
+   },
+   {
+    "qid": 97282,
+    "name": "Stormy Potential",
+    "level": 10
+   },
+   {
+    "qid": 97281,
+    "name": "A Simmering Storm",
+    "level": 11
+   },
+   {
+    "qid": 96877,
+    "name": "Halikor's Hoof",
+    "level": 12
+   }
+  ],
+  "Hillsbrad Foothills (29-30)": [
+   {
+    "qid": 97891,
+    "name": "Prompt Potion Runner",
+    "level": 16
+   },
+   {
+    "qid": 97290,
+    "name": "Unending Torment",
+    "level": 21
+   },
+   {
+    "qid": 98094,
+    "name": "Scout Support",
+    "level": 25
+   },
+   {
+    "qid": 98095,
+    "name": "Valuable Vantages",
+    "level": 25
+   },
+   {
+    "qid": 97985,
+    "name": "Thundering Hearts",
+    "level": 33
+   }
+  ],
+  "Feralas (49)": [
+   {
+    "qid": 97378,
+    "name": "Mirrorscale",
+    "level": 50
+   }
+  ],
+  "Stranglethorn Vale (42-43)": [
+   {
+    "qid": 97386,
+    "name": "The Offense of Grom'gol",
+    "level": 44
+   }
+  ],
+  "Badlands (40-41)": [
+   {
+    "qid": 97663,
+    "name": "Supplies and Studies",
+    "level": 40
+   },
+   {
+    "qid": 97821,
+    "name": "Mirage Mirror",
+    "level": 42
+   }
+  ],
+  "Thousand Needles (28-29)": [
+   {
+    "qid": 98069,
+    "name": "Stolen Freewind Supplies",
+    "level": 30
+   },
+   {
+    "qid": 98070,
+    "name": "Stop the Screeching",
+    "level": 30
+   }
+  ],
+  "Azshara (46-47)": [
+   {
+    "qid": 98096,
+    "name": "Sisters In Duty",
+    "level": 47
+   }
+  ],
+  "Dustwallow Marsh (43-44)": [
+   {
+    "qid": 98192,
+    "name": "Skin Careful, Skin Sharp",
+    "level": 43
+   },
+   {
+    "qid": 98205,
+    "name": "Whelps are the Worst!",
+    "level": 44
+   },
+   {
+    "qid": 98215,
+    "name": "Dragon Scales, Post Burnt Tails",
+    "level": 44
+   },
+   {
+    "qid": 98231,
+    "name": "Active Ingredient",
+    "level": 44
+   }
+  ],
+  "The Hinterlands (50-51)": [
+   {
+    "qid": 98203,
+    "name": "Witch Doctor Ti'ik",
+    "level": 49
+   }
+  ]
+ },
+ "extras_not_in_route": {
+  "shendralas": [
+   {
+    "qid": 92914,
+    "name": "Strange Pylons",
+    "level": 43
+   },
+   {
+    "qid": 93016,
+    "name": "A Brief History Lesson",
+    "level": 43
+   },
+   {
+    "qid": 93034,
+    "name": "Valley of Bones",
+    "level": 38
+   },
+   {
+    "qid": 93035,
+    "name": "Ravaging Ravagers",
+    "level": 38
+   },
+   {
+    "qid": 93037,
+    "name": "Outing Outcasts",
+    "level": 40
+   },
+   {
+    "qid": 93041,
+    "name": "Facing the Truth",
+    "level": 38
+   },
+   {
+    "qid": 93058,
+    "name": "Saving Our Own",
+    "level": 42
+   },
+   {
+    "qid": 93062,
+    "name": "Bone Burying",
+    "level": 42
+   },
+   {
+    "qid": 93066,
+    "name": "Bristleback Retreat",
+    "level": 43
+   },
+   {
+    "qid": 93072,
+    "name": "Long-Term Solutions",
+    "level": 43
+   },
+   {
+    "qid": 93122,
+    "name": "Checking Things Out",
+    "level": 43
+   },
+   {
+    "qid": 93125,
+    "name": "Going Home",
+    "level": 43
+   },
+   {
+    "qid": 93129,
+    "name": "Threat of Starvation",
+    "level": 43
+   },
+   {
+    "qid": 93188,
+    "name": "Return to Orgrul",
+    "level": 43
+   },
+   {
+    "qid": 93341,
+    "name": "Forlorn Gardens",
+    "level": 43
+   },
+   {
+    "qid": 93362,
+    "name": "What They've Done to My Peonies",
+    "level": 43
+   },
+   {
+    "qid": 93394,
+    "name": "Meeting the Magister",
+    "level": 43
+   },
+   {
+    "qid": 93450,
+    "name": "Phantasmal Problems",
+    "level": 42
+   },
+   {
+    "qid": 93546,
+    "name": "Spectral Iron Ore",
+    "level": 42
+   },
+   {
+    "qid": 93568,
+    "name": "Partially Digested Collar",
+    "level": 45
+   },
+   {
+    "qid": 93574,
+    "name": "Corpsefeeder's Carapace",
+    "level": 45
+   },
+   {
+    "qid": 93594,
+    "name": "Word of the Woods",
+    "level": 43
+   },
+   {
+    "qid": 93644,
+    "name": "Tattered Journal",
+    "level": 45
+   },
+   {
+    "qid": 96010,
+    "name": "Fragments of the Pylons",
+    "level": 41
+   },
+   {
+    "qid": 96018,
+    "name": "Powering the Pylons",
+    "level": 43
+   },
+   {
+    "qid": 96060,
+    "name": "Tempered Expectations",
+    "level": 42
+   },
+   {
+    "qid": 99257,
+    "name": "A Heart of Crystal",
+    "level": 43
+   },
+   {
+    "qid": 99258,
+    "name": "Mana Mania",
+    "level": 43
+   }
+  ],
+  "riverglades": [
+   {
+    "qid": 93786,
+    "name": "A Message in Blood",
+    "level": 36
+   },
+   {
+    "qid": 93787,
+    "name": "Food for the Taking",
+    "level": 36
+   },
+   {
+    "qid": 93788,
+    "name": "Borrowed Blades",
+    "level": 38
+   },
+   {
+    "qid": 93971,
+    "name": "Farholde Scouting Report",
+    "level": 45
+   },
+   {
+    "qid": 93976,
+    "name": "The Goblin Trader",
+    "level": 36
+   },
+   {
+    "qid": 94480,
+    "name": "A Gift From Our Enemies",
+    "level": 36
+   },
+   {
+    "qid": 94481,
+    "name": "A Serving of Strength",
+    "level": 38
+   },
+   {
+    "qid": 94483,
+    "name": "Show Them How It's Done",
+    "level": 39
+   },
+   {
+    "qid": 94532,
+    "name": "Gnoll Infestation",
+    "level": 38
+   },
+   {
+    "qid": 94533,
+    "name": "Snargl's Snout",
+    "level": 40
+   },
+   {
+    "qid": 94535,
+    "name": "Bristle Hills Bandits",
+    "level": 38
+   },
+   {
+    "qid": 94556,
+    "name": "Jom-jom's Escape",
+    "level": 42
+   },
+   {
+    "qid": 94668,
+    "name": "Bloodmaster's Ring",
+    "level": 41
+   },
+   {
+    "qid": 94669,
+    "name": "Pay to Play",
+    "level": 41
+   },
+   {
+    "qid": 94670,
+    "name": "Bloodmaster's Ring",
+    "level": 41
+   },
+   {
+    "qid": 94672,
+    "name": "Encroaching Twilight",
+    "level": 41
+   },
+   {
+    "qid": 94680,
+    "name": "Twilight Missives",
+    "level": 41
+   },
+   {
+    "qid": 94727,
+    "name": "Digging for Answers",
+    "level": 40
+   },
+   {
+    "qid": 94733,
+    "name": "Our Ogre Friend",
+    "level": 41
+   },
+   {
+    "qid": 94734,
+    "name": "A Boar's Delight",
+    "level": 41
+   },
+   {
+    "qid": 94737,
+    "name": "A Treat for a Friend",
+    "level": 41
+   },
+   {
+    "qid": 94739,
+    "name": "Bloodmaster's Ring",
+    "level": 42
+   },
+   {
+    "qid": 94744,
+    "name": "The Wayward Warrior",
+    "level": 43
+   },
+   {
+    "qid": 94745,
+    "name": "Carving a Path",
+    "level": 44
+   },
+   {
+    "qid": 94748,
+    "name": "Break Their Chains",
+    "level": 44
+   },
+   {
+    "qid": 94768,
+    "name": "Bring Me His Head",
+    "level": 46
+   },
+   {
+    "qid": 94961,
+    "name": "Biting the Hand",
+    "level": 40
+   },
+   {
+    "qid": 94962,
+    "name": "Bloodmaster's Ring",
+    "level": 42
+   },
+   {
+    "qid": 94963,
+    "name": "Biting the Hand",
+    "level": 40
+   },
+   {
+    "qid": 94964,
+    "name": "Bloodmaster's Ring",
+    "level": 43
+   },
+   {
+    "qid": 94965,
+    "name": "Bloodmaster's Ring",
+    "level": 44
+   },
+   {
+    "qid": 95033,
+    "name": "On the Other Side",
+    "level": 41
+   },
+   {
+    "qid": 95062,
+    "name": "Frazzlespark's Crate",
+    "level": 36
+   },
+   {
+    "qid": 95063,
+    "name": "Bloodmaster's Ring",
+    "level": 45
+   },
+   {
+    "qid": 95118,
+    "name": "Saltwater Savages",
+    "level": 41
+   },
+   {
+    "qid": 95119,
+    "name": "Unfriendly Competition",
+    "level": 43
+   },
+   {
+    "qid": 95120,
+    "name": "WANTED: Old Rot-Chum",
+    "level": 42
+   },
+   {
+    "qid": 95121,
+    "name": "A Taste of the Sea",
+    "level": 40
+   },
+   {
+    "qid": 95122,
+    "name": "Unchecked Expansion",
+    "level": 44
+   },
+   {
+    "qid": 95123,
+    "name": "A Blast Ye Scurvy Dogs!",
+    "level": 44
+   },
+   {
+    "qid": 95124,
+    "name": "Admiral Lamora",
+    "level": 45
+   },
+   {
+    "qid": 95162,
+    "name": "Paletusk Harvesting",
+    "level": 41
+   },
+   {
+    "qid": 95163,
+    "name": "Drive Them Back",
+    "level": 40
+   },
+   {
+    "qid": 95165,
+    "name": "See Ya, Scallywags!",
+    "level": 44
+   },
+   {
+    "qid": 95183,
+    "name": "Step One: Rock",
+    "level": 41
+   },
+   {
+    "qid": 95254,
+    "name": "WANTED: Trapclaw",
+    "level": 42
+   },
+   {
+    "qid": 95260,
+    "name": "Terrors From the Deep",
+    "level": 42
+   },
+   {
+    "qid": 95261,
+    "name": "It Takes Guts",
+    "level": 42
+   },
+   {
+    "qid": 95267,
+    "name": "The Monster Surfaces",
+    "level": 42
+   },
+   {
+    "qid": 95278,
+    "name": "It Is Time, Brother...",
+    "level": 45
+   },
+   {
+    "qid": 95288,
+    "name": "Smuggler's Paradise",
+    "level": 43
+   },
+   {
+    "qid": 95293,
+    "name": "Smuggler's Special",
+    "level": 42
+   },
+   {
+    "qid": 95294,
+    "name": "Smuggler's Bargain",
+    "level": 42
+   },
+   {
+    "qid": 95295,
+    "name": "I Know a Guy",
+    "level": 40
+   },
+   {
+    "qid": 95296,
+    "name": "Shipping and Handling",
+    "level": 40
+   },
+   {
+    "qid": 95312,
+    "name": "Coming to Collect",
+    "level": 40
+   },
+   {
+    "qid": 95321,
+    "name": "Tazzik's Dues",
+    "level": 40
+   },
+   {
+    "qid": 95322,
+    "name": "Get the Goods",
+    "level": 40
+   },
+   {
+    "qid": 95325,
+    "name": "We've Been Robbed!",
+    "level": 40
+   },
+   {
+    "qid": 95326,
+    "name": "The Big Payback",
+    "level": 39
+   },
+   {
+    "qid": 95383,
+    "name": "Shipping and Handling",
+    "level": 40
+   },
+   {
+    "qid": 95417,
+    "name": "The Purple Ones",
+    "level": 40
+   },
+   {
+    "qid": 95418,
+    "name": "Spread the Word",
+    "level": 40
+   },
+   {
+    "qid": 95420,
+    "name": "Land of Giants",
+    "level": 40
+   },
+   {
+    "qid": 95424,
+    "name": "Might Makes Right",
+    "level": 41
+   },
+   {
+    "qid": 95425,
+    "name": "Unworthy Champion",
+    "level": 42
+   },
+   {
+    "qid": 95427,
+    "name": "Twilight No More!",
+    "level": 41
+   },
+   {
+    "qid": 95428,
+    "name": "Clugfist's Decree",
+    "level": 41
+   },
+   {
+    "qid": 95431,
+    "name": "Rumblings of Discontent",
+    "level": 41
+   },
+   {
+    "qid": 95432,
+    "name": "Rise Up!",
+    "level": 43
+   },
+   {
+    "qid": 95433,
+    "name": "Death to the Executioner",
+    "level": 46
+   },
+   {
+    "qid": 95601,
+    "name": "The Purple Ones",
+    "level": 40
+   },
+   {
+    "qid": 95602,
+    "name": "Sickening Lights",
+    "level": 40
+   },
+   {
+    "qid": 95792,
+    "name": "Clear 'em Out",
+    "level": 42
+   },
+   {
+    "qid": 95882,
+    "name": "WANTED: Scoutmaster Vargas",
+    "level": 43
+   },
+   {
+    "qid": 95934,
+    "name": "Proof of Profit",
+    "level": 42
+   },
+   {
+    "qid": 95936,
+    "name": "Hail the Dragonslayer",
+    "level": 43
+   },
+   {
+    "qid": 95951,
+    "name": "Fetch 'n' Fletch",
+    "level": 38
+   },
+   {
+    "qid": 95982,
+    "name": "Not My Circus",
+    "level": 38
+   },
+   {
+    "qid": 95992,
+    "name": "WANTED: Ghostmaw",
+    "level": 42
+   },
+   {
+    "qid": 96026,
+    "name": "Step Two: More Rock",
+    "level": 41
+   },
+   {
+    "qid": 96063,
+    "name": "Gaseous Gold",
+    "level": 38
+   },
+   {
+    "qid": 96067,
+    "name": "Rock 'em and Sock 'em",
+    "level": 40
+   },
+   {
+    "qid": 96103,
+    "name": "A Feast for Buzzards",
+    "level": 38
+   },
+   {
+    "qid": 96104,
+    "name": "Song of the Strider",
+    "level": 39
+   },
+   {
+    "qid": 96105,
+    "name": "King of the Wild Plains",
+    "level": 41
+   },
+   {
+    "qid": 96107,
+    "name": "Feathers for Fletching",
+    "level": 40
+   },
+   {
+    "qid": 96108,
+    "name": "Poison Tips",
+    "level": 40
+   },
+   {
+    "qid": 96109,
+    "name": "A Hunter's Quiver",
+    "level": 40
+   },
+   {
+    "qid": 97884,
+    "name": "Armory of Sunnyglade",
+    "level": 40
+   }
+  ]
+ },
+ "auto_placed": {
+  "Durotar (1-12)": [
+   {
+    "qid": 98576,
+    "name": "Glyphic Parchment",
+    "A": 9,
+    "C": 9,
+    "T": 51
+   },
+   {
+    "qid": 97279,
+    "name": "Wayward Weapons",
+    "A": 9,
+    "C": 9,
+    "T": 10
+   },
+   {
+    "qid": 96821,
+    "name": "Legging It",
+    "A": 61,
+    "C": 94,
+    "T": 98
+   },
+   {
+    "qid": 96825,
+    "name": "This Fruit Could Bite Back",
+    "A": 158,
+    "C": 158,
+    "T": 158
+   },
+   {
+    "qid": 96822,
+    "name": "For Honor",
+    "A": 79,
+    "C": 79,
+    "T": 79
+   },
+   {
+    "qid": 96873,
+    "name": "A Pain in the Neck",
+    "A": 61,
+    "C": 61,
+    "T": 61
+   },
+   {
+    "qid": 99123,
+    "name": "Lost in the Shadows",
+    "A": 99,
+    "C": 99,
+    "T": 109
+   },
+   {
+    "qid": 97223,
+    "name": "Bloodtalon Matriarch",
+    "A": 109,
+    "C": 109,
+    "T": 109
+   },
+   {
+    "qid": 97225,
+    "name": "Forgotten Loa Idols",
+    "A": 61,
+    "C": 61,
+    "T": 61
+   },
+   {
+    "qid": 99048,
+    "name": "A Missing Hand",
+    "A": 71,
+    "C": 71,
+    "T": 92
+   },
+   {
+    "qid": 99049,
+    "name": "Threat from Below",
+    "A": 92,
+    "C": 92,
+    "T": 158
+   },
+   {
+    "qid": 96874,
+    "name": "This Is Spinal Axe",
+    "A": 179,
+    "C": 179,
+    "T": 179
+   },
+   {
+    "qid": 96875,
+    "name": "Beasts of Thunder Ridge",
+    "A": 176,
+    "C": 176,
+    "T": 176
+   }
+  ]
+ },
+ "validation": {
+  "unknown_actions": [],
+  "duplicates": [
+   [
+    "The Barrens (12-15)",
+    "T The Disruption Ends |N|Back at the Crossroads (51.53, 30.83).| |T| |QID|872|"
+   ],
+   [
+    "The Barrens (12-15)",
+    "C Fungal Spores |N|All over the oasis.| |QID|848|"
+   ],
+   [
+    "The Barrens (16-20)",
+    "T Samophlange (Part 1) |N|Follow the road north out of town, then east off the road near the Sludge Fen (52.42, 11.67)| |QID|894|"
+   ],
+   [
+    "The Barrens (16-20)",
+    "A The Ashenvale Hunt |N|(40, 59)| |QID|6382|"
+   ],
+   [
+    "Stonetalon Mountains (20-21)",
+    "T News of Dogran (Part 2) |C|Warlock| |QID|1510|"
+   ],
+   [
+    "Ashenvale (21-22)",
+    "T The Ashenvale Hunt"
+   ],
+   [
+    "Hinterlands (47)",
+    "T Rin'ji is Trapped! |N|Turn-in at the tablet| |QID|2742|"
+   ]
+  ],
+  "bad_title_case": [
+   [
+    "Durotar (1-12)",
+    "Your Place In The World"
+   ],
+   [
+    "Durotar (1-12)",
+    "Your Place In The World"
+   ],
+   [
+    "Durotar (1-12)",
+    "Your Place In The World"
+   ],
+   [
+    "Durotar (1-12)",
+    "Your Place In The World"
+   ],
+   [
+    "Durotar (1-12)",
+    "From The Wreckage...."
+   ],
+   [
+    "Durotar (1-12)",
+    "From The Wreckage...."
+   ],
+   [
+    "Durotar (1-12)",
+    "From The Wreckage...."
+   ],
+   [
+    "Hillsbrad Foothills (29-30)",
+    "Time To Strike"
+   ],
+   [
+    "Hillsbrad Foothills (29-30)",
+    "Time To Strike"
+   ],
+   [
+    "Stranglethorn Vale (34-36)",
+    "To Steal From Thieves"
+   ],
+   [
+    "Arathi Highlands (36-37)",
+    "To Steal From Thieves"
+   ],
+   [
+    "Alterac Mountains (37)",
+    "Prison Break In"
+   ],
+   [
+    "Alterac Mountains (37)",
+    "Prison Break In"
+   ],
+   [
+    "Alterac Mountains (37)",
+    "Prison Break In"
+   ],
+   [
+    "Alterac Mountains (37)",
+    "To Steal From Thieves"
+   ],
+   [
+    "Badlands (40-41)",
+    "Nothing But The Truth (Part 1)"
+   ],
+   [
+    "Badlands (40-41)",
+    "Nothing But The Truth (Part 1)"
+   ],
+   [
+    "Badlands (40-41)",
+    "Nothing But The Truth (Part 2)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 1)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 1)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 2)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 2)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 2)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 3)"
+   ],
+   [
+    "Swamp of Sorrows (41-42)",
+    "Threat From the Sea (Part 3)"
+   ],
+   [
+    "Desolace (43)",
+    "Nothing But The Truth (Part 2)"
+   ],
+   [
+    "Swamp of Sorrows (48-49)",
+    "Fall From Grace"
+   ],
+   [
+    "Swamp of Sorrows (48-49)",
+    "Fall From Grace"
+   ],
+   [
+    "Swamp of Sorrows (48-49)",
+    "Nothing But The Truth (Part 2)"
+   ],
+   [
+    "Swamp of Sorrows (48-49)",
+    "Nothing But The Truth (Part 4)"
+   ],
+   [
+    "Swamp of Sorrows (48-49)",
+    "Nothing But The Truth (Part 4)"
+   ],
+   [
+    "Un'Goro Crater (51-53)",
+    "A Little Help From My Friends"
+   ],
+   [
+    "Un'Goro Crater (51-53)",
+    "A Little Help From My Friends"
+   ],
+   [
+    "Un'Goro Crater (51-53)",
+    "A Little Help From My Friends"
+   ]
+  ],
+  "unclosed_comments": [],
+  "accept_without_turnin": [
+   [
+    "Durotar (1-12)",
+    "Vile Familiars (Part 2)",
+    "Warlock"
+   ],
+   [
+    "The Barrens (16-20)",
+    "Gathering the Cure",
+    "DRUID"
+   ],
+   [
+    "The Barrens (16-20)",
+    "Hamuul Runetotem",
+    ""
+   ],
+   [
+    "The Barrens (22-23)",
+    "Washte Pawne",
+    ""
+   ],
+   [
+    "The Barrens (25)",
+    "The Harvester",
+    ""
+   ],
+   [
+    "Desolace (32-34)",
+    "Catch of the Day",
+    ""
+   ],
+   [
+    "Dustwallow Marsh (38)",
+    "The Black Shield (Part 4)",
+    ""
+   ],
+   [
+    "Badlands (40-41)",
+    "Coolant Heads Prevail",
+    ""
+   ],
+   [
+    "Badlands (40-41)",
+    "Gyro... What?",
+    ""
+   ],
+   [
+    "Hinterlands (47)",
+    "Ripple Delivery",
+    ""
+   ],
+   [
+    "Hinterlands (47)",
+    "Consult Master Gadrin",
+    ""
+   ],
+   [
+    "Searing Gorge (47-48)",
+    "What the Flux?",
+    ""
+   ],
+   [
+    "Feralas (49)",
+    "The Strength of Corruption",
+    ""
+   ],
+   [
+    "Tanaris (49-50)",
+    "The Super Egg-O-Matic",
+    ""
+   ],
+   [
+    "Tanaris (49-50)",
+    "The Stone Circle",
+    ""
+   ],
+   [
+    "Tanaris (49-50)",
+    "Sprinkle's Secret Ingredient",
+    ""
+   ],
+   [
+    "Tanaris (49-50)",
+    "Return to Apothecary Zinge",
+    ""
+   ],
+   [
+    "Azshara (50)",
+    "Xylem's Payment to Jediga",
+    ""
+   ],
+   [
+    "Azshara (50)",
+    "Magatha's Payment to Jediga",
+    ""
+   ],
+   [
+    "Azshara (50)",
+    "March of the Silithid",
+    ""
+   ],
+   [
+    "Azshara (50)",
+    "Jes'rimon's Payment to Jediga",
+    ""
+   ],
+   [
+    "Azshara (50)",
+    "Andron's Payment to Jediga",
+    ""
+   ]
+  ],
+  "turnin_without_accept": [
+   [
+    "Durotar (1-12)",
+    "Rune-Inscribed Tablet",
+    "Shaman"
+   ],
+   [
+    "Dustwallow Marsh (38)",
+    "The Black Shield (Part 5)",
+    ""
+   ],
+   [
+    "Hinterlands (47)",
+    "Lines of Communication",
+    ""
+   ],
+   [
+    "Hinterlands (47)",
+    "Oran's Gratitude",
+    ""
+   ],
+   [
+    "Un'Goro Crater (51-53)",
+    "Bungle in the Jungle",
+    ""
+   ],
+   [
+    "Un'Goro Crater (51-53)",
+    "Volcanic Activity",
+    ""
+   ],
+   [
+    "Un'Goro Crater (51-53)",
+    "Marvon's Workshop",
+    ""
+   ]
+  ]
+ },
+ "canonicalized": [
+  [
+   "Durotar (1-12)",
+   "Taming the Beast",
+   "Taming the Beast (Part 2)"
+  ],
+  [
+   "Durotar (1-12)",
+   "Taming the Beast",
+   "Taming the Beast (Part 2)"
+  ],
+  [
+   "Durotar (1-12)",
+   "Taming the Beast",
+   "Taming the Beast (Part 2)"
+  ],
+  [
+   "Durotar (1-12)",
+   "Taming the Beast",
+   "Taming the Beast (Part 3)"
+  ],
+  [
+   "Durotar (1-12)",
+   "Taming the Beast",
+   "Taming the Beast (Part 3)"
+  ],
+  [
+   "Durotar (1-12)",
+   "Taming the Beast",
+   "Taming the Beast (Part 3)"
+  ],
+  [
+   "The Barrens (12-15)",
+   "Chen's Empty Keg",
+   "Chen's Empty Keg (Part 2)"
+  ],
+  [
+   "The Barrens (16-20)",
+   "Chen's Empty Keg",
+   "Chen's Empty Keg (Part 2)"
+  ],
+  [
+   "The Barrens (16-20)",
+   "Chen's Empty Keg",
+   "Chen's Empty Keg (Part 3)"
+  ],
+  [
+   "Stonetalon Mountains (20-21)",
+   "News of Dogran",
+   "News of Dogran (Part 2)"
+  ],
+  [
+   "The Barrens (22-23)",
+   "Chen's Empty Keg",
+   "Chen's Empty Keg (Part 3)"
+  ],
+  [
+   "The Barrens (22-23)",
+   "Chen's Empty Keg",
+   "Chen's Empty Keg (Part 3)"
+  ],
+  [
+   "The Barrens (22-23)",
+   "The Binding",
+   "The Binding (Part 2)"
+  ],
+  [
+   "The Barrens (22-23)",
+   "The Binding",
+   "The Binding (Part 2)"
+  ],
+  [
+   "The Barrens (22-23)",
+   "The Binding",
+   "The Binding (Part 2)"
+  ],
+  [
+   "Ashenvale (26-28)",
+   "The Sacred Flame (Part 1)",
+   "The Sacred Flame"
+  ],
+  [
+   "Stonetalon Mountains (28)",
+   "The Sacred Flame (Part 1)",
+   "The Sacred Flame"
+  ],
+  [
+   "Thousand Needles (31-32)",
+   "Wharfmaster Dizzywig",
+   "Wharfmaster Dizzywig (Part 2)"
+  ],
+  [
+   "Desolace (32-34)",
+   "The Black Shield",
+   "The Black Shield (Part 2)"
+  ],
+  [
+   "Desolace (32-34)",
+   "The Black Shield",
+   "The Black Shield (Part 2)"
+  ],
+  [
+   "Desolace (32-34)",
+   "Wharfmaster Dizzywig",
+   "Wharfmaster Dizzywig (Part 2)"
+  ],
+  [
+   "Thousand Needles (37-38)",
+   "The Swarm Grows",
+   "The Swarm Grows (Part 3)"
+  ],
+  [
+   "Thousand Needles (37-38)",
+   "The Swarm Grows",
+   "The Swarm Grows (Part 3)"
+  ],
+  [
+   "Stranglethorn Vale (38-40)",
+   "Mok'thardin's Enchantment (Part 2)",
+   "Mok'thardin's Enchantment"
+  ],
+  [
+   "Stranglethorn Vale (38-40)",
+   "Mok'thardin's Enchantment (Part 2)",
+   "Mok'thardin's Enchantment"
+  ],
+  [
+   "Stranglethorn Vale (38-40)",
+   "Panther Mastery (Part 3)",
+   "Panther Mastery (Part 4)"
+  ],
+  [
+   "Stranglethorn Vale (38-40)",
+   "Panther Mastery (Part 3)",
+   "Panther Mastery (Part 4)"
+  ],
+  [
+   "Badlands (40-41)",
+   "This Is Going to Be Hard",
+   "This Is Going to Be Hard (Part 2)"
+  ],
+  [
+   "Badlands (40-41)",
+   "This Is Going to Be Hard",
+   "This Is Going to Be Hard (Part 2)"
+  ],
+  [
+   "Badlands (40-41)",
+   "This Is Going to Be Hard",
+   "This Is Going to Be Hard (Part 3)"
+  ],
+  [
+   "Badlands (40-41)",
+   "This Is Going to Be Hard",
+   "This Is Going to Be Hard (Part 3)"
+  ],
+  [
+   "Badlands (40-41)",
+   "This Is Going to Be Hard",
+   "This Is Going to Be Hard (Part 3)"
+  ],
+  [
+   "Desolace (43)",
+   "Nothing But the Truth (Part 2)",
+   "Nothing But The Truth (Part 2)"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk",
+   "A Donation of Silk (Part 2)"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk",
+   "A Donation of Silk (Part 2)"
+  ],
+  [
+   "Feralas (45-46)",
+   "Parts of the Swarm",
+   "Parts of the Swarm (Part 2)"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk",
+   "A Donation of Silk (Part 3)"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk",
+   "A Donation of Silk (Part 3)"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Mageweave",
+   "A Donation of Mageweave (Part 2)"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Mageweave",
+   "A Donation of Mageweave (Part 2)"
+  ],
+  [
+   "Hinterlands (47)",
+   "Ripple Recovery",
+   "Ripple Recovery (Part 2)"
+  ],
+  [
+   "Swamp of Sorrows (48-49)",
+   "Nothing But the Truth (Part 2)",
+   "Nothing But The Truth (Part 2)"
+  ],
+  [
+   "Swamp of Sorrows (48-49)",
+   "Nothing But the Truth (Part 4)",
+   "Nothing But The Truth (Part 4)"
+  ],
+  [
+   "The Hinterlands (50-51)",
+   "Cortello's Riddle",
+   "Cortello's Riddle (Part 3)"
+  ],
+  [
+   "Western Plaguelands (56)",
+   "Better Late Than Never",
+   "Better Late Than Never (Part 2)"
+  ]
+ ],
+ "qid_fixes": [
+  [
+   "The Barrens (12-15)",
+   "Forged Steel",
+   1502,
+   1503
+  ],
+  [
+   "The Barrens (12-15)",
+   "Forged Steel",
+   1502,
+   1503
+  ],
+  [
+   "The Barrens (12-15)",
+   "Forged Steel",
+   1502,
+   1503
+  ],
+  [
+   "The Barrens (16-20)",
+   "The Ashenvale Hunt",
+   1131,
+   6382
+  ],
+  [
+   "Stonetalon Mountains (20-21)",
+   "Cycle of Rebirth",
+   1087,
+   6301
+  ],
+  [
+   "Hinterlands (47)",
+   "Rin'ji's Secret",
+   2742,
+   2782
+  ]
+ ],
+ "title_fixes": [
+  [
+   "Thousand Needles (31-32)",
+   "Hemet Nesingwary Jr.",
+   "Hemet Nesingwary"
+  ],
+  [
+   "Desolace (43)",
+   "Khan Kehn",
+   "Khan Jehn"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk (Orgrimmar)",
+   "A Donation of Silk"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk (Orgrimmar)",
+   "A Donation of Silk"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Mageweave (Orgrimmar)",
+   "A Donation of Mageweave"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Mageweave (Orgrimmar)",
+   "A Donation of Mageweave"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk (Darkspear Trolls)",
+   "A Donation of Silk"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Silk (Darkspear Trolls)",
+   "A Donation of Silk"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Mageweave (Darkspear Trolls)",
+   "A Donation of Mageweave"
+  ],
+  [
+   "Feralas (45-46)",
+   "A Donation of Mageweave (Darkspear Trolls)",
+   "A Donation of Mageweave"
+  ],
+  [
+   "Swamp of Sorrows (48-49)",
+   "Nothing But the Turth (Part 4)",
+   "Nothing But The Truth (Part 4)"
+  ],
+  [
+   "Feralas (49)",
+   "The Sunkey Temple",
+   "The Sunken Temple"
+  ]
+ ],
+ "not_in_forever_by_name": [
+  {
+   "guide": "Western Plaguelands (56)",
+   "qid": 9443,
+   "step": "A The So-Called Mark of the Lightbringer |QID|9443|"
+  },
+  {
+   "guide": "Western Plaguelands (57-59)",
+   "qid": 9443,
+   "step": "C The So-Called Mark of the Lightbringer |QID|9443|"
+  },
+  {
+   "guide": "Western Plaguelands (57-59)",
+   "qid": 9443,
+   "step": "T The So-Called Mark of the Lightbringer |QID|9443|"
+  },
+  {
+   "guide": "Western Plaguelands (57-59)",
+   "qid": 9444,
+   "step": "A Defiling Uther's Tomb |QID|9444|"
+  },
+  {
+   "guide": "Western Plaguelands (57-59)",
+   "qid": 9444,
+   "step": "C Defiling Uther's Tomb |QID|9444| |N|You'll need to equip the quest item at the tomb.|"
+  },
+  {
+   "guide": "Western Plaguelands (57-59)",
+   "qid": 9444,
+   "step": "T Defiling Uther's Tomb |QID|9444|"
+  }
+ ]
+}

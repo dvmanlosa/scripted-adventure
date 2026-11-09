@@ -1,0 +1,261 @@
+id|name|level|reqlevel|side|reqclass|zone|start|end|startcoord|endcoord|racemask|series|choices|objective|reqcoord
+92482|The Way of the Hunter|2|2|3|0|CLASS:hunter|npc:251361:Rorian the Dayseeker|npc:251376:Tai'ree Farsight|Zephras Isle@42,23.4|Zephras Isle@42.4,23.6|95||0|Read the Scribbled Note and then speak with Tai'ree Farsight in Thendal Grove.|
+92483|At Home in the Shadows|2|2|3|0|CLASS:rogue|npc:251361:Rorian the Dayseeker|npc:251389:Akeri Duskblade|Zephras Isle@42,23.4|Zephras Isle@43.6,24.2|95||0|Read the Simple Note then speak with Akeri Duskblade within the watchtower in Thendal Grove.|
+92484|Embracing the Elements|2|2|2|0|CLASS:shaman|npc:251361:Rorian the Dayseeker|npc:251374:Windshaper Boro|Zephras Isle@42,23.4|Zephras Isle@42.7,23.5|||0|Examine the Humming Recall Crystal then speak with Windshaper Boro in Thendal Grove.|
+92532|The Warrior's Path|2|2|3|1|CLASS:warrior|npc:251361:Rorian the Dayseeker|npc:251964:Blademaster Ren|Zephras Isle@42,23.4|Zephras Isle@43.6,24.2|6||0|Read the Crumpled Note you've been given, then seek out Blademaster Ren inside the Thendal Village watchtower.|
+94003|The Skybreaker Bulwark|10|10|3|0|CLASS:warrior|npc:252377:Seena Skybreaker|npc:252377:Seena Skybreaker|Zephras Isle@59.8,72.8|Zephras Isle@59.8,72.8|95||0|Reclaim the Skybreaker Bulwark from Zaal Stormshield at the Shrine of Akir.|
+94007|Taming the Beast|10|10|3|0|CLASS:hunter|npc:254084:Elayaa Easewind|npc:252389:Quel'ana Quickgale|Zephras Isle@45.2,44.2|Zephras Isle@59.6,72.6|95|6071;6072;6073;6721;6722;6063;94013;94978;94979;6101;6102;6103|0|Report to Quel'ana Quickgale in Valanaar.|
+94013|Taming the Beast|10|10|3|0|CLASS:hunter|npc:252389:Quel'ana Quickgale|npc:252389:Quel'ana Quickgale|Zephras Isle@59.6,72.6|Zephras Isle@59.6,72.6|95|6071;6072;6073;6721;6722;94007;6063;94978;94979;6101;6102;6103|0|Use the Taming Rod to tame a Vuldren Alpha in the Gustberry Lowlands. Practice your skills, then return the Taming Rod to Quel'ana Quickgale in Valanaar.|
+94050|Training the Beast|10|10|3|0|CLASS:hunter|npc:252389:Quel'ana Quickgale|npc:254411:Quel'dora Quickgale|Zephras Isle@59.6,72.6|Zephras Isle@59.6,72.6|95||0|Speak to Quel'dora Quickgale in Valanaar.|
+94978|Taming the Beast|10|10|3|0|CLASS:hunter|npc:252389:Quel'ana Quickgale|npc:252389:Quel'ana Quickgale|Zephras Isle@59.6,72.6|Zephras Isle@59.6,72.6|95|6071;6072;6073;6721;6722;94007;6063;94013;94979;6101;6102;6103|0|Use the Taming Rod to tame a Windsong Crawler found near bodies of water. Practice your skills, then return the Taming Rod to Quel'ana Quickgale in Valanaar.|
+94979|Taming the Beast|10|10|3|0|CLASS:hunter|npc:252389:Quel'ana Quickgale|npc:252389:Quel'ana Quickgale|Zephras Isle@59.6,72.6|Zephras Isle@59.6,72.6|95|6071;6072;6073;6721;6722;94007;6063;94013;94978;6101;6102;6103|0|Use the Taming Rod to tame an Ornery Galestrider in the Gustberry Lowlands. Practice your skills, then return the Taming Rod to Quel'ana Quickgale in Valanaar.|
+96821|Legging It|6|1|2|0|KA:durotar|npc:3194:Vel'rin Fang|npc:3139:Gar'Thok|Durotar@55.8,74|Durotar@52,43.4|||0|Kill 6 Ridgeshade Creepers and 6 Ridgeshade Lurkers in southern Durotar, then report to Gar'thok in Razor Hill.|Durotar@50.6,50.6
+96822|For Honor|7|3|2|0|KA:durotar|npc:266940:Turroc|npc:266940:Turroc|Durotar@54,42.6|Durotar@54,42.6|||0|Collect the Raider's Battleaxe, Raider's Bow, and Raider's Shield from the Tiragarde Keep outskirts, then return them to Turroc in Razor Hill.|
+96825|This Fruit Could Bite Back|6|3|2|0|KA:durotar|npc:3191:Cook Torka|npc:3191:Cook Torka|Durotar@51.2,42.4|Durotar@51.2,42.4|||0|Cook Torka in Razor Hill wants you to collect 8 Prickly Pear Fruit from the Razormane Grounds west of town.|
+96873|A Pain in the Neck|8|5|2|0|KA:durotar|npc:266881:Pa'zula|npc:266881:Pa'zula|Durotar@56.6,73.6|Durotar@56.6,73.6|2||0|Pa'zula in Sen'jin Village wants you to collect 3 Luminous Residue. Luminous Residue can be obtained by disenchanting Hexed Pendants dropped by trolls in the Echo Isles.|
+96874|This Is Spinal Axe|10|6|2|67|KA:durotar|npc:10266:Ug'thok|npc:10266:Ug'thok|Orgrimmar@80.6,23.4|Orgrimmar@80.6,23.4|||0|Ug'thok in Orgrimmar wants you to collect 5 Weathered Spines from beasts in Thunder Ridge, along with 5 Rough Grinding Stones.|
+96875|Beasts of Thunder Ridge|10|6|2|0|KA:durotar|npc:5811:Kamari|npc:5811:Kamari|Orgrimmar@63,45|Orgrimmar@63,45|||0|Kamari in Orgrimmar wants you to collect 5 Rough Lizard Hide from beasts in Thunder Ridge, along with 2 Cured Light Hides.|
+97223|Bloodtalon Matriarch|9|5|2|0|KA:durotar|npc:7953:Xar'Ti|npc:7953:Xar'Ti|Durotar@55.2,75.4|Durotar@55.2,75.4|||0|Bring Eggs of the Bloodtalon Matriarch to Xar'Ti in Sen'jin Village.|
+97225|Forgotten Loa Idols|9|4|2|0|KA:durotar|npc:3304:Master Vornal|npc:3188:Master Gadrin|Durotar@55.8,74.4|Durotar@56,74.6|||0|Collect 8 Forgotten Loa Idols from the Echo Isles. Bring them to Master Gadrin in Sen'jin Village.|
+97243|Call of Fire|10|10|2|0|CLASS:shaman|npc:252382:Sessaria Skystride|npc:268592:Olariaan Swiftburn|Zephras Isle@58.2,78.4|Zephras Isle@51.2,86|||0|Bring the Torch of Dormant Flame to Olariaan Swiftburn at the Shrine of Flames in the Gustberry Lowlands.|
+97244|Call of Fire|10|10|2|0|CLASS:shaman|npc:268592:Olariaan Swiftburn|npc:268592:Olariaan Swiftburn|Zephras Isle@51.2,86|Zephras Isle@51.2,86|||0|Slay Skypriest Faladiel in the Gustberry Lowlands and collect Faladiel's Heart.|
+97279|Wayward Weapons|2|1|2|0|KA:durotar|npc:3143:Gornek|npc:3159:Kzan Thornslash|Durotar@42,68.4|Durotar@40.4,68|||0|Collect 6 Abandoned Training Weapons, then return to Kzan Thornslash in the Den.|
+98575|Tainted Tablet|1|1|2|256|CLASS:warlock|npc:3143:Gornek|npc:3156:Nartok|Durotar@42,68.4|Durotar@40.6,68.4|8||0|Read the Tainted Tablet and speak to Nartok inside the Den in the Valley of Trials.|
+98576|Glyphic Parchment|1|1|2|128|CLASS:mage|npc:3143:Gornek|npc:5884:Mai'ah|Durotar@42,68.4|Durotar@42.4,69|2||0|Read the Glyphic Parchment and speak with Mai'ah near the entrance to the Den in the Valley of Trials.|
+99048|A Missing Hand|9|8|2|0|KA:durotar|npc:3142:Orgnil Soulscar|npc:275657:Heglan Shadeeye|Durotar@52.2,43.2|Durotar@58.6,45.6|||0|Find Heglan Shadeeye north of Tiragarde Keep.|
+99049|Threat from Below|9|8|2|0|KA:durotar|npc:275657:Heglan Shadeeye|npc:3142:Orgnil Soulscar|Durotar@58.6,45.6|Durotar@52.2,43.2|||0|Find signs of what attacked Heglan Shadeeye.|
+99123|Lost in the Shadows|8|4|2|0|KA:durotar|npc:275811:Pal'juh|npc:3304:Master Vornal|Durotar@46.2,78.6|Durotar@55.8,74.4|||2|Help Pal'juh escape Kolkar Crag and bring news of your success to Master Vornal in Sen'jin Village.|
+86576|Bloodfury Trinkets|26|18|2|0|KA:stonetalon-mountains|||||||||
+87494|Microcrystal Contamination|55|45|0|0|KA:ungoro-crater|||||||||
+91734|Remote Contact|52|44|2|0|KA:azshara|||||||||
+91735|Remote Contact|52|44|2|0|KA:azshara|||||||||
+91737|Remote Contact|52|44|2|0|KA:azshara|||||||||
+92434|Blood in the Streets|34|30|2|0|EK:alterac-mountains|||||||||
+92519|Ward Restocking|36|30|2|0|EK:arathi-highlands|||||||||
+92706|WANTED: Bruuz|20|15|3|0|KA:the-barrens|||||||||
+92707|The Giant in the Den|33|30|2|0|EK:arathi-highlands|||||||||
+92743|A Conqueror's Crown|40|30|3|0|KA:desolace|||||||||
+92754|A New Need for Shadow Protection|35|30|0|0|KA:desolace|||||||||
+92812|Economic Warfare|60|1|3|0|KA:desolace|||||||||
+92814|I Need a Tailor|35|30|0|0|KA:desolace|||||||||
+92817|Leather Technique|35|30|0|0|KA:desolace|||||||||
+92867|Ground to Keep|39|32|0|0|EK:arathi-highlands|||||||||
+92878|Lost for Words|43|36|2|0|KA:feralas|||||||||
+92914|Strange Pylons|43|35|0|0|KA:shendralas|||||||||
+93016|A Brief History Lesson|43|35|0|0|KA:shendralas|||||||||
+93034|Valley of Bones|38|35|3|0|KA:shendralas|||||||||
+93035|Ravaging Ravagers|38|35|3|0|KA:shendralas|||||||||
+93037|Outing Outcasts|40|35|3|0|KA:shendralas|||||||||
+93041|Facing the Truth|38|35|3|0|KA:shendralas|||||||||
+93044|A Cleansing Cry|38|35|2|0|KA:desolace|||||||||
+93045|Test Your Theory|38|35|2|0|KA:desolace|||||||||
+93058|Saving Our Own|42|35|2|0|KA:shendralas|||||||||
+93062|Bone Burying|42|35|2|0|KA:shendralas|||||||||
+93066|Bristleback Retreat|43|35|3|0|KA:shendralas|||||||||
+93072|Long-Term Solutions|43|35|0|0|KA:shendralas|||||||||
+93122|Checking Things Out|43|35|2|0|KA:shendralas|||||||||
+93125|Going Home|43|35|0|0|KA:shendralas|||||||||
+93128|Khan Jehn|42|35|2|0|KA:desolace|||||||||
+93129|Threat of Starvation|43|35|0|0|KA:shendralas|||||||||
+93176|My Little Friends|35|25|3|0|EK:swamp-of-sorrows|||||||||
+93188|Return to Orgrul|43|35|0|0|KA:shendralas|||||||||
+93196|Khan Jehn|42|35|0|0|KA:desolace|||||||||
+93225|Carved Centaur Totems|40|30|2|0|KA:desolace|||||||||
+93341|Forlorn Gardens|43|35|0|0|KA:shendralas|||||||||
+93362|What They've Done to My Peonies|43|35|0|0|KA:shendralas|||||||||
+93394|Meeting the Magister|43|35|0|0|KA:shendralas|||||||||
+93430|Taking the Bait Back|35|30|0|0|EK:swamp-of-sorrows|||||||||
+93450|Phantasmal Problems|42|35|0|0|KA:shendralas|||||||||
+93464|The Visiting Mage|38|30|2|0|EK:swamp-of-sorrows|||||||||
+93465|Notes on Draenethyst|40|30|2|0|KA:desolace|||||||||
+93546|Spectral Iron Ore|42|35|0|0|KA:shendralas|||||||||
+93568|Partially Digested Collar|45|35|0|0|KA:shendralas|||||||||
+93574|Corpsefeeder's Carapace|45|35|0|0|KA:shendralas|||||||||
+93594|Word of the Woods|43|35|0|0|KA:shendralas|||||||||
+93644|Tattered Journal|45|35|0|0|KA:shendralas|||||||||
+93663|Lost in Transit|35|30|2|0|EK:swamp-of-sorrows|||||||||
+93678|Abridged Notes on Draenethyst|40|30|0|0|KA:desolace|||||||||
+93680|Key to the City|33|30|2|0|EK:alterac-mountains|||||||||
+93689|Friend of the Kirin Tor|33|24|0|0|EK:alterac-mountains|||||||||
+93739|Exploring the Horde|13|7|2|0|KA:orgrimmar|||||||||
+93786|A Message in Blood|36|35|2|0|EK:riverglades|||||||||
+93787|Food for the Taking|36|36|2|0|EK:riverglades|||||||||
+93788|Borrowed Blades|38|36|2|0|EK:riverglades|||||||||
+93971|Farholde Scouting Report|45|36|2|0|EK:riverglades|||||||||
+93976|The Goblin Trader|36|36|2|0|EK:riverglades|||||||||
+94480|A Gift From Our Enemies|36|36|2|0|EK:riverglades|||||||||
+94481|A Serving of Strength|38|36|2|0|EK:riverglades|||||||||
+94483|Show Them How It's Done|39|36|2|0|EK:riverglades|||||||||
+94532|Gnoll Infestation|38|36|2|0|EK:riverglades|||||||||
+94533|Snargl's Snout|40|36|2|0|EK:riverglades|||||||||
+94535|Bristle Hills Bandits|38|36|2|0|EK:riverglades|||||||||
+94556|Jom-jom's Escape|42|36|2|0|EK:riverglades|||||||||
+94668|Bloodmaster's Ring|41|36|2|0|EK:riverglades|||||||||
+94669|Pay to Play|41|36|2|0|EK:riverglades|||||||||
+94670|Bloodmaster's Ring|41|36|2|0|EK:riverglades|||||||||
+94672|Encroaching Twilight|41|36|2|0|EK:riverglades|||||||||
+94680|Twilight Missives|41|36|2|0|EK:riverglades|||||||||
+94727|Digging for Answers|40|36|2|0|EK:riverglades|||||||||
+94733|Our Ogre Friend|41|36|2|0|EK:riverglades|||||||||
+94734|A Boar's Delight|41|36|2|0|EK:riverglades|||||||||
+94737|A Treat for a Friend|41|36|2|0|EK:riverglades|||||||||
+94739|Bloodmaster's Ring|42|36|2|0|EK:riverglades|||||||||
+94744|The Wayward Warrior|43|38|2|0|EK:riverglades|||||||||
+94745|Carving a Path|44|38|2|0|EK:riverglades|||||||||
+94748|Break Their Chains|44|38|2|0|EK:riverglades|||||||||
+94768|Bring Me His Head|46|38|2|0|EK:riverglades|||||||||
+94872|Buying Friendship: Magram|45|30|2|0|KA:desolace|||||||||
+94873|Buying Friendship: Gelkis|45|30|2|0|KA:desolace|||||||||
+94895|Lost Shipping Crate|38|36|2|0|KA:desolace|||||||||
+94930|Lost Shipping Crate|38|36|2|0|KA:thousand-needles|||||||||
+94961|Biting the Hand|40|36|0|0|EK:riverglades|||||||||
+94962|Bloodmaster's Ring|42|36|2|0|EK:riverglades|||||||||
+94963|Biting the Hand|40|36|0|0|EK:riverglades|||||||||
+94964|Bloodmaster's Ring|43|36|2|0|EK:riverglades|||||||||
+94965|Bloodmaster's Ring|44|36|2|0|EK:riverglades|||||||||
+95033|On the Other Side|41|40|2|0|EK:riverglades|||||||||
+95062|Frazzlespark's Crate|36|36|2|0|EK:riverglades|||||||||
+95063|Bloodmaster's Ring|45|36|2|0|EK:riverglades|||||||||
+95118|Saltwater Savages|41|36|0|0|EK:riverglades|||||||||
+95119|Unfriendly Competition|43|38|0|0|EK:riverglades|||||||||
+95120|WANTED: Old Rot-Chum|42|36|0|0|EK:riverglades|||||||||
+95121|A Taste of the Sea|40|36|0|0|EK:riverglades|||||||||
+95122|Unchecked Expansion|44|38|0|0|EK:riverglades|||||||||
+95123|A Blast Ye Scurvy Dogs!|44|38|0|0|EK:riverglades|||||||||
+95124|Admiral Lamora|45|38|0|0|EK:riverglades|||||||||
+95141|Report to Rog'mar|38|36|2|0|EK:stranglethorn-vale|||||||||
+95143|Finding Tan'jani|38|36|2|0|EK:arathi-highlands|||||||||
+95144|Overseas Delivery|38|36|0|0|KA:tanaris|||||||||
+95162|Paletusk Harvesting|41|38|2|0|EK:riverglades|||||||||
+95163|Drive Them Back|40|38|2|0|EK:riverglades|||||||||
+95165|See Ya, Scallywags!|44|38|0|0|EK:riverglades|||||||||
+95183|Step One: Rock|41|38|2|0|EK:riverglades|||||||||
+95254|WANTED: Trapclaw|42|36|0|0|EK:riverglades|||||||||
+95260|Terrors From the Deep|42|38|0|0|EK:riverglades|||||||||
+95261|It Takes Guts|42|38|0|0|EK:riverglades|||||||||
+95267|The Monster Surfaces|42|38|0|0|EK:riverglades|||||||||
+95278|It Is Time, Brother...|45|38|2|0|EK:riverglades|||||||||
+95288|Smuggler's Paradise|43|38|0|0|EK:riverglades|||||||||
+95293|Smuggler's Special|42|38|0|0|EK:riverglades|||||||||
+95294|Smuggler's Bargain|42|38|0|0|EK:riverglades|||||||||
+95295|I Know a Guy|40|36|0|0|EK:riverglades|||||||||
+95296|Shipping and Handling|40|36|0|0|EK:riverglades|||||||||
+95312|Coming to Collect|40|36|0|0|EK:riverglades|||||||||
+95321|Tazzik's Dues|40|36|0|0|EK:riverglades|||||||||
+95322|Get the Goods|40|36|0|0|EK:riverglades|||||||||
+95325|We've Been Robbed!|40|36|0|0|EK:riverglades|||||||||
+95326|The Big Payback|39|36|0|0|EK:riverglades|||||||||
+95350|Welcome to Azeroth|13|7|2|0|KA:orgrimmar|||||||||
+95383|Shipping and Handling|40|36|0|0|EK:riverglades|||||||||
+95384|Partial Mystical Notes|40|32|0|0|EK:stranglethorn-vale|||||||||
+95385|Torn Mystical Scroll|43|35|0|0|EK:stranglethorn-vale|||||||||
+95417|The Purple Ones|40|36|2|0|EK:riverglades|||||||||
+95418|Spread the Word|40|36|2|0|EK:riverglades|||||||||
+95420|Land of Giants|40|36|2|0|EK:riverglades|||||||||
+95424|Might Makes Right|41|36|2|0|EK:riverglades|||||||||
+95425|Unworthy Champion|42|36|2|0|EK:riverglades|||||||||
+95427|Twilight No More!|41|36|2|0|EK:riverglades|||||||||
+95428|Clugfist's Decree|41|36|2|0|EK:riverglades|||||||||
+95431|Rumblings of Discontent|41|38|2|0|EK:riverglades|||||||||
+95432|Rise Up!|43|36|2|0|EK:riverglades|||||||||
+95433|Death to the Executioner|46|36|2|0|EK:riverglades|||||||||
+95494|Bruised Pride and Lion Hides|18|14|2|0|KA:the-barrens|||||||||
+95495|The Hermit Tanner|18|14|2|0|KA:the-barrens|||||||||
+95507|Vrang's Game|18|14|2|0|KA:the-barrens|||||||||
+95508|Unwelcome Guests|18|14|2|0|KA:the-barrens|||||||||
+95534|Strahnbrad Mystery|36|25|3|0|EK:alterac-mountains|||||||||
+95601|The Purple Ones|40|36|2|0|EK:riverglades|||||||||
+95602|Sickening Lights|40|36|2|0|EK:riverglades|||||||||
+95621|Trouble in the Valley|18|14|2|0|KA:the-barrens|||||||||
+95748|The Gurubashi Legends of Old|40|30|2|0|EK:stranglethorn-vale|||||||||
+95770|Locating the Lost City|40|30|2|0|EK:stranglethorn-vale|||||||||
+95773|Enemies in the Water|37|30|2|0|EK:stranglethorn-vale|||||||||
+95774|Her Name Is Olgra|20|14|2|0|KA:the-barrens|||||||||
+95792|Clear 'em Out|42|36|0|0|EK:riverglades|||||||||
+95819|Sign Me Up!|60|1|0|0|KA:the-barrens|||||||||
+95882|WANTED: Scoutmaster Vargas|43|38|2|0|EK:riverglades|||||||||
+95934|Proof of Profit|42|36|0|0|EK:riverglades|||||||||
+95936|Hail the Dragonslayer|43|36|2|0|EK:riverglades|||||||||
+95951|Fetch 'n' Fletch|38|36|2|0|EK:riverglades|||||||||
+95982|Not My Circus|38|36|0|0|EK:riverglades|||||||||
+95992|WANTED: Ghostmaw|42|38|2|0|EK:riverglades|||||||||
+96010|Fragments of the Pylons|41|35|0|0|KA:shendralas|||||||||
+96018|Powering the Pylons|43|35|0|0|KA:shendralas|||||||||
+96026|Step Two: More Rock|41|38|2|0|EK:riverglades|||||||||
+96060|Tempered Expectations|42|35|0|0|KA:shendralas|||||||||
+96063|Gaseous Gold|38|36|0|0|EK:riverglades|||||||||
+96067|Rock 'em and Sock 'em|40|36|0|0|EK:riverglades|||||||||
+96078|A Tale Spun Around the Fire|40|30|2|0|EK:stranglethorn-vale|||||||||
+96103|A Feast for Buzzards|38|36|2|0|EK:riverglades|||||||||
+96104|Song of the Strider|39|36|2|0|EK:riverglades|||||||||
+96105|King of the Wild Plains|41|36|2|0|EK:riverglades|||||||||
+96107|Feathers for Fletching|40|36|2|0|EK:riverglades|||||||||
+96108|Poison Tips|40|36|2|0|EK:riverglades|||||||||
+96109|A Hunter's Quiver|40|36|2|0|EK:riverglades|||||||||
+96136|Call of Air|35|30|2|0|CLASS:shaman|||||||||
+96222|Khan Hratha|42|35|3|0|KA:desolace|||||||||
+96339|Legacy Reward: Replica Ironforge Air Rifle|60|0|3|0|KA:the-barrens|||||||||
+96383|Legacy Reward: Spectral Bear Cub|60|0|3|0|KA:the-barrens|||||||||
+96779|Syndicate Sabotage|24|24|3|8|CLASS:rogue|||||||||
+96781|What's the Big Idea?|36|24|3|8|CLASS:rogue|||||||||
+96782|Covert Extraction|36|24|3|8|CLASS:rogue|||||||||
+96783|A Way In|36|24|3|8|CLASS:rogue|||||||||
+96784|Master of Disguise|36|24|3|8|CLASS:rogue|||||||||
+96785|Ain't No Telling|36|24|3|8|CLASS:rogue|||||||||
+96786|The Syndicate Sting|36|24|3|8|CLASS:rogue|||||||||
+96876|Ukor's Lost Pack|8|5|2|0|KA:durotar|||||||||
+96877|Halikor's Hoof|12|6|2|0|KA:durotar|||||||||
+96989|Your First Riding Raptor|40|40|2|0|KA:durotar|||||||||
+96994|Your First Riding Wolf|40|40|2|0|KA:orgrimmar|||||||||
+97003|Chol'aruk the Ravener|21|15|2|0|KA:the-barrens|||||||||
+97194|Learning to Ride|40|40|2|0|KA:orgrimmar|||||||||
+97200|Learning to Ride|40|40|2|0|KA:orgrimmar|||||||||
+97242|Yelmak's Medley|15|9|2|0|KA:orgrimmar|||||||||
+97245|Call of Fire|10|10|2|0|CLASS:shaman|||||||||
+97246|Meal Appeal|15|5|2|0|KA:orgrimmar|||||||||
+97249|Favorite Food|15|5|2|0|KA:orgrimmar|||||||||
+97250|Wrongly Blamed, Justly Corrected|23|18|2|0|KA:the-barrens|||||||||
+97253|Parts and Pieces|15|9|3|0|KA:the-barrens|||||||||
+97257|Call of Fire|10|10|2|0|CLASS:shaman|||||||||
+97265|Hate the Hatefury|33|28|2|0|KA:desolace|||||||||
+97275|Whuut's the Rush|15|9|2|0|KA:orgrimmar|||||||||
+97281|A Simmering Storm|11|7|2|0|KA:durotar|||||||||
+97282|Stormy Potential|10|6|2|0|KA:durotar|||||||||
+97286|Research Access|20|1|3|128|CLASS:mage|||||||||
+97287|Shrewd Negotiations|33|24|2|0|EK:alterac-mountains|||||||||
+97290|Unending Torment|21|15|2|0|EK:undercity|||||||||
+97326|Rocks to Rests|15|5|2|0|KA:orgrimmar|||||||||
+97328|Anything of Value|35|30|3|0|EK:stranglethorn-vale|||||||||
+97332|Twice Misplaced Trust|41|36|0|0|EK:stranglethorn-vale|||||||||
+97378|Mirrorscale|50|45|0|0|KA:feralas|||||||||
+97386|The Offense of Grom'gol|44|38|2|0|EK:stranglethorn-vale|||||||||
+97453|Weed Whacked|38|33|2|0|EK:stranglethorn-vale|||||||||
+97485|Traditions of the Bluff|10|3|2|0|KA:thunder-bluff|||||||||
+97530|Dunemaul Dues|47|40|0|0|KA:tanaris|||||||||
+97534|Gritty Business|45|40|2|0|KA:tanaris|||||||||
+97538|Pigments for Paints|26|20|2|0|KA:stonetalon-mountains|||||||||
+97539|Silky Sutures|36|30|2|0|EK:arathi-highlands|||||||||
+97663|Supplies and Studies|40|34|0|0|EK:badlands|||||||||
+97821|Mirage Mirror|42|37|0|0|EK:badlands|||||||||
+97884|Armory of Sunnyglade|40|36|2|0|EK:riverglades|||||||||
+97891|Prompt Potion Runner|16|9|2|0|EK:undercity|||||||||
+97985|Thundering Hearts|33|25|2|0|EK:undercity|||||||||
+98024|Journey to the Crossroads|13|7|2|0|KA:the-barrens|||||||||
+98069|Stolen Freewind Supplies|30|25|2|0|KA:thousand-needles|||||||||
+98070|Stop the Screeching|30|25|2|0|KA:thousand-needles|||||||||
+98093|Field to Clear|23|18|2|0|KA:the-barrens|||||||||
+98094|Scout Support|25|19|2|0|EK:hillsbrad-foothills|||||||||
+98095|Valuable Vantages|25|19|2|0|EK:hillsbrad-foothills|||||||||
+98096|Sisters In Duty|47|45|0|0|KA:azshara|||||||||
+98192|Skin Careful, Skin Sharp|43|38|0|0|KA:dustwallow-marsh|||||||||
+98203|Witch Doctor Ti'ik|49|45|2|0|EK:the-hinterlands|||||||||
+98205|Whelps are the Worst!|44|39|0|0|KA:dustwallow-marsh|||||||||
+98215|Dragon Scales, Post Burnt Tails|44|39|0|0|KA:dustwallow-marsh|||||||||
+98231|Active Ingredient|44|39|0|0|KA:dustwallow-marsh|||||||||
+98248|Shipping Label|60|10|2|0|KA:the-barrens|||||||||
+98251|Never Coming Back|23|18|2|0|KA:thunder-bluff|||||||||
+98517|Call of Fire|10|10|2|0|CLASS:shaman|||||||||
+99051|Threat from Below|11|8|2|0|KA:durotar|||||||||
+99052|Threat from Below|11|8|2|0|KA:durotar|||||||||
+99257|A Heart of Crystal|43|35|0|0|KA:shendralas|||||||||
+99258|Mana Mania|43|35|0|0|KA:shendralas|||||||||

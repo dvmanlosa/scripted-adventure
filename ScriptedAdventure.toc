@@ -1,0 +1,15 @@
+## Interface: 16001
+## Title: Scripted Adventure
+## Notes: Step-by-step leveling guide for WoW Forever. /sa
+## Version: 0.4.0
+## SavedVariables: ScriptedAdventureDB
+## SavedVariablesPerCharacter: ScriptedAdventureCharDB
+
+Core\Parser.lua
+Core\Core.lua
+Core\Tracker.lua
+Core\Nav.lua
+UI\StepFrame.lua
+
+Guides\Horde\Horde.xml
+Guides\Alliance\Alliance.xml

@@ -1,0 +1,393 @@
+id|name|level|reqlevel|side|reqclass|zone|start|end|startcoord|endcoord|racemask|series|choices|objective|reqcoord
+86574|Stonetalon Supply Run|24|20|1|0|KA:stonetalon-mountains|||||||0||
+86585|Banner of the Fallen|17|10|1|0|EK:loch-modan|npc:269153:Mountaineer Ylva|npc:1092:Captain Rugelfuss|Loch Modan@31.8,86.4|Loch Modan@23.2,73.8|3||2||
+86613|Excavation Tools|18|13|1|0|EK:loch-modan||npc:1344:Prospector Ironband||Loch Modan@65.8,65.6|||0||
+86614|Silver of the Waves|20|13|1|0|EK:loch-modan|object:665289:Discarded Fishing Toolbox|npc:1684:Khara Deepwater|Loch Modan@48.1,39.7|Loch Modan@40.4,39.4|3||0||
+86667|Snowbound|10|10|1|0|EK:loch-modan|npc:49808:Grenhild Darktalon|npc:258043:Norric Lochthane|Loch Modan@36.4,48.2|Loch Modan@41.8,19|3||0||
+86757|Slowing the Orc Advance|30|25|1|0|KA:ashenvale|||||||0||
+86758|Twisting the Knife|16|12|1|0|EK:loch-modan|npc:1154:Marek Ironheart|npc:1154:Marek Ironheart|Loch Modan@81.8,61.8|Loch Modan@81.8,61.8|3||0||
+86776|Ingredients for the Forge|30|15|1|0|EK:loch-modan|npc:167:Morhan Coppertongue|npc:167:Morhan Coppertongue|Loch Modan@34,46.6|Loch Modan@34,46.6|3||0||
+87318|Hearts of the Lost|33|28|1|0|EK:wetlands|||||||0||
+87491|Spark of Freedom|30|25|1|0|EK:wetlands|||||||0||
+87494|Microcrystal Contamination|55|45|0|0|KA:ungoro-crater|||||||2||
+87760|Holy Diver|20|15|1|0|KA:darkshore|||||||0||
+88756|Bring Back a Bang|31|25|1|0|EK:wetlands|||||||0||
+88757|Accessories of the Lost|33|28|1|0|EK:wetlands|||||||0||
+88758|Sentiments of the Lost|33|28|1|0|EK:wetlands|||||||0||
+91723|Delicate Instruments|8|6|1|0|EK:elwynn-forest|npc:248242:Hamish Bergwort|npc:248242:Hamish Bergwort|Elwynn Forest@65,69.8|Elwynn Forest@65,69.8|3||0||
+91724|Delicate Instruments|10|6|1|0|EK:elwynn-forest|npc:248242:Hamish Bergwort|npc:248242:Hamish Bergwort|Elwynn Forest@65,69.8|Elwynn Forest@65,69.8|3||0||
+91725|Stolen Enchanting Supplies|10|7|1|0|EK:elwynn-forest|npc:248248:Blixie Fitzwink|npc:248248:Blixie Fitzwink|Elwynn Forest@63.2,72.6|Elwynn Forest@63.2,72.6|3||0||
+91732|Good Steel|7|6|1|0|EK:elwynn-forest|npc:248266:Hagar Lowe|npc:248266:Hagar Lowe|Elwynn Forest@82.4,63.8|Elwynn Forest@82.4,63.8|3||0||
+91733|Downstream|10|7|1|0|EK:elwynn-forest|npc:248265:Ormin Pelford|npc:248265:Ormin Pelford|Elwynn Forest@76.4,72|Elwynn Forest@76.4,72|3||0||
+91736|Applejack Still|0|0|1|0|EK:elwynn-forest|object:562131:Applejack Still|object:562131:Applejack Still|Elwynn Forest@24.5,58.2|Elwynn Forest@24.5,58.2|||0||
+91738|An Apple Treat|10|7|1|0|EK:elwynn-forest|npc:955:Sergeant De Vries|npc:955:Sergeant De Vries|Elwynn Forest@24,73|Elwynn Forest@24,73|||0||
+91740|Croaky's Head|11|7|1|0|EK:elwynn-forest||npc:248277:Merell Ross||Elwynn Forest@84.6,79.2|||0||
+91741|Nibbled-On Book|2|1|1|0|EK:elwynn-forest||npc:951:Brother Paxton||Elwynn Forest@49.4,40.4||91743;91745;91752;91758;91772;91775;91777|0||
+91743|Rascally Rodents|2|1|1|0|EK:elwynn-forest|npc:951:Brother Paxton|npc:951:Brother Paxton|Elwynn Forest@49.4,40.4|Elwynn Forest@49.4,40.4|3|91741;91745;91752;91758;91772;91775;91777|3||
+91745|Mining Consultant|3|1|1|0|EK:elwynn-forest|npc:951:Brother Paxton|npc:247226:Kelsey Fargo|Elwynn Forest@49.4,40.4|Elwynn Forest@47.2,32.2|3|91741;91743;91752;91758;91772;91775;91777|0||
+91746|Elmpaw's Head|12|7|1|0|EK:elwynn-forest||npc:6306:Helene Peltskinner||Elwynn Forest@46.2,62.2|||0||
+91751|Rough Wolf Pelts|8|5|1|0|EK:elwynn-forest|npc:6306:Helene Peltskinner|npc:6306:Helene Peltskinner|Elwynn Forest@46.2,62.2|Elwynn Forest@46.2,62.2|3||0||
+91752|The Big Picture|3|1|1|0|EK:elwynn-forest|npc:247226:Kelsey Fargo|npc:197:Marshal McBride|Elwynn Forest@47.2,32.2|Elwynn Forest@48.8,41.6|3|91741;91743;91745;91758;91772;91775;91777|0||
+91753|An Enchanting Lesson|7|5|1|0|EK:elwynn-forest|npc:11072:Kitta Firewind|npc:11072:Kitta Firewind|Elwynn Forest@64.8,70.6|Elwynn Forest@64.8,70.6|3||0||
+91758|Follow That Kobold!|4|1|1|0|EK:elwynn-forest|npc:197:Marshal McBride|npc:248415:Tordrin Sternblade|Elwynn Forest@48.8,41.6|Elwynn Forest@51.2,40.8|3|91741;91743;91745;91752;91772;91775;91777|0||
+91772|Shhh! We're Hunting Kobolds|4|1|1|0|EK:elwynn-forest|npc:248415:Tordrin Sternblade|npc:240:Marshal Dughan|Elwynn Forest@51.2,40.8|Elwynn Forest@42.2,65.8|3|91741;91743;91745;91752;91758;91775;91777|0||
+91775|Book Return|6|1|1|0|EK:elwynn-forest|npc:240:Marshal Dughan|npc:240:Marshal Dughan|Elwynn Forest@42.2,65.8|Elwynn Forest@42.2,65.8|3|91741;91743;91745;91752;91758;91772;91777|0||
+91777|Rare Books|7|1|1|0|EK:elwynn-forest|npc:240:Marshal Dughan|npc:951:Brother Paxton|Elwynn Forest@42.2,65.8|Elwynn Forest@49.4,40.4|3|91741;91743;91745;91752;91758;91772;91775|5||
+92109|My First Alchemy Set|10|10|1|0|EK:westfall|npc:249713:Odd Child|npc:249713:Odd Child||||92110|2||
+92110|My First Real Potion|10|10|1|0|EK:westfall|npc:249713:Odd Child|npc:249713:Odd Child||||92109|0||
+92124|Book Inventory|2|1|1|0|EK:elwynn-forest|npc:951:Brother Paxton|npc:247229:Daniel|Elwynn Forest@49.4,40.4|Elwynn Forest@49.4,40.6|3||0||
+92432|An Alarming Request|33|30|1|0|EK:alterac-mountains|||||||0||
+92459|Friend of the Kirin Tor|33|24|1|0|EK:alterac-mountains|||||||0||
+92479|A Scribbled Letter|1|1|1|1|CLASS:warrior|||||||0||
+92481|A Student of the Arcane|2|2|1|0|CLASS:mage|||||||0||
+92482|The Way of the Hunter|2|2|3|0|CLASS:hunter|||||||0||
+92483|At Home in the Shadows|2|2|3|0|CLASS:rogue|||||||0||
+92532|The Warrior's Path|2|2|3|1|CLASS:warrior|||||||0||
+92742|Testing the Wells|12|9|1|0|EK:westfall|npc:253092:Alba Fairmoon|npc:253092:Alba Fairmoon|Westfall@52.4,53|Westfall@52.4,53|3||0||
+92743|A Conqueror's Crown|40|30|3|0|KA:desolace|||||||0||
+92744|Murloc Gills|12|9|1|0|EK:westfall|npc:253092:Alba Fairmoon|npc:253092:Alba Fairmoon|Westfall@52.4,53|Westfall@52.4,53|3||0||
+92745|The State of the Mines|14|9|1|0|EK:westfall|npc:253092:Alba Fairmoon|npc:253092:Alba Fairmoon|Westfall@52.4,53|Westfall@52.4,53|3||0||
+92747|Moonbrook Espionage|15|9|1|0|EK:westfall|npc:253092:Alba Fairmoon|npc:253092:Alba Fairmoon|Westfall@52.4,53|Westfall@52.4,53|3||0||
+92748|Explosive Consultation|16|9|1|0|EK:westfall|npc:253092:Alba Fairmoon|npc:11026:Sprite Jumpsprocket|Westfall@52.4,53|Stormwind City@54.6,8|3||0||
+92749|A Dynamite Plan|16|9|1|0|EK:westfall|npc:11026:Sprite Jumpsprocket|npc:11026:Sprite Jumpsprocket|Stormwind City@54.6,8|Stormwind City@54.6,8|3||0||
+92750|Detonation at a Distance|16|9|1|0|EK:westfall|npc:11026:Sprite Jumpsprocket|npc:1325:Jasper Fel|Stormwind City@54.6,8|Stormwind City@78.2,58.8|3||0||
+92751|Detonation at a Distance|16|9|1|0|EK:westfall|npc:1325:Jasper Fel|npc:11026:Sprite Jumpsprocket|Stormwind City@78.2,58.8|Stormwind City@54.6,8|3||0||
+92752|Explosive Consultation|16|9|1|0|EK:westfall|npc:11026:Sprite Jumpsprocket|npc:253092:Alba Fairmoon|Stormwind City@54.6,8|Westfall@52.4,53|3||0||
+92754|A New Need for Shadow Protection|35|30|0|0|KA:desolace|||||||2||
+92755|Mysterious Mysticism|35|30|1|0|KA:desolace|||||||2||
+92811|Economic Warfare|60|1|1|0|KA:desolace|||||||0||
+92812|Economic Warfare|60|1|3|0|KA:desolace|||||||0||
+92814|I Need a Tailor|35|30|0|0|KA:desolace|||||||2||
+92817|Leather Technique|35|30|0|0|KA:desolace|||||||2||
+92818|Big, No, MASSIVE Iron Axes|35|30|1|0|KA:desolace|||||||2||
+92819|Destruction in Deadmines|18|9|1|0|EK:westfall|npc:253279:Alba Fairmoon|npc:253279:Alba Fairmoon|Westfall@38.6,83.6|Westfall@38.6,83.6|3||0||
+92841|Valley of Bones|40|35|1|0|KA:shendralas|||||||0||
+92844|Mountain of Bones|42|35|1|0|KA:shendralas|||||||0||
+92846|Outcast Necromancers|40|35|1|0|KA:shendralas|||||||0||
+92847|Corrupting Tears|42|35|1|0|KA:shendralas|||||||0||
+92858|WANTED: Ohk'zi|43|39|1|0|KA:feralas|||||||0||
+92867|Ground to Keep|39|32|0|0|EK:arathi-highlands|||||||2||
+92872|Dutiful Steps|38|32|1|0|EK:arathi-highlands|||||||0||
+92873|Proof of Concept|41|35|1|0|KA:shendralas|||||||3||
+92893|No Mercy for the Weak|42|35|1|0|KA:shendralas|||||||0||
+92894|Bone Raising|40|35|1|0|KA:shendralas|||||||0||
+92909|Harvesting the Harvesters|15|8|1|0|EK:westfall|npc:253395:Ozwin Ironsprocket|npc:253395:Ozwin Ironsprocket|Westfall@51.6,32.2|Westfall@51.6,32.2|3||0||
+92910|Harvesting the Harvesters|15|8|1|0|EK:westfall||npc:253395:Ozwin Ironsprocket||Westfall@51.6,32.2|||0||
+92911|Harvesting the Harvesters|15|8|1|0|EK:westfall|npc:253395:Ozwin Ironsprocket|npc:253395:Ozwin Ironsprocket|Westfall@51.6,32.2|Westfall@51.6,32.2|||0||
+92914|Strange Pylons|43|35|0|0|KA:shendralas|||||||0||
+93016|A Brief History Lesson|43|35|0|0|KA:shendralas|||||||0||
+93034|Valley of Bones|38|35|3|0|KA:shendralas|||||||0||
+93035|Ravaging Ravagers|38|35|3|0|KA:shendralas|||||||0||
+93037|Outing Outcasts|40|35|3|0|KA:shendralas|||||||0||
+93041|Facing the Truth|38|35|3|0|KA:shendralas|||||||0||
+93066|Bristleback Retreat|43|35|3|0|KA:shendralas|||||||0||
+93072|Long-Term Solutions|43|35|0|0|KA:shendralas|||||||0||
+93125|Going Home|43|35|0|0|KA:shendralas|||||||0||
+93129|Threat of Starvation|43|35|0|0|KA:shendralas|||||||0||
+93176|My Little Friends|35|25|3|0|EK:swamp-of-sorrows|||||||0||
+93188|Return to Orgrul|43|35|0|0|KA:shendralas|||||||0||
+93196|Khan Jehn|42|35|0|0|KA:desolace|||||||3||
+93224|Carved Centaur Totems|40|30|1|0|KA:desolace|||||||0||
+93226|Buying Friendship: Magram|45|30|1|0|KA:desolace|||||||0||
+93227|Buying Friendship: Gelkis|45|30|1|0|KA:desolace|||||||0||
+93341|Forlorn Gardens|43|35|0|0|KA:shendralas|||||||0||
+93362|What They've Done to My Peonies|43|35|0|0|KA:shendralas|||||||0||
+93394|Meeting the Magister|43|35|0|0|KA:shendralas|||||||0||
+93429|Blood of My Blood|35|30|1|0|EK:swamp-of-sorrows|||||||0||
+93430|Taking the Bait Back|35|30|0|0|EK:swamp-of-sorrows|||||||0||
+93443|Lost Shipping Crate|36|36|1|0|EK:stranglethorn-vale|||||||0||
+93450|Phantasmal Problems|42|35|0|0|KA:shendralas|||||||0||
+93546|Spectral Iron Ore|42|35|0|0|KA:shendralas|||||||0||
+93568|Partially Digested Collar|45|35|0|0|KA:shendralas|||||||0||
+93574|Corpsefeeder's Carapace|45|35|0|0|KA:shendralas|||||||3||
+93585|This Light of Mine|34|30|1|0|EK:swamp-of-sorrows|||||||0||
+93594|Word of the Woods|43|35|0|0|KA:shendralas|||||||0||
+93644|Tattered Journal|45|35|0|0|KA:shendralas|||||||0||
+93678|Abridged Notes on Draenethyst|40|30|0|0|KA:desolace|||||||0||
+93689|Friend of the Kirin Tor|33|24|0|0|EK:alterac-mountains|||||||0||
+93791|Speak with Belann|10|10|1|0|CLASS:mage|||||||0||
+93797|Boughs in the Wind|10|10|1|0|CLASS:mage|||||||0||
+93928|Of Mice and Milk|15|15|1|0|EK:westfall|npc:6271:Mouse|npc:715:Hemet Nesingwary|Westfall@52.8,54.2|Stranglethorn Vale@35.6,10.8|||0||
+93963|Exploring the Alliance|13|7|1|0|EK:stormwind-city|npc:1748:Highlord Bolvar Fordragon|npc:1748:Highlord Bolvar Fordragon|Stormwind City@78,18|Stormwind City@78,18|95|93835;94369;93089;94946;94947|0||
+94003|The Skybreaker Bulwark|10|10|3|0|CLASS:warrior|||||||0||
+94007|Taming the Beast|10|10|3|0|CLASS:hunter|||||||0||
+94013|Taming the Beast|10|10|3|0|CLASS:hunter|||||||0||
+94050|Training the Beast|10|10|3|0|CLASS:hunter|||||||0||
+94613|My Kingdom for a Horse|38|36|1|0|EK:riverglades|||||||0||
+94614|Freshwater Fiends|38|36|1|0|EK:riverglades|||||||0||
+94615|Foal Play|38|36|1|0|EK:riverglades|||||||0||
+94617|Coyote Huntin'|38|36|1|0|EK:riverglades|||||||0||
+94618|Wheeler's Fleeing Steeds|38|36|1|0|EK:riverglades|||||||0||
+94678|Gnoll Infestation|38|36|1|0|EK:riverglades|||||||0||
+94679|Snargl's Snout|40|36|1|0|EK:riverglades|||||||4||
+94773|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94774|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94775|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94776|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94777|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94778|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94779|Divine Grace|10|10|1|16|CLASS:priest|||||||0||
+94792|Taming the Beast|10|10|1|4|CLASS:hunter|||||||0||
+94793|Training the Beast|10|10|1|4|CLASS:hunter|||||||0||
+94817|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94818|Contingency Plan|20|20|1|16|CLASS:priest|||||||0||
+94819|Contingency Plan|20|20|1|16|CLASS:priest|||||||0||
+94820|Contingency Plan|20|20|1|16|CLASS:priest|||||||0||
+94821|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94822|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94823|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94824|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94825|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94826|Confounding Flash|10|10|1|16|CLASS:priest|||||||0||
+94829|What We Lost|40|36|1|0|EK:riverglades|||||||0||
+94841|Lost Shipping Crate|38|36|1|0|KA:desolace|||||||0||
+94842|Unsavory Plant Food|38|36|1|0|EK:riverglades|||||||0||
+94843|From Seed to Sprout|38|36|1|0|EK:riverglades|||||||0||
+94857|If a Tree Falls, and No One Hears...|39|36|1|0|EK:riverglades|||||||0||
+94858|All That's Left|40|36|1|0|EK:riverglades|||||||0||
+94861|Helping Hands|39|36|1|0|EK:riverglades|||||||2||
+94863|Taming the Beast|10|10|1|4|CLASS:hunter|||||||0||
+94864|Taming the Beast|10|10|1|4|CLASS:hunter|||||||0||
+94877|Saving Sunnyglade|40|36|1|0|EK:riverglades|||||||2||
+94879|Scraps of Knowledge|40|36|1|0|EK:riverglades|||||||0||
+94881|Curious Trinkets|38|36|1|0|EK:riverglades|||||||0||
+94884|An Unsettling Discovery|41|36|1|0|EK:riverglades|||||||0||
+94885|Field Marshal's Log|40|36|1|0|EK:riverglades|||||||0||
+94886|The Western Front|44|38|1|0|EK:riverglades|||||||0||
+94887|Saving Marshal Ryan|47|36|1|0|EK:riverglades|||||||0||
+94888|No Soldier Left Behind|44|38|1|0|EK:riverglades|||||||0||
+94889|Carving a Path|44|38|1|0|EK:riverglades|||||||0||
+94890|Bring Me His Head|46|38|1|0|EK:riverglades|||||||2||
+94891|News to Farholde|46|38|1|0|EK:riverglades|||||||0||
+94892|Dying Wish|47|36|1|0|EK:riverglades|||||||0||
+94893|Delivering Closure|47|36|1|0|EK:riverglades|||||||0||
+94894|The Twilight Threat|45|38|1|0|EK:riverglades|||||||0||
+94907|A Small Favor|44|36|1|0|EK:riverglades|||||||0||
+94923|Hats Off|38|36|1|0|EK:riverglades|||||||0||
+94924|Hunting the Hunters|39|36|1|0|EK:riverglades|||||||0||
+94925|A Fur Trade|39|36|1|0|EK:riverglades|||||||0||
+94926|Drop the Hammer|45|38|1|0|EK:riverglades|||||||0||
+94927|Dunston Checks Out|44|38|1|0|EK:riverglades|||||||3||
+94928|A Few Furs for Friz|39|36|1|0|EK:riverglades|||||||0||
+94929|Deliver the Second Shipment|38|36|1|0|EK:swamp-of-sorrows|||||||0||
+94931|Stolen Saws|38|36|1|0|EK:riverglades|||||||0||
+94947|Welcome to Azeroth|13|7|1|0|EK:stormwind-city|npc:259084:Denaaris Stargale|npc:1748:Highlord Bolvar Fordragon|Alterac Mountains@12.4,56.2|Stormwind City@78,18|95|93835;94369;93089;94946;93963|0||
+94961|Biting the Hand|40|36|0|0|EK:riverglades|||||||0||
+94963|Biting the Hand|40|36|0|0|EK:riverglades|||||||0||
+94978|Taming the Beast|10|10|3|0|CLASS:hunter|||||||0||
+94979|Taming the Beast|10|10|3|0|CLASS:hunter|||||||0||
+94992|Rescue Roundup|38|36|1|0|EK:riverglades|||||||0||
+94999|Eyes for the Watchman|36|36|1|0|EK:riverglades|||||||0||
+95041|Data Hoarders|10|7|1|0|EK:dun-morogh|npc:11028:Jemma Quikswitch|npc:11028:Jemma Quikswitch|Ironforge@67.8,43.8|Ironforge@67.8,43.8|3||0||
+95059|Frazzlespark's Crate|36|36|1|0|EK:riverglades|||||||0||
+95064|Preventative Measures|39|36|1|0|EK:riverglades|||||||2||
+95065|Fishin' Time|12|7|1|0|EK:stormwind-city|npc:267118:Gilbert Gray|npc:267118:Gilbert Gray|Stormwind City@26.2,47|Stormwind City@26.2,47|3||2||
+95066|The Rog'mar Situation|39|36|1|0|EK:riverglades|||||||0||
+95118|Saltwater Savages|41|36|0|0|EK:riverglades|||||||0||
+95119|Unfriendly Competition|43|38|0|0|EK:riverglades|||||||0||
+95120|WANTED: Old Rot-Chum|42|36|0|0|EK:riverglades|||||||0||
+95121|A Taste of the Sea|40|36|0|0|EK:riverglades|||||||0||
+95122|Unchecked Expansion|44|38|0|0|EK:riverglades|||||||0||
+95123|A Blast Ye Scurvy Dogs!|44|38|0|0|EK:riverglades|||||||0||
+95124|Admiral Lamora|45|38|0|0|EK:riverglades|||||||0||
+95144|Overseas Delivery|38|36|0|0|KA:tanaris|||||||0||
+95147|The Lost Scout|37|36|1|0|EK:riverglades|||||||0||
+95148|Southern Watch Gnoll Report|37|36|1|0|EK:riverglades|||||||0||
+95156|Stuff 'Em and Stick 'Em|37|36|1|0|EK:riverglades|||||||0||
+95161|Remember That I Love You|22|15|1|0|EK:riverglades|||||||1||
+95165|See Ya, Scallywags!|44|38|0|0|EK:riverglades|||||||0||
+95184|The Sharpest of Blades|38|36|1|0|EK:riverglades|||||||0||
+95212|Never Saddle on Quality|10|7|1|0|EK:dun-morogh|npc:1265:Rudra Amberstill|npc:1265:Rudra Amberstill|Dun Morogh@63,49.8|Dun Morogh@63,49.8|3||0||
+95213|Stolen Blasting Powder|10|7|1|0|EK:dun-morogh||npc:1256:Quarrymaster Thesten||Dun Morogh@69,54.8|||0||
+95214|Stolen Blasting Powder|10|7|1|0|EK:dun-morogh|npc:1256:Quarrymaster Thesten|npc:1256:Quarrymaster Thesten|Dun Morogh@69,54.8|Dun Morogh@69,54.8|3||0||
+95217|The Quarry's Smith|10|7|1|67|EK:dun-morogh|npc:1698:Frast Dokner|npc:1698:Frast Dokner|Dun Morogh@68.8,55.8|Dun Morogh@68.8,55.8|3||0||
+95219|From Port to Port|41|40|1|0|EK:riverglades|||||||0||
+95254|WANTED: Trapclaw|42|36|0|0|EK:riverglades|||||||0||
+95260|Terrors From the Deep|42|38|0|0|EK:riverglades|||||||0||
+95261|It Takes Guts|42|38|0|0|EK:riverglades|||||||0||
+95267|The Monster Surfaces|42|38|0|0|EK:riverglades|||||||0||
+95288|Smuggler's Paradise|43|38|0|0|EK:riverglades|||||||0||
+95293|Smuggler's Special|42|38|0|0|EK:riverglades|||||||0||
+95294|Smuggler's Bargain|42|38|0|0|EK:riverglades|||||||0||
+95295|I Know a Guy|40|36|0|0|EK:riverglades|||||||0||
+95296|Shipping and Handling|40|36|0|0|EK:riverglades|||||||0||
+95312|Coming to Collect|40|36|0|0|EK:riverglades|||||||0||
+95315|The Riverglades Report|38|36|1|0|EK:arathi-highlands|||||||0||
+95321|Tazzik's Dues|40|36|0|0|EK:riverglades|||||||0||
+95322|Get the Goods|40|36|0|0|EK:riverglades|||||||0||
+95325|We've Been Robbed!|40|36|0|0|EK:riverglades|||||||0||
+95326|The Big Payback|39|36|0|0|EK:riverglades|||||||0||
+95329|Out in the Field|38|36|1|0|EK:riverglades|||||||0||
+95330|Love Thy Neighbor|37|36|1|0|EK:riverglades|||||||0||
+95383|Shipping and Handling|40|36|0|0|EK:riverglades|||||||0||
+95384|Partial Mystical Notes|40|32|0|0|EK:stranglethorn-vale|||||||0||
+95385|Torn Mystical Scroll|43|35|0|0|EK:stranglethorn-vale|||||||0||
+95426|Rog'mar Supplies|39|36|1|0|EK:riverglades|||||||0||
+95511|Your First Feline Friend|40|40|1|0|KA:darnassus|||||||4||
+95534|Strahnbrad Mystery|36|25|3|0|EK:alterac-mountains|||||||0||
+95561|Apple of My Eye|38|36|1|0|EK:riverglades|||||||0||
+95562|Cut Off the Heads|41|36|1|0|EK:riverglades|||||||0||
+95603|Bats in the Belfry|38|36|1|0|EK:riverglades|||||||0||
+95613|Keeping the Light On|38|36|1|0|EK:riverglades|||||||0||
+95615|In Memoriam|38|36|1|0|EK:riverglades|||||||2||
+95642|Abominable Magics|40|36|1|0|EK:riverglades|||||||0||
+95643|Indiscriminate Purge|40|36|1|0|EK:riverglades|||||||0||
+95771|A Taste of Darkness|10|6|0|0|EK:elwynn-forest|||||||0||
+95786|An Acquaintance in Southshore|40|30|1|0|EK:stranglethorn-vale|||||||0||
+95792|Clear 'em Out|42|36|0|0|EK:riverglades|||||||0||
+95798|The Web of Magic|40|30|1|0|EK:alterac-mountains|||||||2||
+95799|Findings for the Explorer's League|40|30|1|0|EK:ironforge|||||||2||
+95816|Sign Me Up!|60|1|0|0|EK:redridge-mountains||||||95817;95818|0||
+95817|Rotgath Stonebeard|60|1|0|0|EK:ironforge||||||95816;95818|0||
+95818|A Quick Craft|60|1|0|0|EK:ironforge||||||95816;95817|6||
+95912|WANTED: Blademaster Kaijo|42|38|1|0|EK:riverglades|||||||2||
+95913|Fit for a Princess|38|36|1|0|EK:riverglades|||||||2||
+95934|Proof of Profit|42|36|0|0|EK:riverglades|||||||0||
+95935|Hail the Dragonslayer|43|36|1|0|EK:riverglades|||||||0||
+95943|Foreman's Plight|38|36|1|0|EK:riverglades|||||||0||
+95957|Drink Up!|38|36|1|0|EK:riverglades|||||||0||
+95961|Stepped Out|38|36|1|0|EK:riverglades|||||||0||
+95975|Her World|41|36|1|0|EK:riverglades|||||||0||
+95982|Not My Circus|38|36|0|0|EK:riverglades|||||||0||
+95983|A Feast for Buzzards|38|36|1|0|EK:riverglades|||||||0||
+95984|Song of the Strider|39|36|1|0|EK:riverglades|||||||0||
+95986|King of the Wild Plains|41|36|1|0|EK:riverglades|||||||0||
+95988|Goes Down Smooth|38|36|1|0|EK:riverglades|||||||0||
+95991|WANTED: Ghostmaw|42|38|1|0|EK:riverglades|||||||0||
+95999|WANTED: Incinerator Gar'im|25|16|1|0|EK:redridge-mountains|object:649051:Wanted: Incinerator Gar'im|npc:344:Magistrate Solomon|Redridge Mountains@24.4,46.3|Redridge Mountains@30,44.2|3||3||
+96009|High Stakes|38|36|1|0|EK:riverglades|||||||0||
+96010|Fragments of the Pylons|41|35|0|0|KA:shendralas|||||||0||
+96015|A Miner Problem|43|38|1|0|EK:riverglades|||||||0||
+96018|Powering the Pylons|43|35|0|0|KA:shendralas|||||||0||
+96060|Tempered Expectations|42|35|0|0|KA:shendralas|||||||3||
+96063|Gaseous Gold|38|36|0|0|EK:riverglades|||||||0||
+96067|Rock 'em and Sock 'em|40|36|0|0|EK:riverglades|||||||0||
+96081|Wound Dressings|40|36|1|0|EK:riverglades|||||||0||
+96082|Doctor's Orderly|40|36|1|0|EK:riverglades|||||||0||
+96083|Clerical Quarantine|40|36|1|0|EK:riverglades|||||||0||
+96084|Something's in the Water|40|36|1|0|EK:riverglades|||||||0||
+96085|Upstream Contamination|42|36|1|0|EK:riverglades|||||||0||
+96125|In Need of Relief|43|38|1|0|EK:riverglades|||||||0||
+96126|An Ogre's Captive|44|38|1|0|EK:riverglades|||||||0||
+96137|Ira's Dagger|25|18|1|0|EK:duskwood|npc:6176:Bath'rah the Windwatcher|npc:268:Sirra Von'Indi|Alterac Mountains@80.4,66.8|Duskwood@72.6,47.6|||0||
+96138|Merrick's Bow|30|18|1|0|EK:duskwood|||||||0||
+96139|The Valor Family|23|18|1|0|EK:duskwood|||||||0||
+96222|Khan Hratha|42|35|3|0|KA:desolace|||||||4||
+96390|Nip 'Em in the Bud|13|9|1|0|EK:dun-morogh|npc:264936:Earthseer Farsen|npc:264936:Earthseer Farsen|Dun Morogh@64.8,58.4|Dun Morogh@64.8,58.4|3|96408;96392|0||
+96391|Underground Map|15|9|1|0|EK:dun-morogh||npc:264936:Earthseer Farsen||Dun Morogh@64.8,58.4||96393|0||
+96392|Farsen's Watch|13|9|1|0|EK:dun-morogh|npc:264936:Earthseer Farsen|npc:264936:Earthseer Farsen|Dun Morogh@64.8,58.4|Dun Morogh@64.8,58.4|3|96408;96390|0||
+96408|A Visitor to Dun Morogh|13|9|1|0|EK:dun-morogh|npc:1376:Beldin Steelgrill|npc:264936:Earthseer Farsen|Dun Morogh@50.4,49|Dun Morogh@64.8,58.4|3|96392;96390|0||
+96438|Battle at the Mannoroc Coven|40|35|1|2|CLASS:paladin|||||||0||
+96779|Syndicate Sabotage|24|24|3|8|CLASS:rogue|||||||0||
+96781|What's the Big Idea?|36|24|3|8|CLASS:rogue|||||||0||
+96782|Covert Extraction|36|24|3|8|CLASS:rogue|||||||0||
+96783|A Way In|36|24|3|8|CLASS:rogue|||||||0||
+96784|Master of Disguise|36|24|3|8|CLASS:rogue|||||||0||
+96785|Ain't No Telling|36|24|3|8|CLASS:rogue|||||||0||
+96786|The Syndicate Sting|36|24|3|8|CLASS:rogue|||||||0||
+96797|The Orphan|54|45|1|0|EK:blasted-lands|||||||0||
+96798|Into the Darkness|54|45|1|0|EK:blasted-lands|||||||0||
+97017|Your First Riding Ram|40|40|1|0|EK:dun-morogh|||||3||3||
+97018|Learning to Ride|40|40|1|0|EK:dun-morogh|||||3||0||
+97045|Your First Horse|40|40|1|0|EK:elwynn-forest|||||1||3||
+97046|Your First Mechanostrider|40|40|1|0|EK:dun-morogh|||||7||4||
+97047|The Cook in the Cage|38|30|1|0|EK:stranglethorn-vale|||||||0||
+97048|Returning to Port|38|30|1|0|EK:stranglethorn-vale|||||||3||
+97074|Learning to Ride|40|40|1|0|KA:darnassus|||||||0||
+97170|Learning to Ride|40|40|1|0|EK:elwynn-forest|||||1||0||
+97188|Learning to Ride|40|40|1|0|EK:dun-morogh|||||7||0||
+97220|Philmor's Favor|15|9|1|0|EK:stormwind-city|npc:268511:Manifest Clerk Philmor|npc:483:Elaine Trias|Stormwind City@30.4,29|Stormwind City@60.4,63.4|3|97246;97242;97249;97222|0||
+97222|Gatehouse Goods|15|9|1|0|EK:stormwind-city|npc:483:Elaine Trias|npc:483:Elaine Trias|Stormwind City@60.4,63.4|Stormwind City@60.4,63.4|3|97246;97220;97242;97249|0||
+97234|Reading Room|18|13|1|0|EK:stormwind-city|npc:268568:Roy Lewells|npc:2504:Donyal Tovald|Stormwind City@38.6,62|Stormwind City@71.6,7.4|3|97237|0||
+97237|Shelf Picked|18|13|1|0|EK:stormwind-city|npc:2504:Donyal Tovald|npc:268568:Roy Lewells|Stormwind City@71.6,7.4|Stormwind City@38.6,62|3|97234|2||
+97263|Your Package Has Arrived|2|1|1|0|EK:ironforge|object:660964:Misplaced Packages|npc:258098:Eldrun Stormbreaker|Ironforge@72.3,48.6|Ironforge@47.4,13.6|3||0||
+97284|Vahlarriel's Vengeance|33|30|1|0|KA:desolace|||||||0||
+97286|Research Access|20|1|3|128|CLASS:mage|||||||0||
+97328|Anything of Value|35|30|3|0|EK:stranglethorn-vale|||||||0||
+97329|Where's the Key?|35|30|1|0|EK:stranglethorn-vale|||||||0||
+97331|Zimmix's Great Escape|35|30|1|0|EK:stranglethorn-vale|||||||0||
+97332|Twice Misplaced Trust|41|36|0|0|EK:stranglethorn-vale|||||||3||
+97378|Mirrorscale|50|45|0|0|KA:feralas|||||||4||
+97405|Noise Complaints|44|38|1|0|EK:stranglethorn-vale|||||||3||
+97420|Reduce, Reuse, Reconcile|36|31|1|0|EK:stranglethorn-vale|||||||0||
+97530|Dunemaul Dues|47|40|0|0|KA:tanaris|||||||0||
+97536|Gnomish Garbage|45|40|1|0|KA:tanaris|||||||0||
+97617|Safety Checks|40|35|1|0|EK:badlands|||||||0||
+97663|Supplies and Studies|40|34|0|0|EK:badlands|||||||0||
+97821|Mirage Mirror|42|37|0|0|EK:badlands|||||||0||
+97894|Business in Auberdine|17|13|1|0|KA:darkshore|||||||0||
+97914|Expanding Horizons|17|13|1|0|EK:stormwind-city|npc:3649:Thundris Windweaver|npc:1646:Baros Alexston|Darkshore@37.4,40.2|Stormwind City@49,30.2|3|97926|0||
+97926|Making Do|17|13|1|0|KA:darkshore|||||||0||
+98013|Swelling Forces|20|12|1|0|KA:darkshore|||||||0||
+98021|Journey to Sentinel Hill|13|7|1|0|EK:westfall|npc:1748:Highlord Bolvar Fordragon|npc:234:Gryan Stoutmantle|Stormwind City@78,18|Westfall@56.2,47.6|95||0||
+98025|WANTED: Jai'vhanel|13|10|1|0|KA:darkshore|||||||2||
+98027|Gleaming Crescent Necklace|26|22|1|0|KA:ashenvale|||||||0||
+98028|Baron Marinous|21|17|1|0|KA:darkshore|||||||2||
+98042|It's All Fun and Games Until...|17|12|1|0|KA:darkshore|||||||0||
+98059|Hillsbrad's Hoard|27|23|1|0|EK:hillsbrad-foothills|||||||0||
+98067|Eyes of the Sentinels|11|1|1|0|KA:darnassus|||||||0||
+98071|Brewer's Trade|27|23|1|0|EK:hillsbrad-foothills|||||||0||
+98072|Crocs of the Sky|27|19|1|0|EK:wetlands|||||||0||
+98096|Sisters In Duty|47|45|0|0|KA:azshara|||||||0||
+98155|Pristine Pesterhide Pelts|29|24|1|0|KA:thousand-needles|||||||0||
+98156|Packaged Pristine Pelts|29|24|1|0|KA:thousand-needles|||||||0||
+98189|Return the Statuette|25|20|1|0|EK:wetlands|||||||0||
+98190|A Friend of the Family|25|20|1|0|EK:stormwind-city|npc:2104:Captain Stoutfist|npc:1748:Highlord Bolvar Fordragon|Wetlands@9.8,57.4|Stormwind City@78,18|3|279;281;284;285;286;98189;98191|0||
+98191|A Friend of the Family|25|20|1|0|EK:stormwind-city|npc:1748:Highlord Bolvar Fordragon|npc:928:Lord Grayson Shadowbreaker|Stormwind City@78,18|Stormwind City@37.2,33||279;281;284;285;286;98189;98190|2||
+98192|Skin Careful, Skin Sharp|43|38|0|0|KA:dustwallow-marsh|||||||0||
+98197|Spoils of War|22|18|1|0|EK:wetlands|||||||0||
+98205|Whelps are the Worst!|44|39|0|0|KA:dustwallow-marsh|||||||2||
+98208|Bloom of the Heavens|29|22|1|0|EK:wetlands|||||||0||
+98209|Bloom of the Heavens|29|22|1|0|EK:wetlands|||||||0||
+98215|Dragon Scales, Post Burnt Tails|44|39|0|0|KA:dustwallow-marsh|||||||0||
+98216|Understanding Our Present|31|23|1|0|EK:wetlands|||||||2||
+98219|The Shamed Lieutenant|30|20|1|0|EK:stormwind-city|npc:928:Lord Grayson Shadowbreaker|npc:2228:Lieutenant Farren Orinelle|Stormwind City@37.2,33|Hillsbrad Foothills@51.4,58.4|3||0||
+98221|From the Ashes|28|23|1|0|EK:wetlands|||||||0||
+98223|Old Habits|31|23|1|0|EK:wetlands|||||||2||
+98230|This Land Was Their Land|29|22|1|0|EK:wetlands|||||||0||
+98231|Active Ingredient|44|39|0|0|KA:dustwallow-marsh|||||||0||
+98233|Sword in the Slime|42|36|1|0|KA:dustwallow-marsh|||||||0||
+98240|Crimson Crate Delivery|29|19|1|0|EK:wetlands|||||||0||
+98245|Razormaw Needling|29|21|1|0|EK:wetlands|||||||0||
+98246|Trying Times|29|21|1|0|EK:wetlands|||||||0||
+98247|Shipping Label|60|10|1|0|EK:redridge-mountains||npc:256390:Marcy Baker||Redridge Mountains@9.6,71|||0||
+98282|Alchemical Hazards|22|20|1|0|EK:wetlands|||||||0||
+98283|Carnage|30|22|1|0|EK:wetlands|||||||2||
+98291|Death to the Dragonmaw|30|22|1|0|EK:wetlands|||||||0||
+98293|Forced Disarmament|30|22|1|0|EK:wetlands|||||||0||
+98297|Stopping the Cycle|34|24|1|0|EK:wetlands|||||||3||
+98300|Word to Ironforge|34|24|1|0|EK:ironforge|npc:270637:Howin Kindfeather|npc:2784:King Magni Bronzebeard|Wetlands@49.4,42|Ironforge@39.4,55.8|||0||
+98310|Gleaning Our Future|32|24|1|0|EK:wetlands|||||||3||
+98313|For Further Study|32|24|1|0|EK:ironforge|npc:1077:Prospector Whelgar|npc:2916:Historian Karnik|Wetlands@38.8,52.2|Ironforge@77.2,11.8||299;98216;98310|0||
+98319|Secure the Mountain|8|4|1|0|EK:dun-morogh|npc:271546:Mountaineer Gretchen|npc:271546:Mountaineer Gretchen|Dun Morogh@44,57|Dun Morogh@44,57|3|98322;98323|0||
+98321|Flintfire's Shipment|7|4|1|0|EK:dun-morogh|npc:1241:Tognus Flintfire|npc:1241:Tognus Flintfire|Dun Morogh@45.2,52|Dun Morogh@45.2,52|3||0||
+98322|Secure the Mountain|8|4|1|0|EK:dun-morogh|npc:1252:Senir Whitebeard|npc:271546:Mountaineer Gretchen|Dun Morogh@46.6,53.8|Dun Morogh@44,57|3|98319;98323|0||
+98323|Secure the Mountain|8|4|1|0|EK:dun-morogh|npc:271546:Mountaineer Gretchen|npc:1252:Senir Whitebeard|Dun Morogh@44,57|Dun Morogh@46.6,53.8|3|98322;98319|0||
+98326|Frosthowl|9|5|1|0|EK:dun-morogh|npc:8508:Gretta Ganter|npc:8508:Gretta Ganter|Dun Morogh@31.4,44.6|Dun Morogh@31.4,44.6|3||0||
+98386|Alther's Mill|21|15|1|0|EK:redridge-mountains|npc:341:Foreman Oslow|npc:341:Foreman Oslow|Redridge Mountains@32.2,48.6|Redridge Mountains@32.2,48.6|3|20;98387;19|0||
+98387|Blackrock Blockade|21|18|1|0|EK:redridge-mountains|npc:382:Marshal Marris|npc:382:Marshal Marris|Redridge Mountains@33.4,48.8|Redridge Mountains@33.4,48.8|3|20;98386;19|0||
+98391|The Sisterhood of Elune|10|5|1|0|KA:darnassus|||||||0||
+98407|Show of Force|17|11|1|0|EK:redridge-mountains|npc:1070:Deputy Feldon|npc:1070:Deputy Feldon|Redridge Mountains@30.8,60|Redridge Mountains@30.8,60|3||0||
+98417|Vengeful Trail|28|23|1|0|KA:ashenvale|||||||0||
+98418|Shared Fury|30|23|1|0|KA:ashenvale|||||||0||
+98423|The Treaty of Understanding|16|9|1|0|EK:dun-morogh||npc:2784:King Magni Bronzebeard||Ironforge@39.4,55.8|||0||
+98447|The Valor Family|27|18|0|0|EK:duskwood|||||||0||
+98459|A Lack of Virtue|21|18|1|0|EK:wetlands|||||||0||
+98461|Unrequited Love|21|18|1|0|EK:wetlands|||||||0||
+98463|Talk of the Town|33|28|1|0|EK:stranglethorn-vale|||||||0||
+98574|Hallowed Memorandum|1|1|1|16|CLASS:priest|||||||0||
+99127|A Net Disaster|7|4|1|0|EK:elwynn-forest|npc:383:Jason Mathers|npc:383:Jason Mathers|Elwynn Forest@47.4,62.2|Elwynn Forest@47.4,62.2|3||0||
+99128|Slimy Menace|7|4|1|0|EK:elwynn-forest|npc:383:Jason Mathers|npc:383:Jason Mathers|Elwynn Forest@47.4,62.2|Elwynn Forest@47.4,62.2|3||0||
+99129|A Man About a Murloc|7|4|1|0|EK:elwynn-forest|npc:383:Jason Mathers|npc:241:Remy "Two Times"|Elwynn Forest@47.4,62.2|Elwynn Forest@42.2,67.2|3||0||
+99130|An Enticing Offer|7|4|1|0|EK:elwynn-forest|npc:241:Remy "Two Times"|npc:241:Remy "Two Times"|Elwynn Forest@42.2,67.2|Elwynn Forest@42.2,67.2|3||0||
+99131|Baited for Success|7|4|1|0|EK:elwynn-forest|npc:241:Remy "Two Times"|npc:383:Jason Mathers|Elwynn Forest@42.2,67.2|Elwynn Forest@47.4,62.2|3||0||
+99143|Bottles and Baubles|7|4|1|0|EK:elwynn-forest|npc:1651:Lee Brown|npc:1651:Lee Brown|Elwynn Forest@47.4,62.2|Elwynn Forest@47.4,62.2|3||0||
+99158|Dawn in the Mountains|8|5|1|0|EK:dun-morogh|npc:1226:Maxan Anvol|npc:1253:Father Gavin|Dun Morogh@47.2,52.2|Dun Morogh@57.6,44.8|3||0||
+99159|Finding Warmth|8|5|1|0|EK:dun-morogh|npc:1253:Father Gavin|npc:1253:Father Gavin|Dun Morogh@57.6,44.8|Dun Morogh@57.6,44.8|3||0||
+99160|Rime's Wrath|8|5|1|0|EK:dun-morogh|npc:1253:Father Gavin|npc:1253:Father Gavin|Dun Morogh@57.6,44.8|Dun Morogh@57.6,44.8|3||0||
+99161|Rime's Wrath|8|5|1|0|EK:dun-morogh|npc:1253:Father Gavin|npc:1253:Father Gavin|Dun Morogh@57.6,44.8|Dun Morogh@57.6,44.8|3||0||
+99162|Treacherous Cold|8|5|1|0|EK:dun-morogh|npc:1253:Father Gavin|npc:1253:Father Gavin|Dun Morogh@57.6,44.8|Dun Morogh@57.6,44.8|3||0||
+99191|A Donation of Wool|60|12|1|0|EK:alterac-mountains|||||||0||
+99192|A Donation of Silk|60|26|1|0|EK:alterac-mountains|||||||0||
+99257|A Heart of Crystal|43|35|0|0|KA:shendralas|||||||0||
+99258|Mana Mania|43|35|0|0|KA:shendralas|||||||0||

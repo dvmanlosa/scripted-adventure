@@ -1,0 +1,41 @@
+TourGuide:RegisterGuide("The Deadmines (20-22)", "Darkshore (20-21)", "Alliance", function()
+return [[
+N Group chapter |N|The Defias Brotherhood chain ends in the Deadmines. No group? Pick the next guide from the guide list and abandon the Defias quests| |FV|
+F Sentinel Hill |Z|Westfall|
+T The Defias Brotherhood (Part 2) |N|Gryan Stoutmantle (56.33, 47.52)| |QID|132|
+A The Defias Brotherhood (Part 3) |QID|135|
+F Stormwind City
+T The Defias Brotherhood (Part 3) |N|Master Mathias Shaw, Old Town (78.31, 70.74)| |Z|Stormwind City| |QID|135|
+A The Defias Brotherhood (Part 4) |QID|141|
+F Sentinel Hill |Z|Westfall|
+T The Defias Brotherhood (Part 4) |N|Gryan Stoutmantle (56.33, 47.52)| |QID|141|
+A The Defias Brotherhood (Part 5) |QID|142|
+C The Defias Brotherhood (Part 5) |N|Kill the Defias Messenger; he walks the road between Jangolode Mine and Moonbrook| |QID|142|
+T The Defias Brotherhood (Part 5) |N|Gryan Stoutmantle (56.33, 47.52)| |QID|142|
+A The Defias Brotherhood (Part 6) |N|The Defias Traitor at the foot of the tower (55.68, 47.5)| |QID|155|
+C The Defias Brotherhood (Part 6) |N|Escort him to the Defias hideout in Moonbrook| |QID|155|
+T The Defias Brotherhood (Part 6) |N|Gryan Stoutmantle (56.33, 47.52)| |QID|155|
+A The Defias Brotherhood (Part 7) |QID|166|
+A Red Silk Bandanas |N|Scout Riell on the tower (56.67, 47.35)| |QID|214|
+T Explosive Consultation (Part 2) |N|Alba Fairmoon by the inn (52.4, 53.0)| |QID|92752| |FV|
+A Destruction in Deadmines |N|Alba waits near the Deadmines entrance (38.6, 83.6)| |QID|92819| |FV|
+
+N Run the Deadmines |N|Entrance in the Moonbrook mine (38.2, 77.5). Recommended level 18-22| |FV|
+C Red Silk Bandanas |N|Defias inside the Deadmines| |QID|214|
+C Collecting Memories |N|Miners' League Crests from the Defias miners| |QID|168|
+C Oh Brother. . . |N|Foreman Thistlenettle in the first cave| |QID|167|
+C Underground Assault |N|Gnoam Sprecklesprocket from Sneed's Shredder| |QID|2040|
+C Destruction in Deadmines |QID|92819| |FV|
+C The Defias Brotherhood (Part 7) |N|Edwin VanCleef on the ship| |QID|166|
+T Destruction in Deadmines |N|Alba Fairmoon outside (38.6, 83.6)| |QID|92819| |FV|
+
+F Sentinel Hill |Z|Westfall|
+T The Defias Brotherhood (Part 7) |N|Gryan Stoutmantle (56.33, 47.52)| |QID|166|
+T Red Silk Bandanas |N|Scout Riell (56.67, 47.35)| |QID|214|
+F Stormwind City
+T Collecting Memories |N|Wilder Thistlenettle (70.31, 40.82)| |Z|Stormwind City| |QID|168|
+T Oh Brother. . . |QID|167|
+T Underground Assault |N|Shoni the Shilent (62.63, 34.11)| |Z|Stormwind City| |QID|2040|
+b Auberdine |N|Direct ship from Stormwind Harbor| |FV|
+]]
+end)

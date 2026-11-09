@@ -1,0 +1,36 @@
+# ScriptedAdventure roadmap
+
+A step-by-step leveling guide for WoW Forever: picks the route for your faction (and the starting zone for your race), shows the current steps, and ticks them off as you do them.
+
+| Phase | Scope | Status |
+| --- | --- | --- |
+| 1 | Readable guide format, converter from `out/` JSON, Lua parser, checker | Done |
+| 2 | Addon skeleton: `.toc`, faction routes with per-race starting zones, step window (current + next steps), manual tick/skip/back, saved progress per character, slash commands | Done, needs in-game test |
+| 3 | Auto-completion: quest accepted / objectives done / turned in, flight path, hearth, level, zone, item counts; already-done quests tick on login; modern quest API first, secret-value safe | Done, needs in-game test |
+| 4 | Navigation: game map pin + on-screen waypoint on the current step, TomTom if installed, "show on map"; live objective counts; right-click step menu; skip a whole quest | **Done, needs in-game test** |
+| 5 | Polish: guide picker, settings, minimap button, compact/expanded views | Next |
+| Content | Improve the shared 12-60 routes first; starting zones for other races later | Ongoing |
+
+## Route data tools
+
+| Tool | Does |
+| --- | --- |
+| `tools/match_quest_ids.py` | Fills missing quest IDs from QuestieDB -> `tools/quest_id_fixes.json` |
+| `tools/route_edits.json` | Hand fixes on top of the JSON: reorder steps, notes, optional, wrong quest IDs |
+| `tools/audit_routes.py` | Flags wrong-faction quests, quests taken under their required level, grey quests |
+| `tools/convert_routes.py` | JSON + fixes + edits -> `Guides/` |
+| `tools/check_guides.py`, `tools/smoke_test.py` | Parser/route checks, and the whole addon against a fake WoW API |
+
+## Ideas (from studying FlowUp Forever; their routes are All Rights Reserved and not used)
+
+- Skipping a quest also skips its follow-ups (QuestieDB has the chain links).
+- Level gates by XP percent ("grind to 70% of level 8").
+- Dungeon steps that can be switched off; optional side chains.
+- Optional automation, off by default: auto accept/turn-in, take the step's flight.
+- Starting zones for Tauren, Undead, Dwarf/Gnome, Night Elf, Skyborne (Zephras Isle).
+
+## Open items
+
+- Abandoning a quest doesn't untick its accept step yet.
+- Trolls use Durotar, but Troll-only class quests aren't in the data yet.
+- Grey-quest audit (13 Horde, 7 Alliance) lists low-XP breadcrumbs; review case by case.

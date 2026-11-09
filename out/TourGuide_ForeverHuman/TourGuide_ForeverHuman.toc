@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: TourGuide |cff7fff7fForever Human|r
+## Notes: WoW Forever Human route 1-60 built from TourGuideVanilla + Forever quest data. Replaces TourGuide_Alliance; do not load both.
+## Dependencies: TourGuide
+## X-Interface-Forever: 16001 (expected; engine port required)
+
+Guides.xml

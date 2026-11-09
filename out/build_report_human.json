@@ -1,0 +1,3463 @@
+{
+ "tbc_removed": [
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9517,
+   "step": "N Get wood |N|Collect 5 Satyrnaar Fel Wood.| |L|24081 5| |QID|9517|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9520,
+   "step": "K Demons... |QID|9520| |L|23777| |T| |N|Kill infernals, lashers and felguards until you get the [Diabolical Plans]. Don't worry about completing \"Destroy the Legion\" right now, you'll be back.|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9522,
+   "step": "F Forest Song |N|Run to Astranaar then fly| |QID|9522|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11185,
+   "step": "K Apothecary Cylla |L|33114| |QID|11185|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11217,
+   "step": "R Mudsprocket |N|Back on the mainland, follow the road southwest (42.31, 72.94)| |QID|11217|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11140,
+   "step": "U Open the supplies |U|33045| |QID|11140|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11140,
+   "step": "U Put on the Diving Gear |U|33040| |QID|11140|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9471,
+   "step": "K Mangy Silvermane Wolves |QID|9471| |QO|Mangy Silvermane slain: 10/10|"
+  },
+  {
+   "guide": "Searing Gorge (50-51)",
+   "qid": 10520,
+   "step": "A Assisting Arch Druid Staghelm |N|From the innkeeper| |QID|10520|"
+  },
+  {
+   "guide": "Kalimdor (51)",
+   "qid": 10520,
+   "step": "T Assisting Arch Druid Staghelm |N|In a tower in the Cenarion Enclave (34.8, 8.7)| |Z|Darnassus| |QID|10520|"
+  }
+ ],
+ "tbc_kept_travel": [
+  [
+   "Dustwallow Marsh (37-38)",
+   "F Theramore Isle |N|Boat to Ratchet, fly down| |QID|11191|"
+  ],
+  [
+   "Dustwallow Marsh (37-38)",
+   "h Theramore Isle |T| |QID|11142|"
+  ],
+  [
+   "Dustwallow Marsh (37-38)",
+   "H Theramore Isle |QID|11142|"
+  ],
+  [
+   "The Hinterlands (46-47)",
+   "F Southshore |N|Fly to Theramore, boat to Menethil, fly to Southshore| |QID|9469|"
+  ],
+  [
+   "The Hinterlands (46-47)",
+   "R The Hinterlands |N|Path is behind Durnholde Keep (84,33), look for two gryphons.| |Z|Hillsbrad Foothills| |QID|9469|"
+  ],
+  [
+   "Kalimdor (51)",
+   "F Darnassus |N|You probably want to hearth to IF| |QID|10520|"
+  ]
+ ],
+ "coords_converted": [
+  {
+   "zone": "Stormwind City",
+   "from": [
+    56.0,
+    64.0
+   ],
+   "to": [
+    63.0,
+    74.0
+   ],
+   "step": "Shipment to Stormwind"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    55.1,
+    56.22
+   ],
+   "to": [
+    62.3,
+    67.9
+   ],
+   "step": "Harlan Needs a Resupply"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    51.7,
+    12.1
+   ],
+   "to": [
+    59.7,
+    33.8
+   ],
+   "step": "Elmore's Task"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    52.41,
+    67.65
+   ],
+   "to": [
+    60.2,
+    76.8
+   ],
+   "step": "Wine Shop Advert"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    49.58,
+    55.64
+   ],
+   "to": [
+    58.0,
+    67.5
+   ],
+   "step": "Harlan Needs a Resupply"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    42.48,
+    76.28
+   ],
+   "to": [
+    52.5,
+    83.5
+   ],
+   "step": "Package for Thurman"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    74.2,
+    47.38
+   ],
+   "to": [
+    77.1,
+    61.1
+   ],
+   "step": "Continue to Stormwind"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    54.6,
+    8.0
+   ],
+   "to": [
+    61.9,
+    30.6
+   ],
+   "step": "Explosive Consultation"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    78.2,
+    58.8
+   ],
+   "to": [
+    80.2,
+    69.9
+   ],
+   "step": "Detonation at a Distance"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    54.6,
+    8.0
+   ],
+   "to": [
+    61.9,
+    30.6
+   ],
+   "step": "Detonation at a Distance (Part 2)"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    30.4,
+    29.0
+   ],
+   "to": [
+    43.2,
+    46.9
+   ],
+   "step": "Philmor's Favor"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    60.4,
+    63.4
+   ],
+   "to": [
+    66.4,
+    73.5
+   ],
+   "step": "Philmor's Favor"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    60.4,
+    63.4
+   ],
+   "to": [
+    66.4,
+    73.5
+   ],
+   "step": "Gatehouse Goods"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    49.0,
+    30.2
+   ],
+   "to": [
+    57.6,
+    47.8
+   ],
+   "step": "Expanding Horizons"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    26.5,
+    45.4
+   ],
+   "to": [
+    21.4,
+    45.4
+   ],
+   "step": "The Defias Brotherhood"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    30.8,
+    60.0
+   ],
+   "to": [
+    25.7,
+    60.0
+   ],
+   "step": "Show of Force"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    30.8,
+    60.0
+   ],
+   "to": [
+    25.7,
+    60.0
+   ],
+   "step": "Show of Force"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    32.2,
+    48.6
+   ],
+   "to": [
+    27.1,
+    48.6
+   ],
+   "step": "Alther's Mill and Blackrock Blockade"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    33.4,
+    48.8
+   ],
+   "to": [
+    28.3,
+    48.8
+   ],
+   "step": "Alther's Mill and Blackrock Blockade"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    40.0,
+    45.0
+   ],
+   "to": [
+    34.9,
+    45.0
+   ],
+   "step": "Murloc Poachers"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    56.0,
+    53.0
+   ],
+   "to": [
+    50.9,
+    53.0
+   ],
+   "step": "Murloc Poachers"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    78.0,
+    18.0
+   ],
+   "to": [
+    80.0,
+    38.4
+   ],
+   "step": "A Friend of the Family"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    37.2,
+    33.0
+   ],
+   "to": [
+    48.5,
+    50.0
+   ],
+   "step": "A Friend of the Family (Part 2)"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    24.4,
+    46.3
+   ],
+   "to": [
+    19.3,
+    46.3
+   ],
+   "step": "WANTED: Incinerator Gar'im"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    36.0,
+    10.0
+   ],
+   "to": [
+    30.9,
+    10.0
+   ],
+   "step": "Blackrock Menace"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    28.39,
+    12.56
+   ],
+   "to": [
+    23.3,
+    12.6
+   ],
+   "step": "Missing In Action"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    79.0,
+    39.0
+   ],
+   "to": [
+    73.9,
+    39.0
+   ],
+   "step": "Wanted: Lieutenant Fangore"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    30.0,
+    44.2
+   ],
+   "to": [
+    24.9,
+    44.2
+   ],
+   "step": "WANTED: Incinerator Gar'im"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    77.7,
+    23.5
+   ],
+   "to": [
+    79.8,
+    42.6
+   ],
+   "step": "The Missing Diplomat (Part 1)"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    73.0,
+    78.0
+   ],
+   "to": [
+    76.2,
+    84.8
+   ],
+   "step": "The Missing Diplomat (Part 2)"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    60.09,
+    64.45
+   ],
+   "to": [
+    66.2,
+    74.3
+   ],
+   "step": "The Missing Diplomat (Part 3)"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    73.7,
+    17.6
+   ],
+   "to": [
+    76.7,
+    38.1
+   ],
+   "step": "Reassignment"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    39.0,
+    27.0
+   ],
+   "to": [
+    49.9,
+    45.3
+   ],
+   "step": "Cleansing the Eye"
+  },
+  {
+   "zone": "Redridge Mountains",
+   "from": [
+    46.0,
+    6.0
+   ],
+   "to": [
+    40.9,
+    6.0
+   ],
+   "step": "Burning Steppes"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    57.26,
+    48.16
+   ],
+   "to": [
+    64.0,
+    61.7
+   ],
+   "step": "Better Late Than Never (Part 2)"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    79.86,
+    38.47
+   ],
+   "to": [
+    81.5,
+    54.2
+   ],
+   "step": "The First and the Last"
+  },
+  {
+   "zone": "Stormwind City",
+   "from": [
+    78.41,
+    70.84
+   ],
+   "to": [
+    80.3,
+    79.3
+   ],
+   "step": "The First and the Last"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    4.64,
+    38.49
+   ],
+   "to": [
+    2.5,
+    30.9
+   ],
+   "step": "Demon Dogs"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    25.17,
+    73.09
+   ],
+   "to": [
+    21.0,
+    62.0
+   ],
+   "step": "The Eastern Plagues"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    23.6,
+    68.46
+   ],
+   "to": [
+    19.6,
+    57.9
+   ],
+   "step": "The Eastern Plagues"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    25.12,
+    68.37
+   ],
+   "to": [
+    21.0,
+    57.8
+   ],
+   "step": "The Eastern Plagues"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    32.48,
+    83.65
+   ],
+   "to": [
+    27.6,
+    71.5
+   ],
+   "step": "Sister Pamela"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    75.65,
+    53.84
+   ],
+   "to": [
+    66.4,
+    44.7
+   ],
+   "step": "Uncle Carlin"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    73.92,
+    57.7
+   ],
+   "to": [
+    64.9,
+    48.2
+   ],
+   "step": "Zaeldarr the Outcast"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    24.59,
+    79.99
+   ],
+   "to": [
+    20.5,
+    68.2
+   ],
+   "step": "Of Forgotten Memories"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    23.83,
+    78.52
+   ],
+   "to": [
+    19.8,
+    66.9
+   ],
+   "step": "Zaeldarr the Outcast"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    49.19,
+    59.55
+   ],
+   "to": [
+    42.6,
+    49.8
+   ],
+   "step": "Villains of Darrowshire"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    46.53,
+    44.17
+   ],
+   "to": [
+    40.2,
+    36.0
+   ],
+   "step": "Villains of Darrowshire"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    65.95,
+    28.93
+   ],
+   "to": [
+    57.7,
+    22.3
+   ],
+   "step": "Of Lost Honor"
+  },
+  {
+   "zone": "Eastern Plaguelands",
+   "from": [
+    48.89,
+    17.67
+   ],
+   "to": [
+    42.3,
+    12.1
+   ],
+   "step": "Troubled Spirits of Kel'Theril"
+  }
+ ],
+ "inserted": {
+  "Elwynn Forest (1-12)": [
+   "N Hunter trainer",
+   "A Book Inventory",
+   "T Book Inventory",
+   "A Nibbled-On Book",
+   "T Nibbled-On Book",
+   "A Rascally Rodents",
+   "C Rascally Rodents",
+   "T Rascally Rodents",
+   "A Mining Consultant",
+   "T Mining Consultant",
+   "A The Big Picture",
+   "C The Big Picture",
+   "T The Big Picture",
+   "A Follow That Kobold!",
+   "T Follow That Kobold!",
+   "A Shhh! We're Hunting Kobolds",
+   "T Shhh! We're Hunting Kobolds",
+   "A Book Return",
+   "A A Net Disaster",
+   "A Slimy Menace",
+   "A Bottles and Baubles",
+   "A Rough Wolf Pelts",
+   "C Book Return",
+   "T Book Return",
+   "A Rare Books",
+   "T Rare Books",
+   "C A Net Disaster",
+   "C Slimy Menace",
+   "C Bottles and Baubles",
+   "T A Net Disaster",
+   "T Slimy Menace",
+   "T Bottles and Baubles",
+   "A A Man About a Murloc",
+   "A Delicate Instruments",
+   "A Stolen Enchanting Supplies",
+   "A Downstream",
+   "A Good Steel",
+   "C Good Steel",
+   "C Delicate Instruments",
+   "C Stolen Enchanting Supplies",
+   "C Downstream",
+   "C Rough Wolf Pelts",
+   "T Good Steel",
+   "T Downstream",
+   "T Delicate Instruments",
+   "T Stolen Enchanting Supplies",
+   "T Rough Wolf Pelts",
+   "T A Man About a Murloc",
+   "N Taming the Beast",
+   "N Optional rares",
+   "N An Apple Treat"
+  ],
+  "Westfall (11-17)": [
+   "R Westfall",
+   "A Harvesting the Harvesters",
+   "A Testing the Wells",
+   "A Murloc Gills",
+   "A The State of the Mines",
+   "T Elmore's Task",
+   "A Stormpike's Delivery",
+   "N Confounding Flash and Divine Grace",
+   "F Westfall",
+   "C The State of the Mines",
+   "C Murloc Gills",
+   "N Testing the Wells: first sample",
+   "C Testing the Wells",
+   "C Harvesting the Harvesters",
+   "C The State of the Mines",
+   "T Harvesting the Harvesters",
+   "T Testing the Wells",
+   "T Murloc Gills",
+   "T The State of the Mines",
+   "A Moonbrook Espionage",
+   "C Moonbrook Espionage",
+   "T Moonbrook Espionage",
+   "A Explosive Consultation",
+   "T Explosive Consultation",
+   "A A Dynamite Plan",
+   "C A Dynamite Plan",
+   "T A Dynamite Plan",
+   "A Detonation at a Distance",
+   "T Detonation at a Distance",
+   "A Detonation at a Distance (Part 2)",
+   "T Detonation at a Distance (Part 2)",
+   "A Explosive Consultation (Part 2)",
+   "A Philmor's Favor",
+   "T Philmor's Favor",
+   "A Gatehouse Goods",
+   "C Gatehouse Goods",
+   "T Gatehouse Goods",
+   "N Deadmines prep",
+   "b Auberdine"
+  ],
+  "Darkshore (12-17)": [
+   "A Expanding Horizons"
+  ],
+  "Loch Modan (17-18)": [
+   "T Stormpike's Delivery",
+   "N New Loch Modan quests"
+  ],
+  "Redridge Mountains (18-20)": [
+   "T Expanding Horizons",
+   "N Contingency Plan",
+   "T The Defias Brotherhood",
+   "A The Defias Brotherhood (Part 2)",
+   "A Show of Force",
+   "C Show of Force",
+   "T Show of Force",
+   "N Alther's Mill and Blackrock Blockade"
+  ],
+  "The Deadmines (20-22)": [
+   "N Group chapter",
+   "T Explosive Consultation (Part 2)",
+   "A Destruction in Deadmines",
+   "N Run the Deadmines",
+   "C Destruction in Deadmines",
+   "T Destruction in Deadmines",
+   "b Auberdine"
+  ],
+  "Wetlands (25-27)": [
+   "A A Friend of the Family"
+  ],
+  "Redridge Mountains (27-28)": [
+   "F Stormwind City",
+   "T A Friend of the Family",
+   "A A Friend of the Family (Part 2)",
+   "T A Friend of the Family (Part 2)",
+   "A The Shamed Lieutenant",
+   "A WANTED: Incinerator Gar'im",
+   "C WANTED: Incinerator Gar'im",
+   "T WANTED: Incinerator Gar'im"
+  ],
+  "Hillsbrad Foothills (31-32)": [
+   "T The Shamed Lieutenant",
+   "N Syndicate Sabotage"
+  ],
+  "Desolace (33-34)": [
+   "N Battle at the Mannoroc Coven"
+  ],
+  "Dustwallow Marsh (37-38)": [
+   "N Riverglades option"
+  ],
+  "Badlands (40-41)": [
+   "N Learning to Ride"
+  ]
+ },
+ "advisories": {
+  "Loch Modan (17-18)": [
+   {
+    "qid": 86667,
+    "name": "Snowbound",
+    "level": 10
+   },
+   {
+    "qid": 86613,
+    "name": "Excavation Tools",
+    "level": 18
+   },
+   {
+    "qid": 86776,
+    "name": "Ingredients for the Forge",
+    "level": 30
+   }
+  ],
+  "Ashenvale (29-30)": [
+   {
+    "qid": 98417,
+    "name": "Vengeful Trail",
+    "level": 28
+   },
+   {
+    "qid": 86757,
+    "name": "Slowing the Orc Advance",
+    "level": 30
+   },
+   {
+    "qid": 98418,
+    "name": "Shared Fury",
+    "level": 30
+   }
+  ],
+  "Wetlands (30-31)": [
+   {
+    "qid": 88756,
+    "name": "Bring Back a Bang",
+    "level": 31
+   },
+   {
+    "qid": 98216,
+    "name": "Understanding Our Present",
+    "level": 31
+   },
+   {
+    "qid": 98223,
+    "name": "Old Habits",
+    "level": 31
+   },
+   {
+    "qid": 98310,
+    "name": "Gleaning Our Future",
+    "level": 32
+   },
+   {
+    "qid": 98313,
+    "name": "For Further Study",
+    "level": 32
+   },
+   {
+    "qid": 87318,
+    "name": "Hearts of the Lost",
+    "level": 33
+   },
+   {
+    "qid": 88757,
+    "name": "Accessories of the Lost",
+    "level": 33
+   },
+   {
+    "qid": 88758,
+    "name": "Sentiments of the Lost",
+    "level": 33
+   },
+   {
+    "qid": 98297,
+    "name": "Stopping the Cycle",
+    "level": 34
+   },
+   {
+    "qid": 98300,
+    "name": "Word to Ironforge",
+    "level": 34
+   },
+   {
+    "qid": 95799,
+    "name": "Findings for the Explorer's League",
+    "level": 40
+   }
+  ],
+  "Wetlands (25-27)": [
+   {
+    "qid": 97263,
+    "name": "Your Package Has Arrived",
+    "level": 2
+   },
+   {
+    "qid": 98459,
+    "name": "A Lack of Virtue",
+    "level": 21
+   },
+   {
+    "qid": 98461,
+    "name": "Unrequited Love",
+    "level": 21
+   },
+   {
+    "qid": 98197,
+    "name": "Spoils of War",
+    "level": 22
+   },
+   {
+    "qid": 98282,
+    "name": "Alchemical Hazards",
+    "level": 22
+   },
+   {
+    "qid": 98072,
+    "name": "Crocs of the Sky",
+    "level": 27
+   },
+   {
+    "qid": 98221,
+    "name": "From the Ashes",
+    "level": 28
+   },
+   {
+    "qid": 98208,
+    "name": "Bloom of the Heavens",
+    "level": 29
+   },
+   {
+    "qid": 98230,
+    "name": "This Land Was Their Land",
+    "level": 29
+   },
+   {
+    "qid": 98240,
+    "name": "Crimson Crate Delivery",
+    "level": 29
+   },
+   {
+    "qid": 98245,
+    "name": "Razormaw Needling",
+    "level": 29
+   },
+   {
+    "qid": 98246,
+    "name": "Trying Times",
+    "level": 29
+   },
+   {
+    "qid": 87491,
+    "name": "Spark of Freedom",
+    "level": 30
+   },
+   {
+    "qid": 98283,
+    "name": "Carnage",
+    "level": 30
+   },
+   {
+    "qid": 98291,
+    "name": "Death to the Dragonmaw",
+    "level": 30
+   },
+   {
+    "qid": 98293,
+    "name": "Forced Disarmament",
+    "level": 30
+   }
+  ],
+  "Un'Goro Crater (51-52)": [
+   {
+    "qid": 87494,
+    "name": "Microcrystal Contamination",
+    "level": 55
+   }
+  ],
+  "Darkshore (12-17)": [
+   {
+    "qid": 98025,
+    "name": "WANTED: Jai'vhanel",
+    "level": 13
+   },
+   {
+    "qid": 97894,
+    "name": "Business in Auberdine",
+    "level": 17
+   },
+   {
+    "qid": 97926,
+    "name": "Making Do",
+    "level": 17
+   },
+   {
+    "qid": 98042,
+    "name": "It's All Fun and Games Until...",
+    "level": 17
+   },
+   {
+    "qid": 87760,
+    "name": "Holy Diver",
+    "level": 20
+   },
+   {
+    "qid": 98013,
+    "name": "Swelling Forces",
+    "level": 20
+   }
+  ],
+  "Elwynn Forest (1-12)": [
+   {
+    "qid": 91753,
+    "name": "An Enchanting Lesson",
+    "level": 7
+   },
+   {
+    "qid": 99130,
+    "name": "An Enticing Offer",
+    "level": 7
+   },
+   {
+    "qid": 99131,
+    "name": "Baited for Success",
+    "level": 7
+   },
+   {
+    "qid": 95771,
+    "name": "A Taste of Darkness",
+    "level": 10
+   }
+  ],
+  "Westfall (11-17)": [
+   {
+    "qid": 92109,
+    "name": "My First Alchemy Set",
+    "level": 10
+   },
+   {
+    "qid": 92110,
+    "name": "My First Real Potion",
+    "level": 10
+   },
+   {
+    "qid": 95065,
+    "name": "Fishin' Time",
+    "level": 12
+   },
+   {
+    "qid": 93928,
+    "name": "Of Mice and Milk",
+    "level": 15
+   },
+   {
+    "qid": 97234,
+    "name": "Reading Room",
+    "level": 18
+   },
+   {
+    "qid": 97237,
+    "name": "Shelf Picked",
+    "level": 18
+   }
+  ],
+  "Desolace (33-34)": [
+   {
+    "qid": 97284,
+    "name": "Vahlarriel's Vengeance",
+    "level": 33
+   },
+   {
+    "qid": 92754,
+    "name": "A New Need for Shadow Protection",
+    "level": 35
+   },
+   {
+    "qid": 92755,
+    "name": "Mysterious Mysticism",
+    "level": 35
+   },
+   {
+    "qid": 92814,
+    "name": "I Need a Tailor",
+    "level": 35
+   },
+   {
+    "qid": 92817,
+    "name": "Leather Technique",
+    "level": 35
+   },
+   {
+    "qid": 92818,
+    "name": "Big, No, MASSIVE Iron Axes",
+    "level": 35
+   },
+   {
+    "qid": 94841,
+    "name": "Lost Shipping Crate",
+    "level": 38
+   },
+   {
+    "qid": 92743,
+    "name": "A Conqueror's Crown",
+    "level": 40
+   },
+   {
+    "qid": 93224,
+    "name": "Carved Centaur Totems",
+    "level": 40
+   },
+   {
+    "qid": 93678,
+    "name": "Abridged Notes on Draenethyst",
+    "level": 40
+   },
+   {
+    "qid": 93196,
+    "name": "Khan Jehn",
+    "level": 42
+   },
+   {
+    "qid": 96222,
+    "name": "Khan Hratha",
+    "level": 42
+   },
+   {
+    "qid": 93226,
+    "name": "Buying Friendship: Magram",
+    "level": 45
+   },
+   {
+    "qid": 93227,
+    "name": "Buying Friendship: Gelkis",
+    "level": 45
+   }
+  ],
+  "Feralas (43-45)": [
+   {
+    "qid": 92858,
+    "name": "WANTED: Ohk'zi",
+    "level": 43
+   }
+  ],
+  "Stranglethorn Vale (36-37)": [
+   {
+    "qid": 98463,
+    "name": "Talk of the Town",
+    "level": 33
+   },
+   {
+    "qid": 97328,
+    "name": "Anything of Value",
+    "level": 35
+   },
+   {
+    "qid": 97329,
+    "name": "Where's the Key?",
+    "level": 35
+   },
+   {
+    "qid": 97331,
+    "name": "Zimmix's Great Escape",
+    "level": 35
+   },
+   {
+    "qid": 93443,
+    "name": "Lost Shipping Crate",
+    "level": 36
+   },
+   {
+    "qid": 97420,
+    "name": "Reduce, Reuse, Reconcile",
+    "level": 36
+   },
+   {
+    "qid": 97047,
+    "name": "The Cook in the Cage",
+    "level": 38
+   },
+   {
+    "qid": 97048,
+    "name": "Returning to Port",
+    "level": 38
+   },
+   {
+    "qid": 95384,
+    "name": "Partial Mystical Notes",
+    "level": 40
+   },
+   {
+    "qid": 95786,
+    "name": "An Acquaintance in Southshore",
+    "level": 40
+   }
+  ],
+  "Tanaris (43)": [
+   {
+    "qid": 95144,
+    "name": "Overseas Delivery",
+    "level": 38
+   },
+   {
+    "qid": 97536,
+    "name": "Gnomish Garbage",
+    "level": 45
+   }
+  ],
+  "Stranglethorn Vale (38-40)": [
+   {
+    "qid": 97332,
+    "name": "Twice Misplaced Trust",
+    "level": 41
+   },
+   {
+    "qid": 95385,
+    "name": "Torn Mystical Scroll",
+    "level": 43
+   }
+  ],
+  "Duskwood (28-29)": [
+   {
+    "qid": 96139,
+    "name": "The Valor Family",
+    "level": 23
+   },
+   {
+    "qid": 96137,
+    "name": "Ira's Dagger",
+    "level": 25
+   },
+   {
+    "qid": 96138,
+    "name": "Merrick's Bow",
+    "level": 30
+   }
+  ],
+  "Blasted Lands (49-50)": [
+   {
+    "qid": 96797,
+    "name": "The Orphan",
+    "level": 54
+   },
+   {
+    "qid": 96798,
+    "name": "Into the Darkness",
+    "level": 54
+   }
+  ],
+  "Feralas (47)": [
+   {
+    "qid": 97378,
+    "name": "Mirrorscale",
+    "level": 50
+   }
+  ],
+  "Stranglethorn Vale (41-42)": [
+   {
+    "qid": 97405,
+    "name": "Noise Complaints",
+    "level": 44
+   }
+  ],
+  "Tanaris (47-48)": [
+   {
+    "qid": 97530,
+    "name": "Dunemaul Dues",
+    "level": 47
+   }
+  ],
+  "Badlands (40-41)": [
+   {
+    "qid": 97617,
+    "name": "Safety Checks",
+    "level": 40
+   },
+   {
+    "qid": 97663,
+    "name": "Supplies and Studies",
+    "level": 40
+   },
+   {
+    "qid": 97821,
+    "name": "Mirage Mirror",
+    "level": 42
+   }
+  ],
+  "Ashenvale (22-24)": [
+   {
+    "qid": 98027,
+    "name": "Gleaming Crescent Necklace",
+    "level": 26
+   }
+  ],
+  "Darkshore (20-21)": [
+   {
+    "qid": 98028,
+    "name": "Baron Marinous",
+    "level": 21
+   }
+  ],
+  "Hillsbrad Foothills (31-32)": [
+   {
+    "qid": 98059,
+    "name": "Hillsbrad's Hoard",
+    "level": 27
+   },
+   {
+    "qid": 98071,
+    "name": "Brewer's Trade",
+    "level": 27
+   }
+  ],
+  "Dustwallow Marsh (37-38)": [
+   {
+    "qid": 98233,
+    "name": "Sword in the Slime",
+    "level": 42
+   },
+   {
+    "qid": 98192,
+    "name": "Skin Careful, Skin Sharp",
+    "level": 43
+   },
+   {
+    "qid": 98205,
+    "name": "Whelps are the Worst!",
+    "level": 44
+   },
+   {
+    "qid": 98215,
+    "name": "Dragon Scales, Post Burnt Tails",
+    "level": 44
+   },
+   {
+    "qid": 98231,
+    "name": "Active Ingredient",
+    "level": 44
+   }
+  ],
+  "Redridge Mountains (27-28)": [
+   {
+    "qid": 98247,
+    "name": "Shipping Label",
+    "level": 60
+   }
+  ]
+ },
+ "extras_not_in_route": {
+  "stonetalon-mountains": [
+   {
+    "qid": 86574,
+    "name": "Stonetalon Supply Run",
+    "level": 24
+   }
+  ],
+  "alterac-mountains": [
+   {
+    "qid": 92432,
+    "name": "An Alarming Request",
+    "level": 33
+   },
+   {
+    "qid": 92459,
+    "name": "Friend of the Kirin Tor",
+    "level": 33
+   },
+   {
+    "qid": 93689,
+    "name": "Friend of the Kirin Tor",
+    "level": 33
+   },
+   {
+    "qid": 95534,
+    "name": "Strahnbrad Mystery",
+    "level": 36
+   },
+   {
+    "qid": 95798,
+    "name": "The Web of Magic",
+    "level": 40
+   }
+  ],
+  "shendralas": [
+   {
+    "qid": 92841,
+    "name": "Valley of Bones",
+    "level": 40
+   },
+   {
+    "qid": 92844,
+    "name": "Mountain of Bones",
+    "level": 42
+   },
+   {
+    "qid": 92846,
+    "name": "Outcast Necromancers",
+    "level": 40
+   },
+   {
+    "qid": 92847,
+    "name": "Corrupting Tears",
+    "level": 42
+   },
+   {
+    "qid": 92873,
+    "name": "Proof of Concept",
+    "level": 41
+   },
+   {
+    "qid": 92893,
+    "name": "No Mercy for the Weak",
+    "level": 42
+   },
+   {
+    "qid": 92894,
+    "name": "Bone Raising",
+    "level": 40
+   },
+   {
+    "qid": 92914,
+    "name": "Strange Pylons",
+    "level": 43
+   },
+   {
+    "qid": 93016,
+    "name": "A Brief History Lesson",
+    "level": 43
+   },
+   {
+    "qid": 93034,
+    "name": "Valley of Bones",
+    "level": 38
+   },
+   {
+    "qid": 93035,
+    "name": "Ravaging Ravagers",
+    "level": 38
+   },
+   {
+    "qid": 93037,
+    "name": "Outing Outcasts",
+    "level": 40
+   },
+   {
+    "qid": 93041,
+    "name": "Facing the Truth",
+    "level": 38
+   },
+   {
+    "qid": 93066,
+    "name": "Bristleback Retreat",
+    "level": 43
+   },
+   {
+    "qid": 93072,
+    "name": "Long-Term Solutions",
+    "level": 43
+   },
+   {
+    "qid": 93125,
+    "name": "Going Home",
+    "level": 43
+   },
+   {
+    "qid": 93129,
+    "name": "Threat of Starvation",
+    "level": 43
+   },
+   {
+    "qid": 93188,
+    "name": "Return to Orgrul",
+    "level": 43
+   },
+   {
+    "qid": 93341,
+    "name": "Forlorn Gardens",
+    "level": 43
+   },
+   {
+    "qid": 93362,
+    "name": "What They've Done to My Peonies",
+    "level": 43
+   },
+   {
+    "qid": 93394,
+    "name": "Meeting the Magister",
+    "level": 43
+   },
+   {
+    "qid": 93450,
+    "name": "Phantasmal Problems",
+    "level": 42
+   },
+   {
+    "qid": 93546,
+    "name": "Spectral Iron Ore",
+    "level": 42
+   },
+   {
+    "qid": 93568,
+    "name": "Partially Digested Collar",
+    "level": 45
+   },
+   {
+    "qid": 93574,
+    "name": "Corpsefeeder's Carapace",
+    "level": 45
+   },
+   {
+    "qid": 93594,
+    "name": "Word of the Woods",
+    "level": 43
+   },
+   {
+    "qid": 93644,
+    "name": "Tattered Journal",
+    "level": 45
+   },
+   {
+    "qid": 96010,
+    "name": "Fragments of the Pylons",
+    "level": 41
+   },
+   {
+    "qid": 96018,
+    "name": "Powering the Pylons",
+    "level": 43
+   },
+   {
+    "qid": 96060,
+    "name": "Tempered Expectations",
+    "level": 42
+   },
+   {
+    "qid": 99257,
+    "name": "A Heart of Crystal",
+    "level": 43
+   },
+   {
+    "qid": 99258,
+    "name": "Mana Mania",
+    "level": 43
+   }
+  ],
+  "arathi-highlands": [
+   {
+    "qid": 92867,
+    "name": "Ground to Keep",
+    "level": 39
+   },
+   {
+    "qid": 92872,
+    "name": "Dutiful Steps",
+    "level": 38
+   },
+   {
+    "qid": 95315,
+    "name": "The Riverglades Report",
+    "level": 38
+   }
+  ],
+  "swamp-of-sorrows": [
+   {
+    "qid": 93176,
+    "name": "My Little Friends",
+    "level": 35
+   },
+   {
+    "qid": 93429,
+    "name": "Blood of My Blood",
+    "level": 35
+   },
+   {
+    "qid": 93430,
+    "name": "Taking the Bait Back",
+    "level": 35
+   },
+   {
+    "qid": 93585,
+    "name": "This Light of Mine",
+    "level": 34
+   },
+   {
+    "qid": 94929,
+    "name": "Deliver the Second Shipment",
+    "level": 38
+   }
+  ],
+  "riverglades": [
+   {
+    "qid": 94613,
+    "name": "My Kingdom for a Horse",
+    "level": 38
+   },
+   {
+    "qid": 94614,
+    "name": "Freshwater Fiends",
+    "level": 38
+   },
+   {
+    "qid": 94615,
+    "name": "Foal Play",
+    "level": 38
+   },
+   {
+    "qid": 94617,
+    "name": "Coyote Huntin'",
+    "level": 38
+   },
+   {
+    "qid": 94618,
+    "name": "Wheeler's Fleeing Steeds",
+    "level": 38
+   },
+   {
+    "qid": 94678,
+    "name": "Gnoll Infestation",
+    "level": 38
+   },
+   {
+    "qid": 94679,
+    "name": "Snargl's Snout",
+    "level": 40
+   },
+   {
+    "qid": 94829,
+    "name": "What We Lost",
+    "level": 40
+   },
+   {
+    "qid": 94842,
+    "name": "Unsavory Plant Food",
+    "level": 38
+   },
+   {
+    "qid": 94843,
+    "name": "From Seed to Sprout",
+    "level": 38
+   },
+   {
+    "qid": 94857,
+    "name": "If a Tree Falls, and No One Hears...",
+    "level": 39
+   },
+   {
+    "qid": 94858,
+    "name": "All That's Left",
+    "level": 40
+   },
+   {
+    "qid": 94861,
+    "name": "Helping Hands",
+    "level": 39
+   },
+   {
+    "qid": 94877,
+    "name": "Saving Sunnyglade",
+    "level": 40
+   },
+   {
+    "qid": 94879,
+    "name": "Scraps of Knowledge",
+    "level": 40
+   },
+   {
+    "qid": 94881,
+    "name": "Curious Trinkets",
+    "level": 38
+   },
+   {
+    "qid": 94884,
+    "name": "An Unsettling Discovery",
+    "level": 41
+   },
+   {
+    "qid": 94885,
+    "name": "Field Marshal's Log",
+    "level": 40
+   },
+   {
+    "qid": 94886,
+    "name": "The Western Front",
+    "level": 44
+   },
+   {
+    "qid": 94887,
+    "name": "Saving Marshal Ryan",
+    "level": 47
+   },
+   {
+    "qid": 94888,
+    "name": "No Soldier Left Behind",
+    "level": 44
+   },
+   {
+    "qid": 94889,
+    "name": "Carving a Path",
+    "level": 44
+   },
+   {
+    "qid": 94890,
+    "name": "Bring Me His Head",
+    "level": 46
+   },
+   {
+    "qid": 94891,
+    "name": "News to Farholde",
+    "level": 46
+   },
+   {
+    "qid": 94892,
+    "name": "Dying Wish",
+    "level": 47
+   },
+   {
+    "qid": 94893,
+    "name": "Delivering Closure",
+    "level": 47
+   },
+   {
+    "qid": 94894,
+    "name": "The Twilight Threat",
+    "level": 45
+   },
+   {
+    "qid": 94907,
+    "name": "A Small Favor",
+    "level": 44
+   },
+   {
+    "qid": 94923,
+    "name": "Hats Off",
+    "level": 38
+   },
+   {
+    "qid": 94924,
+    "name": "Hunting the Hunters",
+    "level": 39
+   },
+   {
+    "qid": 94925,
+    "name": "A Fur Trade",
+    "level": 39
+   },
+   {
+    "qid": 94926,
+    "name": "Drop the Hammer",
+    "level": 45
+   },
+   {
+    "qid": 94927,
+    "name": "Dunston Checks Out",
+    "level": 44
+   },
+   {
+    "qid": 94928,
+    "name": "A Few Furs for Friz",
+    "level": 39
+   },
+   {
+    "qid": 94931,
+    "name": "Stolen Saws",
+    "level": 38
+   },
+   {
+    "qid": 94961,
+    "name": "Biting the Hand",
+    "level": 40
+   },
+   {
+    "qid": 94963,
+    "name": "Biting the Hand",
+    "level": 40
+   },
+   {
+    "qid": 94992,
+    "name": "Rescue Roundup",
+    "level": 38
+   },
+   {
+    "qid": 94999,
+    "name": "Eyes for the Watchman",
+    "level": 36
+   },
+   {
+    "qid": 95059,
+    "name": "Frazzlespark's Crate",
+    "level": 36
+   },
+   {
+    "qid": 95064,
+    "name": "Preventative Measures",
+    "level": 39
+   },
+   {
+    "qid": 95066,
+    "name": "The Rog'mar Situation",
+    "level": 39
+   },
+   {
+    "qid": 95118,
+    "name": "Saltwater Savages",
+    "level": 41
+   },
+   {
+    "qid": 95119,
+    "name": "Unfriendly Competition",
+    "level": 43
+   },
+   {
+    "qid": 95120,
+    "name": "WANTED: Old Rot-Chum",
+    "level": 42
+   },
+   {
+    "qid": 95121,
+    "name": "A Taste of the Sea",
+    "level": 40
+   },
+   {
+    "qid": 95122,
+    "name": "Unchecked Expansion",
+    "level": 44
+   },
+   {
+    "qid": 95123,
+    "name": "A Blast Ye Scurvy Dogs!",
+    "level": 44
+   },
+   {
+    "qid": 95124,
+    "name": "Admiral Lamora",
+    "level": 45
+   },
+   {
+    "qid": 95147,
+    "name": "The Lost Scout",
+    "level": 37
+   },
+   {
+    "qid": 95148,
+    "name": "Southern Watch Gnoll Report",
+    "level": 37
+   },
+   {
+    "qid": 95156,
+    "name": "Stuff 'Em and Stick 'Em",
+    "level": 37
+   },
+   {
+    "qid": 95161,
+    "name": "Remember That I Love You",
+    "level": 22
+   },
+   {
+    "qid": 95165,
+    "name": "See Ya, Scallywags!",
+    "level": 44
+   },
+   {
+    "qid": 95184,
+    "name": "The Sharpest of Blades",
+    "level": 38
+   },
+   {
+    "qid": 95219,
+    "name": "From Port to Port",
+    "level": 41
+   },
+   {
+    "qid": 95254,
+    "name": "WANTED: Trapclaw",
+    "level": 42
+   },
+   {
+    "qid": 95260,
+    "name": "Terrors From the Deep",
+    "level": 42
+   },
+   {
+    "qid": 95261,
+    "name": "It Takes Guts",
+    "level": 42
+   },
+   {
+    "qid": 95267,
+    "name": "The Monster Surfaces",
+    "level": 42
+   },
+   {
+    "qid": 95288,
+    "name": "Smuggler's Paradise",
+    "level": 43
+   },
+   {
+    "qid": 95293,
+    "name": "Smuggler's Special",
+    "level": 42
+   },
+   {
+    "qid": 95294,
+    "name": "Smuggler's Bargain",
+    "level": 42
+   },
+   {
+    "qid": 95295,
+    "name": "I Know a Guy",
+    "level": 40
+   },
+   {
+    "qid": 95296,
+    "name": "Shipping and Handling",
+    "level": 40
+   },
+   {
+    "qid": 95312,
+    "name": "Coming to Collect",
+    "level": 40
+   },
+   {
+    "qid": 95321,
+    "name": "Tazzik's Dues",
+    "level": 40
+   },
+   {
+    "qid": 95322,
+    "name": "Get the Goods",
+    "level": 40
+   },
+   {
+    "qid": 95325,
+    "name": "We've Been Robbed!",
+    "level": 40
+   },
+   {
+    "qid": 95326,
+    "name": "The Big Payback",
+    "level": 39
+   },
+   {
+    "qid": 95329,
+    "name": "Out in the Field",
+    "level": 38
+   },
+   {
+    "qid": 95330,
+    "name": "Love Thy Neighbor",
+    "level": 37
+   },
+   {
+    "qid": 95383,
+    "name": "Shipping and Handling",
+    "level": 40
+   },
+   {
+    "qid": 95426,
+    "name": "Rog'mar Supplies",
+    "level": 39
+   },
+   {
+    "qid": 95561,
+    "name": "Apple of My Eye",
+    "level": 38
+   },
+   {
+    "qid": 95562,
+    "name": "Cut Off the Heads",
+    "level": 41
+   },
+   {
+    "qid": 95603,
+    "name": "Bats in the Belfry",
+    "level": 38
+   },
+   {
+    "qid": 95613,
+    "name": "Keeping the Light On",
+    "level": 38
+   },
+   {
+    "qid": 95615,
+    "name": "In Memoriam",
+    "level": 38
+   },
+   {
+    "qid": 95642,
+    "name": "Abominable Magics",
+    "level": 40
+   },
+   {
+    "qid": 95643,
+    "name": "Indiscriminate Purge",
+    "level": 40
+   },
+   {
+    "qid": 95792,
+    "name": "Clear 'em Out",
+    "level": 42
+   },
+   {
+    "qid": 95912,
+    "name": "WANTED: Blademaster Kaijo",
+    "level": 42
+   },
+   {
+    "qid": 95913,
+    "name": "Fit for a Princess",
+    "level": 38
+   },
+   {
+    "qid": 95934,
+    "name": "Proof of Profit",
+    "level": 42
+   },
+   {
+    "qid": 95935,
+    "name": "Hail the Dragonslayer",
+    "level": 43
+   },
+   {
+    "qid": 95943,
+    "name": "Foreman's Plight",
+    "level": 38
+   },
+   {
+    "qid": 95957,
+    "name": "Drink Up!",
+    "level": 38
+   },
+   {
+    "qid": 95961,
+    "name": "Stepped Out",
+    "level": 38
+   },
+   {
+    "qid": 95975,
+    "name": "Her World",
+    "level": 41
+   },
+   {
+    "qid": 95982,
+    "name": "Not My Circus",
+    "level": 38
+   },
+   {
+    "qid": 95983,
+    "name": "A Feast for Buzzards",
+    "level": 38
+   },
+   {
+    "qid": 95984,
+    "name": "Song of the Strider",
+    "level": 39
+   },
+   {
+    "qid": 95986,
+    "name": "King of the Wild Plains",
+    "level": 41
+   },
+   {
+    "qid": 95988,
+    "name": "Goes Down Smooth",
+    "level": 38
+   },
+   {
+    "qid": 95991,
+    "name": "WANTED: Ghostmaw",
+    "level": 42
+   },
+   {
+    "qid": 96009,
+    "name": "High Stakes",
+    "level": 38
+   },
+   {
+    "qid": 96015,
+    "name": "A Miner Problem",
+    "level": 43
+   },
+   {
+    "qid": 96063,
+    "name": "Gaseous Gold",
+    "level": 38
+   },
+   {
+    "qid": 96067,
+    "name": "Rock 'em and Sock 'em",
+    "level": 40
+   },
+   {
+    "qid": 96081,
+    "name": "Wound Dressings",
+    "level": 40
+   },
+   {
+    "qid": 96082,
+    "name": "Doctor's Orderly",
+    "level": 40
+   },
+   {
+    "qid": 96083,
+    "name": "Clerical Quarantine",
+    "level": 40
+   },
+   {
+    "qid": 96084,
+    "name": "Something's in the Water",
+    "level": 40
+   },
+   {
+    "qid": 96085,
+    "name": "Upstream Contamination",
+    "level": 42
+   },
+   {
+    "qid": 96125,
+    "name": "In Need of Relief",
+    "level": 43
+   },
+   {
+    "qid": 96126,
+    "name": "An Ogre's Captive",
+    "level": 44
+   }
+  ],
+  "dun-morogh": [
+   {
+    "qid": 95041,
+    "name": "Data Hoarders",
+    "level": 10
+   },
+   {
+    "qid": 95212,
+    "name": "Never Saddle on Quality",
+    "level": 10
+   },
+   {
+    "qid": 95213,
+    "name": "Stolen Blasting Powder",
+    "level": 10
+   },
+   {
+    "qid": 95214,
+    "name": "Stolen Blasting Powder",
+    "level": 10
+   },
+   {
+    "qid": 95217,
+    "name": "The Quarry's Smith",
+    "level": 10
+   },
+   {
+    "qid": 96390,
+    "name": "Nip 'Em in the Bud",
+    "level": 13
+   },
+   {
+    "qid": 96391,
+    "name": "Underground Map",
+    "level": 15
+   },
+   {
+    "qid": 96392,
+    "name": "Farsen's Watch",
+    "level": 13
+   },
+   {
+    "qid": 96408,
+    "name": "A Visitor to Dun Morogh",
+    "level": 13
+   },
+   {
+    "qid": 98319,
+    "name": "Secure the Mountain",
+    "level": 8
+   },
+   {
+    "qid": 98321,
+    "name": "Flintfire's Shipment",
+    "level": 7
+   },
+   {
+    "qid": 98322,
+    "name": "Secure the Mountain",
+    "level": 8
+   },
+   {
+    "qid": 98323,
+    "name": "Secure the Mountain",
+    "level": 8
+   },
+   {
+    "qid": 98326,
+    "name": "Frosthowl",
+    "level": 9
+   },
+   {
+    "qid": 98423,
+    "name": "The Treaty of Understanding",
+    "level": 16
+   },
+   {
+    "qid": 99158,
+    "name": "Dawn in the Mountains",
+    "level": 8
+   },
+   {
+    "qid": 99159,
+    "name": "Finding Warmth",
+    "level": 8
+   },
+   {
+    "qid": 99160,
+    "name": "Rime's Wrath",
+    "level": 8
+   },
+   {
+    "qid": 99161,
+    "name": "Rime's Wrath",
+    "level": 8
+   },
+   {
+    "qid": 99162,
+    "name": "Treacherous Cold",
+    "level": 8
+   }
+  ],
+  "darnassus": [
+   {
+    "qid": 98067,
+    "name": "Eyes of the Sentinels",
+    "level": 11
+   },
+   {
+    "qid": 98391,
+    "name": "The Sisterhood of Elune",
+    "level": 10
+   }
+  ],
+  "azshara": [
+   {
+    "qid": 98096,
+    "name": "Sisters In Duty",
+    "level": 47
+   }
+  ],
+  "thousand-needles": [
+   {
+    "qid": 98155,
+    "name": "Pristine Pesterhide Pelts",
+    "level": 29
+   },
+   {
+    "qid": 98156,
+    "name": "Packaged Pristine Pelts",
+    "level": 29
+   }
+  ]
+ },
+ "auto_placed": {},
+ "validation": {
+  "unknown_actions": [],
+  "duplicates": [
+   [
+    "Feralas (47)",
+    "A The Sunken Temple |QID|3445|"
+   ]
+  ],
+  "bad_title_case": [
+   [
+    "Wetlands (25-27)",
+    "In Search of The Excavation Team (Part 1)"
+   ],
+   [
+    "Wetlands (25-27)",
+    "In Search of The Excavation Team (Part 1)"
+   ],
+   [
+    "Wetlands (25-27)",
+    "In Search of The Excavation Team (Part 2)"
+   ],
+   [
+    "Wetlands (25-27)",
+    "Blisters on The Land"
+   ],
+   [
+    "Wetlands (25-27)",
+    "In Search of The Excavation Team (Part 2)"
+   ],
+   [
+    "Wetlands (25-27)",
+    "Blisters on The Land"
+   ],
+   [
+    "Wetlands (25-27)",
+    "Blisters on The Land"
+   ],
+   [
+    "Redridge Mountains (27-28)",
+    "Missing In Action"
+   ],
+   [
+    "Redridge Mountains (27-28)",
+    "Missing In Action"
+   ],
+   [
+    "Redridge Mountains (27-28)",
+    "Missing In Action"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 1)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 1)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 1)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 1)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 1)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 1)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 2)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 2)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 2)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 2)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 3)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 3)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 3)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 3)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 3)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 3)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 4)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 4)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 4)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 4)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 4)"
+   ],
+   [
+    "Duskwood (28-29)",
+    "Look To The Stars (Part 4)"
+   ],
+   [
+    "Wetlands (30-31)",
+    "Plea To The Alliance"
+   ],
+   [
+    "Wetlands (30-31)",
+    "Plea To The Alliance"
+   ],
+   [
+    "Hillsbrad Foothills (31-32)",
+    "Plea To The Alliance"
+   ],
+   [
+    "Hillsbrad Foothills (31-32)",
+    "Plea To The Alliance"
+   ],
+   [
+    "Feralas (47)",
+    "An Orphan Looking For a Home"
+   ],
+   [
+    "Tanaris (47-48)",
+    "An Orphan Looking For a Home"
+   ],
+   [
+    "Blasted Lands (49-50)",
+    "Everything Counts In Large Amounts"
+   ],
+   [
+    "Blasted Lands (49-50)",
+    "Everything Counts In Large Amounts"
+   ],
+   [
+    "Un'Goro Crater (51-52)",
+    "A Little Help From My Friends"
+   ],
+   [
+    "Un'Goro Crater (51-52)",
+    "A Little Help From My Friends"
+   ],
+   [
+    "Un'Goro Crater (51-52)",
+    "A Little Help From My Friends"
+   ],
+   [
+    "Burning Steppes (55-56)",
+    "Ogre Head On A Stick = Party"
+   ],
+   [
+    "Burning Steppes (55-56)",
+    "Ogre Head On A Stick = Party"
+   ],
+   [
+    "Burning Steppes (55-56)",
+    "Ogre Head On A Stick = Party"
+   ]
+  ],
+  "unclosed_comments": [],
+  "accept_without_turnin": [
+   [
+    "Darkshore (20-21)",
+    "Journey to Astranaar",
+    ""
+   ],
+   [
+    "Felwood (53-54)",
+    "Morrowgrain Research (Part 2)",
+    ""
+   ]
+  ],
+  "turnin_without_accept": []
+ },
+ "canonicalized": [
+  [
+   "Darkshore (20-21)",
+   "The Absent Minded Prospector (Part 1)",
+   "The Absent Minded Prospector"
+  ],
+  [
+   "Hillsbrad Foothills (31-32)",
+   "Encrypted Letter",
+   "Encrypted Letter (Part 2)"
+  ],
+  [
+   "Hillsbrad Foothills (31-32)",
+   "Encrypted Letter",
+   "Encrypted Letter (Part 2)"
+  ],
+  [
+   "Tanaris (47-48)",
+   "Rise of the Silithid",
+   "Rise of the Silithid (Part 2)"
+  ],
+  [
+   "Tanaris (47-48)",
+   "Akiris by the Bundle",
+   "Akiris by the Bundle (Part 2)"
+  ],
+  [
+   "Kalimdor (51)",
+   "Rise of the Silithid",
+   "Rise of the Silithid (Part 2)"
+  ],
+  [
+   "Felwood (53-54)",
+   "A Little Slime Goes a Long Way (Part 1)",
+   "A Little Slime Goes a Long Way"
+  ]
+ ],
+ "title_fixes": [
+  [
+   "Wetlands (25-27)",
+   "The Alagaz Gauntlet",
+   "The Algaz Gauntlet"
+  ],
+  [
+   "Wetlands (25-27)",
+   "The Alagaz Gauntlet",
+   "The Algaz Gauntlet"
+  ],
+  [
+   "Wetlands (25-27)",
+   "The Alagaz Gauntlet",
+   "The Algaz Gauntlet"
+  ],
+  [
+   "Tanaris (47-48)",
+   "OOX-17/TN Distress Beacon",
+   "Find OOX-17/TN!"
+  ],
+  [
+   "Western Plaguelands (56-57)",
+   "Return to Chillwind Camp (Part 4)",
+   "Return to Chillwind Point (Part 4)"
+  ],
+  [
+   "Western Plaguelands (56-57)",
+   "Return to Chillwind Camp (Part 4)",
+   "Return to Chillwind Point (Part 4)"
+  ]
+ ],
+ "not_in_forever_by_name": [
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9533,
+   "step": "A A Helping Hand |T| |N|From Vindicator Palanaar (34.93, 49.70), she probably won't have a ! over her head.| |QID|9533|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9519,
+   "step": "A The Lost Chalice |T| |QID|9519|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9518,
+   "step": "A Agents of Destruction |T| |QID|9518|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9533,
+   "step": "T A Helping Hand |T| |QID|9533|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9517,
+   "step": "A A Shameful Waste |T| |QID|9517|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9516,
+   "step": "A Destroy the Legion |T| |QID|9516|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9526,
+   "step": "A Reclaiming Felfire Hill |N|From Gnarl the Ancient of War, he paths around the camp.| |T| |QID|9526|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9519,
+   "step": "C The Lost Chalice |N|In Satyrnaar (81.61, 48.57)| |QID|9519|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9518,
+   "step": "C Agents of Destruction |N|South of Forest Song in Warsong Lumber Camp (88,54). Overseer Gorthak is in the small building southwest of the big building (88.86, 59.51)| |QID|9518|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9517,
+   "step": "C A Shameful Waste |QID|9517|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9526,
+   "step": "C Reclaiming Felfire Hill |N|Southwest at Felfire Hill (81,67)| |QID|9526|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9519,
+   "step": "T The Lost Chalice |T| |QID|9519|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9517,
+   "step": "T A Shameful Waste |T| |QID|9517|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9526,
+   "step": "T Reclaiming Felfire Hill |T| |QID|9526|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9518,
+   "step": "T Agents of Destruction |T| |QID|9518|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9520,
+   "step": "A Diabolical Plans |U|23777| |T| |QID|9520|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9520,
+   "step": "T Diabolical Plans |T| |QID|9520|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9522,
+   "step": "A Never Again! |T| |QID|9522|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9522,
+   "step": "C Never Again! |N|South at Demon Fall canyon. Gorgannon is east up the main path (90.0, 76.8). Diathorus is west past the monument in a cave on Demon Fall Ridge (78.01, 83.66). Small glowing monuments mark the path up. Both demons call for help, so make sure to clear the area around them.| |QID|9522|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9516,
+   "step": "C Destroy the Legion |N|Skip this quest if you can't get all the lashers, they seem to have a very low spawn rate.| |QID|9516|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9522,
+   "step": "T Never Again! |T| |N|Back in Forest Song| |QID|9522|"
+  },
+  {
+   "guide": "Ashenvale (29-30)",
+   "qid": 9516,
+   "step": "T Destroy the Legion |T| |QID|9516|"
+  },
+  {
+   "guide": "Hillsbrad Foothills (31-32)",
+   "qid": 9435,
+   "step": "A Missing Crystals |QID|9435|"
+  },
+  {
+   "guide": "Hillsbrad Foothills (31-32)",
+   "qid": 9435,
+   "step": "C Missing Crystals |N|Tower north of Southshore (55.4,35)| |QID|9435|"
+  },
+  {
+   "guide": "Hillsbrad Foothills (31-32)",
+   "qid": 9435,
+   "step": "T Missing Crystals |QID|9435|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11191,
+   "step": "A This Old Lighthouse |T| |QID|11191|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11191,
+   "step": "T This Old Lighthouse |N|On the lighthouse island northeast of Theramore (72.06, 47.02)| |QID|11191|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11192,
+   "step": "A Thresher Oil |QID|11192|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11192,
+   "step": "C Thresher Oil |N|In the water around the lighthouse| |QID|11192|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11192,
+   "step": "T Thresher Oil |QID|11192|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11193,
+   "step": "A Dastardly Denizens of the Deep |QID|11193|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11193,
+   "step": "T Dastardly Denizens of the Deep |N|Back on the dock (70.01, 50.81)| |T| |QID|11193|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11194,
+   "step": "A Is it Real? |T| |QID|11194|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11126,
+   "step": "A Traitors Among Us |T| |QID|11126|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11126,
+   "step": "C Traitors Among Us |N|Talk to the Deserter Agitators, you may have to fight some.| |T| |QID|11126|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11126,
+   "step": "T Traitors Among Us |T| |QID|11126|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11128,
+   "step": "A Propaganda War |T| |QID|11128|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11128,
+   "step": "C Propaganda War |N|In the ship at the south dock, downstairs in the captain's quarters| |T| |QID|11128|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11128,
+   "step": "T Propaganda War |T| |QID|11128|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11133,
+   "step": "A Discrediting the Deserters |T| |QID|11133|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11133,
+   "step": "C Discrediting the Deserters |N|Hand out pamphlets to the guards| |T| |QID|11133|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11133,
+   "step": "T Discrediting the Deserters |T| |QID|11133|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11134,
+   "step": "A The End of the Deserters |T| |QID|11134|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11134,
+   "step": "C The End of the Deserters |N|Out on boat to the southeast (76.58, 56.86). Downstairs in the captain's quarters.| |QID|11134|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11134,
+   "step": "T The End of the Deserters |N|Back in Theremore, of course.| |T| |QID|11134|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11212,
+   "step": "A Tabetha's Farm |T| |QID|11212|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11123,
+   "step": "A Inspecting the Ruins |T| |QID|11123|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11136,
+   "step": "A A Disturbing Development |T| |QID|11136|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11136,
+   "step": "T A Disturbing Development |QID|11136|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11137,
+   "step": "A Defias in Dustwallow? |QID|11137|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11137,
+   "step": "C Defias in Dustwallow? |N|Kill Garn Mathers on the island to the northeast (63.40, 28.12)| |QID|11137|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11137,
+   "step": "T Defias in Dustwallow? |N|Back at the tower| |QID|11137|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11138,
+   "step": "A Renn McGill |QID|11138|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 1218,
+   "step": "A Marsh Frog Legs |N|Northwest at Swamplight Manor (55,26)| |QID|1218|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11180,
+   "step": "A What's Haunting Witch Hill? |QID|11180|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 1218,
+   "step": "C Marsh Frog Legs |N|Behind the house| |QID|1218|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11180,
+   "step": "C What's Haunting Witch Hill? |QID|11180|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 1218,
+   "step": "T Marsh Frog Legs |N|Back at the house| |QID|1218|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11180,
+   "step": "T What's Haunting Witch Hill? |QID|11180|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11181,
+   "step": "A The Witch's Bane |QID|11181|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11181,
+   "step": "C The Witch's Bane |N|Around the water, herbalists can track these.| |QID|11181|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11181,
+   "step": "T The Witch's Bane |QID|11181|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11183,
+   "step": "A Cleansing Witch Hill |QID|11183|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11183,
+   "step": "C Cleansing Witch Hill |N|Plant the torch at the end of the dock and kill the bat| |U|33113| |QID|11183|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11183,
+   "step": "T Cleansing Witch Hill |QID|11183|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11146,
+   "step": "A Raptor Captor |N|Follow the road northwest to North Point Tower (46.65, 23.12)| |QID|11146|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11146,
+   "step": "C Raptor Captor |U|33069| |N|Fight raptors to the north of the tower down to low health, then use the rope on them.| |QID|11146|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11146,
+   "step": "T Raptor Captor |QID|11146|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11145,
+   "step": "A Prisoners of the Grimtotems |QID|11145|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11147,
+   "step": "A Unleash the Raptors |QID|11147|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11145,
+   "step": "C Prisoners of the Grimtotems |N|Northwest in Blackhoof Village (41,12). Kill Grimtotems for keys.| |QID|11145|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11147,
+   "step": "C Unleash the Raptors |U|33070| |N|Place the bait near the windmill in the center of town (42,12)| |QID|11147|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11145,
+   "step": "T Prisoners of the Grimtotems |N|Back at the tower| |QID|11145|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11147,
+   "step": "T Unleash the Raptors |QID|11147|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11123,
+   "step": "T Inspecting the Ruins |N|At the Shady Rest Inn (29.6, 47.5).| |QID|11123|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11156,
+   "step": "A Direhorn Raiders |N|Follow the road south, then east to Tabetha's Farm (46.04, 57.17).| |QID|11156|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11172,
+   "step": "A The Zeppelin Crash |QID|11172|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11212,
+   "step": "T Tabetha's Farm |QID|11212|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11169,
+   "step": "A The Grimtotem Weapon |QID|11169|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11173,
+   "step": "A The Reagent Thief |QID|11173|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11169,
+   "step": "C The Grimtotem Weapon |N|Place the totem near crocs to the north and kill them. If you have a pet you may not want to use it, you won't get credit if the croc is not targeting you when it dies.| |U|33101| |QID|11169|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11173,
+   "step": "C The Reagent Thief |N|Kill spiders southeast of the farm (48,62)| |QID|11173|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11156,
+   "step": "C Direhorn Raiders |N|Kill Grimtotems north of the farm| |QID|11156|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11185,
+   "step": "A The Apothecary's Letter |U|33114| |QID|11185|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11156,
+   "step": "T Direhorn Raiders |N|Back at the farm| |QID|11156|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11169,
+   "step": "T The Grimtotem Weapon |QID|11169|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11173,
+   "step": "T The Reagent Thief |QID|11173|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11185,
+   "step": "T The Apothecary's Letter |QID|11185|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11172,
+   "step": "T The Zeppelin Crash |N|To the east at Beezil's Wreck (54,56).| |QID|11172|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11174,
+   "step": "A Corrosion Prevention |QID|11174|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11207,
+   "step": "A Secure the Cargo! |QID|11207|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11174,
+   "step": "C Corrosion Prevention |U|33108| |N|Make sure you have the \"Energized\" buff and use the [Ooze Buster] on the slimes. Note that there is a bug with this quest which may allow you to complete it without leaving the questgiver: target a nearby ooze, use the buster... while it is channelling target a different ooze (at any range).| |QID|11174|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11207,
+   "step": "C Secure the Cargo! |QID|11207|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11174,
+   "step": "T Corrosion Prevention |QID|11174|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11207,
+   "step": "T Secure the Cargo! |QID|11207|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11208,
+   "step": "A Delivery for Drazzit |QID|11208|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11194,
+   "step": "T Is it Real? |N|On an island to the southeast (58.72, 60.18)| |QID|11194|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11209,
+   "step": "A Nat's Bargain |QID|11209|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11209,
+   "step": "C Nat's Bargain |N|Head to the ship wreckage to the southwest (57,63), use the fish paste, swim around until you're attacked by the shark. You may have to use the paste more than once.| |U|33166| |QID|11209|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11209,
+   "step": "T Nat's Bargain |QID|11209|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11210,
+   "step": "A Oh, It's Real |QID|11210|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11208,
+   "step": "T Delivery for Drazzit |T| |QID|11208|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11184,
+   "step": "A WANTED: Goreclaw the Ravenous |T| |QID|11184|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11217,
+   "step": "A Catch a Dragon by the Tail |T| |QID|11217|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11158,
+   "step": "A Bloodfen Feathers |T| |QID|11158|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11184,
+   "step": "C WANTED: Goreclaw the Ravenous |N|In front of the cave at the Bloodfen Burrow (33.52, 65.76)| |QID|11184|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11158,
+   "step": "C Bloodfen Feathers |N|Keep killin' raptors| |QID|11158|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11184,
+   "step": "T WANTED: Goreclaw the Ravenous |N|Back at Mudsprocket| |T| |QID|11184|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11158,
+   "step": "T Bloodfen Feathers |T| |QID|11158|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11160,
+   "step": "A Banner of the Stonemaul |T| |QID|11160|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11161,
+   "step": "A The Essence of Enmity |T| |QID|11161|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11160,
+   "step": "C Banner of the Stonemaul |N|Follow the road northwest to the Den of Flames (39,66). Stay left unti you find the Stonemaul Clan Banner (38.13, 69.37). Make sure you use the totem on the dragonkin after you kill them for \"The Essence of Enmity\".| |U|33088| |QID|11160|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11161,
+   "step": "C The Essence of Enmity |U|33088| |N|Kill dragonkin, use the totem on their corpses.| |QID|11161|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11160,
+   "step": "T Banner of the Stonemaul |N|Back at Mudsprocket| |T| |QID|11160|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11161,
+   "step": "T The Essence of Enmity |T| |QID|11161|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11159,
+   "step": "A Spirits of Stonemaul Hold |T| |QID|11159|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11159,
+   "step": "C Spirits of Stonemaul Hold |N|North at Stonemaul Ruins, talk to the bones.| |QID|11159|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11159,
+   "step": "T Spirits of Stonemaul Hold |T| |QID|11159|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11162,
+   "step": "A Challenge to the Black Flight |T| |QID|11162|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11162,
+   "step": "C Challenge to the Black Flight |N|East outside the entrance to Onyxia's Lair (52.06, 75.68). Plant the banner and kill the dragon. If you can't plant the banner, back out of the cave.| |U|33095| |QID|11162|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11217,
+   "step": "C Catch a Dragon by the Tail |N|Little round spore things, all over between Onyxia's Lair and Mudsprocket.| |QID|11217|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11162,
+   "step": "T Challenge to the Black Flight |N|Back at Mudsprocket| |T| |QID|11162|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11217,
+   "step": "T Catch a Dragon by the Tail |T| |QID|11217|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11210,
+   "step": "T Oh, It's Real |N|Back in Theramore| |T| |QID|11210|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11198,
+   "step": "A Take Down Tethyr! |T| |QID|11198|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11198,
+   "step": "C Take Down Tethyr! |T| |N|Use the cannons on the pier, be careful of his water blasts.| |QID|11198|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11198,
+   "step": "T Take Down Tethyr! |T| |QID|11198|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11214,
+   "step": "A Mission to Mudsprocket |T| |QID|11214|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11138,
+   "step": "T Renn McGill |N|On the southeast island (63.68, 17.03)| |QID|11138|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11139,
+   "step": "A Secondhand Diving Gear |QID|11139|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11139,
+   "step": "C Secondhand Diving Gear |QID|11139|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11139,
+   "step": "T Secondhand Diving Gear |QID|11139|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11140,
+   "step": "A Recover the Cargo! |QID|11140|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11140,
+   "step": "C Recover the Cargo! |N|Find burning wreckage on the water's surface, dive down below it and use the Salvage Kit on the debris.| |U|33044| |QID|11140|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11140,
+   "step": "T Recover the Cargo! |QID|11140|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11141,
+   "step": "A Jaina Must Know |QID|11141|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11141,
+   "step": "T Jaina Must Know |N|Up in the tower| |T| |QID|11141|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11142,
+   "step": "A Survey Alcaz Island |T| |QID|11142|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11143,
+   "step": "A A Grim Connection |T| |QID|11143|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11142,
+   "step": "C Survey Alcaz Island |N|Head down to the apprentice gryphon master and take the flight... DON'T SWIM OUT TO THE ISLAND!| |QID|11142|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11142,
+   "step": "T Survey Alcaz Island |T| |QID|11142|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11143,
+   "step": "T A Grim Connection |N|Take the road northwest out of town to North Point tower| |QID|11143|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11144,
+   "step": "A Confirming the Suspicion |QID|11144|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11148,
+   "step": "A Arms of the Grimtotems |QID|11148|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11148,
+   "step": "C Arms of the Grimtotems |N|Northwest in Blackhoof Village (41,12).| |QID|11148|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11144,
+   "step": "C Confirming the Suspicion |N|Kill Elders to get 4 notes, then combine them| |U|33050| |QID|11144|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11144,
+   "step": "T Confirming the Suspicion |N|Back at the tower| |QID|11144|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11148,
+   "step": "T Arms of the Grimtotems |QID|11148|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11149,
+   "step": "A Tabetha's Assistance |QID|11149|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11149,
+   "step": "T Tabetha's Assistance |N|At her farm, of course (45,57)| |QID|11149|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11150,
+   "step": "A Raze Direhorn Post! |QID|11150|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11150,
+   "step": "C Raze Direhorn Post! |N|Burn the tents to the north of the farm. North Tent (46.63, 46.14), Northeast Tent (47.16, 46.72), East Tent (47.35, 47.48)| |U|33072| |QID|11150|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11150,
+   "step": "T Raze Direhorn Post! |QID|11150|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11151,
+   "step": "A Justice for the Hyals |QID|11151|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11214,
+   "step": "T Mission to Mudsprocket |N|Run down to Mudsprocket.| |T| |QID|11214|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11151,
+   "step": "T Justice for the Hyals |N|Back in Theramore.| |T| |QID|11151|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11152,
+   "step": "A Peace at Last |T| |QID|11152|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11152,
+   "step": "C Peace at Last |N|Just outside Theramore at the graveyard| |QID|11152|"
+  },
+  {
+   "guide": "Dustwallow Marsh (37-38)",
+   "qid": 11152,
+   "step": "T Peace at Last |T| |QID|11152|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9469,
+   "step": "A Featherbeard's Endorsement |N|Outside the inn| |QID|9469|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9470,
+   "step": "A A Gesture of Goodwill |QID|9470|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9471,
+   "step": "A Preying on the Predators |QID|9471|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9469,
+   "step": "T Featherbeard's Endorsement |N|South at a small house, near the fireplace (13,55)| |QID|9469|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9476,
+   "step": "A In Pursuit of Featherbeard |QID|9476|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9470,
+   "step": "C A Gesture of Goodwill |N|To the south in a cave at Bogen's Ledge (25,66)| |QID|9470|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9471,
+   "step": "C Preying on the Predators |QID|9471|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9470,
+   "step": "T A Gesture of Goodwill |QID|9470|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9471,
+   "step": "T Preying on the Predators |QID|9471|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9476,
+   "step": "T In Pursuit of Featherbeard |N|To the southeast in Shadar'Alor, in the east temple (37,72)| |QID|9476|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9475,
+   "step": "A Reclaiming the Eggs |QID|9475|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9475,
+   "step": "C Reclaiming the Eggs |N|Two eggs at the altar on the south edge of the pond (34.16, 72.91), 3 near Atal'ai Exile in a troff (33,75)| |QID|9475|"
+  },
+  {
+   "guide": "The Hinterlands (46-47)",
+   "qid": 9475,
+   "step": "T Reclaiming the Eggs |QID|9475|"
+  },
+  {
+   "guide": "Western Plaguelands (56-57)",
+   "qid": 9474,
+   "step": "A The Mark of the Lightbringer |N|From Anchorite Truuen. He may not be in the camp if he's out doing the escort quest.| |QID|9474|"
+  },
+  {
+   "guide": "Western Plaguelands (58-59)",
+   "qid": 9474,
+   "step": "C The Mark of the Lightbringer |N|At the top of the tower| |QID|9474|"
+  },
+  {
+   "guide": "Western Plaguelands (58-59)",
+   "qid": 9474,
+   "step": "T The Mark of the Lightbringer |QID|9474|"
+  },
+  {
+   "guide": "Western Plaguelands (58-59)",
+   "qid": 9446,
+   "step": "A Tomb of the Lightbringer |QID|9446|"
+  },
+  {
+   "guide": "Western Plaguelands (58-59)",
+   "qid": 9446,
+   "step": "C Tomb of the Lightbringer |N|Escort quest!| |QID|9446|"
+  },
+  {
+   "guide": "Western Plaguelands (58-59)",
+   "qid": 9446,
+   "step": "T Tomb of the Lightbringer |N|Back at Chillwind Camp| |QID|9446|"
+  }
+ ]
+}

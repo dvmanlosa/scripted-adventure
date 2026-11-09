@@ -1,0 +1,41 @@
+{
+ "_about": "Hand changes applied on top of out/*.json by tools/convert_routes.py, per guide, in order. 'replace_qid' {from, to} fixes a wrong quest ID on every step of that quest in the guide. Other entries find one step by 'step' {action, qid}: 'after' {action, qid} moves it right after that step, 'note' replaces its note, 'optional': true marks it skippable. 'why' is for people reading this file.",
+ "Horde": {
+  "Durotar (1-12)": [
+   {"step": {"action": "A", "qid": 97279}, "after": {"action": "T", "qid": 4641},
+    "note": "Gornek, right after Your Place In The World"},
+   {"step": {"action": "A", "qid": 98576}, "after": {"action": "A", "qid": 97279},
+    "note": "Gornek"},
+   {"step": {"action": "T", "qid": 98576}, "after": {"action": "A", "qid": 98576},
+    "note": "Mai'ah, at the Den entrance. Read the Glyphic Parchment first"},
+   {"step": {"action": "C", "qid": 97279}, "after": {"action": "C", "qid": 788},
+    "note": "Collect 6 Abandoned Training Weapons around the valley while killing boars and heading to Sarkoth"}
+  ],
+  "Stranglethorn Vale (47)": [
+   {"replace_qid": {"from": 614, "to": 8551},
+    "why": "#614 is the Alliance-only version (level 51); the Booty Bay one for Horde is #8551 from Captain Hecklebury Smotts (level 47)"}
+  ]
+ },
+ "Alliance": {
+  "Elwynn Forest (1-12)": [
+   {"replace_qid": {"from": 1717, "to": 1685},
+    "why": "#1717 is the level 20 Gakin's Summons; the level 10 one from Remen Marcot is #1685"}
+  ],
+  "Westfall (11-17)": [
+   {"replace_qid": {"from": 1717, "to": 1685}, "why": "same quest as the Elwynn accept"},
+   {"replace_qid": {"from": 1795, "to": 1689},
+    "why": "Voidwalker Binding (Bloodstone Choker, Gakin, level 10) is #1689; #1795 is the level 30 Felhunter one"}
+  ],
+  "Redridge Mountains (27-28)": [
+   {"replace_qid": {"from": 1795, "to": 1739},
+    "why": "Succubus Binding (Gakin, level 20) is #1739"}
+  ],
+  "Hillsbrad Foothills (31-32)": [
+   {"replace_qid": {"from": 4736, "to": 4737},
+    "why": "#4736 is the Horde version (Briarthorn); Zevrost in Ironforge's Forlorn Cavern gives #4737"},
+   {"step": {"action": "A", "qid": 6141}, "optional": true,
+    "note": "Downstairs in Stormwind Cathedral. Needs level 34: skip it if you can't take it yet",
+    "why": "QuestieDB: required level 34, not 24"}
+  ]
+ }
+}
