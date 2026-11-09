@@ -94,7 +94,7 @@ turnin     Find OOX-09/HL!                    #485  @49,38  optional
 
 hearth     Tarren Mill
 turnin     Undamaged Venom Sac                #2934
-accept     Consult Master Gadrin              #2935  [Orc, Troll]
+accept     Consult Master Gadrin              #2935  held
            If you haven't yet purchased your mount, grab this
 
 fly        Undercity

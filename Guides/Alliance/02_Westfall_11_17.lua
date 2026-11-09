@@ -78,27 +78,27 @@ accept     Mirror Lake                               #1861  [Mage]  [Human]
 note       Confounding Flash and Divine Grace        [Priest]  forever
            New level 10 priest quest chains; ask your trainer in the Cathedral
 
-turnin     Gakin's Summons                           #1685  [Warlock]  [Human]
+turnin     Gakin's Summons                           #1685  [Warlock]  held
            In the Mage Quarter
-accept     Surena Caledon                            #1688  [Warlock]  [Human]
+accept     Surena Caledon                            #1688  [Warlock]
 
 turnin     Continue to Stormwind                     #6281  @77.1,61.1  [Human]
            In Old Town at Limited Immunity
 accept     Dungar Longdrink                          #6261  [Human]
 
-turnin     Seek out SI: 7                            #2205  [Rogue]  [Human]
+turnin     Seek out SI: 7                            #2205  [Rogue]  held
            In Old Town
-accept     Snatch and Grab                           #2206  [Rogue]  [Human]
+accept     Snatch and Grab                           #2206  [Rogue]  held
 
-turnin     A Warrior's Training                      #1638  [Warrior]  [Human]
+turnin     A Warrior's Training                      #1638  [Warrior]  held
            In Old Town
-accept     Bartleby the Drunk                        #1639  [Warrior]  [Human]
-turnin     Bartleby the Drunk                        #1639  [Warrior]  [Human]
-accept     Beat Bartleby                             #1640  [Warrior]  [Human]
-turnin     Beat Bartleby                             #1640  [Warrior]  [Human]
-accept     Bartleby's Mug                            #1665  [Warrior]  [Human]
-turnin     Bartleby's Mug                            #1665  [Warrior]  [Human]
-accept     Marshal Haggard                           #1666  [Warrior]  [Human]
+accept     Bartleby the Drunk                        #1639  [Warrior]  held
+turnin     Bartleby the Drunk                        #1639  [Warrior]  held
+accept     Beat Bartleby                             #1640  [Warrior]  held
+turnin     Beat Bartleby                             #1640  [Warrior]  held
+accept     Bartleby's Mug                            #1665  [Warrior]  held
+turnin     Bartleby's Mug                            #1665  [Warrior]  held
+accept     Marshal Haggard                           #1666  [Warrior]  held
 
 note       Get a Tome of Divinity                    [Paladin]  [Human]  loot:6775
            Go see Duthorian Rall in the Cathedral of Light
@@ -127,17 +127,17 @@ turnin     The Collector                             #123  optional
 zone: Westfall
 complete   Mirror Lake                               #1861  @28.6,61.4  [Mage]  [Human]  use:7207
            Directly south of Stormwind at Mirror Lake
-complete   Snatch and Grab                           #2206  @48,87  [Rogue]  [Human]
+complete   Snatch and Grab                           #2206  @48,87  [Rogue]  held
            Sap & Pickpocket the Dockmaster at Jerod's Landing
-complete   Surena Caledon                            #1688  @71,80  [Warlock]  [Human]
+complete   Surena Caledon                            #1688  @71,80  [Warlock]  held
            In the house at the Brackwell Pumpkin Patch
 
-turnin     Marshal Haggard                           #1666  @84.6,69.4  [Warrior]  [Human]
+turnin     Marshal Haggard                           #1666  @84.6,69.4  [Warrior]  held
            At the Eastvale Logging Camp
-accept     Dead-tooth Jack                           #1667  [Warrior]  [Human]
-complete   Dead-tooth Jack                           #1667  @89.2,78.7  [Warrior]  [Human]
+accept     Dead-tooth Jack                           #1667  [Warrior]  held
+complete   Dead-tooth Jack                           #1667  @89.2,78.7  [Warrior]  held
            To the southeast
-turnin     Dead-tooth Jack                           #1667  [Warrior]  [Human]
+turnin     Dead-tooth Jack                           #1667  [Warrior]  held
 
 turnin     The Tome of Divinity (Part 6)             #1786  @72.6,51.5  [Paladin]  [Human]  use:6866
            West side of the island on Stonecaire Lake in Elwynn Forest
@@ -147,12 +147,12 @@ complete   The Tome of Divinity (Part 7)             #1787  [Paladin]  [Human]
 
 hearth     Stormwind City
 turnin     Mirror Lake                               #1861  [Mage]  [Human]
-turnin     Snatch and Grab                           #2206  [Rogue]  [Human]
-turnin     Surena Caledon                            #1688  [Warlock]  [Human]
-accept     The Binding                               #1689  [Warlock]  [Human]
-complete   The Binding                               #1689  [Warlock]  [Human]  use:6928
+turnin     Snatch and Grab                           #2206  [Rogue]  held
+turnin     Surena Caledon                            #1688  [Warlock]  held
+accept     The Binding                               #1689  [Warlock]  held
+complete   The Binding                               #1689  [Warlock]  use:6928  held
            Summoning circle downstairs
-turnin     The Binding                               #1689  [Warlock]  [Human]
+turnin     The Binding                               #1689  [Warlock]  held
 turnin     The Tome of Divinity (Part 7)             #1787  [Paladin]  [Human]
            In the Cathedral of Light
 accept     The Tome of Divinity (Part 8)             #1788  [Paladin]  [Human]

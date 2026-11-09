@@ -77,7 +77,26 @@ end
 function SA:IsDone(step)
     local v = self:DoneSet(self.guide)[step.key]
     if v ~= nil then return v == true end
+    if step.held and not self:Held(step) then return true end -- a hub you didn't pass through
     return step.qid ~= nil and self:QuestRemoved(step.qid)
+end
+
+-- 'held' steps belong to quests handed out in hubs only some starting zones pass through
+-- (e.g. Razor Hill's Conscript of the Horde). Shown only if you have the quest; an accept, if
+-- you have one of its prerequisites. Before the quest log has been read, they show.
+function SA:Held(step)
+    local T = self.Tracker
+    if not (T and T.byId and step.qid) then return true end
+    local function has(q) return T.byId[q] ~= nil or T:QuestDone(q) end
+    if step.action ~= "A" then return has(step.qid) end
+    local reqs = SA.requires and SA.requires[self.routeName] and SA.requires[self.routeName][step.qid]
+    if not reqs then return true end
+    for _, group in ipairs(reqs) do
+        for _, pre in ipairs(group) do
+            if has(pre) then return true end
+        end
+    end
+    return false
 end
 
 ---------------------------------------------------------------------------
@@ -293,18 +312,23 @@ function SA:Skip()
 end
 
 -- Un-tick the last ticked step before the current one.
+-- Only steps that were ticked count here; steps that are merely passed over (held, skipped
+-- quest, dungeon off) are not "undone".
 function SA:Back()
-    local cur = self:CurrentIndex() or (#self.guide.visible + 1)
-    for i = cur - 1, 1, -1 do
-        local step = self.guide.visible[i]
-        if self:IsDone(step) then return self:SetDone(step, false) end
+    local function lastTicked(guide, before)
+        local set = self:DoneSet(guide)
+        for i = (before or #guide.visible + 1) - 1, 1, -1 do
+            if set[guide.visible[i].key] == true then return guide.visible[i] end
+        end
     end
-    -- nothing to undo here: step back into the previous guide's last step
+    local step = lastTicked(self.guide, self:CurrentIndex())
+    if step then return self:SetDone(step, false) end
+    -- nothing to undo here: step back into the previous guide's last ticked step
     local idx = self:GuideIndex()
     if idx > 1 then
         self:SetGuide(self.chain[idx - 1].name)
-        local last = self.guide.visible[#self.guide.visible]
-        if last then self:SetDone(last, false) end
+        step = lastTicked(self.guide)
+        if step then self:SetDone(step, false) end
     end
 end
 
@@ -370,6 +394,34 @@ function SA:Changed(guideSwitched)
 end
 
 ---------------------------------------------------------------------------
+-- Starting zone: your race's by default; any of your faction's from Settings
+---------------------------------------------------------------------------
+
+-- Choices for the Settings picker: { {value = nil | "none" | guide name, label = ...}, ... }
+function SA:StarterChoices()
+    local own = self:StarterGuide(self.routeName, self.race)
+    local route = SA.routes[self.routeName]
+    local list = { { value = nil, label = "Your race's" .. (own and (" (" .. own.name .. ")") or ": none yet") } }
+    for _, guide in ipairs(self:StarterGuides(self.routeName)) do
+        list[#list + 1] = { value = guide.name, label = guide.name }
+    end
+    list[#list + 1] = { value = "none", label = "None (start at " .. tostring(route and route.start) .. ")" }
+    return list
+end
+
+-- Switch starting zone and open its first guide (to read it or to play it).
+function SA:SetStarter(choice)
+    self.char.starter = choice
+    self.chain = self:RouteGuides(self.routeName, self.race, choice)
+    self.questDungeon, self.routeQuests, self.removedCache = nil, nil, nil
+    for _, guide in ipairs(self.chain) do guide.visible = nil end
+    if self.chain[1] then
+        self:SetGuide(self.chain[1].name)
+        msg("Starting zone: |cffffffff" .. self.chain[1].name .. "|r")
+    end
+end
+
+---------------------------------------------------------------------------
 -- Startup
 ---------------------------------------------------------------------------
 
@@ -387,7 +439,7 @@ function SA:Init()
 
     self:LoadPlayer()
     self.routeName = self.faction -- routes are per faction; starting-zone guides pick the race
-    self.chain = self:RouteGuides(self.routeName, self.race)
+    self.chain = self:RouteGuides(self.routeName, self.race, self.char.starter)
     if #SA.parseErrors > 0 then
         msg("|cffff6060" .. #SA.parseErrors .. " guide error(s).|r Type /sa errors to list them.")
     end

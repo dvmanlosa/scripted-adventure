@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "out" / "tools"))
 sys.path.insert(0, str(ROOT / "tools"))
 from questie import QuestieDB, parse_lua_literal  # noqa: E402
-from convert_routes import ROUTES, OUT, apply_fixes, apply_edits  # noqa: E402
+from convert_routes import ROUTES, load_route  # noqa: E402
 
 META = ROOT / "tools" / "quest_meta.json"
 
@@ -91,14 +91,15 @@ def main(qdb):
     meta = Meta(qdb)
     out = {}
     for route, _starters, json_name, _ in ROUTES:
-        data = apply_edits(route, apply_fixes(route, json.loads((OUT / json_name).read_text(encoding="utf-8"))))
+        data = load_route(route, json_name)
         qids = sorted({s["qid"] for g in data["guides"] for s in g["steps"] if "qid" in s})
         in_route = set(qids)
-        requires, dungeon = {}, {}
+        requires, dungeon, races = {}, {}, {}
         for q in qids:
             rec = meta.db.quest(q)
             if not rec:
                 continue
+            races[str(q)] = rec["races"] or 0
             req = {}
             group = [p for p in as_list(rec["pre_group"]) if p in in_route]
             if group:
@@ -112,7 +113,7 @@ def main(qdb):
             d = meta.dungeon(q)
             if d:
                 dungeon[str(q)] = d
-        out[route] = {"requires": requires, "dungeon": dungeon}
+        out[route] = {"requires": requires, "dungeon": dungeon, "races": races}
         names = {}
         for g in data["guides"]:
             for s in g["steps"]:

@@ -73,6 +73,34 @@ local function BuildPage(parent)
 
     -- Guide
     header("Guide")
+    local startRow = CreateFrame("Frame", nil, parent)
+    startRow:SetSize(WIDTH - 28, 20)
+    startRow.caption = W.Text(startRow, "GameFontHighlight")
+    startRow.caption:SetPoint("LEFT", 0, 0)
+    startRow.caption:SetText("Starting zone")
+    local function cycle(d)
+        local list = SA:StarterChoices()
+        local cur = 1
+        for i, c in ipairs(list) do if c.value == SA.char.starter then cur = i end end
+        local nxt = list[(cur - 1 + d) % #list + 1]
+        SA:SetStarter(nxt.value)
+        page:Refresh()
+    end
+    startRow.prev = W.Button(startRow, "<", 22, function() cycle(-1) end, "Previous starting zone")
+    startRow.prev:SetPoint("LEFT", 96, 0)
+    startRow.name = W.Text(startRow, "GameFontNormal")
+    startRow.name:SetPoint("LEFT", startRow.prev, "RIGHT", 6, 0)
+    startRow.name:SetWidth(WIDTH - 180)
+    startRow.name:SetWordWrap(false)
+    startRow.next = W.Button(startRow, ">", 22, function() cycle(1) end, "Next starting zone")
+    startRow.next:SetPoint("LEFT", startRow.name, "RIGHT", 6, 0)
+    startRow.Refresh = function(self)
+        for _, c in ipairs(SA:StarterChoices()) do
+            if c.value == SA.char.starter then self.name:SetText(c.label) end
+        end
+    end
+    W.Tooltip(startRow.prev, "Your race's starting zone is used by default. Pick another of your faction's to read or play it.")
+    page.startRow = add(startRow, 14, 26)
     local guideRow = CreateFrame("Frame", nil, parent)
     guideRow:SetSize(WIDTH - 28, 20)
     guideRow.prev = W.Button(guideRow, "<", 22, function() SA:ShiftGuide(-1); page:Refresh() end, "Previous guide")

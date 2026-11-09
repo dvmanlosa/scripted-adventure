@@ -18,7 +18,7 @@ from lupa import lua51
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from convert_routes import ROUTES, CLASSES, apply_fixes, apply_edits  # noqa: E402
+from convert_routes import ROUTES, CLASSES, load_route, starter_races  # noqa: E402
 
 lua = lua51.LuaRuntime(unpack_returned_tuples=True)
 SA = lua.eval("{}")
@@ -46,27 +46,37 @@ def filt(t):
 run_file(ROOT / "Core" / "Parser.lua")
 problems = []
 no_qid = []
-for route, starters, json_name, _ in ROUTES:
+TOKEN = {"Night Elf": "NightElf", "Undead": "Scourge"}
+for route, _starters, json_name, _ in ROUTES:
     faction = route
     xml = (ROOT / "Guides" / route / f"{route}.xml").read_text()
     for f in re.findall(r'file="([^"]+)"', xml):
         run_file(ROOT / "Guides" / route / f)
-    data = apply_edits(route, apply_fixes(route, json.loads((ROOT / "out" / json_name).read_text(encoding="utf-8"))))
+    data = load_route(route, json_name)
+    starters = starter_races(route, data)
+    by_name = {g["name"]: g for g in data["guides"]}
 
-    json_names = [g["name"] for g in data["guides"]]
-    # a starter race walks the whole JSON route; a race with no starter skips the starter guides
-    starter_race = {"Night Elf": "NightElf", "Undead": "Scourge"}.get(next(iter(starters.values()))[0])
-    starter_race = starter_race or next(iter(starters.values()))[0]
-    for race, expect in ((starter_race, json_names),
-                         ("NoStarter", [n for n in json_names if n not in starters])):
+    def walk(name):
+        out = []
+        while name in by_name and name not in out:
+            out.append(name)
+            name = by_name[name]["next"]
+        return out
+
+    route_start = next(g["name"] for g in data["guides"] if g["name"] not in starters)
+    # every race with a starting zone walks it into the shared route; others start at the shared route
+    cases = [(TOKEN.get(races[0], races[0]), walk(name)) for name, races in starters.items()]
+    cases.append(("NoStarter", walk(route_start)))
+    for race, expect in cases:
         chain_t, broken = SA.RouteGuides(SA, route, race)
         names = [g["name"] for g in lua_list(chain_t)]
         if broken:
             problems.append(f"{route}/{race}: chain breaks at '{broken}'")
         if names != expect:
-            problems.append(f"{route}/{race}: chain differs from JSON order")
+            problems.append(f"{route}/{race}: chain {names[:2]}... differs from {expect[:2]}...")
         print(f"{route} as {race}: {names[0]} -> {names[-1]} ({len(names)} guides)")
-    chain = lua_list(SA.RouteGuides(SA, route, starter_race)[0])
+    parsed = SA.guides[route]
+    chain = [parsed[g["name"]] for g in data["guides"]]   # every guide, starting zones included
 
     allc = CLASSES[faction]
     tok = {"Night Elf": "NightElf", "Undead": "Scourge"}
@@ -87,6 +97,7 @@ for route, starters, json_name, _ in ROUTES:
                 "optional": True if (j.get("optional") or j.get("advisory")) else None,
                 "unverified": True if j.get("unverified") else None,
                 "xp": j.get("xp"), "dungeon": j.get("dungeon"), "alt": j.get("alt"),
+                "held": True if j.get("held") else None,
             }
             for k, v in exp.items():
                 if s[k] != v:

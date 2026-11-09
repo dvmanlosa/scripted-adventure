@@ -171,7 +171,7 @@ frame = g.ScriptedAdventureFrame
 check(frame is not None and frame._shown, "window built and shown")
 check(not frame.warn._shown, "no level hint in a guide that fits")
 titles = [s.title for s in SA.guide.visible.values()]
-check("Simple Tablet" in titles, "sees Orc Warrior class quest")
+check("Simple Parchment" in titles and "Simple Tablet" not in titles, "sees the Orc Warrior class letter (not the Troll one)")
 check("Etched Tablet" not in titles, "hunter quest hidden")
 row1 = SA.UI.rows[1]
 check(row1.step.title == "Your Place In The World", f"row 1 is first step ({row1.step.title})")
@@ -207,8 +207,8 @@ titles = [s.title for s in SA.guide.visible.values()]
 check("Vile Familiars (Part 1)" in titles and "Vile Familiars" not in titles,
       "warlock sees the warlock version of Vile Familiars only")
 
-print("Tauren druid, level 1 (no starting-zone guide yet)")
-_, g, SA = login("Tauren", "DRUID", "Horde", 1)
+print("Skyborne (Horde) druid, level 1 (no starting-zone guide)")
+_, g, SA = login("Skyborne", "DRUID", "Horde", 1)
 check(SA.guide.name == "The Barrens (12-15)", f"starts at the shared Horde route ({SA.guide.name})")
 check(g.ScriptedAdventureFrame.warn._shown and "No starting-zone guide" in g.ScriptedAdventureFrame.warn._text,
       "window explains the level gap")
@@ -224,7 +224,7 @@ print("Human paladin and Night Elf hunter")
 _, g, SA = login("Human", "PALADIN", "Alliance", 1)
 check(SA.guide.name == "Elwynn Forest (1-12)", "human starts in Elwynn")
 _, g, SA = login("NightElf", "HUNTER", "Alliance", 1)
-check(SA.guide.name == "Westfall (11-17)", f"night elf starts at the shared Alliance route ({SA.guide.name})")
+check(SA.guide.name == "Teldrassil (1-12)", f"night elf starts in Teldrassil ({SA.guide.name})")
 
 print("Auto-tick: an alt that already did some quests")
 
@@ -762,6 +762,85 @@ import xml.etree.ElementTree as ET
 binds = ET.parse(ROOT / "Bindings.xml").getroot()
 names = [b.get("name") for b in binds]
 check(all(G["BINDING_NAME_" + n] for n in names), f"Bindings.xml is valid and every binding has a name ({len(names)})")
+
+print("Starting zones for every race")
+for race, cls, faction, want in (("Scourge", "PRIEST", "Horde", "Tirisfal Glades (1-12)"),
+                                 ("Tauren", "WARRIOR", "Horde", "Mulgore (1-12)"),
+                                 ("Troll", "HUNTER", "Horde", "Durotar (1-12)"),
+                                 ("Dwarf", "PALADIN", "Alliance", "Dun Morogh (1-11)"),
+                                 ("Gnome", "MAGE", "Alliance", "Dun Morogh (1-11)"),
+                                 ("NightElf", "DRUID", "Alliance", "Teldrassil (1-12)")):
+    _, g, SA = login(race, cls, faction, 1)
+    nxt = SA.chain[2].name
+    check(SA.guide.name == want and nxt in ("The Barrens (12-15)", "Darkshore (12-17)"),
+          f"{race} starts in {want}, then {nxt}")
+_, g, SA = login("Gnome", "MAGE", "Alliance", 1)
+races = [x.races for x in SA.guide.steps.values() if x.races]
+vis = [x for x in SA.guide.visible.values() if x.races]
+check(any(r["Dwarf"] for r in races) and all(x.races["Gnome"] for x in vis),
+      "Dun Morogh holds Dwarf and Gnome steps; a Gnome sees only the Gnome ones")
+
+letters = {"Simple Parchment", "Simple Tablet", "Etched Parchment", "Etched Tablet", "Encrypted Parchment",
+           "Encrypted Tablet", "Hallowed Tablet", "Glyphic Tablet", "Glyphic Parchment", "Rune-Inscribed Parchment",
+           "Rune-Inscribed Tablet", "Tainted Parchment"}
+for race, cls, want in (("Orc", "WARRIOR", "Simple Parchment"), ("Troll", "WARRIOR", "Simple Tablet"),
+                        ("Orc", "HUNTER", "Etched Parchment"), ("Troll", "HUNTER", "Etched Tablet"),
+                        ("Troll", "PRIEST", "Hallowed Tablet"), ("Troll", "MAGE", "Glyphic Tablet"),
+                        ("Orc", "MAGE", "Glyphic Parchment"), ("Orc", "SHAMAN", "Rune-Inscribed Parchment"),
+                        ("Troll", "SHAMAN", "Rune-Inscribed Tablet"), ("Orc", "WARLOCK", "Tainted Parchment")):
+    _, g, SA = login(race, cls, "Horde", 1)
+    seen = {x.title for x in SA.guide.visible.values() if x.title in letters}
+    check(seen == {want}, f"Durotar: {race} {cls.title()} gets only {want} ({', '.join(sorted(seen))})")
+
+print("Hub quests (held): shown only if you have the quest")
+for race in ("Tauren", "Scourge"):
+    lua, g, SA = login(race, "WARRIOR", "Horde", 12)
+    SA.SetGuide(SA, "The Barrens (12-15)")
+    g.FIRE("QUEST_LOG_UPDATE")
+    titles = {(x.action, x.title) for x in SA.UpcomingSteps(SA, 200).values()}
+    check(("T", "Conscript of the Horde") not in titles and ("A", "Crossroads Conscription") not in titles,
+          f"{race} who came through their own starting zone isn't sent to turn in Razor Hill's Conscript of the Horde")
+    lua.execute("QUESTLOG = { {title=[[Conscript of the Horde]], id=840, complete=false} }")
+    g.FIRE("QUEST_ACCEPTED", 1, 840)
+    titles = {(x.action, x.title) for x in SA.UpcomingSteps(SA, 200).values()}
+    check(("T", "Conscript of the Horde") in titles and ("A", "Crossroads Conscription") in titles,
+          f"... but a {race} who picked it up (e.g. via Durotar) gets the turn-in and the follow-up")
+def orc_with_conscript(lua, g):
+    lua.execute("QUESTLOG = { {title=[[Conscript of the Horde]], id=840, complete=false} }")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 12, setup=orc_with_conscript)
+SA.SetGuide(SA, "The Barrens (12-15)")
+titles = {(x.action, x.title) for x in SA.UpcomingSteps(SA, 200).values()}
+check(("T", "Conscript of the Horde") in titles, "an Orc arriving from Durotar with the quest gets the turn-in")
+SA.Skip(SA)
+SA.Back(SA)
+check(SA.guide.name == "The Barrens (12-15)", "back only undoes real ticks, never a passed-over held step")
+
+print("Starting zone picker (Settings)")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
+G = lua.globals()
+labels = [c.label for c in SA.StarterChoices(SA).values()]
+check(labels[0].startswith("Your race's (Durotar") and "Mulgore (1-12)" in labels and "Tirisfal Glades (1-12)" in labels
+      and labels[-1].startswith("None") and not any("Teldrassil" in l or "Dun Morogh" in l or "Elwynn" in l for l in labels),
+      f"Horde characters get Horde starting zones only ({len(labels)} choices)")
+g.SlashCmdList.SCRIPTEDADVENTURE("options")
+row = SA.Settings.page.startRow
+check("Durotar" in row.name._text, "the picker shows your race's zone by default")
+row.next._scripts.OnClick(row.next)
+check(SA.guide.name == "Durotar (1-12)" and G.ScriptedAdventureCharDB.starter == "Durotar (1-12)", "> picks the next choice")
+row.next._scripts.OnClick(row.next)
+check(SA.guide.name == "Mulgore (1-12)" and SA.chain[2].name == "The Barrens (12-15)" and "Mulgore" in row.name._text,
+      "picking Mulgore opens it, and it still leads into The Barrens")
+saved = G.ScriptedAdventureCharDB
+_, g2, SA2 = login("Orc", "WARRIOR", "Horde", 1, saved)
+check(SA2.chain[1].name == "Mulgore (1-12)", "the choice is saved per character")
+SA.SetStarter(SA, "none")
+check(SA.guide.name == "The Barrens (12-15)", "'None' starts at the shared route")
+SA.SetStarter(SA, None)
+check(SA.guide.name == "Durotar (1-12)", "back to your race's starting zone")
+lua, g, SA = login("Human", "PRIEST", "Alliance", 1)
+labels = [c.label for c in SA.StarterChoices(SA).values()]
+check(set(l for l in labels if "(1-1" in l and not l.startswith("Your")) == {"Dun Morogh (1-11)", "Elwynn Forest (1-12)", "Teldrassil (1-12)"},
+      "Alliance characters get Alliance starting zones only")
 
 print("Commands")
 for c in ["", "", "guides", "guide next", "guide prev", "guide 3", "shown 2", "reset", "errors", "help", "nonsense"]:

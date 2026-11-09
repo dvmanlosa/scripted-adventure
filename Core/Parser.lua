@@ -24,7 +24,7 @@ local RACE_TOKENS = {
     orc = "Orc", undead = "Scourge", scourge = "Scourge", tauren = "Tauren", troll = "Troll",
     skyborne = "Skyborne", -- WoW Forever race, playable on both factions
 }
-local FLAGS = { optional = true, forever = true, unverified = true }
+local FLAGS = { optional = true, forever = true, unverified = true, held = true }
 local NUM_TAGS = { use = "useItem", loot = "lootItem", level = "level", xp = "xp" }
 local NAME_TAGS = { dungeon = "dungeon", alt = "alt" } -- dungeon:The_Deadmines (underscores = spaces)
 local GUIDE_HEADERS = { guide = true, route = true, faction = true, levels = true, zone = true, next = true, races = true }
@@ -260,12 +260,29 @@ function SA:StarterGuide(routeName, race)
     end
 end
 
--- A route's guide chain for one race: its starting-zone guide (if any), then each 'next:'.
--- Races without a starting guide begin at the route's 'start:'.
+-- The route's starting-zone guides (those with a 'races:' header), sorted by name.
+function SA:StarterGuides(routeName)
+    local list = {}
+    for _, guide in pairs(SA.guides[routeName] or {}) do
+        if guide.races then list[#list + 1] = guide end
+    end
+    table.sort(list, function(a, b) return a.name < b.name end)
+    return list
+end
+
+-- A route's guide chain: a starting-zone guide, then each 'next:'.
+--   choice nil     -> the starting zone for 'race' (or the route's 'start:' if the race has none)
+--   choice "none"  -> no starting zone: begin at the route's 'start:'
+--   choice <name>  -> that starting-zone guide (any race's, same route)
 -- Returns the list of guides, plus the name the chain broke on (nil when it ended cleanly).
-function SA:RouteGuides(routeName, race)
+function SA:RouteGuides(routeName, race, choice)
     local route, byName, list, seen = SA.routes[routeName], SA.guides[routeName] or {}, {}, {}
-    local starter = race and SA:StarterGuide(routeName, race)
+    local starter
+    if choice and choice ~= "none" and byName[choice] and byName[choice].races then
+        starter = byName[choice]
+    elseif choice ~= "none" then
+        starter = race and SA:StarterGuide(routeName, race)
+    end
     local name = starter and starter.name or (route and route.start)
     while name and byName[name] and not seen[name] do
         seen[name] = true

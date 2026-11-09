@@ -1,7 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="Route.lua"/>
 	<Script file="QuestInfo.lua"/>
-	<Script file="01_Durotar_1_12.lua"/>
+	<Script file="00_Durotar_1_12.lua"/>
 	<Script file="02_The_Barrens_12_15.lua"/>
 	<Script file="03_Stonetalon_Mountains_15_16.lua"/>
 	<Script file="04_The_Barrens_16_20.lua"/>
@@ -48,4 +48,6 @@
 	<Script file="45_Western_Plaguelands_56_56.lua"/>
 	<Script file="46_Eastern_Plaguelands_56_57.lua"/>
 	<Script file="47_Western_Plaguelands_57_59.lua"/>
+	<Script file="00_Tirisfal_Glades_1_12.lua"/>
+	<Script file="00_Mulgore_1_12.lua"/>
 </Ui>

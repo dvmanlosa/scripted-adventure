@@ -14,10 +14,54 @@ accept     Your Place In The World             #4641
 turnin     Your Place In The World             #4641
 accept     Wayward Weapons                     #97279  @42,68.4  forever
            Gornek, right after Your Place In The World
-accept     Glyphic Parchment                   #98576  @42,68.4  [Mage]  forever
+accept     Glyphic Parchment                   #98576  @42,68.4  [Mage]  [Orc]  forever
            Gornek
-turnin     Glyphic Parchment                   #98576  @42.4,69  [Mage]  forever
+turnin     Glyphic Parchment                   #98576  @42.4,69  [Mage]  [Orc]  forever
            Mai'ah, at the Den entrance. Read the Glyphic Parchment first
+accept     Simple Parchment                    #2383  [Warrior]  [Orc]
+           Gornek
+turnin     Simple Parchment                    #2383  @42.9,69.4  [Warrior]  [Orc]
+           Frang, class trainer in the Den
+accept     Simple Tablet                       #3065  [Warrior]  [Troll]
+           Gornek
+turnin     Simple Tablet                       #3065  @42.9,69.4  [Warrior]  [Troll]
+           Frang, class trainer in the Den
+accept     Etched Parchment                    #3087  [Hunter]  [Orc]
+           Gornek
+turnin     Etched Parchment                    #3087  @42.8,69.3  [Hunter]  [Orc]
+           Jen'shan, class trainer in the Den
+accept     Etched Tablet                       #3082  [Hunter]  [Troll]
+           Gornek
+turnin     Etched Tablet                       #3082  @42.8,69.3  [Hunter]  [Troll]
+           Jen'shan, class trainer in the Den
+accept     Encrypted Parchment                 #3088  [Rogue]  [Orc]
+           Gornek
+turnin     Encrypted Parchment                 #3088  @41.3,68  [Rogue]  [Orc]
+           Rwag, class trainer in the Den
+accept     Encrypted Tablet                    #3083  [Rogue]  [Troll]
+           Gornek
+turnin     Encrypted Tablet                    #3083  @41.3,68  [Rogue]  [Troll]
+           Rwag, class trainer in the Den
+accept     Hallowed Tablet                     #3085  [Priest]  [Troll]
+           Gornek
+turnin     Hallowed Tablet                     #3085  @42.4,68.8  [Priest]  [Troll]
+           Ken'jai, class trainer in the Den
+accept     Glyphic Tablet                      #3086  [Mage]  [Troll]
+           Gornek
+turnin     Glyphic Tablet                      #3086  @42.5,69  [Mage]  [Troll]
+           Mai'ah, class trainer in the Den
+accept     Rune-Inscribed Parchment            #3089  [Shaman]  [Orc]
+           Gornek
+turnin     Rune-Inscribed Parchment            #3089  @42.4,69  [Shaman]  [Orc]
+           Shikrik, class trainer in the Den
+accept     Rune-Inscribed Tablet               #3084  [Shaman]  [Troll]
+           Gornek
+turnin     Rune-Inscribed Tablet               #3084  @42.4,69  [Shaman]  [Troll]
+           Shikrik, class trainer in the Den
+accept     Tainted Parchment                   #3090  [Warlock]
+           Gornek
+turnin     Tainted Parchment                   #3090  @40.7,68.5  [Warlock]
+           Nartok, class trainer in the Den
 accept     Cutting Teeth                       #788
 complete   Cutting Teeth                       #788  @40.6,62.6
            Head towards Sarkoth while completing this quest
@@ -36,17 +80,9 @@ turnin     Cutting Teeth                       #788  @42.1,68.4
            Back at the Den
 turnin     Wayward Weapons                     #97279  @40.4,68  forever
            Kzan Thornslash
-accept     Etched Tablet                       #3082  [Hunter]
-accept     Rune-Inscribed Parchment            #3089  [Shaman]  [Orc]
-accept     Simple Tablet                       #3065  [Warrior]  [Orc]
 accept     Sting of the Scorpid                #789
 
-turnin     Etched Tablet                       #3082  [Hunter]
-turnin     Rune-Inscribed Tablet               #3084  [Shaman]
-turnin     Rune-Inscribed Parchment            #3089  [Shaman]  [Orc]
-turnin     Simple Tablet                       #3065  [Warrior]  [Orc]
-
-accept     Vile Familiars (Part 1)             #1485  [Warlock]  [Orc]
+accept     Vile Familiars (Part 1)             #1485  [Warlock]
 accept     Vile Familiars                      #792  [not Warlock]
 accept     Galgar's Cactus Apple Surprise      #4402
 accept     Lazy Peons                          #5441
@@ -56,7 +92,7 @@ complete   Lazy Peons                          #5441  use:16114
            can get most of them.
 complete   Sting of the Scorpid                #789
 complete   Galgar's Cactus Apple Surprise      #4402
-complete   Vile Familiars (Part 1)             #1485  [Warlock]  [Orc]
+complete   Vile Familiars (Part 1)             #1485  [Warlock]
            Kill familiars outside the cave at the north end of the valley.
 complete   Vile Familiars                      #792  [not Warlock]
            Kill familiars outside the cave at the north end of the valley.
@@ -64,8 +100,8 @@ complete   Vile Familiars                      #792  [not Warlock]
 turnin     Galgar's Cactus Apple Surprise      #4402
 turnin     Sting of the Scorpid                #789
 accept     Call of Earth (Part 1)              #1516  [Shaman]
-turnin     Vile Familiars (Part 1)             #1485  [Warlock]  [Orc]
-accept     Vile Familiars (Part 2)             #1499  [Warlock]  [Orc]
+turnin     Vile Familiars (Part 1)             #1485  [Warlock]
+accept     Vile Familiars (Part 2)             #1499  [Warlock]
 turnin     Vile Familiars                      #792  [not Warlock]
 accept     Burning Blade Medallion             #794
 

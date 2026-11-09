@@ -74,6 +74,7 @@ Separate the title from its tags with **two or more spaces**. (If you use one sp
 | `xp:70` | With `level:8` on a grind step: done at 70% of the way through level 8 |
 | `dungeon:The_Deadmines` | Part of a dungeon (underscores stand for spaces). Hidden while that dungeon is turned off |
 | `alt:The_Deadmines` | Alternative step, shown only while that dungeon is turned off |
+| `held` | Only shown if you have the quest (an accept: if you have one of its prerequisites). For quests handed out in hubs only some starting zones pass through |
 | `optional` | Can be skipped |
 | `forever` | Content added by WoW Forever (not in vanilla) |
 | `unverified` | Forever quest whose location or objective isn't confirmed yet |
@@ -105,7 +106,9 @@ A character starts at the starting-zone guide whose `races:` include their race,
 The Orc and Human guides are generated from `out/forever_*_route.json`. After editing the generator, or by hand:
 
 ```
+python -I tools/build_starters.py <TourGuideVanilla> <QuestieDB>/data/Forever   # other races' starting zones -> data/starters.json
 python -I tools/match_quest_ids.py <QuestieDB>/data/Forever   # optional: fill missing quest IDs -> tools/quest_id_fixes.json
+python -I tools/quest_meta.py <QuestieDB>/data/Forever        # prerequisites + dungeon quests -> tools/quest_meta.json
 python -I tools/convert_routes.py          # JSON (+ ID fixes) -> Guides/ (overwrites generated guides)
 python tools/check_guides.py               # needs: pip install lupa
 python tools/smoke_test.py                 # loads the whole addon against a fake WoW API

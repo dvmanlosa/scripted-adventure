@@ -74,6 +74,23 @@ def apply_edits(route, data):
                     if s.get("coord", {}).get("zone") == old:
                         s["coord"]["zone"] = new
                 continue
+            if "remove" in e:                   # drop a quest's steps (all, or one action)
+                ref = e["remove"]
+                before = len(g["steps"])
+                g["steps"] = [s for s in g["steps"] if not (s.get("qid") == ref["qid"]
+                                                            and ref.get("action", s["action"]) == s["action"])]
+                assert len(g["steps"]) < before, f"route_edits: {g['name']}: nothing to remove for {ref}"
+                continue
+            if "set" in e and "qid" in e.get("all_of", {}):   # change fields on every step of a quest
+                hits = [s for s in g["steps"] if s.get("qid") == e["all_of"]["qid"]]
+                assert hits, f"route_edits: {g['name']}: no steps with quest {e['all_of']['qid']}"
+                for s in hits:
+                    for k, v in e["set"].items():
+                        if v is None:
+                            s.pop(k, None)
+                        else:
+                            s[k] = v
+                continue
             if "insert" in e:                   # a new step (e.g. an alternative for a dungeon)
                 anchor = find(e["after"])
                 new = dict(e["insert"], origin=e["insert"].get("origin", "authored"), _gap=False)
@@ -100,6 +117,69 @@ def apply_edits(route, data):
             if str(s.get("qid")) in dungeon_of and not s.get("alt"):
                 s["dungeon"] = dungeon_of[str(s["qid"])]
     return data
+
+
+STARTERS_FILE = ROOT / "data" / "starters.json"   # from tools/build_starters.py
+
+
+def load_route(route, json_name, tgv_dir=None):
+    """A route as the guides will be generated: out/ JSON + quest ID fixes + the other races'
+    starting zones (data/starters.json) + route_edits. With tgv_dir, steps carry '_gap' (blank
+    line before them) from the TourGuide files."""
+    data = apply_fixes(route, json.loads((OUT / json_name).read_text(encoding="utf-8")))
+    if tgv_dir:
+        tgv_files = re.findall(r'file="([^"]+)"', (OUT / tgv_dir / "Guides.xml").read_text())
+        assert len(tgv_files) == len(data["guides"]), "Guides.xml and JSON disagree on guide count"
+        for g, tgv_file in zip(data["guides"], tgv_files):
+            breaks, n = tgv_breaks(OUT / tgv_dir / tgv_file)
+            assert n == len(g["steps"]), f"{g['name']}: step count differs from {tgv_file}"
+            for si, st in enumerate(g["steps"]):
+                st["_gap"] = si in breaks
+    extra = json.loads(STARTERS_FILE.read_text(encoding="utf-8")).get(route, []) if STARTERS_FILE.exists() else []
+    for st in extra:
+        gaps = set(st.get("gaps", []))
+        steps = [dict(x, _gap=i in gaps) for i, x in enumerate(st["steps"])]
+        data["guides"].append({"name": st["name"], "zone": st["zone"], "next": st["next"],
+                               "races": st["races"], "steps": steps})
+    data = apply_edits(route, data)
+    return apply_hubs(route, data, starter_races(route, data))
+
+
+FACTION_MASK = {"Horde": 2 | 16 | 32 | 128, "Alliance": 1 | 4 | 8 | 64}
+
+
+def apply_hubs(route, data, starters):
+    """In the shared (non-starting-zone) guides, a race tag on a quest any race of the faction can
+    take only says which starting zone hands it out. Replace it with 'held': shown only if you
+    have the quest (for an accept: one of its prerequisites). Truly race-locked quests keep it."""
+    meta = load_meta().get(route, {})
+    masks, requires, fm = meta.get("races", {}), meta.get("requires", {}), FACTION_MASK[route]
+    for g in data["guides"]:
+        if g["name"] in starters:
+            continue
+        for s in g["steps"]:
+            q = s.get("qid")
+            if not (s.get("race") and q and str(q) in masks):
+                continue
+            mask = masks[str(q)]
+            if mask and (mask & fm) != fm:
+                continue                      # really limited to some races
+            del s["race"]
+            if s["action"] != "A" or str(q) in requires:
+                s["held"] = True
+    return data
+
+
+def starter_races(route, data):
+    """Starting-zone guide name -> races, from ROUTES and data/starters.json."""
+    out = {}
+    for r, starters, _j, _t in ROUTES:
+        if r == route:
+            out.update(starters)
+    for g in data["guides"]:
+        if g.get("races"):
+            out[g["name"]] = g["races"]
+    return out
 
 
 ROUTES = [
@@ -186,6 +266,8 @@ def tags_for(step, faction):
         t.append("dungeon:" + step["dungeon"].replace(" ", "_"))
     if step.get("alt"):
         t.append("alt:" + step["alt"].replace(" ", "_"))
+    if step.get("held"):
+        t.append("held")
     if step.get("optional") or step.get("advisory"):
         t.append("optional")
     if step.get("origin") == "forever":
@@ -215,18 +297,12 @@ def slug(s):
     return re.sub(r"[^A-Za-z0-9]+", "_", s).strip("_")
 
 
-def convert(route, starters, json_name, tgv_dir):
+def convert(route, starters_arg, json_name, tgv_dir):
     faction = route
-    data = apply_fixes(route, json.loads((OUT / json_name).read_text(encoding="utf-8")))
-    tgv_files = re.findall(r'file="([^"]+)"', (OUT / tgv_dir / "Guides.xml").read_text())
-    assert len(tgv_files) == len(data["guides"]), "Guides.xml and JSON disagree on guide count"
-    # blank-line grouping is by position in the TourGuide file: attach it before steps move
-    for g, tgv_file in zip(data["guides"], tgv_files):
-        breaks, n = tgv_breaks(OUT / tgv_dir / tgv_file)
-        assert n == len(g["steps"]), f"{g['name']}: step count differs from {tgv_file}"
-        for si, st in enumerate(g["steps"]):
-            st["_gap"] = si in breaks
-    data = apply_edits(route, data)
+    data = load_route(route, json_name, tgv_dir)
+    starters = starter_races(route, data)
+    source = {g["name"]: ("data/starters.json" if g.get("races") and g["name"] not in dict(starters_arg) else f"out/{json_name}")
+              for g in data["guides"]}
 
     dest = GUIDES / route
     dest.mkdir(parents=True, exist_ok=True)
@@ -239,7 +315,7 @@ def convert(route, starters, json_name, tgv_dir):
         m = re.match(r"^(.*?)\s*\((\d+)(?:-(\d+))?\)$", g["name"])
         levels = f"{m.group(2)}-{m.group(3) or m.group(2)}" if m else "?"
         out = [
-            f"-- {g['name']} - {route} route - generated from out/{json_name}",
+            f"-- {g['name']} - {route} route - generated from {source[g['name']]}",
             "-- Format: docs/GUIDE_FORMAT.md",
             "local _, SA = ...",
             "SA:RegisterGuide [==[",
@@ -275,7 +351,8 @@ def convert(route, starters, json_name, tgv_dir):
         out += ["]==]", ""]
         text = "\n".join(out)
         assert "]==]" not in text[text.index("[==[") + 4:text.rindex("]==]")], "note contains ]==]"
-        fname = f"{gi:02d}_{slug(m.group(1) if m else g['name'])}_{levels.replace('-', '_')}.lua"
+        prefix = "00" if g["name"] in starters else f"{gi:02d}"   # starting zones first
+        fname = f"{prefix}_{slug(m.group(1) if m else g['name'])}_{levels.replace('-', '_')}.lua"
         (dest / fname).write_text(text, encoding="utf-8", newline="\n")
         files.append(fname)
 

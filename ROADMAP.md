@@ -9,13 +9,14 @@ A step-by-step leveling guide for WoW Forever: picks the route for your faction 
 | 3 | Auto-completion: quest accepted / objectives done / turned in, flight path, hearth, level, zone, item counts; already-done quests tick on login; modern quest API first, secret-value safe | Done, needs in-game test |
 | 4 | Navigation: game map pin + on-screen waypoint on the current step, TomTom if installed, "show on map"; live objective counts; right-click step menu; skip a whole quest | Done, needs in-game test |
 | 5 | Polish: settings page (gear button / game AddOns settings) with guide picker, dungeons, skipped quests; history panel (click an entry to go back to it); window lock and size; step animations; minimap button + addon-list entry; item button for the step's item (secure, combat-safe); keybindings; step hover tooltip. Still to do: compact view | **Mostly done, needs in-game test** |
-| Content | Improve the shared 12-60 routes first; starting zones for other races later | Ongoing |
+| Content | Starting zones for every race but Skyborne: Durotar (Orc, Troll), Mulgore (Tauren), Tirisfal Glades (Undead), Elwynn (Human), Dun Morogh (Dwarf, Gnome), Teldrassil (Night Elf); picked by race, changeable in Settings (own faction only). Durotar's level 1 class letters corrected per race and class (QuestieDB). From 12 on the route is per faction; quests handed out in hubs only some starting zones pass through are `held` (shown only if you have them). Next: improve the shared 12-60 routes | Ongoing |
 
 ## Route data tools
 
 | Tool | Does |
 | --- | --- |
 | `tools/match_quest_ids.py` | Fills missing quest IDs from QuestieDB -> `tools/quest_id_fixes.json` |
+| `tools/build_starters.py` | Other races' starting zones with the original pipeline (TourGuideVanilla + QuestieDB + Forever quests) -> `data/starters.json` |
 | `tools/quest_meta.py` | Quest prerequisites and dungeon quests from QuestieDB -> `tools/quest_meta.json` |
 | `tools/route_edits.json` | Hand fixes on top of the JSON: reorder/insert steps, notes, optional, wrong quest IDs and zones, xp gates, dungeon tags and alternatives |
 | `tools/audit_routes.py` | Flags wrong-faction quests, quests taken under their required level, grey quests |
@@ -33,10 +34,9 @@ A step-by-step leveling guide for WoW Forever: picks the route for your faction 
 - Compact view (current step only, smaller font).
 - Optional side chains switched like dungeons.
 - Fill in `xp:` gates on grind steps; review the grey-quest audit.
-- Starting zones for Tauren, Undead, Dwarf/Gnome, Night Elf.
 - Not planned: auto accept/turn-in, Skyborne starting zone.
 
 ## Open items
 
-- Trolls use Durotar, but Troll-only class quests aren't in the data yet.
+- Forever's new quests in Mulgore, Tirisfal and Teldrassil aren't in the scraped quest data yet (Dun Morogh's are: 17 placed). 13 Dun Morogh Forever quests have no objective text: their 'complete' steps say to follow the quest text.
 - Grey-quest audit (13 Horde, 7 Alliance) lists low-XP breadcrumbs; review case by case.

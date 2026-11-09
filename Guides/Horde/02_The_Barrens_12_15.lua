@@ -9,15 +9,15 @@ levels:   12-15
 zone:     The Barrens
 next:     Stonetalon Mountains (15-16)
 
-turnin     Conscript of the Horde         #840  @62.3,19.3  [Orc, Troll, Undead]
+turnin     Conscript of the Horde         #840  @62.3,19.3  held
            Just over the bridge from Durotar to The Barrens.
 
 turnin     Path of Defense                #1498  [Warrior]
 accept     Thun'grim Firegaze             #1502  [Warrior]
 
-accept     Crossroads Conscription        #842  [Orc, Troll, Undead]
-turnin     Ak'Zeloth                      #809  [Orc, Troll]
-accept     The Demon Seed                 #924  [Orc, Troll]
+accept     Crossroads Conscription        #842  held
+turnin     Ak'Zeloth                      #809  held
+accept     The Demon Seed                 #924  held
 
 note       Tame Savannah Huntress         [Hunter]
            Abandon scorpid for better DPS
@@ -33,7 +33,7 @@ turnin     Meats to Orgrimmar             #6365  [Orc, Troll]
            Skip "Ride to Orgrimmar"
 accept     Fungal Spores                  #848
 accept     Wharfmaster Dizzywig           #1492
-turnin     Crossroads Conscription        #842  @52.2,31  [Orc, Troll, Undead]
+turnin     Crossroads Conscription        #842  @52.2,31  held
            Follow the road, taking left turn to the Crossroads
 accept     Plainstrider Menace            #844
 accept     The Forgotten Pools            #870
@@ -41,7 +41,7 @@ accept     The Forgotten Pools            #870
 note       Kill crap...
            Kill any raptors you come across for "Raptor Thieves" and plainstriders for
            "Plainstrider Menace"
-complete   The Demon Seed                 #924  @51,22  [Orc, Troll]
+complete   The Demon Seed                 #924  @51,22  held
            Ramp begins at
 
 turnin     Thun'grim Firegaze             #1502  @55,32  [Warrior]

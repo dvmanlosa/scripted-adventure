@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "out" / "tools"))
 sys.path.insert(0, str(ROOT / "tools"))
 from questie import QuestieDB  # noqa: E402
-from convert_routes import ROUTES, OUT, apply_fixes, apply_edits  # noqa: E402
+from convert_routes import ROUTES, load_route  # noqa: E402
 from match_quest_ids import FACTION_RACES  # noqa: E402
 
 GREY_GAP = 6   # quest level this far under the guide's start level gives little or no XP
@@ -27,7 +27,7 @@ GREY_GAP = 6   # quest level this far under the guide's start level gives little
 def main(qdb):
     db = QuestieDB(qdb)
     for route, starters, json_name, _ in ROUTES:
-        data = apply_edits(route, apply_fixes(route, json.loads((OUT / json_name).read_text(encoding="utf-8"))))
+        data = load_route(route, json_name)
         fmask = FACTION_RACES[route]
         wrong_side, too_high, grey, unknown = [], [], [], []
         seen = set()

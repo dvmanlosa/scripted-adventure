@@ -1,7 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="Route.lua"/>
 	<Script file="QuestInfo.lua"/>
-	<Script file="01_Elwynn_Forest_1_12.lua"/>
+	<Script file="00_Elwynn_Forest_1_12.lua"/>
 	<Script file="02_Westfall_11_17.lua"/>
 	<Script file="03_Darkshore_12_17.lua"/>
 	<Script file="04_Loch_Modan_17_18.lua"/>
@@ -39,4 +39,6 @@
 	<Script file="36_Western_Plaguelands_58_58.lua"/>
 	<Script file="37_Eastern_Plaguelands_58_58.lua"/>
 	<Script file="38_Western_Plaguelands_58_59.lua"/>
+	<Script file="00_Dun_Morogh_1_11.lua"/>
+	<Script file="00_Teldrassil_1_12.lua"/>
 </Ui>

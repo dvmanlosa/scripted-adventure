@@ -1,0 +1,5351 @@
+{
+ "_about": "Starting-zone guides built by tools/build_starters.py from TourGuideVanilla + QuestieDB + Forever quest data. Used by tools/convert_routes.py.",
+ "Horde": [
+  {
+   "name": "Tirisfal Glades (1-12)",
+   "zone": "Tirisfal Glades",
+   "next": "The Barrens (12-15)",
+   "races": [
+    "Undead"
+   ],
+   "gaps": [
+    8,
+    14,
+    16,
+    21,
+    25,
+    29,
+    38,
+    47,
+    49,
+    53,
+    57,
+    64,
+    67,
+    78,
+    81,
+    89,
+    90,
+    95,
+    99,
+    105,
+    113,
+    119,
+    120,
+    126,
+    128
+   ],
+   "steps": [
+    {
+     "action": "A",
+     "title": "Rude Awakening",
+     "origin": "tgv",
+     "qid": 363,
+     "note": "The guy right outside of the starting crypt",
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Rude Awakening",
+     "origin": "tgv",
+     "qid": 363,
+     "note": "Right down the hill",
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "The Mindless Ones",
+     "origin": "tgv",
+     "qid": 364,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Piercing the Veil",
+     "origin": "tgv",
+     "qid": 1470,
+     "class": "Warlock",
+     "in_town": true
+    },
+    {
+     "action": "C",
+     "title": "The Mindless Ones",
+     "origin": "tgv",
+     "qid": 364
+    },
+    {
+     "action": "C",
+     "title": "Piercing the Veil",
+     "origin": "tgv",
+     "qid": 1470,
+     "class": "Warlock"
+    },
+    {
+     "action": "T",
+     "title": "The Mindless Ones",
+     "origin": "tgv",
+     "qid": 364,
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Piercing the Veil",
+     "origin": "tgv",
+     "qid": 1470,
+     "class": "Warlock",
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Rattling the Rattlecages",
+     "origin": "tgv",
+     "qid": 3901,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "The Damned",
+     "origin": "tgv",
+     "qid": 376,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Encrypted Scroll",
+     "origin": "tgv",
+     "qid": 3096,
+     "class": "Rogue",
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Tainted Scroll",
+     "origin": "tgv",
+     "qid": 3099,
+     "class": "Warlock",
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Encrypted Scroll",
+     "origin": "tgv",
+     "qid": 3096,
+     "class": "Rogue",
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Tainted Scroll",
+     "origin": "tgv",
+     "qid": 3099,
+     "class": "Warlock",
+     "in_town": true
+    },
+    {
+     "action": "C",
+     "title": "The Damned",
+     "origin": "tgv",
+     "qid": 376
+    },
+    {
+     "action": "C",
+     "title": "Rattling the Rattlecages",
+     "origin": "tgv",
+     "qid": 3901
+    },
+    {
+     "action": "T",
+     "title": "Rattling the Rattlecages",
+     "origin": "tgv",
+     "qid": 3901,
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "The Damned",
+     "origin": "tgv",
+     "qid": 376,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Marla's Last Wish",
+     "origin": "tgv",
+     "qid": 6395,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Night Web's Hollow",
+     "origin": "tgv",
+     "qid": 380,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "Scavenging Deathknell",
+     "origin": "tgv",
+     "qid": 3902,
+     "in_town": true
+    },
+    {
+     "action": "C",
+     "title": "Night Web's Hollow",
+     "origin": "tgv",
+     "qid": 380,
+     "note": "Cave to the north (27.5, 58.0)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 27.5,
+      "y": 58.0
+     }
+    },
+    {
+     "action": "K",
+     "title": "Samuel Fipps",
+     "origin": "tgv",
+     "note": "Take the road north, then east. Samuel's in a little camp just south of the road (36,62)",
+     "loot": "16333",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 36.0,
+      "y": 62.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Scavenging Deathknell",
+     "origin": "tgv",
+     "qid": 3902,
+     "note": "Boxes all over Deathknell"
+    },
+    {
+     "action": "C",
+     "title": "Marla's Last Wish",
+     "origin": "tgv",
+     "qid": 6395,
+     "note": "Bury Samuel's remains at Marla's Grave (31.17, 65.05)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 31.17,
+      "y": 65.05
+     },
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Scavenging Deathknell",
+     "origin": "tgv",
+     "qid": 3902,
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Night Web's Hollow",
+     "origin": "tgv",
+     "qid": 380,
+     "in_town": true
+    },
+    {
+     "action": "A",
+     "title": "The Scarlet Crusade",
+     "origin": "tgv",
+     "qid": 381,
+     "in_town": true
+    },
+    {
+     "action": "T",
+     "title": "Marla's Last Wish",
+     "origin": "tgv",
+     "qid": 6395,
+     "in_town": true
+    },
+    {
+     "action": "C",
+     "title": "The Scarlet Crusade",
+     "origin": "tgv",
+     "qid": 381,
+     "note": "In a camp east of town (36.0, 67.5)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 36.0,
+      "y": 67.5
+     }
+    },
+    {
+     "action": "T",
+     "title": "The Scarlet Crusade",
+     "origin": "tgv",
+     "qid": 381
+    },
+    {
+     "action": "A",
+     "title": "The Red Messenger",
+     "origin": "tgv",
+     "qid": 382
+    },
+    {
+     "action": "C",
+     "title": "The Red Messenger",
+     "origin": "tgv",
+     "qid": 382,
+     "note": "Kill Meven Korgal at the camp (36.48, 68.78)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 36.48,
+      "y": 68.78
+     }
+    },
+    {
+     "action": "T",
+     "title": "The Red Messenger",
+     "origin": "tgv",
+     "qid": 382
+    },
+    {
+     "action": "A",
+     "title": "Vital Intelligence",
+     "origin": "tgv",
+     "qid": 383
+    },
+    {
+     "action": "A",
+     "title": "A Rogue's Deal (Part 1)",
+     "origin": "tgv",
+     "qid": 8,
+     "note": "On the way out of Deathknell"
+    },
+    {
+     "action": "A",
+     "title": "Fields of Grief (Part 1)",
+     "origin": "tgv",
+     "qid": 365
+    },
+    {
+     "action": "A",
+     "title": "Gordo's Task",
+     "origin": "tgv",
+     "qid": 5481,
+     "note": "Along the road to Brill"
+    },
+    {
+     "action": "R",
+     "title": "Brill",
+     "origin": "tgv"
+    },
+    {
+     "action": "A",
+     "title": "A Putrid Task",
+     "origin": "tgv",
+     "qid": 404
+    },
+    {
+     "action": "A",
+     "title": "A New Plague (Part 1)",
+     "origin": "tgv",
+     "qid": 367,
+     "note": "In the house near the herbalism trainer, this quest requires level 6."
+    },
+    {
+     "action": "T",
+     "title": "Vital Intelligence",
+     "origin": "tgv",
+     "qid": 383
+    },
+    {
+     "action": "A",
+     "title": "At War With The Scarlet Crusade (Part 1)",
+     "origin": "tgv",
+     "qid": 427,
+     "nodebug": true
+    },
+    {
+     "action": "A",
+     "title": "Wanted: Maggot Eye",
+     "origin": "tgv",
+     "qid": 398
+    },
+    {
+     "action": "A",
+     "title": "Graverobbers",
+     "origin": "tgv",
+     "qid": 358
+    },
+    {
+     "action": "T",
+     "title": "A Rogue's Deal (Part 1)",
+     "origin": "tgv",
+     "qid": 8
+    },
+    {
+     "action": "h",
+     "title": "Gallows' End Tavern",
+     "origin": "tgv"
+    },
+    {
+     "action": "C",
+     "title": "Gordo's Task",
+     "origin": "tgv",
+     "qid": 5481,
+     "note": "Pick weeds, all over the area between Deathknell and Brill."
+    },
+    {
+     "action": "C",
+     "title": "A Putrid Task",
+     "origin": "tgv",
+     "qid": 404,
+     "note": "Kill rotting dead and ravaged corpses west of Brill."
+    },
+    {
+     "action": "T",
+     "title": "A Putrid Task",
+     "origin": "tgv",
+     "qid": 404
+    },
+    {
+     "action": "A",
+     "title": "The Mills Overrun",
+     "origin": "tgv",
+     "qid": 426
+    },
+    {
+     "action": "T",
+     "title": "Gordo's Task",
+     "origin": "tgv",
+     "qid": 5481,
+     "note": "Wandering around in the graveyard"
+    },
+    {
+     "action": "A",
+     "title": "Doom Weed",
+     "origin": "tgv",
+     "qid": 5482
+    },
+    {
+     "action": "C",
+     "title": "Graverobbers",
+     "origin": "tgv",
+     "qid": 358,
+     "note": "Mongrels are at Garren's Haunt, graverobbers to the south."
+    },
+    {
+     "action": "C",
+     "title": "Doom Weed",
+     "origin": "tgv",
+     "qid": 5482
+    },
+    {
+     "action": "C",
+     "title": "Wanted: Maggot Eye",
+     "origin": "tgv",
+     "qid": 398,
+     "note": "In the house at the north end of Garren's Haunt (58.7, 31.7)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 58.7,
+      "y": 31.7
+     }
+    },
+    {
+     "action": "C",
+     "title": "A New Plague (Part 1)",
+     "origin": "tgv",
+     "qid": 367,
+     "note": "You can find a bunch on the hill southwest of Brill."
+    },
+    {
+     "action": "T",
+     "title": "Wanted: Maggot Eye",
+     "origin": "tgv",
+     "qid": 398
+    },
+    {
+     "action": "T",
+     "title": "Graverobbers",
+     "origin": "tgv",
+     "qid": 358
+    },
+    {
+     "action": "A",
+     "title": "Forsaken Duties",
+     "origin": "tgv",
+     "qid": 359
+    },
+    {
+     "action": "A",
+     "title": "The Prodigal Lich",
+     "origin": "tgv",
+     "qid": 405
+    },
+    {
+     "action": "T",
+     "title": "A New Plague (Part 1)",
+     "origin": "tgv",
+     "qid": 367
+    },
+    {
+     "action": "A",
+     "title": "A New Plague (Part 2)",
+     "origin": "tgv",
+     "qid": 368
+    },
+    {
+     "action": "T",
+     "title": "Doom Weed",
+     "origin": "tgv",
+     "qid": 5482
+    },
+    {
+     "action": "C",
+     "title": "Fields of Grief (Part 1)",
+     "origin": "tgv",
+     "qid": 365,
+     "note": "At the farm north of Deathknell (35,50)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 35.0,
+      "y": 50.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "At War With The Scarlet Crusade (Part 1)",
+     "origin": "tgv",
+     "qid": 427,
+     "note": "West of the farm.",
+     "nodebug": true
+    },
+    {
+     "action": "C",
+     "title": "A New Plague (Part 2)",
+     "origin": "tgv",
+     "qid": 368,
+     "note": "Along the shore (60,29). Murlocs.... joy.",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 60.0,
+      "y": 29.0
+     }
+    },
+    {
+     "action": "H",
+     "title": "Brill",
+     "origin": "tgv"
+    },
+    {
+     "action": "A",
+     "title": "Deaths in the Family",
+     "origin": "tgv",
+     "qid": 354
+    },
+    {
+     "action": "A",
+     "title": "The Haunted Mills",
+     "origin": "tgv",
+     "qid": 362
+    },
+    {
+     "action": "A",
+     "title": "The Chill of Death",
+     "origin": "tgv",
+     "qid": 375,
+     "note": "Upstairs in the inn (61.89, 52.65)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 61.89,
+      "y": 52.65
+     }
+    },
+    {
+     "action": "T",
+     "title": "At War With The Scarlet Crusade (Part 1)",
+     "origin": "tgv",
+     "qid": 427,
+     "nodebug": true
+    },
+    {
+     "action": "A",
+     "title": "At War With The Scarlet Crusade (Part 2)",
+     "origin": "tgv",
+     "qid": 370,
+     "nodebug": true
+    },
+    {
+     "action": "A",
+     "title": "Proof of Demise",
+     "origin": "tgv",
+     "qid": 374
+    },
+    {
+     "action": "T",
+     "title": "Fields of Grief (Part 1)",
+     "origin": "tgv",
+     "qid": 365
+    },
+    {
+     "action": "A",
+     "title": "Fields of Grief (Part 2)",
+     "origin": "tgv",
+     "qid": 407
+    },
+    {
+     "action": "T",
+     "title": "A New Plague (Part 2)",
+     "origin": "tgv",
+     "qid": 368
+    },
+    {
+     "action": "A",
+     "title": "A New Plague (Part 3)",
+     "origin": "tgv",
+     "qid": 369
+    },
+    {
+     "action": "C",
+     "title": "The Mills Overrun",
+     "origin": "tgv",
+     "qid": 426,
+     "note": "At Agamand Mills"
+    },
+    {
+     "action": "C",
+     "title": "The Haunted Mills",
+     "origin": "tgv",
+     "qid": 362,
+     "note": "He is at (47.34, 40.78)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 47.34,
+      "y": 40.78
+     }
+    },
+    {
+     "action": "C",
+     "title": "Deaths in the Family",
+     "origin": "tgv",
+     "qid": 354,
+     "note": "These are at (49.74,36.34) (46.74,29.31) (44,33.64)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 49.74,
+      "y": 36.34
+     }
+    },
+    {
+     "action": "D",
+     "title": "Die",
+     "origin": "tgv",
+     "note": "Take Rez Sickness"
+    },
+    {
+     "action": "T",
+     "title": "The Mills Overrun",
+     "origin": "tgv",
+     "qid": 426
+    },
+    {
+     "action": "A",
+     "title": "A Letter Undelivered",
+     "origin": "tgv",
+     "qid": 361,
+     "use_item": "2839",
+     "optional": true
+    },
+    {
+     "action": "T",
+     "title": "Deaths in the Family",
+     "origin": "tgv",
+     "qid": 354
+    },
+    {
+     "action": "T",
+     "title": "The Haunted Mills",
+     "origin": "tgv",
+     "qid": 362
+    },
+    {
+     "action": "A",
+     "title": "Speak with Sevren",
+     "origin": "tgv",
+     "qid": 355
+    },
+    {
+     "action": "T",
+     "title": "A Letter Undelivered",
+     "origin": "tgv",
+     "qid": 361,
+     "optional": true
+    },
+    {
+     "action": "T",
+     "title": "Fields of Grief (Part 2)",
+     "origin": "tgv",
+     "qid": 407,
+     "note": "Downstairs in the inn"
+    },
+    {
+     "action": "A",
+     "title": "Halgar's Summons",
+     "origin": "tgv",
+     "qid": 1478,
+     "class": "Warlock"
+    },
+    {
+     "action": "T",
+     "title": "Speak with Sevren",
+     "origin": "tgv",
+     "qid": 355
+    },
+    {
+     "action": "A",
+     "title": "The Family Crypt",
+     "origin": "tgv",
+     "qid": 408
+    },
+    {
+     "action": "C",
+     "title": "The Chill of Death",
+     "origin": "tgv",
+     "qid": 375,
+     "note": "Work your way north from town killing greater duskbats near the road."
+    },
+    {
+     "action": "B",
+     "title": "[Coarse Thread]",
+     "origin": "tgv",
+     "note": "Just one is required",
+     "loot": "2320"
+    },
+    {
+     "action": "T",
+     "title": "The Chill of Death",
+     "origin": "tgv",
+     "qid": 375
+    },
+    {
+     "action": "R",
+     "title": "Undercity",
+     "origin": "tgv"
+    },
+    {
+     "action": "T",
+     "title": "Halgar's Summons",
+     "origin": "tgv",
+     "qid": 1478,
+     "class": "Warlock"
+    },
+    {
+     "action": "A",
+     "title": "Creature of the Void",
+     "origin": "tgv",
+     "qid": 1473,
+     "class": "Warlock"
+    },
+    {
+     "action": "T",
+     "title": "The Prodigal Lich",
+     "origin": "tgv",
+     "qid": 405,
+     "note": "In the magic quarter"
+    },
+    {
+     "action": "C",
+     "title": "At War With The Scarlet Crusade (Part 2)",
+     "origin": "tgv",
+     "qid": 370,
+     "note": "Leave Undercity through the sewers and you'll end up near the mobs for this quest.",
+     "nodebug": true
+    },
+    {
+     "action": "C",
+     "title": "Creature of the Void",
+     "origin": "tgv",
+     "qid": 1473,
+     "class": "Warlock",
+     "note": "Loot the chest at (51,67)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 51.0,
+      "y": 67.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Creature of the Void",
+     "origin": "tgv",
+     "qid": 1473,
+     "class": "Warlock"
+    },
+    {
+     "action": "A",
+     "title": "The Binding",
+     "origin": "tgv",
+     "qid": 1471,
+     "class": "Warlock"
+    },
+    {
+     "action": "C",
+     "title": "The Binding",
+     "origin": "tgv",
+     "qid": 1471,
+     "class": "Warlock"
+    },
+    {
+     "action": "T",
+     "title": "The Binding",
+     "origin": "tgv",
+     "qid": 1471,
+     "class": "Warlock"
+    },
+    {
+     "action": "T",
+     "title": "At War With The Scarlet Crusade (Part 2)",
+     "origin": "tgv",
+     "qid": 370,
+     "note": "Back in Brill. Hearth if you can.",
+     "nodebug": true
+    },
+    {
+     "action": "A",
+     "title": "At War With The Scarlet Crusade (Part 3)",
+     "origin": "tgv",
+     "qid": 371,
+     "nodebug": true
+    },
+    {
+     "action": "T",
+     "title": "Forsaken Duties",
+     "origin": "tgv",
+     "qid": 359,
+     "note": "Southeast of Brill at the campfire (65.5, 60.0)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 65.5,
+      "y": 60.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Return to the Magistrate",
+     "origin": "tgv",
+     "qid": 360
+    },
+    {
+     "action": "A",
+     "title": "Rear Guard Patrol",
+     "origin": "tgv",
+     "qid": 356
+    },
+    {
+     "action": "C",
+     "title": "Rear Guard Patrol",
+     "origin": "tgv",
+     "qid": 356,
+     "note": "At the farm further east down the road (75,60).",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 75.0,
+      "y": 60.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "At War With The Scarlet Crusade (Part 3)",
+     "origin": "tgv",
+     "qid": 371,
+     "nodebug": true
+    },
+    {
+     "action": "C",
+     "title": "A New Plague (Part 3)",
+     "origin": "tgv",
+     "qid": 369
+    },
+    {
+     "action": "T",
+     "title": "Rear Guard Patrol",
+     "origin": "tgv",
+     "qid": 356
+    },
+    {
+     "action": "T",
+     "title": "At War With The Scarlet Crusade (Part 3)",
+     "origin": "tgv",
+     "qid": 371,
+     "nodebug": true
+    },
+    {
+     "action": "A",
+     "title": "At War With The Scarlet Crusade (Part 4)",
+     "origin": "tgv",
+     "qid": 372,
+     "nodebug": true
+    },
+    {
+     "action": "T",
+     "title": "A New Plague (Part 3)",
+     "origin": "tgv",
+     "qid": 369
+    },
+    {
+     "action": "A",
+     "title": "A New Plague (Part 4)",
+     "origin": "tgv",
+     "qid": 492
+    },
+    {
+     "action": "A",
+     "title": "Delivery to Silverpine Forest",
+     "origin": "tgv",
+     "qid": 445
+    },
+    {
+     "action": "C",
+     "title": "The Family Crypt",
+     "origin": "tgv",
+     "qid": 408,
+     "note": "At Agamand Mills"
+    },
+    {
+     "action": "D",
+     "title": "Die",
+     "origin": "tgv",
+     "note": "Take Rez Sickness"
+    },
+    {
+     "action": "T",
+     "title": "Return to the Magistrate",
+     "origin": "tgv",
+     "qid": 360
+    },
+    {
+     "action": "T",
+     "title": "The Family Crypt",
+     "origin": "tgv",
+     "qid": 408
+    },
+    {
+     "action": "T",
+     "title": "A New Plague (Part 4)",
+     "origin": "tgv",
+     "qid": 492
+    },
+    {
+     "action": "C",
+     "title": "At War With The Scarlet Crusade (Part 4)",
+     "origin": "tgv",
+     "qid": 372,
+     "note": "You can find him at (79.52,25.15)",
+     "coord": {
+      "zone": "Tirisfal Glades",
+      "x": 79.52,
+      "y": 25.15
+     },
+     "nodebug": true
+    },
+    {
+     "action": "C",
+     "title": "Proof of Demise",
+     "origin": "tgv",
+     "qid": 374
+    },
+    {
+     "action": "T",
+     "title": "At War With The Scarlet Crusade (Part 4)",
+     "origin": "tgv",
+     "qid": 372,
+     "note": "Back in Brill. Hearth if you can.",
+     "nodebug": true
+    },
+    {
+     "action": "T",
+     "title": "Proof of Demise",
+     "origin": "tgv",
+     "qid": 374
+    },
+    {
+     "action": "F",
+     "title": "Orgrimmar",
+     "origin": "tgv",
+     "note": "Take the zeppelin outside Undercity"
+    },
+    {
+     "action": "f",
+     "title": "Grab flight point",
+     "origin": "tgv"
+    }
+   ]
+  },
+  {
+   "name": "Mulgore (1-12)",
+   "zone": "Mulgore",
+   "next": "The Barrens (12-15)",
+   "races": [
+    "Tauren"
+   ],
+   "gaps": [
+    3,
+    13,
+    16,
+    18,
+    21,
+    24,
+    28,
+    33,
+    34,
+    46,
+    56,
+    64,
+    67,
+    68,
+    70,
+    71,
+    73,
+    75,
+    77,
+    79,
+    82,
+    83,
+    93,
+    94,
+    98,
+    107,
+    108,
+    111,
+    114,
+    116,
+    120,
+    125,
+    127,
+    133,
+    134,
+    136,
+    152
+   ],
+   "steps": [
+    {
+     "action": "A",
+     "title": "The Hunt Begins",
+     "origin": "tgv",
+     "qid": 747,
+     "note": "Right in front of you! (44.5, 77.6)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 44.5,
+      "y": 77.6
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Hunt Begins",
+     "origin": "tgv",
+     "qid": 747
+    },
+    {
+     "action": "T",
+     "title": "The Hunt Begins",
+     "origin": "tgv",
+     "qid": 747,
+     "note": "Back at Camp Narache (44.5, 77.5)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 44.5,
+      "y": 77.5
+     }
+    },
+    {
+     "action": "A",
+     "title": "Etched Note",
+     "origin": "tgv",
+     "qid": 3092,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Simple Note",
+     "origin": "tgv",
+     "qid": 3091,
+     "class": "Warrior"
+    },
+    {
+     "action": "A",
+     "title": "Rune-Inscribed Note",
+     "origin": "tgv",
+     "qid": 3093,
+     "class": "Shaman"
+    },
+    {
+     "action": "A",
+     "title": "Verdant Note",
+     "origin": "tgv",
+     "qid": 3094,
+     "class": "Druid"
+    },
+    {
+     "action": "A",
+     "title": "The Hunt Continues",
+     "origin": "tgv",
+     "qid": 750
+    },
+    {
+     "action": "T",
+     "title": "Verdant Note",
+     "origin": "tgv",
+     "qid": 3094,
+     "class": "Druid",
+     "note": "Inside one of the little tents (44.6, 76.7)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 44.6,
+      "y": 76.7
+     }
+    },
+    {
+     "action": "T",
+     "title": "Etched Note",
+     "origin": "tgv",
+     "qid": 3092,
+     "class": "Hunter"
+    },
+    {
+     "action": "T",
+     "title": "Simple Note",
+     "origin": "tgv",
+     "qid": 3091,
+     "class": "Warrior"
+    },
+    {
+     "action": "T",
+     "title": "Rune-Inscribed Note",
+     "origin": "tgv",
+     "qid": 3093,
+     "class": "Shaman"
+    },
+    {
+     "action": "A",
+     "title": "A Humble Task (Part 1)",
+     "origin": "tgv",
+     "qid": 752,
+     "note": "In the big tent (43.9, 76.7)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 43.9,
+      "y": 76.7
+     }
+    },
+    {
+     "action": "T",
+     "title": "A Humble Task (Part 1)",
+     "origin": "tgv",
+     "qid": 752,
+     "note": "Southeast near the well (48.8, 80.9)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 48.8,
+      "y": 80.9
+     }
+    },
+    {
+     "action": "A",
+     "title": "A Humble Task (Part 2)",
+     "origin": "tgv",
+     "qid": 753,
+     "note": "Mulgore, Red Cloud Mesa (48.8, 80.9)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 48.8,
+      "y": 80.9
+     }
+    },
+    {
+     "action": "C",
+     "title": "A Humble Task (Part 2)",
+     "origin": "tgv",
+     "qid": 753,
+     "note": "Grab a pitcher of water."
+    },
+    {
+     "action": "T",
+     "title": "A Humble Task (Part 2)",
+     "origin": "tgv",
+     "qid": 753,
+     "note": "Back at Camp Narache (43.9, 76.7)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 43.9,
+      "y": 76.7
+     }
+    },
+    {
+     "action": "A",
+     "title": "Rites of the Earthmother (Part 1)",
+     "origin": "tgv",
+     "qid": 755
+    },
+    {
+     "action": "T",
+     "title": "Rites of the Earthmother (Part 1)",
+     "origin": "tgv",
+     "qid": 755,
+     "note": "Due south of town at the hut on the hill (42.5, 90.0)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 42.5,
+      "y": 90.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Rite of Strength",
+     "origin": "tgv",
+     "qid": 757
+    },
+    {
+     "action": "C",
+     "title": "The Hunt Continues",
+     "origin": "tgv",
+     "qid": 750
+    },
+    {
+     "action": "T",
+     "title": "The Hunt Continues",
+     "origin": "tgv",
+     "qid": 750,
+     "note": "Back at Camp Narache (44.5, 77.6)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 44.5,
+      "y": 77.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Battleboars",
+     "origin": "tgv",
+     "qid": 780
+    },
+    {
+     "action": "A",
+     "title": "Break Sharptusk!",
+     "origin": "tgv",
+     "qid": 3376
+    },
+    {
+     "action": "C",
+     "title": "Break Sharptusk!",
+     "origin": "tgv",
+     "qid": 3376,
+     "note": "East inside Brambleblade Ravine. Follow the torches to the large hut, the chief is inside (60.7, 77.9).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 60.7,
+      "y": 77.9
+     }
+    },
+    {
+     "action": "A",
+     "title": "Attack on Camp Narache",
+     "origin": "tgv",
+     "qid": 781,
+     "note": "South of the chief's hut, find the map on the floor of the cave (59.8, 82.2)",
+     "use_item": "4851",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 59.8,
+      "y": 82.2
+     }
+    },
+    {
+     "action": "C",
+     "title": "Rite of Strength",
+     "origin": "tgv",
+     "qid": 757,
+     "note": "Kill anthro boars for belts."
+    },
+    {
+     "action": "C",
+     "title": "The Battleboars",
+     "origin": "tgv",
+     "qid": 780,
+     "note": "Kill any non-anthro boars for meat."
+    },
+    {
+     "action": "T",
+     "title": "The Battleboars",
+     "origin": "tgv",
+     "qid": 780,
+     "note": "Back at Camp Narache (44.5, 77.6). Hearth if you can.",
+     "use_item": "6948",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 44.5,
+      "y": 77.6
+     }
+    },
+    {
+     "action": "T",
+     "title": "Break Sharptusk!",
+     "origin": "tgv",
+     "qid": 3376
+    },
+    {
+     "action": "T",
+     "title": "Rite of Strength",
+     "origin": "tgv",
+     "qid": 757
+    },
+    {
+     "action": "A",
+     "title": "Rites of the Earthmother (Part 2)",
+     "origin": "tgv",
+     "qid": 763
+    },
+    {
+     "action": "T",
+     "title": "Attack on Camp Narache",
+     "origin": "tgv",
+     "qid": 781
+    },
+    {
+     "action": "A",
+     "title": "A Task Unfinished",
+     "origin": "tgv",
+     "qid": 1656,
+     "note": "Follow the road out of town (39.2, 81.3).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 39.2,
+      "y": 81.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Dangers of the Windfury",
+     "origin": "tgv",
+     "qid": 743
+    },
+    {
+     "action": "T",
+     "title": "A Task Unfinished",
+     "origin": "tgv",
+     "qid": 1656
+    },
+    {
+     "action": "h",
+     "title": "Bloodhoof Village",
+     "origin": "tgv"
+    },
+    {
+     "action": "T",
+     "title": "Rites of the Earthmother (Part 2)",
+     "origin": "tgv",
+     "qid": 763,
+     "note": "Keep following the road to Bloodhoof Village (46.6, 63.4).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 46.6,
+      "y": 63.4
+     }
+    },
+    {
+     "action": "A",
+     "title": "Sharing the Land",
+     "origin": "tgv",
+     "qid": 745
+    },
+    {
+     "action": "A",
+     "title": "Dwarven Digging",
+     "origin": "tgv",
+     "qid": 746
+    },
+    {
+     "action": "A",
+     "title": "Rite of Vision (Part 1)",
+     "origin": "tgv",
+     "qid": 767
+    },
+    {
+     "action": "A",
+     "title": "Poison Water",
+     "origin": "tgv",
+     "qid": 748
+    },
+    {
+     "action": "A",
+     "title": "Swoop Hunting",
+     "origin": "tgv",
+     "qid": 761
+    },
+    {
+     "action": "T",
+     "title": "Rite of Vision (Part 1)",
+     "origin": "tgv",
+     "qid": 767
+    },
+    {
+     "action": "A",
+     "title": "Rite of Vision (Part 2)",
+     "origin": "tgv",
+     "qid": 771
+    },
+    {
+     "action": "A",
+     "title": "Mazzranache",
+     "origin": "tgv",
+     "qid": 766
+    },
+    {
+     "action": "N",
+     "title": "Kill Swoops...",
+     "origin": "tgv",
+     "note": "Kill any Swoops you come across for \"Swoop Hunting\"."
+    },
+    {
+     "action": "C",
+     "title": "Rite of Vision (Part 2)",
+     "origin": "tgv",
+     "qid": 771,
+     "note": "Grab the well stones at the well. Acorns can be found under the trees all over."
+    },
+    {
+     "action": "C",
+     "title": "Sharing the Land",
+     "origin": "tgv",
+     "qid": 745,
+     "note": "To the south by the cliffs (52.1, 74.1).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 52.1,
+      "y": 74.1
+     }
+    },
+    {
+     "action": "C",
+     "title": "Dangers of the Windfury",
+     "origin": "tgv",
+     "qid": 743,
+     "note": "To the east, south of the road (60.4, 71.6).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 60.4,
+      "y": 71.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Ravaged Caravan",
+     "origin": "tgv",
+     "qid": 749,
+     "note": "Find Morin Cloudstalker patrolling along the road to the east."
+    },
+    {
+     "action": "T",
+     "title": "The Ravaged Caravan",
+     "origin": "tgv",
+     "qid": 749,
+     "note": "On the north edge of the lake at the Ravaged Caravan (51.9, 53.5).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 51.9,
+      "y": 53.5
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Ravaged Caravan (Part 2)",
+     "origin": "tgv",
+     "qid": 751
+    },
+    {
+     "action": "C",
+     "title": "Poison Water",
+     "origin": "tgv",
+     "qid": 748
+    },
+    {
+     "action": "C",
+     "title": "Mazzranache",
+     "origin": "tgv",
+     "qid": 766
+    },
+    {
+     "action": "C",
+     "title": "Swoop Hunting",
+     "origin": "tgv",
+     "qid": 761
+    },
+    {
+     "action": "T",
+     "title": "Sharing the Land",
+     "origin": "tgv",
+     "qid": 745
+    },
+    {
+     "action": "T",
+     "title": "Dangers of the Windfury",
+     "origin": "tgv",
+     "qid": 743
+    },
+    {
+     "action": "T",
+     "title": "Poison Water",
+     "origin": "tgv",
+     "qid": 748,
+     "note": "Back at Bloodhoof Village (47.5, 63.7)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.5,
+      "y": 63.7
+     }
+    },
+    {
+     "action": "T",
+     "title": "Swoop Hunting",
+     "origin": "tgv",
+     "qid": 761
+    },
+    {
+     "action": "A",
+     "title": "Winterhoof Cleansing",
+     "origin": "tgv",
+     "qid": 754
+    },
+    {
+     "action": "T",
+     "title": "Rite of Vision (Part 2)",
+     "origin": "tgv",
+     "qid": 771
+    },
+    {
+     "action": "A",
+     "title": "Rite of Vision (Part 3)",
+     "origin": "tgv",
+     "qid": 772
+    },
+    {
+     "action": "T",
+     "title": "Mazzranache",
+     "origin": "tgv",
+     "qid": 766
+    },
+    {
+     "action": "T",
+     "title": "The Ravaged Caravan (Part 2)",
+     "origin": "tgv",
+     "qid": 751,
+     "note": "Back at Morin Cloudstalker"
+    },
+    {
+     "action": "A",
+     "title": "The Venture Co.",
+     "origin": "tgv",
+     "qid": 764
+    },
+    {
+     "action": "A",
+     "title": "Supervisor Fizsprocket",
+     "origin": "tgv",
+     "qid": 765
+    },
+    {
+     "action": "C",
+     "title": "Winterhoof Cleansing",
+     "origin": "tgv",
+     "qid": 754,
+     "note": "South of town at the well (51.7, 68.6). Use the totem to cleanse it.",
+     "use_item": "5411",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 51.7,
+      "y": 68.6
+     }
+    },
+    {
+     "action": "T",
+     "title": "Winterhoof Cleansing",
+     "origin": "tgv",
+     "qid": 754,
+     "note": "Back at Bloodhoof Village (47.5, 63.7)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.5,
+      "y": 63.7
+     }
+    },
+    {
+     "action": "A",
+     "title": "Thunderhorn Totem",
+     "origin": "tgv",
+     "qid": 756
+    },
+    {
+     "action": "C",
+     "title": "Dwarven Digging",
+     "origin": "tgv",
+     "qid": 746,
+     "note": "Head south to the Bael'dun Digsite and work your way back to the forge (33.2, 54.7). By the time you're there you should have 5 picks to break. Use them at the forge.",
+     "use_item": "4702",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 33.2,
+      "y": 54.7
+     }
+    },
+    {
+     "action": "T",
+     "title": "Rite of Vision (Part 3)",
+     "origin": "tgv",
+     "qid": 772,
+     "note": "Follow the vision, or just run to the cave he's leading you to (34.4, 43.3)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 34.4,
+      "y": 43.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Rite of Wisdom",
+     "origin": "tgv",
+     "qid": 773
+    },
+    {
+     "action": "A",
+     "title": "A Sacred Burial",
+     "origin": "tgv",
+     "qid": 833,
+     "note": "To the east near Red Rocks Amphitheatre (56.9, 34.5)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 56.9,
+      "y": 34.5
+     }
+    },
+    {
+     "action": "C",
+     "title": "A Sacred Burial",
+     "origin": "tgv",
+     "qid": 833
+    },
+    {
+     "action": "T",
+     "title": "Rite of Wisdom",
+     "origin": "tgv",
+     "qid": 773,
+     "note": "Talk to the Ancestral Spirit at the center of the graveyard (58.3, 30.6).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 58.3,
+      "y": 30.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "Journey into Thunder Bluff",
+     "origin": "tgv",
+     "qid": 775
+    },
+    {
+     "action": "T",
+     "title": "A Sacred Burial",
+     "origin": "tgv",
+     "qid": 833
+    },
+    {
+     "action": "C",
+     "title": "Thunderhorn Totem",
+     "origin": "tgv",
+     "qid": 756,
+     "note": "All over the plains south of Thunder Bluff."
+    },
+    {
+     "action": "A",
+     "title": "The Hunter's Way",
+     "origin": "tgv",
+     "qid": 861,
+     "note": "Back at Bloodhoof Village. Hearth if you can. (46.6, 63.4)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 46.6,
+      "y": 63.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Thunderhorn Totem",
+     "origin": "tgv",
+     "qid": 756
+    },
+    {
+     "action": "A",
+     "title": "Thunderhorn Cleansing",
+     "origin": "tgv",
+     "qid": 758
+    },
+    {
+     "action": "A",
+     "title": "Heeding the Call",
+     "origin": "tgv",
+     "qid": 5928,
+     "class": "Druid",
+     "note": "From the druid trainer (47.5, 62.9)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.5,
+      "y": 62.9
+     }
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6061,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6061,
+     "class": "Hunter",
+     "note": "North of town"
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6061,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6087,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6087,
+     "class": "Hunter",
+     "note": "North of town"
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6087,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6088,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6088,
+     "class": "Hunter",
+     "note": "East of town"
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6088,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Training the Beast",
+     "origin": "tgv",
+     "qid": 6089,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Thunderhorn Cleansing",
+     "origin": "tgv",
+     "qid": 758,
+     "note": "North of town at the Thunderhorn Water Well (44.2, 51.3). You know the drill, use the totem.",
+     "use_item": "5415",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 44.2,
+      "y": 51.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Preparation for Ceremony",
+     "origin": "tgv",
+     "qid": 744,
+     "note": "Follow the road north to Thunder Bluff (38.3, 63.4)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 38.3,
+      "y": 63.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Training the Beast",
+     "origin": "tgv",
+     "qid": 6089,
+     "class": "Hunter",
+     "note": "Over on Hunter Rise (to the south)"
+    },
+    {
+     "action": "T",
+     "title": "Journey into Thunder Bluff",
+     "origin": "tgv",
+     "qid": 775
+    },
+    {
+     "action": "A",
+     "title": "Rites of the Earthmother (Part 3)",
+     "origin": "tgv",
+     "qid": 776
+    },
+    {
+     "action": "T",
+     "title": "Heeding the Call",
+     "origin": "tgv",
+     "qid": 5928,
+     "class": "Druid",
+     "note": "Over on Elder Rise (70.8, 36.3)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 70.8,
+      "y": 36.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Moonglade",
+     "origin": "tgv",
+     "qid": 5922,
+     "class": "Druid"
+    },
+    {
+     "action": "T",
+     "title": "Moonglade",
+     "origin": "tgv",
+     "qid": 5922,
+     "class": "Druid",
+     "note": "Teleport to Moonglade, upstairs in the building you land by (56.28, 30.46)",
+     "coord": {
+      "zone": "Moonglade",
+      "x": 56.28,
+      "y": 30.46
+     }
+    },
+    {
+     "action": "A",
+     "title": "Great Bear Spirit",
+     "origin": "tgv",
+     "qid": 5930,
+     "class": "Druid"
+    },
+    {
+     "action": "C",
+     "title": "Great Bear Spirit",
+     "origin": "tgv",
+     "qid": 5930,
+     "class": "Druid",
+     "note": "Northwest corner of Moonglade (39.26, 27.63)",
+     "coord": {
+      "zone": "Moonglade",
+      "x": 39.26,
+      "y": 27.63
+     }
+    },
+    {
+     "action": "T",
+     "title": "Great Bear Spirit",
+     "origin": "tgv",
+     "qid": 5930,
+     "class": "Druid",
+     "note": "Back in Nighthaven (56.24, 30.40)",
+     "coord": {
+      "zone": "Moonglade",
+      "x": 56.24,
+      "y": 30.4
+     }
+    },
+    {
+     "action": "A",
+     "title": "Back to Thunder Bluff",
+     "origin": "tgv",
+     "qid": 5932,
+     "class": "Druid"
+    },
+    {
+     "action": "T",
+     "title": "Back to Thunder Bluff",
+     "origin": "tgv",
+     "qid": 5932,
+     "class": "Druid",
+     "note": "Fly back to Thunder Bluff (70.6, 36.3)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 70.6,
+      "y": 36.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Body and Heart",
+     "origin": "tgv",
+     "qid": 6002,
+     "class": "Druid"
+    },
+    {
+     "action": "P",
+     "title": "The Rake",
+     "origin": "tgv",
+     "class": "Hunter",
+     "note": "Tame him if available, otherwise tame a Flatland Prowler (50.4, 28.2)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 50.4,
+      "y": 28.2
+     }
+    },
+    {
+     "action": "C",
+     "title": "Supervisor Fizsprocket",
+     "origin": "tgv",
+     "qid": 765,
+     "note": "In the Venture Co. Mine to the east of the Ravaged Caravan (61.0, 49.6)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 61.0,
+      "y": 49.6
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Venture Co.",
+     "origin": "tgv",
+     "qid": 764
+    },
+    {
+     "action": "D",
+     "title": "Die",
+     "origin": "tgv",
+     "note": "Take Rez Sickness"
+    },
+    {
+     "action": "T",
+     "title": "Dwarven Digging",
+     "origin": "tgv",
+     "qid": 746
+    },
+    {
+     "action": "T",
+     "title": "Thunderhorn Cleansing",
+     "origin": "tgv",
+     "qid": 758,
+     "note": "Back at Bloodhoof Village (47.5, 63.6)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.5,
+      "y": 63.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "Wildmane Totem",
+     "origin": "tgv",
+     "qid": 759
+    },
+    {
+     "action": "T",
+     "title": "Supervisor Fizsprocket",
+     "origin": "tgv",
+     "qid": 765,
+     "note": "Back at Morin Cloudstalker, patrolling along the road."
+    },
+    {
+     "action": "T",
+     "title": "The Venture Co.",
+     "origin": "tgv",
+     "qid": 764
+    },
+    {
+     "action": "C",
+     "title": "Rites of the Earthmother (Part 3)",
+     "origin": "tgv",
+     "qid": 776,
+     "note": "Kill Arra'chea to the east of Bluff. If you cannot find him, he spawns at (47.9, 29.0) and patrols clockwise. He goes north to (50.4, 21.5) and south to (52.1, 42.4)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.9,
+      "y": 29.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Preparation for Ceremony",
+     "origin": "tgv",
+     "qid": 744,
+     "note": "Kill harpies along the mountains northwest of Red Rocks (52.9, 21.5). You can also find groups northwest of the well (38.7, 19.8) and due west of bluff (33.7, 34.0).",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 52.9,
+      "y": 21.5
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Hunter's Way",
+     "origin": "tgv",
+     "qid": 861,
+     "note": "Killing poor little kitties... you are a BAD cowman."
+    },
+    {
+     "action": "C",
+     "title": "Wildmane Totem",
+     "origin": "tgv",
+     "qid": 759
+    },
+    {
+     "action": "A",
+     "title": "The Barrens Oases",
+     "origin": "tgv",
+     "qid": 886,
+     "note": "From the Archdruid on Elder Rise in TB (72.6, 37.0)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 72.6,
+      "y": 37.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Rites of the Earthmother (Part 3)",
+     "origin": "tgv",
+     "qid": 776
+    },
+    {
+     "action": "T",
+     "title": "The Hunter's Way",
+     "origin": "tgv",
+     "qid": 861,
+     "note": "On Hunter Rise (58.1, 80.3)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 58.1,
+      "y": 80.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Sergra Darkthorn",
+     "origin": "tgv",
+     "qid": 860
+    },
+    {
+     "action": "T",
+     "title": "Preparation for Ceremony",
+     "origin": "tgv",
+     "qid": 744,
+     "note": "Back up on Thunder Bluff (38.8, 62.4)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 38.8,
+      "y": 62.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Wildmane Totem",
+     "origin": "tgv",
+     "qid": 759,
+     "note": "Back at Bloodhoof Village. Hearth if you can. (47.4, 63.6)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.4,
+      "y": 63.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "Wildmane Cleansing",
+     "origin": "tgv",
+     "qid": 760
+    },
+    {
+     "action": "N",
+     "title": "Grind your way...",
+     "origin": "tgv",
+     "note": "Then die on purpose. (46.2, 40.7)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 46.2,
+      "y": 40.7
+     }
+    },
+    {
+     "action": "D",
+     "title": "Die",
+     "origin": "tgv",
+     "note": "Take Rez Sickness"
+    },
+    {
+     "action": "C",
+     "title": "Wildmane Cleansing",
+     "origin": "tgv",
+     "qid": 760,
+     "note": "Find the well north of Bluff (42.6, 25.0), use the totem on it.",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 42.6,
+      "y": 25.0
+     }
+    },
+    {
+     "action": "N",
+     "title": "Grind your way...",
+     "origin": "tgv",
+     "note": "Then die on purpose. (46.2, 44.9)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 46.2,
+      "y": 44.9
+     }
+    },
+    {
+     "action": "D",
+     "title": "Die",
+     "origin": "tgv",
+     "note": "Take Rez Sickness"
+    },
+    {
+     "action": "T",
+     "title": "Wildmane Cleansing",
+     "origin": "tgv",
+     "qid": 760,
+     "note": "Back at Bloodhoof Village (47.4, 63.5)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 47.4,
+      "y": 63.5
+     }
+    },
+    {
+     "action": "C",
+     "title": "Body and Heart",
+     "origin": "tgv",
+     "qid": 6002,
+     "class": "Druid",
+     "note": "On the edge of the Barrens, just as you leave Mulgore, south of the road behind the hut (42.00, 60.89). Use the dust, kill the boomkin, talk to him.",
+     "use_item": "15710",
+     "coord": {
+      "zone": "The Barrens",
+      "x": 42.0,
+      "y": 60.89
+     }
+    },
+    {
+     "action": "A",
+     "title": "Journey to the Crossroads",
+     "origin": "tgv",
+     "qid": 854,
+     "note": "Follow the road east to Camp Taurajo (44.87, 58.65).",
+     "coord": {
+      "zone": "The Barrens",
+      "x": 44.87,
+      "y": 58.65
+     }
+    },
+    {
+     "action": "f",
+     "title": "Get Flight Path",
+     "origin": "tgv"
+    },
+    {
+     "action": "T",
+     "title": "The Barrens Oases",
+     "origin": "tgv",
+     "qid": 886,
+     "note": "North to The Crossroads (50.7, 39.8)",
+     "coord": {
+      "zone": "Mulgore",
+      "x": 50.7,
+      "y": 39.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Forgotten Pools",
+     "origin": "tgv",
+     "qid": 870
+    },
+    {
+     "action": "T",
+     "title": "Sergra Darkthorn",
+     "origin": "tgv",
+     "qid": 860
+    },
+    {
+     "action": "A",
+     "title": "Plainstrider Menace",
+     "origin": "tgv",
+     "qid": 844
+    },
+    {
+     "action": "A",
+     "title": "Meats to Orgrimmar",
+     "origin": "tgv",
+     "qid": 6365
+    },
+    {
+     "action": "h",
+     "title": "The Crossroads",
+     "origin": "tgv"
+    },
+    {
+     "action": "A",
+     "title": "Raptor Thieves",
+     "origin": "tgv",
+     "qid": 869
+    },
+    {
+     "action": "T",
+     "title": "Journey to the Crossroads",
+     "origin": "tgv",
+     "qid": 854,
+     "note": "Follow the road east out of town, north to the Crossroads (51.52, 30.83)",
+     "coord": {
+      "zone": "The Barrens",
+      "x": 51.52,
+      "y": 30.83
+     }
+    },
+    {
+     "action": "A",
+     "title": "Disrupt the Attacks",
+     "origin": "tgv",
+     "qid": 871
+    },
+    {
+     "action": "A",
+     "title": "Supplies for the Crossroads",
+     "origin": "tgv",
+     "qid": 5041
+    },
+    {
+     "action": "A",
+     "title": "Harpy Raiders",
+     "origin": "tgv",
+     "qid": 867
+    },
+    {
+     "action": "T",
+     "title": "Meats to Orgrimmar",
+     "origin": "tgv",
+     "qid": 6365,
+     "note": "Skip the follow-up quest"
+    },
+    {
+     "action": "A",
+     "title": "Fungal Spores",
+     "origin": "tgv",
+     "qid": 848
+    },
+    {
+     "action": "A",
+     "title": "Wharfmaster Dizzywig",
+     "origin": "tgv",
+     "qid": 1492
+    },
+    {
+     "action": "A",
+     "title": "A Bundle of Hides",
+     "origin": "tgv",
+     "qid": 6361,
+     "note": "In the forge at the north edge of town (51.20, 29.11)",
+     "coord": {
+      "zone": "The Barrens",
+      "x": 51.2,
+      "y": 29.11
+     }
+    },
+    {
+     "action": "T",
+     "title": "A Bundle of Hides",
+     "origin": "tgv",
+     "qid": 6361,
+     "note": "Talk to the flight master, skip the follow-up quest (51.51, 30.31)",
+     "coord": {
+      "zone": "The Barrens",
+      "x": 51.51,
+      "y": 30.31
+     }
+    },
+    {
+     "action": "T",
+     "title": "Body and Heart",
+     "origin": "tgv",
+     "qid": 6002,
+     "class": "Druid",
+     "note": "Back in Thunder Bluff"
+    }
+   ]
+  }
+ ],
+ "Alliance": [
+  {
+   "name": "Dun Morogh (1-11)",
+   "zone": "Dun Morogh",
+   "next": "Darkshore (12-17)",
+   "races": [
+    "Dwarf",
+    "Gnome"
+   ],
+   "gaps": [
+    3,
+    8,
+    12,
+    16,
+    21,
+    25,
+    26,
+    31,
+    36,
+    39,
+    47,
+    52,
+    58,
+    66,
+    86,
+    96,
+    103,
+    105,
+    108,
+    115,
+    120,
+    125,
+    128,
+    133,
+    143,
+    146,
+    151,
+    152,
+    157,
+    163,
+    188
+   ],
+   "steps": [
+    {
+     "action": "A",
+     "title": "Dwarven Outfitters",
+     "origin": "tgv",
+     "qid": 179
+    },
+    {
+     "action": "C",
+     "title": "Dwarven Outfitters",
+     "origin": "tgv",
+     "qid": 179
+    },
+    {
+     "action": "T",
+     "title": "Dwarven Outfitters",
+     "origin": "tgv",
+     "qid": 179
+    },
+    {
+     "action": "A",
+     "title": "Encrypted Rune",
+     "origin": "tgv",
+     "qid": 3109,
+     "class": "Rogue",
+     "race": "Dwarf"
+    },
+    {
+     "action": "A",
+     "title": "Etched Rune",
+     "origin": "tgv",
+     "qid": 3108,
+     "class": "Hunter",
+     "race": "Dwarf"
+    },
+    {
+     "action": "A",
+     "title": "Hallowed Rune",
+     "origin": "tgv",
+     "qid": 3110,
+     "class": "Priest",
+     "race": "Dwarf"
+    },
+    {
+     "action": "A",
+     "title": "Simple Rune",
+     "origin": "tgv",
+     "qid": 3106,
+     "class": "Warrior",
+     "race": "Dwarf"
+    },
+    {
+     "action": "A",
+     "title": "Consecrated Rune",
+     "origin": "tgv",
+     "qid": 3107,
+     "class": "Paladin",
+     "race": "Dwarf"
+    },
+    {
+     "action": "A",
+     "title": "Tainted Memorandum",
+     "origin": "tgv",
+     "qid": 3115,
+     "class": "Warlock",
+     "race": "Gnome"
+    },
+    {
+     "action": "A",
+     "title": "Glyphic Memorandum",
+     "origin": "tgv",
+     "qid": 3114,
+     "class": "Mage",
+     "race": "Gnome"
+    },
+    {
+     "action": "A",
+     "title": "Encrypted Memorandum",
+     "origin": "tgv",
+     "qid": 3113,
+     "class": "Rogue",
+     "race": "Gnome"
+    },
+    {
+     "action": "A",
+     "title": "Simple Memorandum",
+     "origin": "tgv",
+     "qid": 3112,
+     "class": "Warrior",
+     "race": "Gnome"
+    },
+    {
+     "action": "A",
+     "title": "Coldridge Valley Mail Delivery (Part 1)",
+     "origin": "tgv",
+     "qid": 233
+    },
+    {
+     "action": "A",
+     "title": "A New Threat",
+     "origin": "tgv",
+     "qid": 170
+    },
+    {
+     "action": "C",
+     "title": "A New Threat",
+     "origin": "tgv",
+     "qid": 170
+    },
+    {
+     "action": "T",
+     "title": "A New Threat",
+     "origin": "tgv",
+     "qid": 170
+    },
+    {
+     "action": "T",
+     "title": "Encrypted Rune",
+     "origin": "tgv",
+     "qid": 3109,
+     "class": "Rogue",
+     "race": "Dwarf"
+    },
+    {
+     "action": "T",
+     "title": "Etched Rune",
+     "origin": "tgv",
+     "qid": 3108,
+     "class": "Hunter",
+     "race": "Dwarf"
+    },
+    {
+     "action": "T",
+     "title": "Hallowed Rune",
+     "origin": "tgv",
+     "qid": 3110,
+     "class": "Priest",
+     "race": "Dwarf"
+    },
+    {
+     "action": "T",
+     "title": "Simple Rune",
+     "origin": "tgv",
+     "qid": 3106,
+     "class": "Warrior",
+     "race": "Dwarf"
+    },
+    {
+     "action": "T",
+     "title": "Consecrated Rune",
+     "origin": "tgv",
+     "qid": 3107,
+     "class": "Paladin",
+     "race": "Dwarf"
+    },
+    {
+     "action": "T",
+     "title": "Tainted Memorandum",
+     "origin": "tgv",
+     "qid": 3115,
+     "class": "Warlock",
+     "race": "Gnome"
+    },
+    {
+     "action": "T",
+     "title": "Glyphic Memorandum",
+     "origin": "tgv",
+     "qid": 3114,
+     "class": "Mage",
+     "race": "Gnome"
+    },
+    {
+     "action": "T",
+     "title": "Encrypted Memorandum",
+     "origin": "tgv",
+     "qid": 3113,
+     "class": "Rogue",
+     "race": "Gnome"
+    },
+    {
+     "action": "T",
+     "title": "Simple Memorandum",
+     "origin": "tgv",
+     "qid": 3112,
+     "class": "Warrior",
+     "race": "Gnome"
+    },
+    {
+     "action": "A",
+     "title": "A Refugee's Quandary",
+     "origin": "tgv",
+     "qid": 3361
+    },
+    {
+     "action": "T",
+     "title": "Coldridge Valley Mail Delivery (Part 1)",
+     "origin": "tgv",
+     "qid": 233
+    },
+    {
+     "action": "A",
+     "title": "Coldridge Valley Mail Delivery (Part 2)",
+     "origin": "tgv",
+     "qid": 234
+    },
+    {
+     "action": "A",
+     "title": "The Boar Hunter",
+     "origin": "tgv",
+     "qid": 183
+    },
+    {
+     "action": "C",
+     "title": "The Boar Hunter",
+     "origin": "tgv",
+     "qid": 183
+    },
+    {
+     "action": "T",
+     "title": "The Boar Hunter",
+     "origin": "tgv",
+     "qid": 183
+    },
+    {
+     "action": "T",
+     "title": "Coldridge Valley Mail Delivery (Part 2)",
+     "origin": "tgv",
+     "qid": 234
+    },
+    {
+     "action": "A",
+     "title": "The Troll Cave",
+     "origin": "tgv",
+     "qid": 182
+    },
+    {
+     "action": "A",
+     "title": "Scalding Mornbrew Delivery",
+     "origin": "tgv",
+     "qid": 3364
+    },
+    {
+     "action": "T",
+     "title": "Scalding Mornbrew Delivery",
+     "origin": "tgv",
+     "qid": 3364,
+     "note": "Run back to Anvilmar (28.8, 66.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 28.8,
+      "y": 66.4
+     }
+    },
+    {
+     "action": "A",
+     "title": "Bring Back the Mug",
+     "origin": "tgv",
+     "qid": 3365
+    },
+    {
+     "action": "A",
+     "title": "Beginnings",
+     "origin": "tgv",
+     "qid": 1599,
+     "class": "Warlock"
+    },
+    {
+     "action": "C",
+     "title": "Beginnings",
+     "origin": "tgv",
+     "qid": 1599,
+     "class": "Warlock",
+     "note": "(27.5,80)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 27.5,
+      "y": 80.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Beginnings",
+     "origin": "tgv",
+     "qid": 1599,
+     "class": "Warlock"
+    },
+    {
+     "action": "T",
+     "title": "Bring Back the Mug",
+     "origin": "tgv",
+     "qid": 3365
+    },
+    {
+     "action": "C",
+     "title": "A Refugee's Quandary",
+     "origin": "tgv",
+     "qid": 3361,
+     "note": "At the troll camps to the southwest. Bucket (26.3, 79.3), Chest (22.8, 78), Box (20.9, 76.1)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 26.3,
+      "y": 79.3
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Troll Cave",
+     "origin": "tgv",
+     "qid": 182
+    },
+    {
+     "action": "T",
+     "title": "The Troll Cave",
+     "origin": "tgv",
+     "qid": 182
+    },
+    {
+     "action": "A",
+     "title": "The Stolen Journal",
+     "origin": "tgv",
+     "qid": 218
+    },
+    {
+     "action": "C",
+     "title": "The Stolen Journal",
+     "origin": "tgv",
+     "qid": 218,
+     "note": "Back of the cave, lower level (31,80)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 31.0,
+      "y": 80.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "The Stolen Journal",
+     "origin": "tgv",
+     "qid": 218
+    },
+    {
+     "action": "A",
+     "title": "Senir's Observations (Part 1)",
+     "origin": "tgv",
+     "qid": 282
+    },
+    {
+     "action": "T",
+     "title": "A Refugee's Quandary",
+     "origin": "tgv",
+     "qid": 3361,
+     "note": "Back in Anvilmar."
+    },
+    {
+     "action": "T",
+     "title": "Senir's Observations (Part 1)",
+     "origin": "tgv",
+     "qid": 282,
+     "note": "East of Anvilmar (33.5, 71.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 33.5,
+      "y": 71.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Senir's Observations (Part 2)",
+     "origin": "tgv",
+     "qid": 420
+    },
+    {
+     "action": "A",
+     "title": "Supplies to Tannok",
+     "origin": "tgv",
+     "qid": 2160
+    },
+    {
+     "action": "A",
+     "title": "In Favor of the Light",
+     "origin": "tgv",
+     "qid": 5626,
+     "class": "Priest"
+    },
+    {
+     "action": "R",
+     "title": "Kharanos",
+     "origin": "tgv",
+     "qid": 420,
+     "note": "You should be able to just run thru the tunnel."
+    },
+    {
+     "action": "T",
+     "title": "Senir's Observations (Part 2)",
+     "origin": "tgv",
+     "qid": 420
+    },
+    {
+     "action": "A",
+     "title": "Beer Basted Boar Ribs",
+     "origin": "tgv",
+     "qid": 384
+    },
+    {
+     "action": "T",
+     "title": "Supplies to Tannok",
+     "origin": "tgv",
+     "qid": 2160
+    },
+    {
+     "action": "h",
+     "title": "Thunderbrew Distillery",
+     "origin": "tgv",
+     "qid": 320
+    },
+    {
+     "action": "A",
+     "title": "Tools for Steelgrill",
+     "origin": "tgv",
+     "qid": 400
+    },
+    {
+     "action": "T",
+     "title": "In Favor of the Light",
+     "origin": "tgv",
+     "qid": 5626,
+     "class": "Priest"
+    },
+    {
+     "action": "A",
+     "title": "Garments of the Light",
+     "origin": "tgv",
+     "qid": 5625,
+     "class": "Priest"
+    },
+    {
+     "action": "C",
+     "title": "Garments of the Light",
+     "origin": "tgv",
+     "qid": 5625,
+     "class": "Priest",
+     "note": "South of town (45.8, 54.6)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 45.8,
+      "y": 54.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "Flintfire's Shipment",
+     "origin": "forever",
+     "qid": 98321,
+     "note": "Tognus Flintfire (45.2, 52)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 45.2,
+      "y": 52.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Flintfire's Shipment",
+     "origin": "forever",
+     "qid": 98321,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Flintfire's Shipment",
+     "origin": "forever",
+     "qid": 98321,
+     "note": "Tognus Flintfire (45.2, 52)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 45.2,
+      "y": 52.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Dawn in the Mountains",
+     "origin": "forever",
+     "qid": 99158,
+     "note": "Maxan Anvol (47.2, 52.2)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 47.2,
+      "y": 52.2
+     }
+    },
+    {
+     "action": "T",
+     "title": "Garments of the Light",
+     "origin": "tgv",
+     "qid": 5625,
+     "class": "Priest"
+    },
+    {
+     "action": "T",
+     "title": "Tools for Steelgrill",
+     "origin": "tgv",
+     "qid": 400,
+     "note": "Northeast of Kharanos (50.4, 49.1)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 50.4,
+      "y": 49.1
+     }
+    },
+    {
+     "action": "T",
+     "title": "Dawn in the Mountains",
+     "origin": "forever",
+     "qid": 99158,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Finding Warmth",
+     "origin": "forever",
+     "qid": 99159,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Finding Warmth",
+     "origin": "forever",
+     "qid": 99159,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Finding Warmth",
+     "origin": "forever",
+     "qid": 99159,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Rime's Wrath",
+     "origin": "forever",
+     "qid": 99160,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Rime's Wrath",
+     "origin": "forever",
+     "qid": 99160,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Rime's Wrath",
+     "origin": "forever",
+     "qid": 99160,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Rime's Wrath (Part 2)",
+     "origin": "forever",
+     "qid": 99161,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Rime's Wrath (Part 2)",
+     "origin": "forever",
+     "qid": 99161,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Rime's Wrath (Part 2)",
+     "origin": "forever",
+     "qid": 99161,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Treacherous Cold",
+     "origin": "forever",
+     "qid": 99162,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Treacherous Cold",
+     "origin": "forever",
+     "qid": 99162,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Treacherous Cold",
+     "origin": "forever",
+     "qid": 99162,
+     "note": "Father Gavin (57.6, 44.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 57.6,
+      "y": 44.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Never Saddle on Quality",
+     "origin": "forever",
+     "qid": 95212,
+     "note": "Rudra Amberstill (63, 49.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 63.0,
+      "y": 49.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Never Saddle on Quality",
+     "origin": "forever",
+     "qid": 95212,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Never Saddle on Quality",
+     "origin": "forever",
+     "qid": 95212,
+     "note": "Rudra Amberstill (63, 49.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 63.0,
+      "y": 49.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Ammo for Rumbleshot",
+     "origin": "tgv",
+     "qid": 5541
+    },
+    {
+     "action": "A",
+     "title": "The Grizzled Den",
+     "origin": "tgv",
+     "qid": 313
+    },
+    {
+     "action": "A",
+     "title": "Stocking Jetsteam",
+     "origin": "tgv",
+     "qid": 317
+    },
+    {
+     "action": "C",
+     "title": "Ammo for Rumbleshot",
+     "origin": "tgv",
+     "qid": 5541,
+     "note": "Open the crate (44.1, 56.9)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 44.1,
+      "y": 56.9
+     }
+    },
+    {
+     "action": "A",
+     "title": "Secure the Mountain",
+     "origin": "forever",
+     "qid": 98319,
+     "note": "Mountaineer Gretchen (44, 57)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 44.0,
+      "y": 57.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Secure the Mountain",
+     "origin": "forever",
+     "qid": 98319,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Secure the Mountain",
+     "origin": "forever",
+     "qid": 98319,
+     "note": "Mountaineer Gretchen (44, 57)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 44.0,
+      "y": 57.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Secure the Mountain (Part 2)",
+     "origin": "forever",
+     "qid": 98322,
+     "note": "Senir Whitebeard (46.6, 53.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 46.6,
+      "y": 53.8
+     }
+    },
+    {
+     "action": "T",
+     "title": "Secure the Mountain (Part 2)",
+     "origin": "forever",
+     "qid": 98322,
+     "note": "Mountaineer Gretchen (44, 57)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 44.0,
+      "y": 57.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Secure the Mountain (Part 3)",
+     "origin": "forever",
+     "qid": 98323,
+     "note": "Mountaineer Gretchen (44, 57)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 44.0,
+      "y": 57.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Secure the Mountain (Part 3)",
+     "origin": "forever",
+     "qid": 98323,
+     "note": "Senir Whitebeard (46.6, 53.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 46.6,
+      "y": 53.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Grizzled Den",
+     "origin": "tgv",
+     "qid": 313,
+     "note": "Southwest of Kharanos (42.5, 54.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 42.5,
+      "y": 54.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Ammo for Rumbleshot",
+     "origin": "tgv",
+     "qid": 5541,
+     "note": "South of Kharanos (40.7, 65.1)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 40.7,
+      "y": 65.1
+     }
+    },
+    {
+     "action": "R",
+     "title": "Brewnall Village",
+     "origin": "tgv",
+     "qid": 310,
+     "note": "Go northwest, near the frozen lake (30.3, 46.3)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 30.3,
+      "y": 46.3
+     }
+    },
+    {
+     "action": "A",
+     "title": "Frosthowl",
+     "origin": "forever",
+     "qid": 98326,
+     "note": "Gretta Ganter (31.4, 44.6)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 31.4,
+      "y": 44.6
+     }
+    },
+    {
+     "action": "C",
+     "title": "Frosthowl",
+     "origin": "forever",
+     "qid": 98326,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Frosthowl",
+     "origin": "forever",
+     "qid": 98326,
+     "note": "Gretta Ganter (31.4, 44.6)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 31.4,
+      "y": 44.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Perfect Stout",
+     "origin": "tgv",
+     "qid": 315
+    },
+    {
+     "action": "A",
+     "title": "Bitter Rivals",
+     "origin": "tgv",
+     "qid": 310
+    },
+    {
+     "action": "C",
+     "title": "The Perfect Stout",
+     "origin": "tgv",
+     "qid": 315,
+     "note": "Northeast across the lake (38,36)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 38.0,
+      "y": 36.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Stocking Jetsteam",
+     "origin": "tgv",
+     "qid": 317,
+     "note": "Go southeast towards Kharanos to find more mobs."
+    },
+    {
+     "action": "K",
+     "title": "Boars",
+     "origin": "tgv",
+     "qid": 384,
+     "note": "For [Crag Boar Rib] x6.",
+     "loot": "2886 6"
+    },
+    {
+     "action": "T",
+     "title": "The Grizzled Den",
+     "origin": "tgv",
+     "qid": 313,
+     "note": "At Steelgrill's Depot, east of Kharanos."
+    },
+    {
+     "action": "T",
+     "title": "Stocking Jetsteam",
+     "origin": "tgv",
+     "qid": 317
+    },
+    {
+     "action": "A",
+     "title": "Evershine",
+     "origin": "tgv",
+     "qid": 318
+    },
+    {
+     "action": "B",
+     "title": "[Rhapsody Malt]",
+     "origin": "tgv",
+     "qid": 384,
+     "note": "From innkeeper or general supplier in Kharanos's inn.",
+     "loot": "2894"
+    },
+    {
+     "action": "B",
+     "title": "[Thunder Ale]",
+     "origin": "tgv",
+     "qid": 310,
+     "loot": "2686"
+    },
+    {
+     "action": "T",
+     "title": "Bitter Rivals",
+     "origin": "tgv",
+     "qid": 310,
+     "note": "Give the Thunder Ale to Jarven downstairs, then talk to the barrel."
+    },
+    {
+     "action": "A",
+     "title": "Return to Marleth",
+     "origin": "tgv",
+     "qid": 311
+    },
+    {
+     "action": "T",
+     "title": "Beer Basted Boar Ribs",
+     "origin": "tgv",
+     "qid": 384
+    },
+    {
+     "action": "A",
+     "title": "Frostmane Hold",
+     "origin": "tgv",
+     "qid": 287,
+     "note": "He's a little south of the inn."
+    },
+    {
+     "action": "A",
+     "title": "Operation Recombobulation",
+     "origin": "tgv",
+     "qid": 412,
+     "note": "In a house a bit northwest of the inn (45.8, 49.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 45.8,
+      "y": 49.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Evershine",
+     "origin": "tgv",
+     "qid": 318,
+     "note": "At Brewnall Village"
+    },
+    {
+     "action": "A",
+     "title": "A Favor for Evershine",
+     "origin": "tgv",
+     "qid": 319
+    },
+    {
+     "action": "T",
+     "title": "The Perfect Stout",
+     "origin": "tgv",
+     "qid": 315
+    },
+    {
+     "action": "A",
+     "title": "Shimmer Stout",
+     "origin": "tgv",
+     "qid": 413
+    },
+    {
+     "action": "T",
+     "title": "Return to Marleth",
+     "origin": "tgv",
+     "qid": 311
+    },
+    {
+     "action": "C",
+     "title": "Frostmane Hold",
+     "origin": "tgv",
+     "qid": 287,
+     "note": "Go southwest, into the back of the cave to complete (21,51)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 21.0,
+      "y": 51.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Operation Recombobulation",
+     "origin": "tgv",
+     "qid": 412,
+     "note": "The green leper gnomes near the moving cog objects."
+    },
+    {
+     "action": "C",
+     "title": "A Favor for Evershine",
+     "origin": "tgv",
+     "qid": 319,
+     "note": "A bit west of Brewnall Village (28,48.5)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 28.0,
+      "y": 48.5
+     }
+    },
+    {
+     "action": "T",
+     "title": "A Favor for Evershine",
+     "origin": "tgv",
+     "qid": 319
+    },
+    {
+     "action": "A",
+     "title": "Return to Bellowfiz",
+     "origin": "tgv",
+     "qid": 320
+    },
+    {
+     "action": "A",
+     "title": "Tundra MacGrann's Stolen Stash",
+     "origin": "tgv",
+     "qid": 312,
+     "note": "South of Brewnall, reach him from the southern part of the hill. (34.6,51.6)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 34.6,
+      "y": 51.6
+     }
+    },
+    {
+     "action": "C",
+     "title": "Tundra MacGrann's Stolen Stash",
+     "origin": "tgv",
+     "qid": 312,
+     "note": "Wait until Old Icebeard leaves his cave and then run in to loot the chest."
+    },
+    {
+     "action": "T",
+     "title": "Tundra MacGrann's Stolen Stash",
+     "origin": "tgv",
+     "qid": 312
+    },
+    {
+     "action": "H",
+     "title": "Kharanos",
+     "origin": "tgv",
+     "qid": 320
+    },
+    {
+     "action": "T",
+     "title": "Frostmane Hold",
+     "origin": "tgv",
+     "qid": 287
+    },
+    {
+     "action": "A",
+     "title": "The Reports",
+     "origin": "tgv",
+     "qid": 291
+    },
+    {
+     "action": "T",
+     "title": "Operation Recombobulation",
+     "origin": "tgv",
+     "qid": 412
+    },
+    {
+     "action": "T",
+     "title": "Return to Bellowfiz",
+     "origin": "tgv",
+     "qid": 320,
+     "note": "Northeast of Kharanos."
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6064,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6064,
+     "class": "Hunter"
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6064,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6084,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6084,
+     "class": "Hunter"
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6084,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6085,
+     "class": "Hunter"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6085,
+     "class": "Hunter"
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6085,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Training the Beast",
+     "origin": "tgv",
+     "qid": 6103,
+     "class": "Hunter"
+    },
+    {
+     "action": "A",
+     "title": "Speak with Bink",
+     "origin": "tgv",
+     "qid": 1879,
+     "class": "Mage"
+    },
+    {
+     "action": "A",
+     "title": "Road to Salvation",
+     "origin": "tgv",
+     "qid": 2218,
+     "class": "Rogue"
+    },
+    {
+     "action": "A",
+     "title": "Muren Stormpike",
+     "origin": "tgv",
+     "qid": 1679,
+     "class": "Warrior"
+    },
+    {
+     "action": "R",
+     "title": "City of Ironforge",
+     "origin": "tgv",
+     "qid": 291
+    },
+    {
+     "action": "T",
+     "title": "The Reports",
+     "origin": "tgv",
+     "qid": 291,
+     "note": "The High Seat (39.6, 57.1)",
+     "coord": {
+      "zone": "Ironforge",
+      "x": 39.6,
+      "y": 57.1
+     }
+    },
+    {
+     "action": "A",
+     "title": "Data Hoarders",
+     "origin": "forever",
+     "qid": 95041,
+     "note": "Jemma Quikswitch (67.8, 43.8)",
+     "coord": {
+      "zone": "Ironforge",
+      "x": 67.8,
+      "y": 43.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Data Hoarders",
+     "origin": "forever",
+     "qid": 95041,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Data Hoarders",
+     "origin": "forever",
+     "qid": 95041,
+     "note": "Jemma Quikswitch (67.8, 43.8)",
+     "coord": {
+      "zone": "Ironforge",
+      "x": 67.8,
+      "y": 43.8
+     }
+    },
+    {
+     "action": "T",
+     "title": "Training the Beast",
+     "origin": "tgv",
+     "qid": 6103,
+     "class": "Hunter"
+    },
+    {
+     "action": "T",
+     "title": "Speak with Bink",
+     "origin": "tgv",
+     "qid": 1879,
+     "class": "Mage"
+    },
+    {
+     "action": "A",
+     "title": "Mage-tastic Gizmonitor",
+     "origin": "tgv",
+     "qid": 1880,
+     "class": "Mage"
+    },
+    {
+     "action": "R",
+     "title": "Dun Morogh",
+     "origin": "tgv",
+     "class": "Mage"
+    },
+    {
+     "action": "C",
+     "title": "Mage-tastic Gizmonitor",
+     "origin": "tgv",
+     "qid": 1880,
+     "class": "Mage",
+     "note": "(27.7, 36.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 27.7,
+      "y": 36.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Mage-tastic Gizmonitor",
+     "origin": "tgv",
+     "qid": 1880,
+     "class": "Mage"
+    },
+    {
+     "action": "T",
+     "title": "Road to Salvation",
+     "origin": "tgv",
+     "qid": 2218,
+     "class": "Rogue"
+    },
+    {
+     "action": "A",
+     "title": "Simple Subterfugin'",
+     "origin": "tgv",
+     "qid": 2238,
+     "class": "Rogue"
+    },
+    {
+     "action": "R",
+     "title": "Dun Morogh",
+     "origin": "tgv",
+     "class": "Rogue"
+    },
+    {
+     "action": "T",
+     "title": "Simple Subterfugin'",
+     "origin": "tgv",
+     "qid": 2238,
+     "class": "Rogue",
+     "note": "(25.2, 44.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 25.2,
+      "y": 44.4
+     }
+    },
+    {
+     "action": "A",
+     "title": "Onin's Report",
+     "origin": "tgv",
+     "qid": 2239,
+     "class": "Rogue"
+    },
+    {
+     "action": "T",
+     "title": "Onin's Report",
+     "origin": "tgv",
+     "qid": 2239,
+     "class": "Rogue"
+    },
+    {
+     "action": "T",
+     "title": "Muren Stormpike",
+     "origin": "tgv",
+     "qid": 1679,
+     "class": "Warrior"
+    },
+    {
+     "action": "A",
+     "title": "Vejrek",
+     "origin": "tgv",
+     "qid": 1678,
+     "class": "Warrior"
+    },
+    {
+     "action": "R",
+     "title": "Dun Morogh",
+     "origin": "tgv",
+     "class": "Warrior"
+    },
+    {
+     "action": "C",
+     "title": "Vejrek",
+     "origin": "tgv",
+     "qid": 1678,
+     "class": "Warrior",
+     "note": "(27.7, 57.7)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 27.7,
+      "y": 57.7
+     }
+    },
+    {
+     "action": "T",
+     "title": "Vejrek",
+     "origin": "tgv",
+     "qid": 1678,
+     "class": "Warrior"
+    },
+    {
+     "action": "A",
+     "title": "Tormus Deepforge",
+     "origin": "tgv",
+     "qid": 1680,
+     "class": "Warrior"
+    },
+    {
+     "action": "T",
+     "title": "Tormus Deepforge",
+     "origin": "tgv",
+     "qid": 1680,
+     "class": "Warrior"
+    },
+    {
+     "action": "A",
+     "title": "Ironband's Compound",
+     "origin": "tgv",
+     "qid": 1681,
+     "class": "Warrior"
+    },
+    {
+     "action": "R",
+     "title": "Dun Morogh",
+     "origin": "tgv",
+     "class": "Warrior"
+    },
+    {
+     "action": "C",
+     "title": "Ironband's Compound",
+     "origin": "tgv",
+     "qid": 1681,
+     "class": "Warrior",
+     "note": "(77.9, 62.2)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 77.9,
+      "y": 62.2
+     }
+    },
+    {
+     "action": "A",
+     "title": "Stolen Blasting Powder",
+     "origin": "forever",
+     "qid": 95214,
+     "note": "Quarrymaster Thesten (69, 54.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 69.0,
+      "y": 54.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "Stolen Blasting Powder",
+     "origin": "forever",
+     "qid": 95214,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Stolen Blasting Powder",
+     "origin": "forever",
+     "qid": 95214,
+     "note": "Quarrymaster Thesten (69, 54.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 69.0,
+      "y": 54.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Quarry's Smith",
+     "origin": "forever",
+     "qid": 95217,
+     "class": "Warrior, Paladin, Shaman",
+     "note": "Frast Dokner (68.8, 55.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 68.8,
+      "y": 55.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Quarry's Smith",
+     "origin": "forever",
+     "qid": 95217,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "The Quarry's Smith",
+     "origin": "forever",
+     "qid": 95217,
+     "class": "Warrior, Paladin, Shaman",
+     "note": "Frast Dokner (68.8, 55.8)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 68.8,
+      "y": 55.8
+     }
+    },
+    {
+     "action": "A",
+     "title": "Nip 'Em in the Bud",
+     "origin": "forever",
+     "qid": 96390,
+     "note": "Earthseer Farsen (64.8, 58.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 64.8,
+      "y": 58.4
+     }
+    },
+    {
+     "action": "C",
+     "title": "Nip 'Em in the Bud",
+     "origin": "forever",
+     "qid": 96390,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Nip 'Em in the Bud",
+     "origin": "forever",
+     "qid": 96390,
+     "note": "Earthseer Farsen (64.8, 58.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 64.8,
+      "y": 58.4
+     }
+    },
+    {
+     "action": "A",
+     "title": "Farsen's Watch",
+     "origin": "forever",
+     "qid": 96392,
+     "note": "Earthseer Farsen (64.8, 58.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 64.8,
+      "y": 58.4
+     }
+    },
+    {
+     "action": "C",
+     "title": "Farsen's Watch",
+     "origin": "forever",
+     "qid": 96392,
+     "unverified": true,
+     "note": "Do what the quest asks (no objective data for this Forever quest yet: follow the quest text)"
+    },
+    {
+     "action": "T",
+     "title": "Farsen's Watch",
+     "origin": "forever",
+     "qid": 96392,
+     "note": "Earthseer Farsen (64.8, 58.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 64.8,
+      "y": 58.4
+     }
+    },
+    {
+     "action": "A",
+     "title": "A Visitor to Dun Morogh",
+     "origin": "forever",
+     "qid": 96408,
+     "note": "Beldin Steelgrill (50.4, 49)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 50.4,
+      "y": 49.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "A Visitor to Dun Morogh",
+     "origin": "forever",
+     "qid": 96408,
+     "note": "Earthseer Farsen (64.8, 58.4)",
+     "coord": {
+      "zone": "Dun Morogh",
+      "x": 64.8,
+      "y": 58.4
+     }
+    },
+    {
+     "action": "T",
+     "title": "Ironband's Compound",
+     "origin": "tgv",
+     "qid": 1681,
+     "class": "Warrior"
+    },
+    {
+     "action": "N",
+     "title": "Forever extras",
+     "origin": "forever",
+     "note": "New Forever quests in this zone, givers not yet in the database: Underground Map (15); The Treaty of Understanding (16)",
+     "advisory": true
+    }
+   ]
+  },
+  {
+   "name": "Teldrassil (1-12)",
+   "zone": "Teldrassil",
+   "next": "Darkshore (12-17)",
+   "races": [
+    "Night Elf"
+   ],
+   "gaps": [
+    4,
+    9,
+    16,
+    21,
+    27,
+    30,
+    42,
+    44,
+    53,
+    61,
+    69,
+    75,
+    78,
+    81,
+    83,
+    93,
+    94,
+    99,
+    108,
+    109,
+    112,
+    113,
+    127,
+    130,
+    131,
+    133,
+    136,
+    140,
+    143,
+    144,
+    150,
+    154,
+    160,
+    162,
+    165
+   ],
+   "steps": [
+    {
+     "action": "A",
+     "title": "The Balance of Nature (Part 1)",
+     "origin": "tgv",
+     "qid": 456
+    },
+    {
+     "action": "C",
+     "title": "The Balance of Nature (Part 1)",
+     "origin": "tgv",
+     "qid": 456
+    },
+    {
+     "action": "T",
+     "title": "The Balance of Nature (Part 1)",
+     "origin": "tgv",
+     "qid": 456
+    },
+    {
+     "action": "A",
+     "title": "The Balance of Nature (Part 2)",
+     "origin": "tgv",
+     "qid": 457
+    },
+    {
+     "action": "A",
+     "title": "Encrypted Sigil",
+     "origin": "tgv",
+     "qid": 3118,
+     "class": "Rogue",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Etched Sigil",
+     "origin": "tgv",
+     "qid": 3117,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Hallowed Sigil",
+     "origin": "tgv",
+     "qid": 3119,
+     "class": "Priest",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Simple Sigil",
+     "origin": "tgv",
+     "qid": 3116,
+     "class": "Warrior",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Verdant Sigil",
+     "origin": "tgv",
+     "qid": 3120,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "The Woodland Protector (Part 1)",
+     "origin": "tgv",
+     "qid": 458
+    },
+    {
+     "action": "A",
+     "title": "A Good Friend",
+     "origin": "tgv",
+     "qid": 4495
+    },
+    {
+     "action": "T",
+     "title": "The Woodland Protector (Part 1)",
+     "origin": "tgv",
+     "qid": 458,
+     "note": "Dryad to the southwest (57.77, 45.20)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 57.77,
+      "y": 45.2
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Woodland Protector (Part 2)",
+     "origin": "tgv",
+     "qid": 459
+    },
+    {
+     "action": "C",
+     "title": "The Woodland Protector (Part 2)",
+     "origin": "tgv",
+     "qid": 459
+    },
+    {
+     "action": "T",
+     "title": "The Woodland Protector (Part 2)",
+     "origin": "tgv",
+     "qid": 459
+    },
+    {
+     "action": "A",
+     "title": "Webwood Venom",
+     "origin": "tgv",
+     "qid": 916,
+     "note": "At the base of the ramp (57.79, 41.70)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 57.79,
+      "y": 41.7
+     }
+    },
+    {
+     "action": "T",
+     "title": "Encrypted Sigil",
+     "origin": "tgv",
+     "qid": 3118,
+     "class": "Rogue",
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "Etched Sigil",
+     "origin": "tgv",
+     "qid": 3117,
+     "class": "Hunter",
+     "race": "Night Elf",
+     "note": "Up the ramp!"
+    },
+    {
+     "action": "T",
+     "title": "Hallowed Sigil",
+     "origin": "tgv",
+     "qid": 3119,
+     "class": "Priest",
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "Simple Sigil",
+     "origin": "tgv",
+     "qid": 3116,
+     "class": "Warrior",
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "Verdant Sigil",
+     "origin": "tgv",
+     "qid": 3120,
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "Up the ramp!"
+    },
+    {
+     "action": "C",
+     "title": "The Balance of Nature (Part 2)",
+     "origin": "tgv",
+     "qid": 457,
+     "note": "Mobs are to the northeast (60,35)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 60.0,
+      "y": 35.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Webwood Venom",
+     "origin": "tgv",
+     "qid": 916,
+     "note": "To the northwest at Shadowthread Cave (57,33)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 57.0,
+      "y": 33.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "A Good Friend",
+     "origin": "tgv",
+     "qid": 4495,
+     "note": "Just west of the cave entrance"
+    },
+    {
+     "action": "A",
+     "title": "A Friend in Need",
+     "origin": "tgv",
+     "qid": 3519
+    },
+    {
+     "action": "T",
+     "title": "Webwood Venom",
+     "origin": "tgv",
+     "qid": 916
+    },
+    {
+     "action": "A",
+     "title": "Webwood Egg",
+     "origin": "tgv",
+     "qid": 917
+    },
+    {
+     "action": "T",
+     "title": "The Balance of Nature (Part 2)",
+     "origin": "tgv",
+     "qid": 457
+    },
+    {
+     "action": "T",
+     "title": "A Friend in Need",
+     "origin": "tgv",
+     "qid": 3519
+    },
+    {
+     "action": "A",
+     "title": "Iverron's Antidote (Part 1)",
+     "origin": "tgv",
+     "qid": 3521
+    },
+    {
+     "action": "C",
+     "title": "Iverron's Antidote (Part 1)",
+     "origin": "tgv",
+     "qid": 3521,
+     "note": "Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders"
+    },
+    {
+     "action": "C",
+     "title": "Webwood Egg",
+     "origin": "tgv",
+     "qid": 917,
+     "note": "Inside the cave (56,26)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 56.0,
+      "y": 26.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Webwood Egg",
+     "origin": "tgv",
+     "qid": 917
+    },
+    {
+     "action": "A",
+     "title": "Tenaron's Summons",
+     "origin": "tgv",
+     "qid": 920
+    },
+    {
+     "action": "T",
+     "title": "Tenaron's Summons",
+     "origin": "tgv",
+     "qid": 920,
+     "note": "Up the ramp"
+    },
+    {
+     "action": "A",
+     "title": "Crown of the Earth (Part 1)",
+     "origin": "tgv",
+     "qid": 921
+    },
+    {
+     "action": "T",
+     "title": "Iverron's Antidote (Part 1)",
+     "origin": "tgv",
+     "qid": 3521
+    },
+    {
+     "action": "A",
+     "title": "Iverron's Antidote (Part 2)",
+     "origin": "tgv",
+     "qid": 3522
+    },
+    {
+     "action": "C",
+     "title": "Crown of the Earth (Part 1)",
+     "origin": "tgv",
+     "qid": 921,
+     "note": "Moonwell north of Aldrassil (59.93, 33.07)",
+     "use_item": "5185",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 59.93,
+      "y": 33.07
+     }
+    },
+    {
+     "action": "T",
+     "title": "Iverron's Antidote (Part 2)",
+     "origin": "tgv",
+     "qid": 3522
+    },
+    {
+     "action": "T",
+     "title": "Crown of the Earth (Part 1)",
+     "origin": "tgv",
+     "qid": 921
+    },
+    {
+     "action": "A",
+     "title": "Crown of the Earth (Part 2)",
+     "origin": "tgv",
+     "qid": 928
+    },
+    {
+     "action": "A",
+     "title": "Dolanaar Delivery",
+     "origin": "tgv",
+     "qid": 2159,
+     "note": "South out of Shadowglen (61,47)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 61.0,
+      "y": 47.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Zenn's Bidding",
+     "origin": "tgv",
+     "qid": 488,
+     "note": "Along the road to Dolannar (60,56)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 60.0,
+      "y": 56.0
+     }
+    },
+    {
+     "action": "R",
+     "title": "Dolanaar",
+     "origin": "tgv"
+    },
+    {
+     "action": "h",
+     "title": "Dolanaar",
+     "origin": "tgv"
+    },
+    {
+     "action": "T",
+     "title": "Dolanaar Delivery",
+     "origin": "tgv",
+     "qid": 2159
+    },
+    {
+     "action": "T",
+     "title": "Crown of the Earth (Part 2)",
+     "origin": "tgv",
+     "qid": 928,
+     "note": "South of the inn by the moonwell"
+    },
+    {
+     "action": "A",
+     "title": "Crown of the Earth (Part 3)",
+     "origin": "tgv",
+     "qid": 929
+    },
+    {
+     "action": "A",
+     "title": "Denalan's Earth",
+     "origin": "tgv",
+     "qid": 997,
+     "note": "In front of the tower"
+    },
+    {
+     "action": "A",
+     "title": "A Troubling Breeze",
+     "origin": "tgv",
+     "qid": 475,
+     "note": "In the tower"
+    },
+    {
+     "action": "A",
+     "title": "The Emerald Dreamcatcher",
+     "origin": "tgv",
+     "qid": 2438,
+     "note": "In the tower"
+    },
+    {
+     "action": "A",
+     "title": "Twisted Hatred",
+     "origin": "tgv",
+     "qid": 932,
+     "note": "In the tower"
+    },
+    {
+     "action": "C",
+     "title": "Zenn's Bidding",
+     "origin": "tgv",
+     "qid": 488,
+     "note": "East of Dolanaar"
+    },
+    {
+     "action": "C",
+     "title": "Crown of the Earth (Part 3)",
+     "origin": "tgv",
+     "qid": 929,
+     "note": "Moonwell is East of Dolanaar (63.37, 58.12)",
+     "use_item": "5619",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 63.37,
+      "y": 58.12
+     }
+    },
+    {
+     "action": "T",
+     "title": "A Troubling Breeze",
+     "origin": "tgv",
+     "qid": 475,
+     "note": "East in Starbreeze Village (66,58)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 66.0,
+      "y": 58.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Gnarlpine Corruption",
+     "origin": "tgv",
+     "qid": 476
+    },
+    {
+     "action": "C",
+     "title": "The Emerald Dreamcatcher",
+     "origin": "tgv",
+     "qid": 2438,
+     "note": "East of the questgiver in a house is a Dresser (68.01, 59.66)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 68.01,
+      "y": 59.66
+     }
+    },
+    {
+     "action": "T",
+     "title": "Zenn's Bidding",
+     "origin": "tgv",
+     "qid": 488
+    },
+    {
+     "action": "A",
+     "title": "Seek Redemption!",
+     "origin": "tgv",
+     "qid": 489,
+     "note": "In front of the tower at Dolanaar"
+    },
+    {
+     "action": "N",
+     "title": "Keep an eye out for Fel Cones",
+     "origin": "tgv",
+     "note": "Needed for \"Seek Redemption!\". Found at the bases of trees"
+    },
+    {
+     "action": "T",
+     "title": "Denalan's Earth",
+     "origin": "tgv",
+     "qid": 997,
+     "note": "South at the lake (60.90, 68.49)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 60.9,
+      "y": 68.49
+     }
+    },
+    {
+     "action": "A",
+     "title": "Timberling Seeds",
+     "origin": "tgv",
+     "qid": 918
+    },
+    {
+     "action": "A",
+     "title": "Timberling Sprouts",
+     "origin": "tgv",
+     "qid": 919
+    },
+    {
+     "action": "C",
+     "title": "Timberling Seeds",
+     "origin": "tgv",
+     "qid": 918
+    },
+    {
+     "action": "C",
+     "title": "Timberling Sprouts",
+     "origin": "tgv",
+     "qid": 919
+    },
+    {
+     "action": "T",
+     "title": "Timberling Seeds",
+     "origin": "tgv",
+     "qid": 918
+    },
+    {
+     "action": "A",
+     "title": "Rellian Greenspyre",
+     "origin": "tgv",
+     "qid": 922
+    },
+    {
+     "action": "T",
+     "title": "Timberling Sprouts",
+     "origin": "tgv",
+     "qid": 919
+    },
+    {
+     "action": "T",
+     "title": "Crown of the Earth (Part 3)",
+     "origin": "tgv",
+     "qid": 929,
+     "note": "Back in Dolanaar"
+    },
+    {
+     "action": "A",
+     "title": "Crown of the Earth (Part 4)",
+     "origin": "tgv",
+     "qid": 933
+    },
+    {
+     "action": "T",
+     "title": "Gnarlpine Corruption",
+     "origin": "tgv",
+     "qid": 476,
+     "note": "In the tower"
+    },
+    {
+     "action": "A",
+     "title": "The Relics of Wakening",
+     "origin": "tgv",
+     "qid": 483
+    },
+    {
+     "action": "T",
+     "title": "The Emerald Dreamcatcher",
+     "origin": "tgv",
+     "qid": 2438
+    },
+    {
+     "action": "A",
+     "title": "Ferocitas the Dream Eater",
+     "origin": "tgv",
+     "qid": 2459
+    },
+    {
+     "action": "C",
+     "title": "Seek Redemption!",
+     "origin": "tgv",
+     "qid": 489
+    },
+    {
+     "action": "T",
+     "title": "Seek Redemption!",
+     "origin": "tgv",
+     "qid": 489,
+     "note": "East at Zenn Foulhoof"
+    },
+    {
+     "action": "C",
+     "title": "Ferocitas the Dream Eater",
+     "origin": "tgv",
+     "qid": 2459,
+     "note": "North of Starbreeze. Kill Ferocitas (69.37, 53.41) and open the necklace he drops for the jewel.",
+     "use_item": "8049",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 69.37,
+      "y": 53.41
+     }
+    },
+    {
+     "action": "C",
+     "title": "Twisted Hatred",
+     "origin": "tgv",
+     "qid": 932,
+     "note": "North of Dolanaar (51.23, 50.79). You can also wait until you're 10 to do this.",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 51.23,
+      "y": 50.79
+     }
+    },
+    {
+     "action": "T",
+     "title": "Ferocitas the Dream Eater",
+     "origin": "tgv",
+     "qid": 2459
+    },
+    {
+     "action": "T",
+     "title": "Twisted Hatred",
+     "origin": "tgv",
+     "qid": 932
+    },
+    {
+     "action": "A",
+     "title": "The Road to Darnassus",
+     "origin": "tgv",
+     "qid": 487,
+     "note": "From a mounted patrol on the road west of town"
+    },
+    {
+     "action": "C",
+     "title": "The Road to Darnassus",
+     "origin": "tgv",
+     "qid": 487,
+     "note": "Outside of Ban'ethil Hollow (46,52), south of the road where the NPC partrols.",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 46.0,
+      "y": 52.0
+     }
+    },
+    {
+     "action": "N",
+     "title": "Rune of Nesting",
+     "origin": "tgv",
+     "qid": 483,
+     "note": "Head down into the Ban'ethil Barrow Den (44.41, 57.87). At the first set of bridges take the left bridge (44.40, 60.67).",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 44.41,
+      "y": 57.87
+     }
+    },
+    {
+     "action": "N",
+     "title": "Black Feather Quill",
+     "origin": "tgv",
+     "qid": 483,
+     "note": "Across the other bridge (43.70, 61.22).",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 43.7,
+      "y": 61.22
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Sleeping Druid",
+     "origin": "tgv",
+     "qid": 2541,
+     "note": "Jump down and take the passage to the west, run across the bridge to Oben Rageclaw (44.94, 61,60)."
+    },
+    {
+     "action": "N",
+     "title": "Sapphire of Sky",
+     "origin": "tgv",
+     "qid": 483,
+     "note": "Jump down and go south (44.70, 62.44).",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 44.7,
+      "y": 62.44
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Relics of Wakening",
+     "origin": "tgv",
+     "qid": 483,
+     "note": "The Raven Claw Talisman is north in the next room (the one with Rageclaw's body). Run up onto the center pilar, take the bridge to the right and follow the path around to the left (45.65, 57.44).",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 45.65,
+      "y": 57.44
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Sleeping Druid",
+     "origin": "tgv",
+     "qid": 2541,
+     "note": "If the item didn't drop while you are collecting the relics, skip this and \"Druid of the Claw\""
+    },
+    {
+     "action": "T",
+     "title": "The Sleeping Druid",
+     "origin": "tgv",
+     "qid": 2541
+    },
+    {
+     "action": "A",
+     "title": "Druid of the Claw",
+     "origin": "tgv",
+     "qid": 2561
+    },
+    {
+     "action": "C",
+     "title": "Druid of the Claw",
+     "origin": "tgv",
+     "qid": 2561,
+     "note": "Back in the room to the north. Kill him, target his body and use the charm.",
+     "use_item": "8149"
+    },
+    {
+     "action": "T",
+     "title": "Druid of the Claw",
+     "origin": "tgv",
+     "qid": 2561
+    },
+    {
+     "action": "C",
+     "title": "Crown of the Earth (Part 4)",
+     "origin": "tgv",
+     "qid": 933,
+     "note": "Moonwell at the Pools of Arlithrien (42.42, 67.08)",
+     "use_item": "5621",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 42.42,
+      "y": 67.08
+     }
+    },
+    {
+     "action": "T",
+     "title": "Crown of the Earth (Part 4)",
+     "origin": "tgv",
+     "qid": 933,
+     "note": "Back at Dolanaar, you can die and spirit rez. Down by the moonwell."
+    },
+    {
+     "action": "A",
+     "title": "Crown of the Earth (Part 5)",
+     "origin": "tgv",
+     "qid": 7383
+    },
+    {
+     "action": "T",
+     "title": "The Relics of Wakening",
+     "origin": "tgv",
+     "qid": 483
+    },
+    {
+     "action": "A",
+     "title": "Ursal the Mauler",
+     "origin": "tgv",
+     "qid": 486
+    },
+    {
+     "action": "T",
+     "title": "The Road to Darnassus",
+     "origin": "tgv",
+     "qid": 487
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6063,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6063,
+     "class": "Hunter",
+     "race": "Night Elf",
+     "note": "Tame a webwood lurker (58,60)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 58.0,
+      "y": 60.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 1)",
+     "origin": "tgv",
+     "qid": 6063,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6101,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6101,
+     "class": "Hunter",
+     "race": "Night Elf",
+     "note": "Tame a nightsaber stalker (55,73)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 55.0,
+      "y": 73.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 2)",
+     "origin": "tgv",
+     "qid": 6101,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6102,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "C",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6102,
+     "class": "Hunter",
+     "race": "Night Elf",
+     "note": "Tame a strigid screecher (55,73)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 55.0,
+      "y": 73.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Taming the Beast (Part 3)",
+     "origin": "tgv",
+     "qid": 6102,
+     "class": "Hunter",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Heeding the Call",
+     "origin": "tgv",
+     "qid": 5923,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "R",
+     "title": "Darnassus",
+     "origin": "tgv"
+    },
+    {
+     "action": "T",
+     "title": "Rellian Greenspyre",
+     "origin": "tgv",
+     "qid": 922,
+     "note": "At Cenarion Enclave (38.17, 21.65)",
+     "coord": {
+      "zone": "Darnassus",
+      "x": 38.17,
+      "y": 21.65
+     }
+    },
+    {
+     "action": "A",
+     "title": "Tumors",
+     "origin": "tgv",
+     "qid": 923
+    },
+    {
+     "action": "T",
+     "title": "Training the Beast",
+     "origin": "tgv",
+     "qid": 6103,
+     "class": "Hunter",
+     "race": "Night Elf",
+     "note": "(40,8)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 40.0,
+      "y": 8.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Heeding the Call",
+     "origin": "tgv",
+     "qid": 5923,
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "Northwest in Cenarion Enclave (33,8)",
+     "coord": {
+      "zone": "Darnassus",
+      "x": 33.0,
+      "y": 8.0
+     }
+    },
+    {
+     "action": "A",
+     "title": "Moonglade",
+     "origin": "tgv",
+     "qid": 5921,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "Moonglade",
+     "origin": "tgv",
+     "qid": 5921,
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "Teleport there, go into the house past the light armor salesmen"
+    },
+    {
+     "action": "A",
+     "title": "Great Bear Spirit",
+     "origin": "tgv",
+     "qid": 5929,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "C",
+     "title": "Great Bear Spirit",
+     "origin": "tgv",
+     "qid": 5929,
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "Northwest corner of Moonglade (39.15, 27.78)",
+     "coord": {
+      "zone": "Moonglade",
+      "x": 39.15,
+      "y": 27.78
+     }
+    },
+    {
+     "action": "T",
+     "title": "Great Bear Spirit",
+     "origin": "tgv",
+     "qid": 5929,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "Back to Darnassus",
+     "origin": "tgv",
+     "qid": 5931,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "Back to Darnassus",
+     "origin": "tgv",
+     "qid": 5931,
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "Hearthstone back to Teldrassil, return to the guy that sent you to Moonglade"
+    },
+    {
+     "action": "A",
+     "title": "Body and Heart",
+     "origin": "tgv",
+     "qid": 6001,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "R",
+     "title": "Rut'theran Village",
+     "origin": "tgv",
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "The portal west of the bank"
+    },
+    {
+     "action": "F",
+     "title": "Auberdine",
+     "origin": "tgv",
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "C",
+     "title": "Body and Heart",
+     "origin": "tgv",
+     "qid": 6001,
+     "class": "Druid",
+     "race": "Night Elf",
+     "note": "The cave west of Auberdine. You might want to ask someone to help you to complete this! (43.50,45.97)",
+     "coord": {
+      "zone": "Darkshore",
+      "x": 43.5,
+      "y": 45.97
+     }
+    },
+    {
+     "action": "F",
+     "title": "Darnassus",
+     "origin": "tgv",
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "Body and Heart",
+     "origin": "tgv",
+     "qid": 6001,
+     "class": "Druid",
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "The Temple of the Moon",
+     "origin": "tgv",
+     "qid": 2519,
+     "note": "Behind the bank, near the portal to Rut'theran Village"
+    },
+    {
+     "action": "T",
+     "title": "The Temple of the Moon",
+     "origin": "tgv",
+     "qid": 2519,
+     "note": "Due south of the bank"
+    },
+    {
+     "action": "A",
+     "title": "Tears of the Moon",
+     "origin": "tgv",
+     "qid": 2518
+    },
+    {
+     "action": "A",
+     "title": "Nessa Shadowsong",
+     "origin": "tgv",
+     "qid": 6344,
+     "race": "Night Elf",
+     "note": "From Mydrannul (70.67, 45.37) on your way out of Darnassus.",
+     "coord": {
+      "zone": "Darnassus",
+      "x": 70.67,
+      "y": 45.37
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Glowing Fruit",
+     "origin": "tgv",
+     "qid": 930,
+     "note": "Out of town, south of the Pools of Arlithrien, just outside Gnarlpine Hold (42.61, 76.11)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 42.61,
+      "y": 76.11
+     }
+    },
+    {
+     "action": "C",
+     "title": "Ursal the Mauler",
+     "origin": "tgv",
+     "qid": 486,
+     "note": "West of the glowing tree (39,80)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 39.0,
+      "y": 80.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Tumors",
+     "origin": "tgv",
+     "qid": 923,
+     "note": "Elementals at the river east of The Oracle Glade (42,42)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 42.0,
+      "y": 42.0
+     }
+    },
+    {
+     "action": "C",
+     "title": "Crown of the Earth (Part 5)",
+     "origin": "tgv",
+     "qid": 7383,
+     "note": "Moonwell at The Oracle Glade (38.44, 34.08)",
+     "use_item": "18152",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 38.44,
+      "y": 34.08
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Enchanted Glade",
+     "origin": "tgv",
+     "qid": 937
+    },
+    {
+     "action": "A",
+     "title": "Mist",
+     "origin": "tgv",
+     "qid": 938,
+     "note": "Find the saber to the west, past the harpies (31.5, 31.6)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 31.5,
+      "y": 31.6
+     }
+    },
+    {
+     "action": "A",
+     "title": "The Shimmering Frond",
+     "origin": "tgv",
+     "qid": 931,
+     "note": "Slightly northeast of where you found Mist (34.7, 28.8)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 34.7,
+      "y": 28.8
+     }
+    },
+    {
+     "action": "C",
+     "title": "The Enchanted Glade",
+     "origin": "tgv",
+     "qid": 937
+    },
+    {
+     "action": "C",
+     "title": "Mist",
+     "origin": "tgv",
+     "qid": 938,
+     "note": "Lead the cat back to the moonwell at the Oracle Glade (38.29, 34.34).",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 38.29,
+      "y": 34.34
+     }
+    },
+    {
+     "action": "T",
+     "title": "Mist",
+     "origin": "tgv",
+     "qid": 938
+    },
+    {
+     "action": "T",
+     "title": "The Enchanted Glade",
+     "origin": "tgv",
+     "qid": 937
+    },
+    {
+     "action": "A",
+     "title": "Teldrassil",
+     "origin": "tgv",
+     "qid": 940
+    },
+    {
+     "action": "C",
+     "title": "Tears of the Moon",
+     "origin": "tgv",
+     "qid": 2518,
+     "note": "North-northeast, near the edge of the tree. Spawns in a few different spots (39,25) (41,25) (47,25)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 39.0,
+      "y": 25.0
+     }
+    },
+    {
+     "action": "T",
+     "title": "Tumors",
+     "origin": "tgv",
+     "qid": 923,
+     "note": "Back in Cenarion Enclave, Darnassus"
+    },
+    {
+     "action": "A",
+     "title": "Return to Denalan",
+     "origin": "tgv",
+     "qid": 2498
+    },
+    {
+     "action": "T",
+     "title": "Tears of the Moon",
+     "origin": "tgv",
+     "qid": 2518
+    },
+    {
+     "action": "A",
+     "title": "Sathrah's Sacrifice",
+     "origin": "tgv",
+     "qid": 2520
+    },
+    {
+     "action": "C",
+     "title": "Sathrah's Sacrifice",
+     "origin": "tgv",
+     "qid": 2520,
+     "note": "Use the item down in the fountain",
+     "use_item": "8155"
+    },
+    {
+     "action": "T",
+     "title": "Sathrah's Sacrifice",
+     "origin": "tgv",
+     "qid": 2520
+    },
+    {
+     "action": "H",
+     "title": "Dolanaar",
+     "origin": "tgv"
+    },
+    {
+     "action": "T",
+     "title": "Ursal the Mauler",
+     "origin": "tgv",
+     "qid": 486
+    },
+    {
+     "action": "T",
+     "title": "Crown of the Earth (Part 5)",
+     "origin": "tgv",
+     "qid": 7383,
+     "note": "Down by the moonwell again"
+    },
+    {
+     "action": "A",
+     "title": "Crown of the Earth (Part 6)",
+     "origin": "tgv",
+     "qid": 935
+    },
+    {
+     "action": "T",
+     "title": "Return to Denalan",
+     "origin": "tgv",
+     "qid": 2498,
+     "note": "South at the lake (60.90, 68.49)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 60.9,
+      "y": 68.49
+     }
+    },
+    {
+     "action": "A",
+     "title": "Oakenscowl",
+     "origin": "tgv",
+     "qid": 2499
+    },
+    {
+     "action": "T",
+     "title": "The Glowing Fruit",
+     "origin": "tgv",
+     "qid": 930
+    },
+    {
+     "action": "T",
+     "title": "The Shimmering Frond",
+     "origin": "tgv",
+     "qid": 931
+    },
+    {
+     "action": "A",
+     "title": "The Moss-twined Heart",
+     "origin": "tgv",
+     "qid": 927,
+     "use_item": "927",
+     "optional": true
+    },
+    {
+     "action": "T",
+     "title": "The Moss-twined Heart",
+     "origin": "tgv",
+     "qid": 927,
+     "optional": true
+    },
+    {
+     "action": "C",
+     "title": "Oakenscowl",
+     "origin": "tgv",
+     "qid": 2499,
+     "note": "Go along the river to the west until you find the cave (53.75, 75.10)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 53.75,
+      "y": 75.1
+     }
+    },
+    {
+     "action": "T",
+     "title": "Oakenscowl",
+     "origin": "tgv",
+     "qid": 2499
+    },
+    {
+     "action": "T",
+     "title": "Crown of the Earth (Part 6)",
+     "origin": "tgv",
+     "qid": 935,
+     "note": "Turn it at Cenarion Enclave, Darnassus, at the top of the tower"
+    },
+    {
+     "action": "T",
+     "title": "Teldrassil",
+     "origin": "tgv",
+     "qid": 940
+    },
+    {
+     "action": "A",
+     "title": "Grove of the Ancients",
+     "origin": "tgv",
+     "qid": 952
+    },
+    {
+     "action": "R",
+     "title": "Rut'theran Village",
+     "origin": "tgv",
+     "race": "Night Elf",
+     "note": "Run thru the portal west of the bank (30.52, 41.44)",
+     "coord": {
+      "zone": "Teldrassil",
+      "x": 30.52,
+      "y": 41.44
+     }
+    },
+    {
+     "action": "T",
+     "title": "Nessa Shadowsong",
+     "origin": "tgv",
+     "qid": 6344,
+     "race": "Night Elf"
+    },
+    {
+     "action": "A",
+     "title": "The Bounty of Teldrassil",
+     "origin": "tgv",
+     "qid": 6341,
+     "race": "Night Elf"
+    },
+    {
+     "action": "T",
+     "title": "The Bounty of Teldrassil",
+     "origin": "tgv",
+     "qid": 6341,
+     "race": "Night Elf",
+     "note": "At the hippogryph master"
+    },
+    {
+     "action": "A",
+     "title": "Flight to Auberdine",
+     "origin": "tgv",
+     "qid": 6342,
+     "race": "Night Elf"
+    }
+   ]
+  }
+ ]
+}
