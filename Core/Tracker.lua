@@ -240,6 +240,7 @@ function T:Evaluate(event)
     for _, step in ipairs(SA.guide.visible) do
         if set[step.key] == nil and self:AnyStepDone(step) then -- nil: not done, not unticked by hand
             set[step.key] = true
+            SA:RecordHistory(step, "auto")
             changed = true
         end
     end
@@ -249,6 +250,7 @@ function T:Evaluate(event)
         local step = SA:CurrentStep()
         if not step or set[step.key] ~= nil or not self:CurrentStepDone(step, event) then break end
         set[step.key] = true
+        SA:RecordHistory(step, "auto")
         changed, event = true, nil
     end
     if changed then

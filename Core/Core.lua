@@ -4,10 +4,13 @@
 local ADDON, SA = ...
 ScriptedAdventure = SA -- global handle for macros and /dump
 
-local DEFAULTS = { shown = 4, point = nil, hidden = false, auto = true, nav = true } -- account-wide (ScriptedAdventureDB)
+local DEFAULTS = { shown = 4, point = nil, hidden = false, auto = true, nav = true, locked = false, scale = 1, anim = true } -- account-wide
 
 local function msg(text) DEFAULT_CHAT_FRAME:AddMessage("|cff33ccffScripted Adventure:|r " .. text) end
 SA.Print = msg
+
+local HISTORY_MAX = 50                                  -- history entries kept per character
+local function now() return time and time() or 0 end
 
 ---------------------------------------------------------------------------
 -- Player and step filtering
@@ -156,6 +159,10 @@ function SA:SkipQuest(qid, title)
     self.char.skipped[qid] = true
     self.removedCache = nil
     local extra = countRemoved() - before - 1
+    local h = self.char.history
+    table.insert(h, 1, { skip = true, qid = qid, title = title or ("quest " .. qid), extra = extra, t = now() })
+    while #h > HISTORY_MAX do table.remove(h) end
+    if self.History then self.History:Update() end
     msg("Skipping |cffffffff" .. tostring(title or ("quest " .. qid)) .. "|r"
         .. (extra > 0 and (" and " .. extra .. " follow-up quest(s)") or "")
         .. ". /sa unskip brings skipped quests back.")
@@ -189,6 +196,9 @@ function SA:UnskipAll()
     local n = 0
     for _ in pairs(self.char.skipped) do n = n + 1 end
     self.char.skipped = {}
+    local h = self.char.history
+    for i = #h, 1, -1 do if h[i].skip then table.remove(h, i) end end
+    if self.History then self.History:Update() end
     msg(n == 0 and "No skipped quests." or ("Brought back " .. n .. " skipped quest(s)."))
     self:Changed()
 end
@@ -225,10 +235,53 @@ function SA:Progress()
     return done, #self.guide.visible
 end
 
--- true = done; false = unticked by hand (auto-tick leaves it alone); nil = not done yet
-function SA:SetDone(step, value)
+-- true = done; false = unticked by hand (auto-tick leaves it alone); nil = not done yet.
+-- 'how' ("manual" or "auto") goes into the history.
+function SA:SetDone(step, value, how)
     self:DoneSet(self.guide)[step.key] = value and true or false
+    if value then self:RecordHistory(step, how or "manual") else self:ForgetHistory(self.guide.name, step.key) end
     self:Changed()
+end
+
+---------------------------------------------------------------------------
+-- History: the last ticks (and quest skips), newest first, saved per character
+---------------------------------------------------------------------------
+
+
+function SA:RecordHistory(step, how)
+    local h = self.char.history
+    table.insert(h, 1, { guide = self.guide.name, key = step.key, verb = step.verb, title = step.title,
+                         how = how, t = now() })
+    while #h > HISTORY_MAX do table.remove(h) end
+    if self.History then self.History:Update() end
+end
+
+function SA:ForgetHistory(guideName, key)
+    local h = self.char.history
+    for i = #h, 1, -1 do
+        if h[i].guide == guideName and h[i].key == key then table.remove(h, i) end
+    end
+    if self.History then self.History:Update() end
+end
+
+-- Undo one history entry: untick that step (switching back to its guide), or un-skip the quest.
+function SA:UndoHistory(entry)
+    if entry.skip then
+        self.char.skipped[entry.qid] = nil
+        local h = self.char.history
+        for i = #h, 1, -1 do if h[i] == entry then table.remove(h, i) end end
+        msg("Brought back |cffffffff" .. tostring(entry.title) .. "|r.")
+        if self.History then self.History:Update() end
+        return self:Changed()
+    end
+    if self.guide.name ~= entry.guide and not self:SetGuide(entry.guide) then
+        self:ForgetHistory(entry.guide, entry.key)
+        return msg("That guide isn't in your route any more.")
+    end
+    for _, step in ipairs(self.guide.steps) do
+        if step.key == entry.key then return self:SetDone(step, false) end
+    end
+    self:ForgetHistory(entry.guide, entry.key) -- the step is gone from the guide
 end
 
 function SA:ToggleStep(step) self:SetDone(step, not self:IsDone(step)) end
@@ -311,6 +364,7 @@ function SA:Changed(guideSwitched)
     end
     if self.UI then self.UI:Update() end
     if self.Nav then self.Nav:Update() end
+    if self.Settings then self.Settings:Refresh() end
 end
 
 ---------------------------------------------------------------------------
@@ -327,6 +381,7 @@ function SA:Init()
     self.char.done = self.char.done or {}
     self.char.skipped = self.char.skipped or {}
     self.char.dungeonsOff = self.char.dungeonsOff or {}
+    self.char.history = self.char.history or {}
 
     self:LoadPlayer()
     self.routeName = self.faction -- routes are per faction; starting-zone guides pick the race
@@ -346,6 +401,7 @@ function SA:Init()
         msg("Starting with |cffffffff" .. guide.name .. "|r. Type /sa for commands.")
     end
     if self.UI then self.UI:Init() end
+    if self.History then self.History:Update() end
 end
 
 local events = CreateFrame("Frame")
@@ -366,6 +422,8 @@ end)
 
 local HELP = {
     "/sa - show or hide the guide window",
+    "/sa options - settings (everything below is also there)",
+    "/sa history - recent ticks; click one to go back to it",
     "/sa skip | back - tick the current step / undo the last tick",
     "/sa guides - list the guides in your route",
     "/sa guide <number> | next | prev - switch guide",
@@ -414,6 +472,10 @@ SlashCmdList.SCRIPTEDADVENTURE = function(input)
         elseif arg == "prev" then SA:ShiftGuide(-1)
         elseif tonumber(arg) and SA.chain[tonumber(arg)] then SA:SetGuide(SA.chain[tonumber(arg)].name)
         else msg("Usage: /sa guide <number> | next | prev  (see /sa guides)") end
+    elseif cmd == "options" or cmd == "settings" or cmd == "config" then
+        if SA.Settings then SA.Settings:Toggle() end
+    elseif cmd == "history" then
+        if SA.History then SA.History:Toggle() end
     elseif cmd == "debug" then
         if SA.Tracker then SA.Tracker:Debug() else msg("Tracker didn't load.") end
     elseif cmd == "auto" and (arg == "on" or arg == "off") then

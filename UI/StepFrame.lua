@@ -130,7 +130,7 @@ function UI:Build()
     f:SetMovable(true)
     f:EnableMouse(true)
     f:RegisterForDrag("LeftButton")
-    f:SetScript("OnDragStart", f.StartMoving)
+    f:SetScript("OnDragStart", function(self) if not SA.db.locked then self:StartMoving() end end)
     f:SetScript("OnDragStop", function(self) self:StopMovingOrSizing(); savePosition(self) end)
     if f.SetBackdrop then
         f:SetBackdrop({
@@ -148,7 +148,7 @@ function UI:Build()
     f.title = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     f.title:SetPoint("TOPLEFT", PAD, -PAD)
     f.title:SetJustifyH("LEFT")
-    f.title:SetWidth(WIDTH - PAD * 2 - 110)
+    f.title:SetWidth(WIDTH - PAD * 2 - 150)
     f.title:SetWordWrap(false)
 
     f.close = smallButton(f, "x", "Hide (/sa to show)", function() UI:Toggle() end)
@@ -157,8 +157,14 @@ function UI:Build()
     f.skip:SetPoint("RIGHT", f.close, "LEFT", -2, 0)
     f.back = smallButton(f, "<", "Undo the last tick", function() SA:Back() end)
     f.back:SetPoint("RIGHT", f.skip, "LEFT", -2, 0)
+    f.hist = SA.W.Icon(f, "Interface\\Icons\\INV_Misc_PocketWatch_01", "History: recent ticks. Click one to go back to it.",
+        function() if SA.History then SA.History:Toggle() end end)
+    f.hist:SetPoint("RIGHT", f.back, "LEFT", -4, 0)
+    f.gear = SA.W.Icon(f, "Interface\\Icons\\INV_Misc_Gear_01", "Settings",
+        function() if SA.Settings then SA.Settings:Toggle() end end)
+    f.gear:SetPoint("RIGHT", f.hist, "LEFT", -4, 0)
     f.progress = f:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    f.progress:SetPoint("RIGHT", f.back, "LEFT", -6, 0)
+    f.progress:SetPoint("RIGHT", f.gear, "LEFT", -6, 0)
 
     f.divider = f:CreateTexture(nil, "ARTWORK")
     f.divider:SetColorTexture(1, 1, 1, 0.12)
@@ -176,27 +182,64 @@ function UI:Build()
     f.empty:SetWidth(WIDTH - PAD * 2)
     f.empty:SetJustifyH("LEFT")
 
-    self.rows = {}
+    self.rows = {}   -- visible rows in order (1 = current step)
+    self.byKey = {}  -- step key -> its row, so a row stays with its step while things move
+    self.live = {}   -- every row on screen, including ones animating out
+    self.pool = {}   -- spare rows
+    f:SetScript("OnUpdate", function(_, dt) UI:Animate(dt) end)
 end
 
-function UI:Row(i)
-    local row = self.rows[i]
+---------------------------------------------------------------------------
+-- Rows and animation
+--   tick:     check fills, green flash, row slides left and fades
+--   removed:  (skipped quest, dungeon off) row fades out
+--   others glide into place, new rows fade in from below, the window height eases
+--   new current step: gold pulse x3
+-- Driven by OnUpdate with plain position/alpha changes (no AnimationGroup dependency).
+---------------------------------------------------------------------------
+
+local CHECK_EMPTY, CHECK_DONE = "Interface\\Buttons\\UI-CheckBox-Up", "Interface\\Buttons\\UI-CheckBox-Check"
+local EXIT_HOLD, EXIT_TIME, EXIT_SHIFT = 0.25, 0.3, 28 -- show the tick, then slide/fade out
+local ENTER_DROP = 14                                    -- new rows rise this far into place
+local FLASH_TIME = 1.5                                   -- three pulses
+
+local function animOn() return SA.db and SA.db.anim ~= false end
+
+local function place(row)
+    row:ClearAllPoints()
+    row:SetPoint("TOPLEFT", PAD + row.st.x, -row.st.y)
+    row:SetAlpha(row.st.a)
+end
+
+function UI:Acquire()
+    local row = table.remove(self.pool)
     if row then return row end
     local f = self.frame
     row = CreateFrame("Button", nil, f)
+    row.st = { x = 0, y = 0, a = 1, ty = 0, ta = 1 } -- animation state, kept off the frame itself
     row:SetWidth(WIDTH - PAD * 2)
     row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
     row:RegisterForDrag("LeftButton")
-    row:SetScript("OnDragStart", function() f:StartMoving() end)
+    row:SetScript("OnDragStart", function() if not SA.db.locked then f:StartMoving() end end)
     row:SetScript("OnDragStop", function() f:StopMovingOrSizing(); savePosition(f) end)
     row:SetScript("OnClick", function(self, button)
-        if not self.step then return end
+        if not self.step or self.st.leaving then return end
         if button == "RightButton" then UI:OpenMenu(self) else SA:ToggleStep(self.step) end
     end)
 
     row.bg = row:CreateTexture(nil, "BACKGROUND")
     row.bg:SetAllPoints()
     row.bg:SetColorTexture(1, 0.82, 0, 0.10)
+    row.flash = row:CreateTexture(nil, "BORDER") -- gold pulse on a new current step
+    row.flash:SetAllPoints()
+    row.flash:SetColorTexture(1, 0.82, 0, 1)
+    row.flash:SetBlendMode("ADD")
+    row.flash:SetAlpha(0)
+    row.glow = row:CreateTexture(nil, "BORDER")  -- green flash when ticked
+    row.glow:SetAllPoints()
+    row.glow:SetColorTexture(0.25, 1, 0.25, 1)
+    row.glow:SetBlendMode("ADD")
+    row.glow:SetAlpha(0)
     row.bar = row:CreateTexture(nil, "ARTWORK")
     row.bar:SetColorTexture(1, 0.82, 0, 0.9)
     row.bar:SetWidth(2)
@@ -209,7 +252,7 @@ function UI:Row(i)
     row.check = row:CreateTexture(nil, "ARTWORK")
     row.check:SetSize(16, 16)
     row.check:SetPoint("TOPLEFT", 4, -3)
-    row.check:SetTexture("Interface\\Buttons\\UI-CheckBox-Up")
+    row.check:SetTexture(CHECK_EMPTY)
 
     row.icon = row:CreateTexture(nil, "ARTWORK")
     row.icon:SetSize(ICON, ICON)
@@ -225,9 +268,104 @@ function UI:Row(i)
     row.detail:SetWidth(TEXT_W)
     row.detail:SetJustifyH("LEFT")
     row.detail:SetTextColor(0.75, 0.75, 0.75)
-
-    self.rows[i] = row
     return row
+end
+
+function UI:Recycle(row)
+    row:Hide()
+    row.step, row.st.leaving, row.st.flashT = nil, nil, nil
+    row.flash:SetAlpha(0)
+    row.glow:SetAlpha(0)
+    row.check:SetTexture(CHECK_EMPTY)
+    self.live[row] = nil
+    self.pool[#self.pool + 1] = row
+end
+
+-- Start a row's exit: 'done' = it was ticked (show the tick and a green flash first).
+-- Every other row waits until the exit has finished, so nothing slides over it.
+function UI:Leave(row, done)
+    row.st.leaving = { t = 0, done = done, a0 = row.st.a }
+    local finish = (self.clock or 0) + (done and EXIT_HOLD or 0) + EXIT_TIME
+    self.holdUntil = math.max(self.holdUntil or 0, finish)
+    row:SetFrameLevel(self.frame:GetFrameLevel() + 1) -- under the rows moving into its place
+    if done then row.check:SetTexture(CHECK_DONE); row.glow:SetAlpha(0.5) end
+    self.animating = true
+end
+
+-- true while a row is still animating out (the rest wait for it)
+function UI:Holding()
+    return self.holdUntil ~= nil and (self.clock or 0) < self.holdUntil
+end
+
+function UI:Animate(dt)
+    if not self.animating then return end
+    self.clock = (self.clock or 0) + (dt or 0)
+    local holding = self:Holding()
+    local busy = false
+    local k = math.min(1, (dt or 0) * 14) -- ease toward the target each frame
+    for row in pairs(self.live) do
+        local L = row.st.leaving
+        if L then
+            L.t = L.t + dt
+            local hold = L.done and EXIT_HOLD or 0
+            local p = math.min(1, math.max(0, (L.t - hold) / EXIT_TIME))
+            if L.done then row.glow:SetAlpha(math.max(0, 0.5 * (1 - L.t / (hold + EXIT_TIME * 0.6)))) end
+            row.st.x = -EXIT_SHIFT * p * p
+            row.st.a = L.a0 * (1 - p)
+            if p >= 1 then self:Recycle(row) else busy = true; place(row) end
+        elseif holding then
+            busy = true -- wait in place until the leaving row is gone
+        else
+            if row.st.wantCur ~= nil then -- current-step highlight moves once the wait is over
+                row.bg:SetShown(row.st.wantCur)
+                row.bar:SetShown(row.st.wantCur)
+                row.st.wantCur = nil
+            end
+            local dy, da, dx = row.st.ty - row.st.y, row.st.ta - row.st.a, -row.st.x
+            if math.abs(dy) > 0.5 or math.abs(da) > 0.02 or math.abs(dx) > 0.5 then
+                row.st.y, row.st.a, row.st.x = row.st.y + dy * k, row.st.a + da * k, row.st.x + dx * k
+                busy = true
+            else
+                row.st.y, row.st.a, row.st.x = row.st.ty, row.st.ta, 0
+            end
+            if row.st.flashT then
+                row.st.flashT = row.st.flashT + dt
+                if row.st.flashT >= FLASH_TIME then
+                    row.st.flashT = nil
+                    row.flash:SetAlpha(0)
+                else
+                    row.flash:SetAlpha(0.35 * math.abs(math.sin(row.st.flashT * math.pi * 2)))
+                    busy = true
+                end
+            end
+            place(row)
+        end
+    end
+    local dh = (self.th or 0) - (self.h or 0)
+    if holding then
+        busy = true
+    elseif math.abs(dh) > 0.5 then
+        self.h = self.h + dh * k
+        busy = true
+    else
+        self.h = self.th
+    end
+    self.frame:SetHeight(self.h)
+    self.animating = busy
+end
+
+function UI:FillRow(row, step, current, guide)
+    row.step = step
+    row.text:SetText(stepTitle(step))
+    local detail = stepDetail(step, guide)
+    row.detail:SetText(detail)
+    row.detail:SetShown(detail ~= "")
+    row.icon:SetTexture(stepIcon(step))
+    row:SetFrameLevel(self.frame:GetFrameLevel() + 2)
+    local h = row.text:GetStringHeight() + (detail ~= "" and (row.detail:GetStringHeight() + 2) or 0) + 7
+    h = math.max(h, ICON + 6)
+    row:SetHeight(h)
+    return h
 end
 
 function UI:Update()
@@ -254,31 +392,64 @@ function UI:Update()
         f.warn:Hide()
     end
 
+    -- animate only for changes inside the same guide, while the window is on screen
+    local anim = animOn() and self.drawn and self.lastGuide == guide.name and f:IsShown()
     local steps = SA:UpcomingSteps(SA.db.shown)
+    local keep = {}
+    for _, step in ipairs(steps) do keep[step.key] = true end
+
+    for key, row in pairs(self.byKey) do
+        if not keep[key] then
+            self.byKey[key] = nil
+            -- ticked rows get the tick animation; skipped / switched-off ones just fade
+            local ticked = SA:DoneSet(guide)[key] == true
+            if anim then self:Leave(row, ticked) else self:Recycle(row) end
+        end
+    end
+    if not anim then
+        for row in pairs(self.live) do if row.st.leaving then self:Recycle(row) end end
+        self.holdUntil = nil
+    end
+    local holding = anim and self:Holding()
+
+    local list = {}
     for i, step in ipairs(steps) do
-        local row = self:Row(i)
-        row.step = step
+        local row = self.byKey[step.key]
+        local new = row == nil
+        if new then
+            row = self:Acquire()
+            self.byKey[step.key] = row
+            self.live[row] = true
+        end
         local current = i == 1
-        row.text:SetText(stepTitle(step))
-        local detail = stepDetail(step, guide)
-        row.detail:SetText(detail)
-        row.detail:SetShown(detail ~= "")
-        row.icon:SetTexture(stepIcon(step))
-        row.bg:SetShown(current)
-        row.bar:SetShown(current)
-        row:SetAlpha(current and 1 or 0.6)
-        local h = row.text:GetStringHeight() + (detail ~= "" and (row.detail:GetStringHeight() + 2) or 0) + 7
-        h = math.max(h, ICON + 6)
-        row:SetHeight(h)
-        row:ClearAllPoints()
-        row:SetPoint("TOPLEFT", PAD, -y)
+        local h = self:FillRow(row, step, current, guide)
+        if holding then
+            row.st.wantCur = current -- applied when the leaving row has gone
+        else
+            row.bg:SetShown(current)
+            row.bar:SetShown(current)
+            row.st.wantCur = nil
+        end
+        row.st.ty, row.st.ta = y, current and 1 or 0.6
+        if new or not anim then
+            row.st.y = (new and anim) and (y + ENTER_DROP) or y
+            row.st.a = (new and anim) and 0 or row.st.ta
+            row.st.x = 0
+        end
+        place(row)
         row:Show()
+        list[i] = row
         y = y + h + 2
     end
-    for i = #steps + 1, #self.rows do
-        self.rows[i]:Hide()
-        self.rows[i].step = nil
+    self.rows = list
+
+    -- pulse the step that just became current
+    local curKey = steps[1] and steps[1].key
+    if curKey and curKey ~= self.lastCurrent and animOn() and self.drawn and f:IsShown() then
+        list[1].st.flashT = 0
+        self.animating = true
     end
+    self.lastCurrent = curKey
 
     if #steps == 0 then
         local isLast = SA:GuideIndex() == #SA.chain
@@ -291,7 +462,16 @@ function UI:Update()
     else
         f.empty:Hide()
     end
-    f:SetHeight(y + PAD - 2)
+    self.th = y + PAD - 2
+    if anim then
+        self.h = self.h or self.th
+        self.animating = true
+    else
+        self.h = self.th
+        f:SetHeight(self.th)
+    end
+    self.drawn = true
+    self.lastGuide = guide.name
 end
 
 ---------------------------------------------------------------------------
@@ -379,10 +559,13 @@ function UI:Toggle()
     SA.db.hidden = self.frame:IsShown()
     self.frame:SetShown(not SA.db.hidden)
     if SA.db.hidden and self.menu then self.menu:Hide() end
+    if SA.db.hidden and SA.History and SA.History.frame then SA.History.frame:Hide() end
+    if SA.Settings then SA.Settings:Refresh() end
 end
 
 function UI:Init()
     if not self.frame then self:Build() end
+    self.frame:SetScale(SA.db.scale or 1)
     self.frame:SetShown(not SA.db.hidden)
     self:Update()
     if SA.Nav then SA.Nav:Update() end

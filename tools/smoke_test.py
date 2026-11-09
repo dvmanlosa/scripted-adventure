@@ -28,11 +28,26 @@ local function mock(kind)
     if k == "GetText" then return function(self) return self._text end end
     if k == "GetStringHeight" then return function(self) return 12 end end
     if k == "RegisterEvent" then return function(self, e) if UNKNOWN_EVENTS[e] then error("Attempt to register unknown event \"" .. e .. "\"") end end end
+    if k == "GetFrameLevel" then return function(self) return rawget(self, "_level") or 1 end end
+    if k == "SetFrameLevel" then return function(self, v) self._level = v end end
+    if k == "SetAlpha" then return function(self, v) self._alpha = v end end
+    if k == "GetAlpha" then return function(self) return rawget(self, "_alpha") or 1 end end
+    if k == "SetChecked" then return function(self, v) self._checked = v and true or false end end
+    if k == "GetChecked" then return function(self) return self._checked end end
     if k == "GetPoint" then return function() return "CENTER", nil, "CENTER", 10, 20 end end
     return function() end
   end })
 end
 FRAMES, UNKNOWN_EVENTS = {}, {}
+CLOCK = 1000
+time = function() return 1700000000 end
+date = function(fmt, t) return "12:34" end
+function GetTime() return CLOCK end
+REGISTERED = {}
+Settings = {
+  RegisterCanvasLayoutCategory = function(frame, name) return { frame = frame, name = name } end,
+  RegisterAddOnCategory = function(cat) REGISTERED[#REGISTERED + 1] = cat.name end,
+}
 function CreateFrame(kind, name) local f = mock(kind); FRAMES[#FRAMES + 1] = f; if name then _G[name] = f end; return f end
 UIParent, GameTooltip = mock("UIParent"), mock("GameTooltip")
 BackdropTemplateMixin = {}
@@ -514,6 +529,149 @@ g.SlashCmdList.SCRIPTEDADVENTURE("dungeon deadmines off")
 lua2, g2, SA2 = login("Human", "WARRIOR", "Alliance", 20, g.ScriptedAdventureCharDB)
 SA2.SetGuide(SA2, "The Deadmines (20-22)")
 check("Level 20" in [x.title for x in SA2.guide.visible.values()], "the dungeon switch is saved per character")
+
+print("History")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
+G = lua.globals()
+hist = lambda: [G.ScriptedAdventureCharDB.history[i] for i in range(1, len(G.ScriptedAdventureCharDB.history) + 1)]
+for _ in range(3):
+    r = SA.UI.rows[1]
+    r._scripts.OnClick(r, "LeftButton")
+h = hist()
+check(len(h) == 3 and h[0].how == "manual" and h[0].title == SA.guide.visible[3].title,
+      "ticks go into the history, newest first")
+lua.execute("QUESTLOG = { {title=[[Cutting Teeth]], id=788, complete=false} }")
+g.FIRE("QUEST_ACCEPTED", 1, 788)
+check(hist()[0].how == "auto" and hist()[0].title == "Cutting Teeth", "auto-ticks are recorded as auto")
+g.SlashCmdList.SCRIPTEDADVENTURE("history")
+hf = g.ScriptedAdventureHistory
+check(hf._shown and "Cutting Teeth" in hf.rows[1].text._text and "auto-ticked" in hf.rows[1].detail._text,
+      "/sa history shows the panel with the latest entry first")
+oldest = hf.rows[4]
+target = oldest.entry.key
+oldest._scripts.OnClick(oldest)
+check(SA.CurrentStep(SA)[0].key == target and len(hist()) == 3,
+      "clicking an older entry unticks that step and makes it current; the entry leaves the history")
+check(SA.IsDone(SA, SA.guide.visible[2]) and SA.IsDone(SA, SA.guide.visible[3]),
+      "steps ticked after it stay ticked")
+while SA.guide.name == "Durotar (1-12)":
+    SA.Skip(SA)
+durotar_entry = next(r for r in hf.rows.values() if r._shown and r.entry.guide == "Durotar (1-12)")
+durotar_key = durotar_entry.entry.key
+durotar_entry._scripts.OnClick(durotar_entry)
+check(SA.guide.name == "Durotar (1-12)" and not any(x.key == durotar_key and SA.IsDone(SA, x) for x in SA.guide.visible.values()),
+      "an entry from an earlier guide switches back to that guide")
+SA.SkipQuest(SA, 790, "Sarkoth")
+check("Skipped" in hf.rows[1].text._text and "+1 follow-up" in hf.rows[1].text._text, "quest skips are in the history")
+hf.rows[1]._scripts.OnClick(hf.rows[1])
+check(not G.ScriptedAdventureCharDB.skipped[790], "clicking a skip entry brings the quest back")
+for _ in range(60):
+    SA.Skip(SA)
+check(len(hist()) == 50, "history keeps the last 50")
+_, g2, SA2 = login("Orc", "WARRIOR", "Horde", 1, G.ScriptedAdventureCharDB)
+check(len(g2.ScriptedAdventureCharDB.history) == 50, "history is saved per character")
+
+print("Settings page")
+lua, g, SA = login("Human", "WARRIOR", "Alliance", 1)
+G = lua.globals()
+check(list(G.REGISTERED.values()) == ["Scripted Adventure"], "registered in the game's AddOns settings")
+g.SlashCmdList.SCRIPTEDADVENTURE("options")
+sf = g.ScriptedAdventureSettings
+page = SA.Settings.page
+check(sf._shown and page is not None, "/sa options (and the gear button) opens the settings window")
+ctrl = lambda label: next(c for c in page.controls.values() if c.label and c.label._text == label)
+auto = ctrl("Tick steps automatically")
+check(auto._checked is True, "checkboxes show the current values")
+auto._checked = False
+auto._scripts.OnClick(auto)
+check(G.ScriptedAdventureDB.auto is False, "unticking 'Tick steps automatically' turns auto-tick off")
+shown = ctrl("Steps shown")
+shown.plus._scripts.OnClick(shown.plus)
+check(G.ScriptedAdventureDB.shown == 5 and shown.value._text == "5" and sum(1 for r in SA.UI.rows.values() if r._shown) == 5,
+      "'Steps shown' + shows 5 steps")
+size = ctrl("Window size")
+size.minus._scripts.OnClick(size.minus)
+check(abs(G.ScriptedAdventureDB.scale - 0.9) < 1e-9 and size.value._text == "90%", "'Window size' steps by 10%")
+lock = ctrl("Lock window position")
+lock._checked = True
+lock._scripts.OnClick(lock)
+check(G.ScriptedAdventureDB.locked is True, "lock window position")
+guide_row = page.guideRow
+guide_row.next._scripts.OnClick(guide_row.next)
+check(SA.GuideIndex(SA) == 2 and "Westfall" in guide_row.name._text, "guide picker moves to the next guide")
+check(page.dungeons[1]._shown and page.dungeons[1].label._text == "The Deadmines" and page.dungeons[1]._checked,
+      "dungeons are listed with their on/off state")
+d = page.dungeons[1]
+d._checked = False
+d._scripts.OnClick(d)
+check(G.ScriptedAdventureCharDB.dungeonsOff["The Deadmines"] is True, "unticking a dungeon turns it off")
+SA.SkipQuest(SA, SA.guide.visible[1].qid or 109, "Test")
+SA.Settings.Refresh(SA.Settings)
+check("1 quest(s) skipped" in page.skipText._text and page.unskip._shown, "skipped quests are counted")
+page.unskip._scripts.OnClick(page.unskip)
+check(len(list(G.ScriptedAdventureCharDB.skipped.items())) == 0, "'Bring them all back' unskips")
+SA.SetGuide(SA, "Elwynn Forest (1-12)")
+r = SA.UI.rows[1]
+r._scripts.OnClick(r, "LeftButton")
+reset = next(f for f in G.FRAMES.values() if f._text in ("Reset this guide",))
+reset._scripts.OnClick(reset)
+check(SA.Progress(SA)[0] == 1 and reset._text == "Click again to reset", "reset asks for a second click")
+reset._scripts.OnClick(reset)
+check(SA.Progress(SA)[0] == 0, "second click resets the guide")
+G.PLAYER.level = 30
+jump = next(f for f in G.FRAMES.values() if f._text == "Jump to my level")
+jump._scripts.OnClick(jump)
+check(SA.guide.minLevel <= 30 <= SA.guide.maxLevel or SA.guide.maxLevel >= 30, f"'Jump to my level' picks a level 30 guide ({SA.guide.name})")
+
+print("Animations")
+lua, g, SA = login("Orc", "WARRIOR", "Horde", 1)
+G = lua.globals()
+UI = SA.UI
+live = lambda: [r for r in UI.live.keys()]
+first, second = UI.rows[1], UI.rows[2]
+first._scripts.OnClick(first, "LeftButton")                      # tick the current step
+check(first.st.leaving is not None and first.st.leaving.done is True and first._shown,
+      "a ticked row stays on screen to animate out")
+check(UI.rows[1] is second or UI.rows[1].step.key == second.step.key, "the next step moves into first place")
+check(second.st.y > second.st.ty, "it glides up from where it was (not a jump)")
+y0 = second.st.y
+check(second.st.flashT == 0, "the new current step starts its pulse")
+newest = UI.rows[len(UI.rows)]
+check(newest.st.a == 0 and newest.st.y > newest.st.ty, "a new row at the bottom fades in from below")
+UI.Animate(UI, 0.1)
+check(first.st.leaving is not None and first._alpha == 1 and first.glow._alpha > 0,
+      "first the tick shows (full alpha, green flash) ...")
+UI.Animate(UI, 0.35)
+check(first.st.leaving is not None and first.st.x < 0 and first._shown, "... then the row slides left")
+check(second.st.y == y0 and not second.bg._shown and second.flash._alpha == 0,
+      "while it fades, the next step waits in place (no overlap, no highlight or pulse yet)")
+UI.Animate(UI, 0.05)
+check(second.st.y == y0, "still waiting until the ticked row has fully faded")
+UI.Animate(UI, 0.3)
+check(not first._shown and first not in live() and second.st.y == second.st.ty and second.bg._shown,
+      "then the ticked row is gone and the next step moves up and takes the highlight")
+check(second.flash._alpha > 0 and second.st.flashT is not None, "the current step is still pulsing")
+for _ in range(20):
+    UI.Animate(UI, 0.1)
+check(second.st.flashT is None and second.flash._alpha == 0 and not UI.animating,
+      "pulse ends after three flashes and the window goes idle")
+
+SA.SkipQuest(SA, UI.rows[1].step.qid, "test")
+gone = [r for r in UI.live.keys() if r.st.leaving is not None]
+check(len(gone) >= 1 and all(r.st.leaving.done is False for r in gone),
+      "skipped steps fade out without the tick animation")
+g.SlashCmdList.SCRIPTEDADVENTURE("unskip")
+UI.Animate(UI, 5)
+
+G.ScriptedAdventureDB.anim = False
+row = UI.rows[1]
+key = row.step.key
+row._scripts.OnClick(row, "LeftButton")
+check(not any(r.st.leaving is not None for r in UI.live.keys()) and all(r.step.key != key for r in UI.rows.values()),
+      "with Animations off, a ticked row disappears at once")
+G.ScriptedAdventureDB.anim = True
+SA.SetGuide(SA, "The Barrens (12-15)")
+check(not any(r.st.leaving is not None for r in UI.live.keys()), "switching guides redraws without animating")
 
 print("Commands")
 for c in ["", "", "guides", "guide next", "guide prev", "guide 3", "shown 2", "reset", "errors", "help", "nonsense"]:
